@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Der Wortschatzkasten</title>
+<meta name="theme-color" content="#2F5D62" />
+<meta name="description" content="Lessico di tedesco per la certificazione scolastica" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="icon-192.png" />
+<link rel="apple-touch-icon" href="icon-192.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Wortschatz" />
+
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #EDE6D6; }
+  #root { min-height: 100%; }
+  * { box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+  .wk-root {
+    --paper: #EDE6D6;
+    --card: #F7F3E8;
+    --ink: #22303C;
+    --ink-soft: #5B5347;
+    --teal: #2F5D62;
+    --gold: #C99A2E;
+    --line: #D9CFB8;
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100%;
+    padding: 18px 14px 60px;
+  }
+  .wk-head { margin-bottom: 16px; }
+  .wk-head h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 2px;
+    color: var(--ink);
+  }
+  .wk-head p { margin: 0; font-size: 13px; color: var(--ink-soft); }
+  .wk-modes {
+    display: flex;
+    gap: 6px;
+    margin-top: 14px;
+    background: #E3DAC3;
+    padding: 4px;
+    border-radius: 10px;
+    width: fit-content;
+  }
+  .wk-mode-btn {
+    border: none;
+    background: transparent;
+    padding: 7px 14px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .wk-mode-btn.active { background: var(--card); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+  .wk-addbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    background: var(--teal);
+    color: #F7F3E8;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .wk-search-wrap {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 9px 12px;
+  }
+  .wk-search-icon { color: var(--ink-soft); flex: none; font-size: 14px; }
+  .wk-search-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--ink);
+    outline: none;
+  }
+  .wk-search-input::placeholder { color: var(--ink-soft); }
+  .wk-search-clear { border: none; background: none; color: var(--ink-soft); cursor: pointer; padding: 2px; flex: none; font-size: 14px; }
+  .wk-filters { margin-top: 18px; }
+  .wk-filter-row {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .wk-chip {
+    flex: none;
+    border: 1px solid var(--line);
+    background: var(--card);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: inherit;
+  }
+  .wk-chip.active-topic { background: var(--gold); border-color: var(--gold); color: #2A2110; }
+  .wk-chip.active-type { background: var(--ink); border-color: var(--ink); color: #F7F3E8; }
+  .wk-filter-label { font-size: 11px; color: var(--ink-soft); margin: 10px 0 4px; font-weight: 600; }
+  .wk-grid {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 10px;
+  }
+  .wk-groups { display: flex; flex-direction: column; gap: 22px; margin-top: 14px; }
+  .wk-group-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+  .wk-card {
+    background: var(--card);
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--type-color, var(--teal));
+    padding: 12px 14px;
+    cursor: pointer;
+    position: relative;
+  }
+  .wk-flag-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background: none;
+    padding: 2px;
+    cursor: pointer;
+    color: var(--line);
+    font-size: 15px;
+    line-height: 1;
+  }
+  .wk-flag-btn.flagged { color: var(--gold); }
+  .wk-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .wk-german {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-right: 18px;
+  }
+  .wk-italian { font-size: 13.5px; color: var(--ink-soft); margin-top: 3px; }
+  .wk-typetag {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--type-color, var(--teal));
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 3px;
+  }
+  .wk-details { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); font-size: 13px; display: flex; flex-direction: column; gap: 5px; }
+  .wk-details .lbl { color: var(--ink-soft); font-weight: 600; margin-right: 4px; }
+  .wk-example { font-style: italic; color: var(--ink-soft); font-size: 12.5px; margin-top: 4px; }
+  .wk-topictags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .wk-topictag { font-size: 10.5px; background: #E3DAC3; color: var(--ink-soft); padding: 2px 7px; border-radius: 999px; }
+  .wk-trash { background: none; border: none; color: #A8452F; cursor: pointer; padding: 2px; font-size: 14px; }
+  .wk-confirm { margin-top: 8px; font-size: 12.5px; display: flex; align-items: center; gap: 8px; }
+  .wk-confirm button { border: none; border-radius: 5px; padding: 4px 9px; font-size: 12px; cursor: pointer; font-weight: 600; font-family: inherit; }
+  .wk-empty { padding: 30px 10px; text-align: center; color: var(--ink-soft); font-size: 14px; }
+
+  .wk-flash-wrap { margin-top: 20px; display: flex; flex-direction: column; align-items: center; }
+  .wk-flash-topbar { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; width: 100%; max-width: 420px; }
+  .wk-icon-btn { display: flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 7px 12px; cursor: pointer; color: var(--ink-soft); font-size: 12.5px; font-weight: 600; font-family: inherit; }
+  .wk-icon-btn.flagged { color: var(--gold); border-color: var(--gold); }
+  .wk-flash-card {
+    width: 100%;
+    max-width: 420px;
+    min-height: 220px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 26px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  }
+  .wk-flash-front { font-family: 'Source Serif 4', Georgia, serif; font-size: 24px; font-weight: 700; }
+  .wk-flash-sub { margin-top: 8px; font-size: 12.5px; color: var(--ink-soft); }
+  .wk-flash-back-italian { font-size: 19px; font-weight: 600; color: var(--teal); margin-bottom: 10px; }
+  .wk-flash-back-details { font-size: 13px; color: var(--ink-soft); display: flex; flex-direction: column; gap: 4px; }
+  .wk-flash-controls { display: flex; align-items: center; gap: 14px; margin-top: 16px; }
+  .wk-flash-count { font-size: 12.5px; color: var(--ink-soft); }
+  .wk-flip-hint { font-size: 11.5px; color: var(--ink-soft); margin-top: 10px; }
+
+  .wk-quiz-wrap { margin-top: 20px; display: flex; flex-direction: column; align-items: center; }
+  .wk-quiz-score-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .wk-quiz-score { font-size: 13px; color: var(--ink-soft); }
+  .wk-quiz-q { width: 100%; max-width: 420px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 22px; text-align: center; }
+  .wk-quiz-german { font-family: 'Source Serif 4', Georgia, serif; font-size: 22px; font-weight: 700; }
+  .wk-quiz-opts { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+  .wk-quiz-opt { border: 1px solid var(--line); background: #FCFAF3; border-radius: 8px; padding: 10px 12px; font-size: 13.5px; text-align: left; cursor: pointer; font-family: inherit; }
+  .wk-quiz-opt.correct { background: #DCEAD8; border-color: #6E9B65; }
+  .wk-quiz-opt.wrong { background: #F2D9D3; border-color: #A8452F; }
+  .wk-quiz-next { margin-top: 14px; background: var(--teal); color: #F7F3E8; border: none; padding: 9px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; font-family: inherit; }
+
+  .wk-modal-bg { position: fixed; inset: 0; background: rgba(34,48,60,.5); display: flex; align-items: flex-end; justify-content: center; z-index: 50; }
+  .wk-modal { background: var(--paper); width: 100%; max-width: 480px; max-height: 92vh; overflow-y: auto; border-radius: 14px 14px 0 0; padding: 18px 18px 24px; }
+  @media (min-width: 640px) { .wk-modal-bg { align-items: center; } .wk-modal { border-radius: 14px; } }
+  .wk-modal h2 { font-family: 'Source Serif 4', Georgia, serif; font-size: 19px; margin: 0 0 14px; }
+  .wk-field { margin-bottom: 12px; }
+  .wk-field label { display: block; font-size: 12px; font-weight: 600; color: var(--ink-soft); margin-bottom: 4px; }
+  .wk-field input, .wk-field select, .wk-field textarea { width: 100%; border: 1px solid var(--line); background: #FCFAF3; border-radius: 7px; padding: 8px 10px; font-size: 14px; font-family: inherit; color: var(--ink); }
+  .wk-field textarea { resize: vertical; min-height: 44px; }
+  .wk-row2 { display: flex; gap: 10px; }
+  .wk-row2 > div { flex: 1; }
+  .wk-type-select { display: flex; flex-wrap: wrap; gap: 6px; }
+  .wk-type-opt { border: 1px solid var(--line); background: #FCFAF3; padding: 6px 11px; border-radius: 999px; font-size: 12.5px; cursor: pointer; font-family: inherit; }
+  .wk-type-opt.sel { color: #fff; }
+  .wk-topic-check { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .wk-topic-check label { display: flex; align-items: center; gap: 5px; background: #FCFAF3; border: 1px solid var(--line); padding: 5px 10px; border-radius: 999px; font-size: 12px; font-weight: 500; cursor: pointer; }
+  .wk-add-topic-inline { display: flex; gap: 6px; margin-top: 8px; }
+  .wk-add-topic-inline input { flex: 1; }
+  .wk-add-topic-inline button, .wk-topic-toggle-btn { border: 1px dashed var(--ink-soft); background: transparent; border-radius: 999px; padding: 5px 10px; font-size: 12px; cursor: pointer; font-family: inherit; color: var(--ink-soft); }
+  .wk-modal-actions { display: flex; gap: 10px; margin-top: 18px; }
+  .wk-btn-primary { flex: 1; background: var(--teal); color: #fff; border: none; padding: 11px; border-radius: 8px; font-weight: 700; cursor: pointer; font-family: inherit; font-size: 14px; }
+  .wk-btn-secondary { background: transparent; border: 1px solid var(--line); padding: 11px 16px; border-radius: 8px; cursor: pointer; font-family: inherit; color: var(--ink-soft); font-weight: 600; }
+  .wk-close { position: absolute; top: 14px; right: 14px; background: none; border: none; cursor: pointer; color: var(--ink-soft); font-size: 18px; }
+  .wk-footer-reset { margin-top: 26px; text-align: center; }
+  .wk-footer-reset button { background: none; border: none; font-size: 11.5px; color: var(--ink-soft); text-decoration: underline; cursor: pointer; font-family: inherit; }
+  .wk-status { font-size: 11.5px; color: var(--ink-soft); margin-top: 6px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useMemo, useCallback, useRef } = React;
+
+const TYPE_META = {
+  sostantivo: { label: "Sostantivi", color: "#2F5D62" },
+  verbo: { label: "Verbi", color: "#A8452F" },
+  aggettivo: { label: "Aggettivi", color: "#8B6F2E" },
+  avverbio: { label: "Avverbi", color: "#4A6B3D" },
+  congiunzione: { label: "Congiunzioni", color: "#5B4B8A" },
+  preposizione: { label: "Preposizioni", color: "#3C6E71" },
+  espressione: { label: "Espressioni", color: "#6E5849" },
+};
+const TYPE_KEYS = Object.keys(TYPE_META);
+
+function headword(item) {
+  if (item.type === "sostantivo") return `${item.articolo || ""} ${item.german}`.trim();
+  return item.german;
+}
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+function uid() {
+  return "custom_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+}
+
+// ---- persistence: plain browser localStorage, no external service ----
+const LS_CUSTOM_ITEMS = "wk_custom_items";
+const LS_CUSTOM_TOPICS = "wk_custom_topics";
+const LS_FLAGS = "wk_flags";
+const LS_DELETED = "wk_deleted_official";
+
+function lsGet(key, fallback) {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch (e) {
+    return fallback;
+  }
+}
+function lsSet(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (e) {
+    /* storage full or unavailable: fail silently, nothing else we can do */
+  }
+}
+
+const emptyForm = {
+  type: "sostantivo",
+  german: "",
+  italian: "",
+  articolo: "die",
+  plurale: "",
+  femminile: "",
+  femminilePlurale: "",
+  reggenza: "",
+  praesens: "",
+  praeteritum: "",
+  perfekt: "",
+  comparativo: "",
+  superlativo: "",
+  caso: "Akkusativ",
+  note: "",
+  esempio: "",
+  esempioTraduzione: "",
+  topics: [],
+};
+
+function App() {
+  const [officialItems, setOfficialItems] = useState([]);
+  const [officialTopics, setOfficialTopics] = useState([]);
+  const [customItems, setCustomItems] = useState(() => lsGet(LS_CUSTOM_ITEMS, []));
+  const [customTopics, setCustomTopics] = useState(() => lsGet(LS_CUSTOM_TOPICS, []));
+  const [flags, setFlags] = useState(() => lsGet(LS_FLAGS, {}));
+  const [deletedIds, setDeletedIds] = useState(() => lsGet(LS_DELETED, []));
+  const [loadStatus, setLoadStatus] = useState("loading"); // loading | ok | error
+  const [ready, setReady] = useState(false);
+
+  const [mode, setMode] = useState("sfoglia");
+  const [selTopic, setSelTopic] = useState("Tutti");
+  const [selType, setSelType] = useState("Tutti");
+  const [search, setSearch] = useState("");
+  const [expandedId, setExpandedId] = useState(null);
+  const [confirmId, setConfirmId] = useState(null);
+  const [showAdd, setShowAdd] = useState(false);
+  const [form, setForm] = useState(emptyForm);
+  const [newTopicText, setNewTopicText] = useState("");
+  const [showNewTopicInput, setShowNewTopicInput] = useState(false);
+  const [importMsg, setImportMsg] = useState("");
+  const fileInputRef = useRef(null);
+
+  const loadVocab = useCallback(async () => {
+    setLoadStatus("loading");
+    try {
+      const res = await fetch("./vocab-data.json?_=" + Date.now(), { cache: "no-store" });
+      const data = await res.json();
+      setOfficialItems(data.items || []);
+      setOfficialTopics(data.topics || []);
+      setLoadStatus("ok");
+    } catch (e) {
+      setLoadStatus("error");
+    } finally {
+      setReady(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    loadVocab();
+  }, [loadVocab]);
+
+  useEffect(() => { lsSet(LS_CUSTOM_ITEMS, customItems); }, [customItems]);
+  useEffect(() => { lsSet(LS_CUSTOM_TOPICS, customTopics); }, [customTopics]);
+  useEffect(() => { lsSet(LS_FLAGS, flags); }, [flags]);
+  useEffect(() => { lsSet(LS_DELETED, deletedIds); }, [deletedIds]);
+
+  const items = useMemo(() => {
+    const off = officialItems.filter((i) => !deletedIds.includes(i.id));
+    const all = [...off, ...customItems];
+    return all.map((i) => ({ ...i, daStudiare: !!flags[i.id] }));
+  }, [officialItems, customItems, deletedIds, flags]);
+
+  const topics = useMemo(() => {
+    const set = [...officialTopics];
+    customTopics.forEach((t) => { if (!set.includes(t)) set.push(t); });
+    return set;
+  }, [officialTopics, customTopics]);
+
+  const filtered = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    return items.filter((i) => {
+      const matchesTopic =
+        selTopic === "Tutti" ? true : selTopic === "DaStudiare" ? !!i.daStudiare : (i.topics || []).includes(selTopic);
+      const matchesType = selType === "Tutti" || i.type === selType;
+      if (!matchesTopic || !matchesType) return false;
+      if (!q) return true;
+      const haystack = [i.german, i.italian, i.articolo, i.plurale, i.femminile, i.reggenza, i.note, i.esempio, i.esempioTraduzione]
+        .filter(Boolean).join(" ").toLowerCase();
+      return haystack.includes(q);
+    });
+  }, [items, selTopic, selType, search]);
+
+  function toggleDaStudiare(id) {
+    setFlags((prev) => ({ ...prev, [id]: !prev[id] }));
+  }
+
+  function deleteItem(id) {
+    if (String(id).startsWith("custom_")) {
+      setCustomItems((prev) => prev.filter((i) => i.id !== id));
+    } else {
+      setDeletedIds((prev) => (prev.includes(id) ? prev : [...prev, id]));
+    }
+    setConfirmId(null);
+    setExpandedId(null);
+  }
+
+  function toggleFormTopic(t) {
+    setForm((f) => ({ ...f, topics: f.topics.includes(t) ? f.topics.filter((x) => x !== t) : [...f.topics, t] }));
+  }
+  function addTopic() {
+    const t = newTopicText.trim();
+    if (!t || topics.includes(t)) return;
+    setCustomTopics((prev) => [...prev, t]);
+    setForm((f) => ({ ...f, topics: [...f.topics, t] }));
+    setNewTopicText("");
+    setShowNewTopicInput(false);
+  }
+  function submitForm(e) {
+    e.preventDefault();
+    if (!form.german.trim() || !form.italian.trim()) return;
+    setCustomItems((prev) => [...prev, { id: uid(), ...form }]);
+    setForm(emptyForm);
+    setShowAdd(false);
+  }
+
+  function exportBackup() {
+    const payload = {
+      exportedAt: new Date().toISOString(),
+      customItems,
+      customTopics,
+      flags,
+      deletedIds,
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "wortschatzkasten-backup.json";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    setImportMsg("Backup scaricato.");
+  }
+
+  function triggerImport() {
+    if (fileInputRef.current) fileInputRef.current.click();
+  }
+
+  function handleImportFile(e) {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(reader.result);
+        setCustomItems(Array.isArray(data.customItems) ? data.customItems : []);
+        setCustomTopics(Array.isArray(data.customTopics) ? data.customTopics : []);
+        setFlags(data.flags && typeof data.flags === "object" ? data.flags : {});
+        setDeletedIds(Array.isArray(data.deletedIds) ? data.deletedIds : []);
+        setImportMsg("Backup importato: le tue parole e bandierine sono state ripristinate.");
+      } catch (err) {
+        setImportMsg("Questo file non è un backup valido.");
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = "";
+  }
+
+  useEffect(() => {
+    if (!importMsg) return;
+    const t = setTimeout(() => setImportMsg(""), 4000);
+    return () => clearTimeout(t);
+  }, [importMsg]);
+
+  if (!ready) {
+    return <div className="wk-root">Apro il tuo Kasten...</div>;
+  }
+
+  return (
+    <div className="wk-root">
+      <div className="wk-head">
+        <h1>Der Wortschatzkasten</h1>
+        <p>Il tuo lessico di tedesco, pronto per la certificazione</p>
+        <div className="wk-modes">
+          <button className={`wk-mode-btn ${mode === "sfoglia" ? "active" : ""}`} onClick={() => setMode("sfoglia")}>Sfoglia</button>
+          <button className={`wk-mode-btn ${mode === "flashcard" ? "active" : ""}`} onClick={() => setMode("flashcard")}>Flashcard</button>
+          <button className={`wk-mode-btn ${mode === "quiz" ? "active" : ""}`} onClick={() => setMode("quiz")}>Quiz</button>
+        </div>
+        <button className="wk-addbtn" onClick={() => setShowAdd(true)}>+ Nuova parola</button>
+        {loadStatus === "error" && (
+          <div className="wk-status">Non sono riuscito a scaricare l'ultimo lessico dal file: sto mostrando solo le tue parole salvate sul telefono.</div>
+        )}
+        {loadStatus === "ok" && (
+          <button className="wk-status" style={{ background: "none", border: "none", textDecoration: "underline", cursor: "pointer", fontFamily: "inherit" }} onClick={loadVocab}>
+            Controlla aggiornamenti del lessico
+          </button>
+        )}
+      </div>
+
+      <div className="wk-search-wrap">
+        <span className="wk-search-icon">🔍</span>
+        <input className="wk-search-input" type="text" placeholder="Cerca parola..." value={search} onChange={(e) => setSearch(e.target.value)} />
+        {search && <button className="wk-search-clear" onClick={() => setSearch("")}>✕</button>}
+      </div>
+
+      <div className="wk-filters">
+        <div className="wk-filter-label">Argomento</div>
+        <div className="wk-filter-row">
+          <button className={`wk-chip ${selTopic === "Tutti" ? "active-topic" : ""}`} onClick={() => setSelTopic("Tutti")}>Tutti</button>
+          <button className={`wk-chip ${selTopic === "DaStudiare" ? "active-topic" : ""}`} onClick={() => setSelTopic("DaStudiare")}>🚩 Da studiare</button>
+          {topics.map((t) => (
+            <button key={t} className={`wk-chip ${selTopic === t ? "active-topic" : ""}`} onClick={() => setSelTopic(t)}>{t}</button>
+          ))}
+        </div>
+        <div className="wk-filter-label">Categoria grammaticale</div>
+        <div className="wk-filter-row">
+          <button className={`wk-chip ${selType === "Tutti" ? "active-type" : ""}`} onClick={() => setSelType("Tutti")}>Tutti</button>
+          {TYPE_KEYS.map((k) => (
+            <button key={k} className={`wk-chip ${selType === k ? "active-type" : ""}`} onClick={() => setSelType(k)}>{TYPE_META[k].label}</button>
+          ))}
+        </div>
+      </div>
+
+      {mode === "sfoglia" && (
+        <BrowseView
+          items={filtered}
+          groupByTopic={selTopic === "DaStudiare"}
+          topicsOrder={topics}
+          expandedId={expandedId}
+          setExpandedId={setExpandedId}
+          confirmId={confirmId}
+          setConfirmId={setConfirmId}
+          deleteItem={deleteItem}
+          onToggleStudy={toggleDaStudiare}
+        />
+      )}
+      <div style={{ display: mode === "flashcard" ? "block" : "none" }}>
+        <FlashcardView items={filtered} onToggleStudy={toggleDaStudiare} />
+      </div>
+      <div style={{ display: mode === "quiz" ? "block" : "none" }}>
+        <QuizView items={filtered} allItems={items} />
+      </div>
+
+      {showAdd && (
+        <AddModal
+          form={form} setForm={setForm} topics={topics} toggleFormTopic={toggleFormTopic}
+          newTopicText={newTopicText} setNewTopicText={setNewTopicText}
+          showNewTopicInput={showNewTopicInput} setShowNewTopicInput={setShowNewTopicInput}
+          addTopic={addTopic} onSubmit={submitForm}
+          onClose={() => { setShowAdd(false); setForm(emptyForm); }}
+        />
+      )}
+
+      <div className="wk-footer-reset">
+        <button onClick={() => { setCustomItems([]); setCustomTopics([]); setFlags({}); setDeletedIds([]); }}>
+          Cancella le mie modifiche (parole aggiunte, bandierine, eliminazioni)
+        </button>
+        <div style={{ marginTop: 8 }}>
+          <button onClick={exportBackup}>Esporta backup</button>
+          {" · "}
+          <button onClick={triggerImport}>Importa backup</button>
+        </div>
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="application/json,.json"
+          style={{ display: "none" }}
+          onChange={handleImportFile}
+        />
+        {importMsg && <div className="wk-status" style={{ marginTop: 6 }}>{importMsg}</div>}
+      </div>
+    </div>
+  );
+}
+
+function BrowseView({ items, groupByTopic, topicsOrder, expandedId, setExpandedId, confirmId, setConfirmId, deleteItem, onToggleStudy }) {
+  if (items.length === 0) {
+    return <div className="wk-empty">{groupByTopic ? "Nessuna parola contrassegnata come \u201cda studiare\u201d con questi filtri." : "Nessuna parola con questi filtri. Prova ad ampliarli o aggiungine una nuova."}</div>;
+  }
+
+  function renderCard(item) {
+    const isOpen = expandedId === item.id;
+    const color = TYPE_META[item.type]?.color;
+    return (
+      <div key={item.id} className="wk-card" style={{ "--type-color": color }} onClick={() => setExpandedId(isOpen ? null : item.id)}>
+        <button className={`wk-flag-btn ${item.daStudiare ? "flagged" : ""}`} onClick={(e) => { e.stopPropagation(); onToggleStudy(item.id); }}>🚩</button>
+        <div className="wk-card-head">
+          <div>
+            <div className="wk-typetag">{TYPE_META[item.type]?.label.replace(/i$/, "")}</div>
+            <div className="wk-german">{headword(item)}</div>
+            <div className="wk-italian">{item.italian}</div>
+          </div>
+        </div>
+        <div className="wk-topictags">{(item.topics || []).map((t) => (<span key={t} className="wk-topictag">{t}</span>))}</div>
+        {isOpen && (
+          <div className="wk-details" onClick={(e) => e.stopPropagation()}>
+            {item.type === "sostantivo" && (
+              <>
+                <div><span className="lbl">Plurale:</span>{item.plurale || "—"}</div>
+                {item.femminile && <div><span className="lbl">Femminile:</span>{item.femminile}{item.femminilePlurale ? ` (pl. ${item.femminilePlurale})` : ""}</div>}
+              </>
+            )}
+            {item.type === "verbo" && (
+              <>
+                {item.reggenza && <div><span className="lbl">Reggenza:</span>{item.reggenza}</div>}
+                <div><span className="lbl">Präsens (3. Sg.):</span>{item.praesens || "—"}</div>
+                <div><span className="lbl">Präteritum:</span>{item.praeteritum || "—"}</div>
+                <div><span className="lbl">Perfekt:</span>{item.perfekt || "—"}</div>
+              </>
+            )}
+            {item.type === "aggettivo" && (
+              <>
+                {item.reggenza && <div><span className="lbl">Uso:</span>{item.reggenza}</div>}
+                {item.comparativo && <div><span className="lbl">Comparativo:</span>{item.comparativo}</div>}
+                {item.superlativo && <div><span className="lbl">Superlativo:</span>{item.superlativo}</div>}
+              </>
+            )}
+            {item.type === "preposizione" && item.caso && <div><span className="lbl">Regge:</span>{item.caso}</div>}
+            {item.note && <div><span className="lbl">Nota:</span>{item.note}</div>}
+            {item.esempio && <div className="wk-example">"{item.esempio}" — {item.esempioTraduzione}</div>}
+            {confirmId === item.id ? (
+              <div className="wk-confirm">
+                Eliminare questa scheda?
+                <button style={{ background: "#A8452F", color: "#fff" }} onClick={() => deleteItem(item.id)}>Elimina</button>
+                <button style={{ background: "transparent", border: "1px solid var(--line)" }} onClick={() => setConfirmId(null)}>Annulla</button>
+              </div>
+            ) : (
+              <button className="wk-trash" onClick={() => setConfirmId(item.id)}>🗑</button>
+            )}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  if (!groupByTopic) return <div className="wk-grid">{items.map(renderCard)}</div>;
+
+  const groups = topicsOrder.map((t) => ({ topic: t, list: items.filter((i) => (i.topics || []).includes(t)) })).filter((g) => g.list.length > 0);
+  const untagged = items.filter((i) => !(i.topics || []).length);
+
+  return (
+    <div className="wk-groups">
+      {groups.map((g) => (
+        <div key={g.topic} className="wk-group">
+          <div className="wk-group-title">{g.topic}</div>
+          <div className="wk-grid">{g.list.map(renderCard)}</div>
+        </div>
+      ))}
+      {untagged.length > 0 && (
+        <div className="wk-group">
+          <div className="wk-group-title">Senza argomento</div>
+          <div className="wk-grid">{untagged.map(renderCard)}</div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function FlashcardView({ items, onToggleStudy }) {
+  const [order, setOrder] = useState(items.map((i) => i.id));
+  const [idx, setIdx] = useState(0);
+  const [flipped, setFlipped] = useState(false);
+  const [direction, setDirection] = useState("de-it");
+
+  const idsKey = items.map((i) => i.id).join(",");
+  useEffect(() => { setOrder(items.map((i) => i.id)); setIdx(0); setFlipped(false); }, [idsKey]);
+
+  if (items.length === 0) return <div className="wk-empty">Nessuna parola con questi filtri.</div>;
+
+  const byId = Object.fromEntries(items.map((i) => [i.id, i]));
+  const current = byId[order[idx]] || items[0];
+  const showGermanFirst = direction === "de-it";
+
+  function next() { setFlipped(false); setIdx((i) => (i + 1) % order.length); }
+  function prev() { setFlipped(false); setIdx((i) => (i - 1 + order.length) % order.length); }
+  function doShuffle() { setOrder(shuffle(order)); setIdx(0); setFlipped(false); }
+  function toggleDirection() { setDirection((d) => (d === "de-it" ? "it-de" : "de-it")); setFlipped(false); }
+
+  const details = (
+    <div className="wk-flash-back-details">
+      {current.type === "sostantivo" && current.plurale && <div>Plurale: {current.plurale}</div>}
+      {current.type === "verbo" && <div>{current.praesens} · {current.praeteritum} · {current.perfekt}</div>}
+      {current.esempio && <div style={{ fontStyle: "italic" }}>"{current.esempio}" — {current.esempioTraduzione}</div>}
+    </div>
+  );
+
+  return (
+    <div className="wk-flash-wrap">
+      <div className="wk-flash-topbar">
+        <button className="wk-icon-btn" onClick={toggleDirection}>⇄ {showGermanFirst ? "DE → IT" : "IT → DE"}</button>
+        <button className={`wk-icon-btn ${current.daStudiare ? "flagged" : ""}`} onClick={() => onToggleStudy(current.id)}>🚩</button>
+      </div>
+      <div className="wk-flash-card" onClick={() => setFlipped((f) => !f)}>
+        {!flipped ? (
+          showGermanFirst ? (
+            <>
+              <div className="wk-flash-front">{headword(current)}</div>
+              {current.reggenza && <div className="wk-flash-sub">{current.reggenza}</div>}
+            </>
+          ) : (
+            <div className="wk-flash-back-italian">{current.italian}</div>
+          )
+        ) : showGermanFirst ? (
+          <>
+            <div className="wk-flash-back-italian">{current.italian}</div>
+            {details}
+          </>
+        ) : (
+          <>
+            <div className="wk-flash-front">{headword(current)}</div>
+            {current.reggenza && <div className="wk-flash-sub">{current.reggenza}</div>}
+            {details}
+          </>
+        )}
+      </div>
+      <div className="wk-flip-hint">Tocca la carta per girarla</div>
+      <div className="wk-flash-controls">
+        <button className="wk-icon-btn" onClick={prev}>‹</button>
+        <span className="wk-flash-count">{idx + 1} / {order.length}</span>
+        <button className="wk-icon-btn" onClick={next}>›</button>
+        <button className="wk-icon-btn" onClick={doShuffle}>🔀</button>
+      </div>
+    </div>
+  );
+}
+
+function QuizView({ items, allItems }) {
+  const [score, setScore] = useState({ right: 0, total: 0 });
+  const [question, setQuestion] = useState(null);
+  const [picked, setPicked] = useState(null);
+  const pool = items.length >= 4 ? items : allItems;
+  const idsKey = items.map((i) => i.id).join(",");
+
+  const buildQuestion = useCallback(() => {
+    if (pool.length < 2) { setQuestion(null); return; }
+    const correct = pool[Math.floor(Math.random() * pool.length)];
+    const others = shuffle(allItems.filter((i) => i.id !== correct.id && i.italian !== correct.italian)).slice(0, 3);
+    setQuestion({ correct, options: shuffle([correct, ...others]) });
+    setPicked(null);
+  }, [pool, allItems]);
+
+  useEffect(() => { buildQuestion(); setScore({ right: 0, total: 0 }); }, [idsKey]);
+
+  function resetQuiz() { setScore({ right: 0, total: 0 }); buildQuestion(); }
+
+  if (!question) return <div className="wk-empty">Servono almeno 2 parole per fare quiz con questi filtri.</div>;
+
+  function choose(opt) {
+    if (picked) return;
+    setPicked(opt.id);
+    setScore((s) => ({ right: s.right + (opt.id === question.correct.id ? 1 : 0), total: s.total + 1 }));
+  }
+
+  return (
+    <div className="wk-quiz-wrap">
+      <div className="wk-quiz-score-row">
+        <div className="wk-quiz-score">Punteggio: {score.right} / {score.total}</div>
+        <button className="wk-icon-btn" onClick={resetQuiz}>↻ Reset</button>
+      </div>
+      <div className="wk-quiz-q">
+        <div className="wk-quiz-german">{headword(question.correct)}</div>
+        <div className="wk-quiz-opts">
+          {question.options.map((opt) => {
+            let cls = "wk-quiz-opt";
+            if (picked) { if (opt.id === question.correct.id) cls += " correct"; else if (opt.id === picked) cls += " wrong"; }
+            return <button key={opt.id} className={cls} onClick={() => choose(opt)}>{opt.italian}</button>;
+          })}
+        </div>
+        {picked && <button className="wk-quiz-next" onClick={buildQuestion}>Prossima parola</button>}
+      </div>
+    </div>
+  );
+}
+
+function AddModal({ form, setForm, topics, toggleFormTopic, newTopicText, setNewTopicText, showNewTopicInput, setShowNewTopicInput, addTopic, onSubmit, onClose }) {
+  function set(field, value) { setForm((f) => ({ ...f, [field]: value })); }
+  return (
+    <div className="wk-modal-bg" onClick={onClose}>
+      <div className="wk-modal" onClick={(e) => e.stopPropagation()}>
+        <button className="wk-close" onClick={onClose}>✕</button>
+        <h2>Aggiungi una scheda</h2>
+        <form onSubmit={onSubmit}>
+          <div className="wk-field">
+            <label>Categoria grammaticale</label>
+            <div className="wk-type-select">
+              {TYPE_KEYS.map((k) => (
+                <button type="button" key={k} className={`wk-type-opt ${form.type === k ? "sel" : ""}`}
+                  style={form.type === k ? { background: TYPE_META[k].color, borderColor: TYPE_META[k].color } : {}}
+                  onClick={() => set("type", k)}>{TYPE_META[k].label}</button>
+              ))}
+            </div>
+          </div>
+          <div className="wk-row2">
+            <div className="wk-field"><label>Tedesco</label><input value={form.german} onChange={(e) => set("german", e.target.value)} placeholder="es. die Freude" required /></div>
+            <div className="wk-field"><label>Italiano</label><input value={form.italian} onChange={(e) => set("italian", e.target.value)} placeholder="es. la gioia" required /></div>
+          </div>
+          {form.type === "sostantivo" && (
+            <>
+              <div className="wk-row2">
+                <div className="wk-field"><label>Articolo</label>
+                  <select value={form.articolo} onChange={(e) => set("articolo", e.target.value)}>
+                    <option value="der">der</option><option value="die">die</option><option value="das">das</option>
+                  </select>
+                </div>
+                <div className="wk-field"><label>Plurale</label><input value={form.plurale} onChange={(e) => set("plurale", e.target.value)} placeholder="es. die Freuden" /></div>
+              </div>
+              <div className="wk-row2">
+                <div className="wk-field"><label>Femminile (se esiste)</label><input value={form.femminile} onChange={(e) => set("femminile", e.target.value)} /></div>
+                <div className="wk-field"><label>Plurale femminile</label><input value={form.femminilePlurale} onChange={(e) => set("femminilePlurale", e.target.value)} /></div>
+              </div>
+            </>
+          )}
+          {form.type === "verbo" && (
+            <>
+              <div className="wk-field"><label>Reggenza / costruzione</label><input value={form.reggenza} onChange={(e) => set("reggenza", e.target.value)} placeholder="es. auf / über + Akkusativ" /></div>
+              <div className="wk-row2">
+                <div className="wk-field"><label>Präsens (3. Sg.)</label><input value={form.praesens} onChange={(e) => set("praesens", e.target.value)} /></div>
+                <div className="wk-field"><label>Präteritum</label><input value={form.praeteritum} onChange={(e) => set("praeteritum", e.target.value)} /></div>
+              </div>
+              <div className="wk-field"><label>Perfekt</label><input value={form.perfekt} onChange={(e) => set("perfekt", e.target.value)} /></div>
+            </>
+          )}
+          {form.type === "aggettivo" && (
+            <div className="wk-row2">
+              <div className="wk-field"><label>Comparativo</label><input value={form.comparativo} onChange={(e) => set("comparativo", e.target.value)} /></div>
+              <div className="wk-field"><label>Superlativo</label><input value={form.superlativo} onChange={(e) => set("superlativo", e.target.value)} /></div>
+            </div>
+          )}
+          {form.type === "preposizione" && (
+            <div className="wk-field"><label>Caso retto</label>
+              <select value={form.caso} onChange={(e) => set("caso", e.target.value)}>
+                <option value="Akkusativ">Akkusativ</option><option value="Dativ">Dativ</option><option value="Genitiv">Genitiv</option><option value="Wechselpräposition">Wechselpräposition (Akk./Dat.)</option>
+              </select>
+            </div>
+          )}
+          <div className="wk-field"><label>Frase di esempio (facoltativa)</label><input value={form.esempio} onChange={(e) => set("esempio", e.target.value)} /></div>
+          <div className="wk-field"><label>Traduzione della frase</label><input value={form.esempioTraduzione} onChange={(e) => set("esempioTraduzione", e.target.value)} /></div>
+          <div className="wk-field"><label>Nota (facoltativa)</label><textarea value={form.note} onChange={(e) => set("note", e.target.value)} /></div>
+          <div className="wk-field">
+            <label>Argomenti</label>
+            <div className="wk-topic-check">
+              {topics.map((t) => (
+                <label key={t}><input type="checkbox" checked={form.topics.includes(t)} onChange={() => toggleFormTopic(t)} />{t}</label>
+              ))}
+            </div>
+            {showNewTopicInput ? (
+              <div className="wk-add-topic-inline">
+                <input value={newTopicText} onChange={(e) => setNewTopicText(e.target.value)} placeholder="nuovo argomento" />
+                <button type="button" className="wk-topic-toggle-btn" onClick={addTopic}>Aggiungi</button>
+              </div>
+            ) : (
+              <button type="button" className="wk-topic-toggle-btn" style={{ marginTop: 8 }} onClick={() => setShowNewTopicInput(true)}>+ nuovo argomento</button>
+            )}
+          </div>
+          <div className="wk-modal-actions">
+            <button type="button" className="wk-btn-secondary" onClick={onClose}>Annulla</button>
+            <button type="submit" className="wk-btn-primary">Salva scheda</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+</script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./service-worker.js").catch(() => {});
+    });
+  }
+</script>
+</body>
+</html>

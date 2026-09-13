@@ -1,0 +1,2981 @@
+{
+  "topics": [
+    "Sentimenti",
+    "Congiunzioni bipartite",
+    "Preposizioni + Genitivo",
+    "Vantaggi lingua straniera",
+    "Colloquio di lavoro",
+    "Il lavoro ideale",
+    "Social media",
+    "Media e informazione",
+    "Politica",
+    "Ambiente",
+    "Shopping e acquisti",
+    "Gestione del denaro",
+    "Avverbi e modi di dire (bonus)",
+    "Moda e stile",
+    "Unione Europea",
+    "Domande indirette e dubbi",
+    "Cultura e tradizioni",
+    "Unità di misura",
+    "Congiunzioni subordinanti"
+  ],
+  "items": [
+    {
+      "id": "a1",
+      "type": "aggettivo",
+      "german": "aufgeregt",
+      "italian": "agitato/a, emozionato/a",
+      "reggenza": "+ sein",
+      "topics": [
+        "Sentimenti"
+      ],
+      "note": "sostantivo collegato: die Aufregung"
+    },
+    {
+      "id": "n1",
+      "type": "sostantivo",
+      "german": "Aufregung",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "l'agitazione",
+      "topics": [
+        "Sentimenti"
+      ],
+      "note": "aggettivo collegato: aufgeregt sein"
+    },
+    {
+      "id": "a2",
+      "type": "aggettivo",
+      "german": "ängstlich",
+      "italian": "spaventato/a, impaurito/a",
+      "reggenza": "+ sein",
+      "topics": [
+        "Sentimenti"
+      ],
+      "note": "sostantivo collegato: die Angst"
+    },
+    {
+      "id": "n2",
+      "type": "sostantivo",
+      "german": "Angst",
+      "articolo": "die",
+      "plurale": "die Ängste",
+      "italian": "la paura",
+      "topics": [
+        "Sentimenti"
+      ],
+      "note": "aggettivo collegato: ängstlich sein"
+    },
+    {
+      "id": "a3",
+      "type": "aggettivo",
+      "german": "begeistert",
+      "italian": "entusiasta",
+      "reggenza": "+ sein",
+      "topics": [
+        "Sentimenti"
+      ],
+      "note": "sostantivo collegato: die Begeisterung"
+    },
+    {
+      "id": "n3",
+      "type": "sostantivo",
+      "german": "Begeisterung",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "l'entusiasmo",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "v1",
+      "type": "verbo",
+      "german": "sich freuen",
+      "reggenza": "auf / über + Akkusativ",
+      "praesens": "freut sich",
+      "praeteritum": "freute sich",
+      "perfekt": "hat sich gefreut",
+      "italian": "essere felice per qualcosa / non vedere l'ora che avvenga qualcosa",
+      "topics": [
+        "Sentimenti"
+      ],
+      "note": "sostantivo collegato: die Freude"
+    },
+    {
+      "id": "n4",
+      "type": "sostantivo",
+      "german": "Freude",
+      "articolo": "die",
+      "plurale": "die Freuden",
+      "italian": "la gioia",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "a4",
+      "type": "aggettivo",
+      "german": "hoffnungsvoll",
+      "italian": "fiducioso/a, pieno/a di speranza",
+      "reggenza": "+ sein",
+      "topics": [
+        "Sentimenti"
+      ],
+      "note": "sostantivo collegato: die Hoffnung"
+    },
+    {
+      "id": "n5",
+      "type": "sostantivo",
+      "german": "Hoffnung",
+      "articolo": "die",
+      "plurale": "die Hoffnungen",
+      "italian": "la speranza",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "a5",
+      "type": "aggettivo",
+      "german": "neugierig",
+      "italian": "curioso/a",
+      "reggenza": "+ sein",
+      "topics": [
+        "Sentimenti"
+      ],
+      "note": "sostantivo collegato: die Neugier"
+    },
+    {
+      "id": "n6",
+      "type": "sostantivo",
+      "german": "Neugier",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la curiosità",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "c1",
+      "type": "congiunzione",
+      "german": "entweder ... oder",
+      "italian": "o ... o",
+      "topics": [
+        "Congiunzioni bipartite"
+      ],
+      "note": "zweiteilige Konnektoren"
+    },
+    {
+      "id": "c2",
+      "type": "congiunzione",
+      "german": "sowohl ... als auch",
+      "italian": "sia ... che",
+      "topics": [
+        "Congiunzioni bipartite"
+      ],
+      "note": "zweiteilige Konnektoren"
+    },
+    {
+      "id": "c3",
+      "type": "congiunzione",
+      "german": "nicht nur ... sondern auch",
+      "italian": "non solo ... ma anche",
+      "topics": [
+        "Congiunzioni bipartite"
+      ],
+      "note": "zweiteilige Konnektoren"
+    },
+    {
+      "id": "c4",
+      "type": "congiunzione",
+      "german": "zwar ... aber",
+      "italian": "è vero / sì ... ma",
+      "topics": [
+        "Congiunzioni bipartite"
+      ],
+      "note": "zweiteilige Konnektoren"
+    },
+    {
+      "id": "c5",
+      "type": "congiunzione",
+      "german": "weder ... noch",
+      "italian": "né ... né",
+      "topics": [
+        "Congiunzioni bipartite"
+      ],
+      "note": "zweiteilige Konnektoren"
+    },
+    {
+      "id": "p1",
+      "type": "preposizione",
+      "german": "während",
+      "italian": "durante",
+      "caso": "Genitiv",
+      "topics": [
+        "Preposizioni + Genitivo"
+      ],
+      "note": "se regge il Genitiv, anche la parola che segue va declinata al Genitiv"
+    },
+    {
+      "id": "p2",
+      "type": "preposizione",
+      "german": "trotz",
+      "italian": "nonostante",
+      "caso": "Genitiv",
+      "topics": [
+        "Preposizioni + Genitivo"
+      ]
+    },
+    {
+      "id": "p3",
+      "type": "preposizione",
+      "german": "wegen",
+      "italian": "a causa di",
+      "caso": "Genitiv",
+      "topics": [
+        "Preposizioni + Genitivo"
+      ]
+    },
+    {
+      "id": "p4",
+      "type": "preposizione",
+      "german": "statt",
+      "italian": "invece di",
+      "caso": "Genitiv",
+      "topics": [
+        "Preposizioni + Genitivo"
+      ]
+    },
+    {
+      "id": "e1",
+      "type": "espressione",
+      "german": "mehr Möglichkeiten für die Karriere",
+      "italian": "maggiori opportunità di carriera",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ]
+    },
+    {
+      "id": "n7",
+      "type": "sostantivo",
+      "german": "Möglichkeit",
+      "articolo": "die",
+      "plurale": "die Möglichkeiten",
+      "italian": "la possibilità, l'opportunità",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ],
+      "esempio": "mehr Möglichkeiten für die Karriere",
+      "esempioTraduzione": "maggiori opportunità di carriera"
+    },
+    {
+      "id": "n8",
+      "type": "sostantivo",
+      "german": "Karriere",
+      "articolo": "die",
+      "plurale": "die Karrieren",
+      "italian": "la carriera",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ],
+      "esempio": "mehr Möglichkeiten für die Karriere",
+      "esempioTraduzione": "maggiori opportunità di carriera"
+    },
+    {
+      "id": "e2",
+      "type": "espressione",
+      "german": "im Ausland leben, studieren und arbeiten",
+      "italian": "vivere, studiare e lavorare all'estero",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ]
+    },
+    {
+      "id": "n9",
+      "type": "sostantivo",
+      "german": "Ausland",
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "l'estero",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ],
+      "esempio": "im Ausland leben, studieren und arbeiten",
+      "esempioTraduzione": "vivere, studiare e lavorare all'estero"
+    },
+    {
+      "id": "e3",
+      "type": "espressione",
+      "german": "neue Kulturen kennenlernen",
+      "italian": "conoscere nuove culture",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ]
+    },
+    {
+      "id": "n10",
+      "type": "sostantivo",
+      "german": "Kultur",
+      "articolo": "die",
+      "plurale": "die Kulturen",
+      "italian": "la cultura",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ],
+      "esempio": "neue Kulturen kennenlernen",
+      "esempioTraduzione": "conoscere nuove culture"
+    },
+    {
+      "id": "v2",
+      "type": "verbo",
+      "german": "kennenlernen",
+      "reggenza": "verbo separabile (kennen + lernen)",
+      "praesens": "lernt kennen",
+      "praeteritum": "lernte kennen",
+      "perfekt": "hat kennengelernt",
+      "italian": "conoscere, fare la conoscenza di",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ],
+      "esempio": "neue Kulturen kennenlernen",
+      "esempioTraduzione": "conoscere nuove culture"
+    },
+    {
+      "id": "e4",
+      "type": "espressione",
+      "german": "neue Freundschaften schließen",
+      "italian": "fare nuove amicizie",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ]
+    },
+    {
+      "id": "n11",
+      "type": "sostantivo",
+      "german": "Freundschaft",
+      "articolo": "die",
+      "plurale": "die Freundschaften",
+      "italian": "l'amicizia",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ],
+      "esempio": "neue Freundschaften schließen",
+      "esempioTraduzione": "fare nuove amicizie"
+    },
+    {
+      "id": "v3",
+      "type": "verbo",
+      "german": "schließen",
+      "reggenza": "verbo forte, + Akkusativ",
+      "praesens": "schließt",
+      "praeteritum": "schloss",
+      "perfekt": "hat geschlossen",
+      "italian": "chiudere; stringere (un'amicizia)",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ],
+      "esempio": "neue Freundschaften schließen",
+      "esempioTraduzione": "fare nuove amicizie"
+    },
+    {
+      "id": "e5",
+      "type": "espressione",
+      "german": "offener und toleranter sein",
+      "italian": "essere più aperti e tolleranti",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ]
+    },
+    {
+      "id": "a6",
+      "type": "aggettivo",
+      "german": "offen",
+      "italian": "aperto/a",
+      "comparativo": "offener",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ],
+      "esempio": "offener und toleranter sein",
+      "esempioTraduzione": "essere più aperti e tolleranti"
+    },
+    {
+      "id": "a7",
+      "type": "aggettivo",
+      "german": "tolerant",
+      "italian": "tollerante",
+      "comparativo": "toleranter",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ],
+      "esempio": "offener und toleranter sein",
+      "esempioTraduzione": "essere più aperti e tolleranti"
+    },
+    {
+      "id": "n12",
+      "type": "sostantivo",
+      "german": "Selbstvertrauen",
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la fiducia in se stessi",
+      "topics": [
+        "Vantaggi lingua straniera"
+      ]
+    },
+    {
+      "id": "b1",
+      "type": "sostantivo",
+      "german": "Weiterbildung",
+      "articolo": "die",
+      "plurale": "die Weiterbildungen",
+      "italian": "la formazione aggiuntiva, l'aggiornamento professionale",
+      "topics": [
+        "Colloquio di lavoro"
+      ]
+    },
+    {
+      "id": "b2",
+      "type": "verbo",
+      "german": "beschreiben",
+      "reggenza": "verbo forte, + Akkusativ",
+      "praesens": "beschreibt",
+      "praeteritum": "beschrieb",
+      "perfekt": "hat beschrieben",
+      "italian": "descrivere",
+      "topics": [
+        "Colloquio di lavoro"
+      ]
+    },
+    {
+      "id": "b3",
+      "type": "espressione",
+      "german": "Was sind Ihre Schwächen und Stärken?",
+      "italian": "Quali sono i tuoi punti di forza e le tue debolezze?",
+      "topics": [
+        "Colloquio di lavoro"
+      ]
+    },
+    {
+      "id": "b4",
+      "type": "sostantivo",
+      "german": "Schwäche",
+      "articolo": "die",
+      "plurale": "die Schwächen",
+      "italian": "il punto debole, la debolezza",
+      "topics": [
+        "Colloquio di lavoro"
+      ],
+      "esempio": "Was sind Ihre Schwächen und Stärken?",
+      "esempioTraduzione": "Quali sono i tuoi punti di forza e le tue debolezze?"
+    },
+    {
+      "id": "b5",
+      "type": "sostantivo",
+      "german": "Stärke",
+      "articolo": "die",
+      "plurale": "die Stärken",
+      "italian": "il punto di forza",
+      "topics": [
+        "Colloquio di lavoro"
+      ],
+      "esempio": "Was sind Ihre Schwächen und Stärken?",
+      "esempioTraduzione": "Quali sono i tuoi punti di forza e le tue debolezze?"
+    },
+    {
+      "id": "b6",
+      "type": "espressione",
+      "german": "Welche Gehaltsvorstellungen haben Sie?",
+      "italian": "Quali sono le tue aspettative di stipendio?",
+      "topics": [
+        "Colloquio di lavoro"
+      ]
+    },
+    {
+      "id": "b7",
+      "type": "sostantivo",
+      "german": "Gehaltsvorstellung",
+      "articolo": "die",
+      "plurale": "die Gehaltsvorstellungen",
+      "italian": "l'aspettativa salariale",
+      "topics": [
+        "Colloquio di lavoro"
+      ],
+      "esempio": "Welche Gehaltsvorstellungen haben Sie?",
+      "esempioTraduzione": "Quali sono le tue aspettative di stipendio?"
+    },
+    {
+      "id": "b8",
+      "type": "sostantivo",
+      "german": "Teamarbeit",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "il lavoro di squadra",
+      "topics": [
+        "Colloquio di lavoro"
+      ]
+    },
+    {
+      "id": "b9",
+      "type": "verbo",
+      "german": "jemanden einstellen",
+      "reggenza": "verbo separabile, + Akkusativ (jemanden)",
+      "praesens": "stellt ein",
+      "praeteritum": "stellte ein",
+      "perfekt": "hat eingestellt",
+      "italian": "assumere qualcuno",
+      "topics": [
+        "Colloquio di lavoro"
+      ]
+    },
+    {
+      "id": "b10",
+      "type": "espressione",
+      "german": "der kurze Arbeitsweg",
+      "italian": "gli spostamenti brevi (il breve tragitto casa-lavoro)",
+      "topics": [
+        "Il lavoro ideale"
+      ]
+    },
+    {
+      "id": "b11",
+      "type": "sostantivo",
+      "german": "Arbeitsweg",
+      "articolo": "der",
+      "plurale": "die Arbeitswege",
+      "italian": "il tragitto casa-lavoro",
+      "topics": [
+        "Il lavoro ideale"
+      ],
+      "esempio": "der kurze Arbeitsweg",
+      "esempioTraduzione": "gli spostamenti brevi"
+    },
+    {
+      "id": "b12",
+      "type": "aggettivo",
+      "german": "kurz",
+      "italian": "corto/a, breve",
+      "comparativo": "kürzer",
+      "superlativo": "kürzeste(r/s)",
+      "topics": [
+        "Il lavoro ideale"
+      ]
+    },
+    {
+      "id": "b13",
+      "type": "sostantivo",
+      "german": "Ruhe",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la calma",
+      "topics": [
+        "Il lavoro ideale"
+      ]
+    },
+    {
+      "id": "b14",
+      "type": "sostantivo",
+      "german": "Lärm",
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "il rumore",
+      "topics": [
+        "Il lavoro ideale"
+      ]
+    },
+    {
+      "id": "b15",
+      "type": "sostantivo",
+      "german": "Flexibilität",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la flessibilità",
+      "topics": [
+        "Il lavoro ideale"
+      ]
+    },
+    {
+      "id": "b16",
+      "type": "sostantivo",
+      "german": "Vereinbarkeit",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la compatibilità",
+      "topics": [
+        "Il lavoro ideale"
+      ],
+      "note": "spesso in 'Vereinbarkeit von Familie und Beruf' = conciliazione lavoro-famiglia"
+    },
+    {
+      "id": "b17",
+      "type": "sostantivo",
+      "german": "Kontakt",
+      "articolo": "der",
+      "plurale": "die Kontakte",
+      "italian": "il contatto",
+      "topics": [
+        "Il lavoro ideale",
+        "Social media"
+      ],
+      "note": "qui: der soziale Kontakt = l'interazione sociale"
+    },
+    {
+      "id": "b18",
+      "type": "sostantivo",
+      "german": "Kommunikation",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la comunicazione",
+      "topics": [
+        "Il lavoro ideale"
+      ]
+    },
+    {
+      "id": "b19",
+      "type": "sostantivo",
+      "german": "Zusammenarbeit",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la collaborazione",
+      "topics": [
+        "Il lavoro ideale"
+      ]
+    },
+    {
+      "id": "b20",
+      "type": "sostantivo",
+      "german": "Grenze",
+      "articolo": "die",
+      "plurale": "die Grenzen",
+      "italian": "il confine, il limite",
+      "topics": [
+        "Il lavoro ideale"
+      ]
+    },
+    {
+      "id": "b21",
+      "type": "verbo",
+      "german": "trennen",
+      "praesens": "trennt",
+      "praeteritum": "trennte",
+      "perfekt": "hat getrennt",
+      "italian": "separare",
+      "topics": [
+        "Il lavoro ideale"
+      ]
+    },
+    {
+      "id": "b22",
+      "type": "espressione",
+      "german": "soziale Medien (pl.)",
+      "italian": "i social media",
+      "topics": [
+        "Social media"
+      ],
+      "note": "die sozialen Medien"
+    },
+    {
+      "id": "b23",
+      "type": "sostantivo",
+      "german": "Netzwerk",
+      "articolo": "das",
+      "plurale": "die Netzwerke",
+      "italian": "la rete",
+      "topics": [
+        "Social media"
+      ],
+      "note": "das soziale Netzwerk = i social network, le reti sociali"
+    },
+    {
+      "id": "b24",
+      "type": "sostantivo",
+      "german": "Plattform",
+      "articolo": "die",
+      "plurale": "die Plattformen",
+      "italian": "la piattaforma",
+      "topics": [
+        "Social media"
+      ]
+    },
+    {
+      "id": "b26",
+      "type": "verbo",
+      "german": "teilen",
+      "praesens": "teilt",
+      "praeteritum": "teilte",
+      "perfekt": "hat geteilt",
+      "italian": "condividere",
+      "topics": [
+        "Social media"
+      ]
+    },
+    {
+      "id": "b27",
+      "type": "verbo",
+      "german": "schauen",
+      "praesens": "schaut",
+      "praeteritum": "schaute",
+      "perfekt": "hat geschaut",
+      "italian": "guardare",
+      "topics": [
+        "Social media"
+      ]
+    },
+    {
+      "id": "b28",
+      "type": "verbo",
+      "german": "kommentieren",
+      "praesens": "kommentiert",
+      "praeteritum": "kommentierte",
+      "perfekt": "hat kommentiert",
+      "italian": "commentare",
+      "topics": [
+        "Social media"
+      ]
+    },
+    {
+      "id": "b29",
+      "type": "verbo",
+      "german": "folgen",
+      "reggenza": "+ Dativ",
+      "praesens": "folgt",
+      "praeteritum": "folgte",
+      "perfekt": "ist gefolgt",
+      "italian": "seguire",
+      "topics": [
+        "Social media"
+      ]
+    },
+    {
+      "id": "b30",
+      "type": "espressione",
+      "german": "Zeit verbringen",
+      "italian": "passare il tempo",
+      "topics": [
+        "Social media"
+      ]
+    },
+    {
+      "id": "b31",
+      "type": "sostantivo",
+      "german": "Zeit",
+      "articolo": "die",
+      "plurale": "die Zeiten",
+      "italian": "il tempo",
+      "topics": [
+        "Social media"
+      ],
+      "esempio": "Zeit verbringen",
+      "esempioTraduzione": "passare il tempo"
+    },
+    {
+      "id": "b32",
+      "type": "verbo",
+      "german": "verbringen",
+      "reggenza": "verbo irregolare, + Akkusativ",
+      "praesens": "verbringt",
+      "praeteritum": "verbrachte",
+      "perfekt": "hat verbracht",
+      "italian": "trascorrere, passare",
+      "topics": [
+        "Social media"
+      ],
+      "esempio": "Zeit verbringen",
+      "esempioTraduzione": "passare il tempo"
+    },
+    {
+      "id": "b33",
+      "type": "sostantivo",
+      "german": "Inhalt",
+      "articolo": "der",
+      "plurale": "die Inhalte",
+      "italian": "il contenuto",
+      "topics": [
+        "Social media"
+      ]
+    },
+    {
+      "id": "b34",
+      "type": "verbo",
+      "german": "erstellen",
+      "praesens": "erstellt",
+      "praeteritum": "erstellte",
+      "perfekt": "hat erstellt",
+      "italian": "creare",
+      "topics": [
+        "Social media"
+      ]
+    },
+    {
+      "id": "b35",
+      "type": "verbo",
+      "german": "veröffentlichen",
+      "praesens": "veröffentlicht",
+      "praeteritum": "veröffentlichte",
+      "perfekt": "hat veröffentlicht",
+      "italian": "pubblicare, postare",
+      "topics": [
+        "Social media"
+      ]
+    },
+    {
+      "id": "b36",
+      "type": "sostantivo",
+      "german": "Beitrag",
+      "articolo": "der",
+      "plurale": "die Beiträge",
+      "italian": "il post",
+      "topics": [
+        "Social media"
+      ]
+    },
+    {
+      "id": "b37",
+      "type": "sostantivo",
+      "german": "Blog",
+      "articolo": "der",
+      "plurale": "die Blogs",
+      "italian": "il blog",
+      "topics": [
+        "Social media"
+      ]
+    },
+    {
+      "id": "b38",
+      "type": "sostantivo",
+      "german": "Forum",
+      "articolo": "das",
+      "plurale": "die Foren",
+      "italian": "il forum",
+      "topics": [
+        "Social media"
+      ]
+    },
+    {
+      "id": "b39",
+      "type": "sostantivo",
+      "german": "Presse",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la stampa",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "b40",
+      "type": "verbo",
+      "german": "berichten über",
+      "reggenza": "+ Akkusativ",
+      "praesens": "berichtet über",
+      "praeteritum": "berichtete über",
+      "perfekt": "hat berichtet über",
+      "italian": "riportare, fare un servizio su, raccontare",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "b41",
+      "type": "sostantivo",
+      "german": "Nachrichtenportal",
+      "articolo": "das",
+      "plurale": "die Nachrichtenportale",
+      "italian": "il portale di notizie",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "b42",
+      "type": "sostantivo",
+      "german": "Falschmeldung / Fake News",
+      "articolo": "die",
+      "plurale": "die Falschmeldungen / die Fake News",
+      "italian": "la bufala, la notizia falsa",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "b43",
+      "type": "sostantivo",
+      "german": "Freiheit",
+      "articolo": "die",
+      "plurale": "die Freiheiten",
+      "italian": "la libertà",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "b44",
+      "type": "aggettivo",
+      "german": "unabhängig",
+      "italian": "indipendente",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "b45",
+      "type": "sostantivo",
+      "german": "Verantwortung",
+      "articolo": "die",
+      "plurale": "— per lo più Sg.",
+      "italian": "la responsabilità",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "b46",
+      "type": "sostantivo",
+      "german": "Wahrheit",
+      "articolo": "die",
+      "plurale": "die Wahrheiten",
+      "italian": "la verità",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "b47",
+      "type": "sostantivo",
+      "german": "Politik",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la politica",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "b48",
+      "type": "sostantivo",
+      "german": "Demokratie",
+      "articolo": "die",
+      "plurale": "die Demokratien",
+      "italian": "la democrazia",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "b49",
+      "type": "sostantivo",
+      "german": "Rolle",
+      "articolo": "die",
+      "plurale": "die Rollen",
+      "italian": "il ruolo",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "b50",
+      "type": "espressione",
+      "german": "eine Rolle spielen",
+      "italian": "svolgere un ruolo",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "b51",
+      "type": "verbo",
+      "german": "schützen",
+      "praesens": "schützt",
+      "praeteritum": "schützte",
+      "perfekt": "hat geschützt",
+      "italian": "proteggere",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "b52",
+      "type": "verbo",
+      "german": "verursachen",
+      "praesens": "verursacht",
+      "praeteritum": "verursachte",
+      "perfekt": "hat verursacht",
+      "italian": "produrre, causare",
+      "topics": [
+        "Ambiente"
+      ]
+    },
+    {
+      "id": "b53",
+      "type": "sostantivo",
+      "german": "Abgase",
+      "articolo": "die",
+      "plurale": "die Abgase (Sg. das Abgas)",
+      "italian": "i gas di scarico",
+      "topics": [
+        "Ambiente"
+      ]
+    },
+    {
+      "id": "b54",
+      "type": "sostantivo",
+      "german": "Umwelt",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "l'ambiente",
+      "topics": [
+        "Ambiente"
+      ]
+    },
+    {
+      "id": "b55",
+      "type": "sostantivo",
+      "german": "Alternative",
+      "articolo": "die",
+      "plurale": "die Alternativen",
+      "italian": "l'alternativa",
+      "topics": [
+        "Ambiente"
+      ]
+    },
+    {
+      "id": "b56",
+      "type": "sostantivo",
+      "german": "Onlineshopping",
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "gli acquisti online",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b57",
+      "type": "verbo",
+      "german": "shoppen",
+      "praesens": "shoppt",
+      "praeteritum": "shoppte",
+      "perfekt": "hat geshoppt",
+      "italian": "fare acquisti, fare shopping",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b58",
+      "type": "sostantivo",
+      "german": "Onlineshop",
+      "articolo": "der",
+      "plurale": "die Onlineshops",
+      "italian": "il negozio online",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b59",
+      "type": "sostantivo",
+      "german": "Geschäft",
+      "articolo": "das",
+      "plurale": "die Geschäfte",
+      "italian": "il negozio",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b60",
+      "type": "sostantivo",
+      "german": "Kunde",
+      "articolo": "der",
+      "plurale": "die Kunden",
+      "femminile": "die Kundin",
+      "femminilePlurale": "die Kundinnen",
+      "italian": "il cliente, la cliente",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b61",
+      "type": "sostantivo",
+      "german": "Qualität",
+      "articolo": "die",
+      "plurale": "die Qualitäten",
+      "italian": "la qualità",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b62",
+      "type": "sostantivo",
+      "german": "Kundenservice",
+      "articolo": "der",
+      "plurale": "— per lo più Sg.",
+      "italian": "il servizio clienti",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b63",
+      "type": "sostantivo",
+      "german": "Beratung",
+      "articolo": "die",
+      "plurale": "die Beratungen",
+      "italian": "l'assistenza, la consulenza",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b64",
+      "type": "espressione",
+      "german": "sich beraten lassen",
+      "italian": "farsi consigliare, ricevere consigli",
+      "topics": [
+        "Shopping e acquisti"
+      ],
+      "note": "verbo riflessivo + lassen"
+    },
+    {
+      "id": "b65",
+      "type": "verbo",
+      "german": "anprobieren",
+      "reggenza": "verbo separabile, + Akkusativ",
+      "praesens": "probiert an",
+      "praeteritum": "probierte an",
+      "perfekt": "hat anprobiert",
+      "italian": "provare (un vestito)",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b66",
+      "type": "verbo",
+      "german": "umtauschen",
+      "reggenza": "verbo separabile, + Akkusativ",
+      "praesens": "tauscht um",
+      "praeteritum": "tauschte um",
+      "perfekt": "hat umgetauscht",
+      "italian": "cambiare (un acquisto)",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b67",
+      "type": "espressione",
+      "german": "Kann ich mit Karte bezahlen?",
+      "italian": "Posso pagare con la carta?",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b68",
+      "type": "espressione",
+      "german": "Ich finde es praktisch, mit Karte zu bezahlen.",
+      "italian": "Trovo che pagare con la carta sia pratico.",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b69",
+      "type": "espressione",
+      "german": "Entschuldigung, wir akzeptieren keine Barzahlung mehr.",
+      "italian": "Mi dispiace, non accettiamo più pagamenti in contanti.",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b70",
+      "type": "espressione",
+      "german": "Der Preis liegt leider außerhalb unseres Budgets.",
+      "italian": "Purtroppo il prezzo è oltre il nostro budget.",
+      "topics": [
+        "Shopping e acquisti"
+      ]
+    },
+    {
+      "id": "b71",
+      "type": "sostantivo",
+      "german": "Barzahlung",
+      "articolo": "die",
+      "plurale": "— per lo più Sg.",
+      "italian": "il pagamento in contanti",
+      "topics": [
+        "Shopping e acquisti"
+      ],
+      "esempio": "Entschuldigung, wir akzeptieren keine Barzahlung mehr.",
+      "esempioTraduzione": "Mi dispiace, non accettiamo più pagamenti in contanti."
+    },
+    {
+      "id": "b72",
+      "type": "sostantivo",
+      "german": "Budget",
+      "articolo": "das",
+      "plurale": "die Budgets",
+      "italian": "il budget",
+      "topics": [
+        "Shopping e acquisti"
+      ],
+      "esempio": "Der Preis liegt leider außerhalb unseres Budgets.",
+      "esempioTraduzione": "Purtroppo il prezzo è oltre il nostro budget."
+    },
+    {
+      "id": "b73",
+      "type": "sostantivo",
+      "german": "Preis",
+      "articolo": "der",
+      "plurale": "die Preise",
+      "italian": "il prezzo",
+      "topics": [
+        "Shopping e acquisti"
+      ],
+      "esempio": "Der Preis liegt leider außerhalb unseres Budgets.",
+      "esempioTraduzione": "Purtroppo il prezzo è oltre il nostro budget."
+    },
+    {
+      "id": "b74",
+      "type": "espressione",
+      "german": "Ich muss aufpassen, dass ich nicht mehr Geld ausgebe, als ich habe.",
+      "italian": "Devo stare attento a non spendere più soldi di quanti ne abbia.",
+      "topics": [
+        "Gestione del denaro"
+      ]
+    },
+    {
+      "id": "b75",
+      "type": "espressione",
+      "german": "Barzahlung hilft mir, mein Budget besser zu kontrollieren.",
+      "italian": "Pagare in contanti mi aiuta a controllare meglio il mio budget.",
+      "topics": [
+        "Gestione del denaro"
+      ]
+    },
+    {
+      "id": "b76",
+      "type": "espressione",
+      "german": "Beim Bezahlen mit Karte besteht die Gefahr, dass ich mehr Geld ausgebe, als ich habe.",
+      "italian": "Quando pago con la carta c'è un rischio che spenda più soldi di quanti ne abbia.",
+      "topics": [
+        "Gestione del denaro"
+      ]
+    },
+    {
+      "id": "b77",
+      "type": "espressione",
+      "german": "Wir sind Opfer von einem Kreditkarten-Betrug.",
+      "italian": "Siamo vittime di una frode con carta di credito.",
+      "topics": [
+        "Gestione del denaro"
+      ]
+    },
+    {
+      "id": "b78",
+      "type": "espressione",
+      "german": "Kreditkarten-Betrug kann jeden treffen.",
+      "italian": "Le frodi con le carte di credito possono capitare a chiunque.",
+      "topics": [
+        "Gestione del denaro"
+      ]
+    },
+    {
+      "id": "b79",
+      "type": "verbo",
+      "german": "ausgeben",
+      "reggenza": "verbo separabile, forte, + Akkusativ",
+      "praesens": "gibt aus",
+      "praeteritum": "gab aus",
+      "perfekt": "hat ausgegeben",
+      "italian": "spendere",
+      "topics": [
+        "Gestione del denaro"
+      ],
+      "esempio": "Ich muss aufpassen, dass ich nicht mehr Geld ausgebe, als ich habe.",
+      "esempioTraduzione": "Devo stare attento a non spendere più soldi di quanti ne abbia."
+    },
+    {
+      "id": "b80",
+      "type": "sostantivo",
+      "german": "Gefahr",
+      "articolo": "die",
+      "plurale": "die Gefahren",
+      "italian": "il pericolo, il rischio",
+      "topics": [
+        "Gestione del denaro"
+      ]
+    },
+    {
+      "id": "b81",
+      "type": "verbo",
+      "german": "treffen",
+      "reggenza": "verbo forte, + Akkusativ",
+      "praesens": "trifft",
+      "praeteritum": "traf",
+      "perfekt": "hat getroffen",
+      "italian": "colpire; incontrare; capitare a",
+      "topics": [
+        "Gestione del denaro"
+      ],
+      "esempio": "Kreditkarten-Betrug kann jeden treffen.",
+      "esempioTraduzione": "Le frodi con le carte di credito possono capitare a chiunque."
+    },
+    {
+      "id": "b82",
+      "type": "sostantivo",
+      "german": "Betrug",
+      "articolo": "der",
+      "plurale": "— per lo più Sg.",
+      "italian": "la frode, la truffa",
+      "topics": [
+        "Gestione del denaro"
+      ]
+    },
+    {
+      "id": "b83",
+      "type": "sostantivo",
+      "german": "Opfer",
+      "articolo": "das",
+      "plurale": "die Opfer",
+      "italian": "la vittima",
+      "topics": [
+        "Gestione del denaro"
+      ]
+    },
+    {
+      "id": "b84",
+      "type": "aggettivo",
+      "german": "sicher / unsicher",
+      "italian": "sicuro / non sicuro",
+      "topics": [
+        "Gestione del denaro"
+      ]
+    },
+    {
+      "id": "b85",
+      "type": "sostantivo",
+      "german": "Ausgabe",
+      "articolo": "die",
+      "plurale": "die Ausgaben",
+      "italian": "la spesa",
+      "topics": [
+        "Gestione del denaro"
+      ],
+      "note": "spesso al plurale: die Ausgaben = le spese"
+    },
+    {
+      "id": "b86",
+      "type": "aggettivo",
+      "german": "verlockend",
+      "italian": "allettante",
+      "topics": [
+        "Gestione del denaro"
+      ]
+    },
+    {
+      "id": "b87",
+      "type": "espressione",
+      "german": "die Kontrolle behalten",
+      "italian": "tenere sotto controllo",
+      "topics": [
+        "Gestione del denaro"
+      ]
+    },
+    {
+      "id": "b88",
+      "type": "sostantivo",
+      "german": "Kontrolle",
+      "articolo": "die",
+      "plurale": "die Kontrollen",
+      "italian": "il controllo",
+      "topics": [
+        "Gestione del denaro"
+      ],
+      "esempio": "die Kontrolle behalten",
+      "esempioTraduzione": "tenere sotto controllo"
+    },
+    {
+      "id": "b89",
+      "type": "espressione",
+      "german": "die Übersicht verlieren",
+      "italian": "perdere traccia, perdere il conto",
+      "topics": [
+        "Gestione del denaro"
+      ]
+    },
+    {
+      "id": "b90",
+      "type": "sostantivo",
+      "german": "Übersicht",
+      "articolo": "die",
+      "plurale": "die Übersichten",
+      "italian": "la visione d'insieme, il quadro generale",
+      "topics": [
+        "Gestione del denaro"
+      ],
+      "esempio": "die Übersicht verlieren",
+      "esempioTraduzione": "perdere traccia, perdere il conto"
+    },
+    {
+      "id": "b91",
+      "type": "avverbio",
+      "german": "gewissermaßen",
+      "italian": "in un certo senso, per così dire",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "avverbio piuttosto formale, utile per sfumare un'affermazione"
+    },
+    {
+      "id": "b92",
+      "type": "avverbio",
+      "german": "keineswegs",
+      "italian": "assolutamente no, in nessun modo",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "negazione forte ed elegante, più incisiva di 'nicht'"
+    },
+    {
+      "id": "b93",
+      "type": "avverbio",
+      "german": "hierzulande",
+      "italian": "qui da noi, in questo paese",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "parola composta (hier + zu Lande), molto usata nei testi ma poco insegnata a scuola"
+    },
+    {
+      "id": "b94",
+      "type": "avverbio",
+      "german": "diesbezüglich",
+      "italian": "a tal proposito, a tal riguardo",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "registro formale/burocratico, utile per lettere ed email"
+    },
+    {
+      "id": "b95",
+      "type": "avverbio",
+      "german": "meinetwegen",
+      "italian": "per quanto mi riguarda, per me va bene",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "letteralmente 'per causa mia'; in tono colloquiale può suonare come 'fai pure, non m'importa'"
+    },
+    {
+      "id": "b96",
+      "type": "espressione",
+      "german": "Ich verstehe nur Bahnhof.",
+      "italian": "Non capisco proprio niente.",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "modo di dire colloquiale, lett. 'capisco solo stazione'"
+    },
+    {
+      "id": "b97",
+      "type": "espressione",
+      "german": "Das ist mir Wurst.",
+      "italian": "Non me ne importa niente.",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "modo di dire colloquiale, lett. 'per me è salsiccia'"
+    },
+    {
+      "id": "b98",
+      "type": "espressione",
+      "german": "die Katze im Sack kaufen",
+      "italian": "comprare a scatola chiusa",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "modo di dire, lett. 'comprare il gatto nel sacco'"
+    },
+    {
+      "id": "d1",
+      "type": "sostantivo",
+      "german": "Mode",
+      "articolo": "die",
+      "plurale": "die Moden",
+      "italian": "la moda",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d2",
+      "type": "sostantivo",
+      "german": "Trend",
+      "articolo": "der",
+      "plurale": "die Trends",
+      "italian": "la tendenza",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d3",
+      "type": "sostantivo",
+      "german": "Stil",
+      "articolo": "der",
+      "plurale": "die Stile",
+      "italian": "lo stile",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d4",
+      "type": "sostantivo",
+      "german": "Marke",
+      "articolo": "die",
+      "plurale": "die Marken",
+      "italian": "la marca, il marchio",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d5",
+      "type": "aggettivo",
+      "german": "schick",
+      "italian": "elegante",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d6",
+      "type": "aggettivo",
+      "german": "lässig",
+      "italian": "casual, informale",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d7",
+      "type": "aggettivo",
+      "german": "bequem",
+      "italian": "comodo/a",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d8",
+      "type": "aggettivo",
+      "german": "gewagt",
+      "italian": "audace",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d9",
+      "type": "aggettivo",
+      "german": "stilvoll",
+      "italian": "con stile, elegante",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d10",
+      "type": "aggettivo",
+      "german": "kariert",
+      "italian": "a quadri",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d11",
+      "type": "aggettivo",
+      "german": "gestreift",
+      "italian": "a righe",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d12",
+      "type": "sostantivo",
+      "german": "Baumwolle",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "il cotone",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d13",
+      "type": "sostantivo",
+      "german": "Wolle",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la lana",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d14",
+      "type": "sostantivo",
+      "german": "Polyester",
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "il poliestere",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d15",
+      "type": "sostantivo",
+      "german": "Leder",
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la pelle",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d16",
+      "type": "espressione",
+      "german": "nachhaltige Materialien",
+      "italian": "materiali sostenibili",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d17",
+      "type": "sostantivo",
+      "german": "Stoff",
+      "articolo": "der",
+      "plurale": "die Stoffe",
+      "italian": "il tessuto",
+      "topics": [
+        "Moda e stile"
+      ]
+    },
+    {
+      "id": "d18",
+      "type": "aggettivo",
+      "german": "nachhaltig",
+      "italian": "sostenibile",
+      "topics": [
+        "Moda e stile"
+      ],
+      "esempio": "nachhaltige Materialien",
+      "esempioTraduzione": "materiali sostenibili"
+    },
+    {
+      "id": "d19",
+      "type": "sostantivo",
+      "german": "Material",
+      "articolo": "das",
+      "plurale": "die Materialien",
+      "italian": "il materiale",
+      "topics": [
+        "Moda e stile"
+      ],
+      "esempio": "nachhaltige Materialien",
+      "esempioTraduzione": "materiali sostenibili"
+    },
+    {
+      "id": "d20",
+      "type": "sostantivo",
+      "german": "Wahl",
+      "articolo": "die",
+      "plurale": "die Wahlen",
+      "italian": "l'elezione, le elezioni",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d21",
+      "type": "sostantivo",
+      "german": "Partei",
+      "articolo": "die",
+      "plurale": "die Parteien",
+      "italian": "il partito politico",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d22",
+      "type": "sostantivo",
+      "german": "Regierung",
+      "articolo": "die",
+      "plurale": "die Regierungen",
+      "italian": "il governo",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d23",
+      "type": "espressione",
+      "german": "Ich gehe wählen!",
+      "italian": "Andrò a votare!",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d24",
+      "type": "espressione",
+      "german": "Ich möchte in meinem Land mitbestimmen.",
+      "italian": "Voglio avere voce in capitolo nel mio paese.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d25",
+      "type": "espressione",
+      "german": "Die Demokratie ermöglicht mir, meine Meinung frei zu sagen.",
+      "italian": "La democrazia mi consente di esprimere liberamente le mie opinioni.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d26",
+      "type": "espressione",
+      "german": "Ich gebe meine Stimme ab.",
+      "italian": "Do il mio voto.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d27",
+      "type": "espressione",
+      "german": "Sie wählt den Kandidaten.",
+      "italian": "Lei vota per il candidato.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d28",
+      "type": "espressione",
+      "german": "Die Partei sitzt in der Regierung.",
+      "italian": "Il partito è al governo.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d29",
+      "type": "espressione",
+      "german": "Alex macht Politik.",
+      "italian": "Alex è in politica.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d30",
+      "type": "espressione",
+      "german": "Meiner Meinung nach sollten mehr junge Menschen an Wahlen teilnehmen.",
+      "italian": "Secondo me, alle elezioni dovrebbero partecipare più giovani.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d31",
+      "type": "espressione",
+      "german": "In einer Demokratie kann ich meine Meinung äußern.",
+      "italian": "In una democrazia posso esprimere la mia opinione.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d32",
+      "type": "espressione",
+      "german": "Ich schätze die Demokratie, weil sie mir ermöglicht, meine Meinung frei zu äußern.",
+      "italian": "Apprezzo la democrazia perché mi permette di esprimere liberamente la mia opinione.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d33",
+      "type": "espressione",
+      "german": "Ich bin mir nicht sicher, welche Partei ich wählen soll.",
+      "italian": "Non so per quale partito votare.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d34",
+      "type": "espressione",
+      "german": "Ich informiere mich über Politik.",
+      "italian": "Mi informo sulla politica.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d35",
+      "type": "espressione",
+      "german": "Ich interessiere mich für Politik.",
+      "italian": "Mi interessa la politica.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d36",
+      "type": "espressione",
+      "german": "Die Partei setzt sich für junge Menschen ein.",
+      "italian": "Il partito sostiene i giovani.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d37",
+      "type": "espressione",
+      "german": "Es ist wichtig, sich vor der Wahl über die Kandidaten zu informieren.",
+      "italian": "È importante informarsi sui candidati prima delle elezioni.",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d38",
+      "type": "verbo",
+      "german": "sich informieren über",
+      "reggenza": "+ Akkusativ",
+      "praesens": "informiert sich über",
+      "praeteritum": "informierte sich über",
+      "perfekt": "hat sich über ... informiert",
+      "italian": "informarsi su",
+      "topics": [
+        "Politica"
+      ],
+      "esempio": "Ich informiere mich über Politik.",
+      "esempioTraduzione": "Mi informo sulla politica."
+    },
+    {
+      "id": "d39",
+      "type": "verbo",
+      "german": "sich interessieren für",
+      "reggenza": "+ Akkusativ",
+      "praesens": "interessiert sich für",
+      "praeteritum": "interessierte sich für",
+      "perfekt": "hat sich für ... interessiert",
+      "italian": "interessarsi a, essere interessato/a a",
+      "topics": [
+        "Politica"
+      ],
+      "esempio": "Ich interessiere mich für Politik.",
+      "esempioTraduzione": "Mi interessa la politica."
+    },
+    {
+      "id": "d40",
+      "type": "verbo",
+      "german": "sich einsetzen für",
+      "reggenza": "+ Akkusativ",
+      "praesens": "setzt sich für ... ein",
+      "praeteritum": "setzte sich für ... ein",
+      "perfekt": "hat sich für ... eingesetzt",
+      "italian": "sostenere, adoperarsi per, essere a favore di",
+      "topics": [
+        "Politica"
+      ],
+      "esempio": "Die Partei setzt sich für junge Menschen ein.",
+      "esempioTraduzione": "Il partito sostiene i giovani."
+    },
+    {
+      "id": "d41",
+      "type": "verbo",
+      "german": "wählen",
+      "praesens": "wählt",
+      "praeteritum": "wählte",
+      "perfekt": "hat gewählt",
+      "italian": "votare; scegliere",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d42",
+      "type": "verbo",
+      "german": "mitbestimmen",
+      "reggenza": "verbo separabile",
+      "praesens": "bestimmt mit",
+      "praeteritum": "bestimmte mit",
+      "perfekt": "hat mitbestimmt",
+      "italian": "avere voce in capitolo, co-decidere",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d43",
+      "type": "verbo",
+      "german": "ermöglichen",
+      "praesens": "ermöglicht",
+      "praeteritum": "ermöglichte",
+      "perfekt": "hat ermöglicht",
+      "italian": "rendere possibile, consentire",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d44",
+      "type": "verbo",
+      "german": "äußern / sich äußern",
+      "praesens": "äußert (sich)",
+      "praeteritum": "äußerte (sich)",
+      "perfekt": "hat (sich) geäußert",
+      "italian": "esprimere; esprimersi",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d45",
+      "type": "verbo",
+      "german": "schätzen",
+      "praesens": "schätzt",
+      "praeteritum": "schätzte",
+      "perfekt": "hat geschätzt",
+      "italian": "apprezzare; stimare",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d46",
+      "type": "verbo",
+      "german": "teilnehmen an",
+      "reggenza": "verbo separabile, + Dativ",
+      "praesens": "nimmt teil an",
+      "praeteritum": "nahm teil an",
+      "perfekt": "hat teilgenommen an",
+      "italian": "partecipare a",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d47",
+      "type": "sostantivo",
+      "german": "Meinung",
+      "articolo": "die",
+      "plurale": "die Meinungen",
+      "italian": "l'opinione",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d48",
+      "type": "sostantivo",
+      "german": "Kandidat",
+      "articolo": "der",
+      "plurale": "die Kandidaten",
+      "italian": "il candidato",
+      "topics": [
+        "Politica"
+      ],
+      "note": "sostantivo debole: prende -en in tutti i casi tranne il nominativo singolare"
+    },
+    {
+      "id": "d49",
+      "type": "sostantivo",
+      "german": "Stimme",
+      "articolo": "die",
+      "plurale": "die Stimmen",
+      "italian": "la voce; il voto",
+      "topics": [
+        "Politica"
+      ],
+      "note": "'die Stimme abgeben' = esprimere il proprio voto"
+    },
+    {
+      "id": "d50",
+      "type": "verbo",
+      "german": "abgeben",
+      "reggenza": "verbo separabile, + Akkusativ",
+      "praesens": "gibt ab",
+      "praeteritum": "gab ab",
+      "perfekt": "hat abgegeben",
+      "italian": "dare, consegnare; esprimere (il voto)",
+      "topics": [
+        "Politica"
+      ]
+    },
+    {
+      "id": "d51",
+      "type": "espressione",
+      "german": "In der EU kann man in viele Länder ohne Visum reisen.",
+      "italian": "Nell'UE è possibile viaggiare in molti Paesi senza visto.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d52",
+      "type": "espressione",
+      "german": "Die vielen Regeln der EU können viel Bürokratie verursachen.",
+      "italian": "Le numerose regole dell'UE possono causare molta burocrazia.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d53",
+      "type": "espressione",
+      "german": "Die Entscheidungen der EU können zu Spannungen führen.",
+      "italian": "Le decisioni dell'UE possono portare a tensioni.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d54",
+      "type": "espressione",
+      "german": "Manchmal führt die EU zu Spannungen, wenn nationale Entscheidungen eingeschränkt werden.",
+      "italian": "A volte l'UE genera tensioni quando vengono limitate le decisioni nazionali.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d55",
+      "type": "sostantivo",
+      "german": "Visum",
+      "articolo": "das",
+      "plurale": "die Visa / die Visen",
+      "italian": "il visto",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d56",
+      "type": "sostantivo",
+      "german": "Regel",
+      "articolo": "die",
+      "plurale": "die Regeln",
+      "italian": "la regola",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d57",
+      "type": "sostantivo",
+      "german": "Bürokratie",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la burocrazia",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d58",
+      "type": "sostantivo",
+      "german": "Entscheidung",
+      "articolo": "die",
+      "plurale": "die Entscheidungen",
+      "italian": "la decisione",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d59",
+      "type": "sostantivo",
+      "german": "Spannung",
+      "articolo": "die",
+      "plurale": "die Spannungen",
+      "italian": "la tensione",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d60",
+      "type": "verbo",
+      "german": "führen zu",
+      "reggenza": "+ Dativ",
+      "praesens": "führt zu",
+      "praeteritum": "führte zu",
+      "perfekt": "hat geführt zu",
+      "italian": "portare a, condurre a",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d61",
+      "type": "verbo",
+      "german": "einschränken",
+      "reggenza": "verbo separabile, + Akkusativ",
+      "praesens": "schränkt ein",
+      "praeteritum": "schränkte ein",
+      "perfekt": "hat eingeschränkt",
+      "italian": "limitare",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d62",
+      "type": "aggettivo",
+      "german": "national",
+      "italian": "nazionale",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d63",
+      "type": "avverbio",
+      "german": "manchmal",
+      "italian": "a volte, talvolta",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d64",
+      "type": "sostantivo",
+      "german": "Mitgliedstaat",
+      "articolo": "der",
+      "plurale": "die Mitgliedstaaten",
+      "italian": "lo stato membro",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d65",
+      "type": "sostantivo",
+      "german": "Wirtschaft",
+      "articolo": "die",
+      "plurale": "— per lo più Sg.",
+      "italian": "l'economia",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d66",
+      "type": "sostantivo",
+      "german": "Forschungsteam",
+      "articolo": "das",
+      "plurale": "die Forschungsteams",
+      "italian": "il gruppo di ricerca",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d67",
+      "type": "sostantivo",
+      "german": "Technologie",
+      "articolo": "die",
+      "plurale": "die Technologien",
+      "italian": "la tecnologia",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d68",
+      "type": "sostantivo",
+      "german": "Unternehmen",
+      "articolo": "das",
+      "plurale": "die Unternehmen",
+      "italian": "l'azienda, l'impresa",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d69",
+      "type": "sostantivo",
+      "german": "Fabrik",
+      "articolo": "die",
+      "plurale": "die Fabriken",
+      "italian": "la fabbrica",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d70",
+      "type": "verbo",
+      "german": "fördern",
+      "praesens": "fördert",
+      "praeteritum": "förderte",
+      "perfekt": "hat gefördert",
+      "italian": "promuovere, sostenere",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d71",
+      "type": "verbo",
+      "german": "einführen",
+      "reggenza": "verbo separabile, + Akkusativ",
+      "praesens": "führt ein",
+      "praeteritum": "führte ein",
+      "perfekt": "hat eingeführt",
+      "italian": "introdurre",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d72",
+      "type": "verbo",
+      "german": "sichern",
+      "praesens": "sichert",
+      "praeteritum": "sicherte",
+      "perfekt": "hat gesichert",
+      "italian": "garantire, assicurare",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d73",
+      "type": "sostantivo",
+      "german": "Frieden",
+      "articolo": "der",
+      "plurale": "— per lo più Sg.",
+      "italian": "la pace",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d74",
+      "type": "verbo",
+      "german": "festlegen",
+      "reggenza": "verbo separabile, + Akkusativ",
+      "praesens": "legt fest",
+      "praeteritum": "legte fest",
+      "perfekt": "hat festgelegt",
+      "italian": "stabilire, fissare",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d75",
+      "type": "verbo",
+      "german": "entwickeln",
+      "praesens": "entwickelt",
+      "praeteritum": "entwickelte",
+      "perfekt": "hat entwickelt",
+      "italian": "sviluppare",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d76",
+      "type": "verbo",
+      "german": "bauen",
+      "praesens": "baut",
+      "praeteritum": "baute",
+      "perfekt": "hat gebaut",
+      "italian": "costruire",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d77",
+      "type": "espressione",
+      "german": "werden + Partizip II = voce passiva",
+      "italian": "es. Die Wirtschaft wird gefördert. = L'economia viene promossa.",
+      "topics": [
+        "Unione Europea"
+      ],
+      "note": "la voce passiva mette in primo piano l'azione; per indicare chi la compie si usa 'von' + Dativ"
+    },
+    {
+      "id": "d78",
+      "type": "aggettivo",
+      "german": "leicht",
+      "italian": "facile; leggero/a",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d79",
+      "type": "aggettivo",
+      "german": "schwer",
+      "italian": "difficile; pesante",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d80",
+      "type": "aggettivo",
+      "german": "möglich",
+      "italian": "possibile",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d81",
+      "type": "aggettivo",
+      "german": "unmöglich",
+      "italian": "impossibile",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d82",
+      "type": "espressione",
+      "german": "es leicht/schwer/möglich/unmöglich machen, zu ...",
+      "italian": "rendere facile/difficile/possibile/impossibile fare qualcosa",
+      "topics": [
+        "Unione Europea"
+      ],
+      "note": "la struttura della frase resta la stessa cambiando solo l'aggettivo"
+    },
+    {
+      "id": "d83",
+      "type": "espressione",
+      "german": "Die EU ist gut, weil sie die Wirtschaft fördert und es leicht macht, in Europa zu reisen und zu arbeiten.",
+      "italian": "L'UE è vantaggiosa perché promuove l'economia e facilita i viaggi e il lavoro in Europa.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d84",
+      "type": "espressione",
+      "german": "Ein Vorteil ist, dass die EU Staaten unterstützt.",
+      "italian": "Un vantaggio è che l'UE dà supporto ai Paesi.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d85",
+      "type": "espressione",
+      "german": "Ein Nachteil der EU ist für mich die komplexe Bürokratie.",
+      "italian": "Per me, uno svantaggio dell'UE è la complessità della burocrazia.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d86",
+      "type": "sostantivo",
+      "german": "Vorteil",
+      "articolo": "der",
+      "plurale": "die Vorteile",
+      "italian": "il vantaggio",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d87",
+      "type": "sostantivo",
+      "german": "Nachteil",
+      "articolo": "der",
+      "plurale": "die Nachteile",
+      "italian": "lo svantaggio",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d88",
+      "type": "verbo",
+      "german": "unterstützen",
+      "praesens": "unterstützt",
+      "praeteritum": "unterstützte",
+      "perfekt": "hat unterstützt",
+      "italian": "sostenere, supportare",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d89",
+      "type": "aggettivo",
+      "german": "komplex",
+      "italian": "complesso/a",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d90",
+      "type": "sostantivo",
+      "german": "Staat",
+      "articolo": "der",
+      "plurale": "die Staaten",
+      "italian": "lo stato",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d91",
+      "type": "congiunzione",
+      "german": "damit",
+      "italian": "affinché, per fare in modo che, così che",
+      "topics": [
+        "Unione Europea"
+      ],
+      "note": "introduce una proposizione subordinata di scopo con il verbo in fondo; risponde alla domanda 'Wozu?'"
+    },
+    {
+      "id": "d92",
+      "type": "avverbio",
+      "german": "wozu",
+      "italian": "per che cosa?, per quale scopo?",
+      "topics": [
+        "Unione Europea"
+      ],
+      "note": "avverbio interrogativo usato per chiedere lo scopo di un'azione"
+    },
+    {
+      "id": "d93",
+      "type": "sostantivo",
+      "german": "Handel",
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "il commercio",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d94",
+      "type": "verbo",
+      "german": "eng zusammenarbeiten",
+      "reggenza": "verbo separabile",
+      "praesens": "arbeitet eng zusammen",
+      "praeteritum": "arbeitete eng zusammen",
+      "perfekt": "hat eng zusammengearbeitet",
+      "italian": "lavorare a stretto contatto",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d95",
+      "type": "verbo",
+      "german": "öffnen",
+      "praesens": "öffnet",
+      "praeteritum": "öffnete",
+      "perfekt": "hat geöffnet",
+      "italian": "aprire",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d96",
+      "type": "espressione",
+      "german": "Die Staaten arbeiten eng zusammen, damit sie den Frieden in Europa sichern.",
+      "italian": "Gli stati stanno lavorando a stretto contatto per garantire la pace in Europa.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d97",
+      "type": "espressione",
+      "german": "Viele Länder haben den Euro eingeführt, damit der Handel in der EU leichter wird.",
+      "italian": "Molti Paesi hanno adottato l'euro per facilitare il commercio all'interno dell'UE.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d98",
+      "type": "espressione",
+      "german": "Die EU hat die Grenzen geöffnet, damit man ohne Visum reisen kann.",
+      "italian": "L'UE ha aperto i confini per permettere i viaggi senza visto.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d99",
+      "type": "espressione",
+      "german": "Die Europäische Union hat ca. 450 Millionen Einwohner.",
+      "italian": "L'Unione Europea ha circa 450 milioni di abitanti.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d100",
+      "type": "espressione",
+      "german": "Die EU schützt das Klima, z. B. durch Gesetze gegen Plastikmüll.",
+      "italian": "L'UE protegge il clima, ad esempio con le leggi contro i rifiuti di plastica.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d101",
+      "type": "espressione",
+      "german": "In Europa gibt es viele berühmte Hauptstädte: Paris, Berlin, Rom usw.",
+      "italian": "Ci sono molte capitali famose in Europa: Parigi, Berlino, Roma, ecc.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d102",
+      "type": "espressione",
+      "german": "In Brüssel arbeiten viele Übersetzer für Deutsch, Französisch, Spanisch etc.",
+      "italian": "A Bruxelles, molti traduttori lavorano con il tedesco, il francese, lo spagnolo, ecc.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d103",
+      "type": "espressione",
+      "german": "Der Euro ist die Währung in Frankreich bzw. der gesamten Eurozone.",
+      "italian": "L'euro è la valuta della Francia, o meglio dell'intera eurozona.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d104",
+      "type": "espressione",
+      "german": "Die EU fördert u. a. die Erforschung von Elektroautos.",
+      "italian": "L'UE promuove, tra le altre cose, la ricerca sulle auto elettriche.",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d105",
+      "type": "sostantivo",
+      "german": "Einwohner",
+      "articolo": "der",
+      "plurale": "die Einwohner",
+      "femminile": "die Einwohnerin",
+      "femminilePlurale": "die Einwohnerinnen",
+      "italian": "l'abitante",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d106",
+      "type": "sostantivo",
+      "german": "Klima",
+      "articolo": "das",
+      "plurale": "die Klimata / die Klimas",
+      "italian": "il clima",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d107",
+      "type": "sostantivo",
+      "german": "Gesetz",
+      "articolo": "das",
+      "plurale": "die Gesetze",
+      "italian": "la legge",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d108",
+      "type": "sostantivo",
+      "german": "Plastikmüll",
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "i rifiuti di plastica",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d109",
+      "type": "sostantivo",
+      "german": "Hauptstadt",
+      "articolo": "die",
+      "plurale": "die Hauptstädte",
+      "italian": "la capitale",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d110",
+      "type": "sostantivo",
+      "german": "Übersetzer",
+      "articolo": "der",
+      "plurale": "die Übersetzer",
+      "femminile": "die Übersetzerin",
+      "femminilePlurale": "die Übersetzerinnen",
+      "italian": "il traduttore, la traduttrice",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d111",
+      "type": "sostantivo",
+      "german": "Währung",
+      "articolo": "die",
+      "plurale": "die Währungen",
+      "italian": "la valuta",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d112",
+      "type": "sostantivo",
+      "german": "Eurozone",
+      "articolo": "die",
+      "plurale": "— per lo più Sg.",
+      "italian": "l'eurozona",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d113",
+      "type": "sostantivo",
+      "german": "Erforschung",
+      "articolo": "die",
+      "plurale": "— per lo più Sg.",
+      "italian": "la ricerca (scientifica)",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d114",
+      "type": "sostantivo",
+      "german": "Elektroauto",
+      "articolo": "das",
+      "plurale": "die Elektroautos",
+      "italian": "l'auto elettrica",
+      "topics": [
+        "Unione Europea"
+      ]
+    },
+    {
+      "id": "d115",
+      "type": "espressione",
+      "german": "Ich weiß nicht, ...",
+      "italian": "Non so...",
+      "topics": [
+        "Domande indirette e dubbi"
+      ]
+    },
+    {
+      "id": "d116",
+      "type": "espressione",
+      "german": "Ich verstehe nicht, ...",
+      "italian": "Non capisco...",
+      "topics": [
+        "Domande indirette e dubbi"
+      ]
+    },
+    {
+      "id": "d117",
+      "type": "espressione",
+      "german": "Ich möchte wissen, ...",
+      "italian": "Mi piacerebbe sapere...",
+      "topics": [
+        "Domande indirette e dubbi"
+      ]
+    },
+    {
+      "id": "d118",
+      "type": "espressione",
+      "german": "Ich frage mich, ...",
+      "italian": "Mi chiedo...",
+      "topics": [
+        "Domande indirette e dubbi"
+      ]
+    },
+    {
+      "id": "d119",
+      "type": "verbo",
+      "german": "sich fragen",
+      "reggenza": "verbo riflessivo",
+      "praesens": "fragt sich",
+      "praeteritum": "fragte sich",
+      "perfekt": "hat sich gefragt",
+      "italian": "chiedersi",
+      "topics": [
+        "Domande indirette e dubbi"
+      ],
+      "esempio": "Ich frage mich, ...",
+      "esempioTraduzione": "Mi chiedo..."
+    },
+    {
+      "id": "f1",
+      "type": "sostantivo",
+      "german": "Tradition",
+      "articolo": "die",
+      "plurale": "die Traditionen",
+      "italian": "la tradizione",
+      "topics": [
+        "Cultura e tradizioni"
+      ]
+    },
+    {
+      "id": "f2",
+      "type": "sostantivo",
+      "german": "Kulturerbe",
+      "articolo": "das",
+      "plurale": "die Kulturerben",
+      "italian": "l'eredità culturale, il patrimonio culturale",
+      "topics": [
+        "Cultura e tradizioni"
+      ]
+    },
+    {
+      "id": "f3",
+      "type": "sostantivo",
+      "german": "Vielfalt",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la diversità",
+      "topics": [
+        "Cultura e tradizioni"
+      ]
+    },
+    {
+      "id": "f4",
+      "type": "sostantivo",
+      "german": "Multikulturalismus",
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "il multiculturalismo",
+      "topics": [
+        "Cultura e tradizioni"
+      ]
+    },
+    {
+      "id": "f5",
+      "type": "espressione",
+      "german": "die typische Küche",
+      "italian": "la cucina tipica",
+      "topics": [
+        "Cultura e tradizioni"
+      ]
+    },
+    {
+      "id": "f6",
+      "type": "sostantivo",
+      "german": "Küche",
+      "articolo": "die",
+      "plurale": "die Küchen",
+      "italian": "la cucina",
+      "topics": [
+        "Cultura e tradizioni"
+      ],
+      "esempio": "die typische Küche",
+      "esempioTraduzione": "la cucina tipica"
+    },
+    {
+      "id": "f7",
+      "type": "aggettivo",
+      "german": "typisch",
+      "italian": "tipico/a",
+      "topics": [
+        "Cultura e tradizioni"
+      ],
+      "esempio": "die typische Küche",
+      "esempioTraduzione": "la cucina tipica"
+    },
+    {
+      "id": "f8",
+      "type": "sostantivo",
+      "german": "Stereotyp",
+      "articolo": "das",
+      "plurale": "die Stereotype / die Stereotypen",
+      "italian": "lo stereotipo",
+      "topics": [
+        "Cultura e tradizioni"
+      ]
+    },
+    {
+      "id": "f9",
+      "type": "sostantivo",
+      "german": "Einfluss",
+      "articolo": "der",
+      "plurale": "die Einflüsse",
+      "italian": "l'influenza",
+      "topics": [
+        "Cultura e tradizioni"
+      ]
+    },
+    {
+      "id": "f10",
+      "type": "sostantivo",
+      "german": "Kilogramm",
+      "articolo": "das",
+      "plurale": "die Kilogramm(e)",
+      "italian": "il chilogrammo",
+      "topics": [
+        "Unità di misura"
+      ],
+      "note": "abbreviazione: kg"
+    },
+    {
+      "id": "f11",
+      "type": "sostantivo",
+      "german": "Gramm",
+      "articolo": "das",
+      "plurale": "die Gramm(e)",
+      "italian": "il grammo",
+      "topics": [
+        "Unità di misura"
+      ],
+      "note": "abbreviazione: g"
+    },
+    {
+      "id": "f12",
+      "type": "sostantivo",
+      "german": "Liter",
+      "articolo": "der",
+      "plurale": "die Liter",
+      "italian": "il litro",
+      "topics": [
+        "Unità di misura"
+      ],
+      "note": "abbreviazione: l"
+    },
+    {
+      "id": "f13",
+      "type": "sostantivo",
+      "german": "Milliliter",
+      "articolo": "der",
+      "plurale": "die Milliliter",
+      "italian": "il millilitro",
+      "topics": [
+        "Unità di misura"
+      ],
+      "note": "abbreviazione: ml"
+    },
+    {
+      "id": "f14",
+      "type": "sostantivo",
+      "german": "Zentiliter",
+      "articolo": "der",
+      "plurale": "die Zentiliter",
+      "italian": "il centilitro",
+      "topics": [
+        "Unità di misura"
+      ],
+      "note": "abbreviazione: cl"
+    },
+    {
+      "id": "f15",
+      "type": "sostantivo",
+      "german": "Tonne",
+      "articolo": "die",
+      "plurale": "die Tonnen",
+      "italian": "la tonnellata",
+      "topics": [
+        "Unità di misura"
+      ],
+      "note": "abbreviazione: t"
+    },
+    {
+      "id": "f16",
+      "type": "congiunzione",
+      "german": "als",
+      "italian": "quando",
+      "topics": [
+        "Congiunzioni subordinanti"
+      ],
+      "note": "usato per un'azione unica e conclusa nel passato (Präteritum/Perfekt); non va confuso con 'wenn'"
+    },
+    {
+      "id": "f17",
+      "type": "congiunzione",
+      "german": "seit",
+      "italian": "da, da quando",
+      "topics": [
+        "Congiunzioni subordinanti"
+      ],
+      "note": "introduce un'azione iniziata nel passato e ancora in corso"
+    },
+    {
+      "id": "f18",
+      "type": "congiunzione",
+      "german": "während",
+      "italian": "mentre",
+      "topics": [
+        "Congiunzioni subordinanti"
+      ],
+      "note": "come congiunzione subordinante significa 'mentre'; attenzione: 'während' esiste anche come preposizione + Genitiv col significato di 'durante'"
+    },
+    {
+      "id": "f19",
+      "type": "congiunzione",
+      "german": "falls",
+      "italian": "se, in caso (che)",
+      "topics": [
+        "Congiunzioni subordinanti"
+      ]
+    },
+    {
+      "id": "f20",
+      "type": "congiunzione",
+      "german": "obwohl",
+      "italian": "anche se, benché",
+      "topics": [
+        "Congiunzioni subordinanti"
+      ]
+    }
+  ]
+}
