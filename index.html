@@ -67,6 +67,75 @@ html[data-theme="dark"] {
   --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 26px -18px rgba(0,0,0,.9);
 }
 
+/* --- Pergamena: carta calda, inchiostro seppia, oro. Per leggere di sera. --- */
+html[data-theme="pergamena"] {
+  --bg: #EFE7D5;
+  --surface: #FAF5E9;
+  --surface-2: #F2EADA;
+  --ink: #2A2115;
+  --ink-2: #6A5B45;
+  --ink-3: #94856D;
+  --line: #DCCDAF;
+  --line-strong: #C4B08B;
+  --der: #1F5E9E;
+  --die: #A82F52;
+  --das: #3E6F33;
+  --neutral: #6A5B45;
+  --flag: #A8761A;
+  --flag-bg: #F3E4C1;
+  --ok: #3E6F33;
+  --ok-bg: #E2EBD5;
+  --err: #A82F52;
+  --err-bg: #F5DCE1;
+  --shadow: 0 1px 2px rgba(74,58,32,.10), 0 8px 22px -16px rgba(74,58,32,.7);
+}
+
+/* --- Notte blu: l'ora blu di Berlino. Scuro ma non nero. --- */
+html[data-theme="notte"] {
+  --bg: #0A1526;
+  --surface: #12223A;
+  --surface-2: #1B2F4D;
+  --ink: #E7EEFA;
+  --ink-2: #9BB0D0;
+  --ink-3: #6F87AB;
+  --line: #22385A;
+  --line-strong: #34537D;
+  --der: #79B4FF;
+  --die: #FF8FB8;
+  --das: #4FD3A6;
+  --neutral: #9BB0D0;
+  --flag: #F2C75C;
+  --flag-bg: #3B3213;
+  --ok: #4FD3A6;
+  --ok-bg: #10382C;
+  --err: #FF8FB8;
+  --err-bg: #3C1B2A;
+  --shadow: 0 1px 2px rgba(0,0,0,.5), 0 12px 28px -18px rgba(0,0,0,1);
+}
+
+/* --- Menta: chiaro e freddo, per studiare di giorno senza affaticare. --- */
+html[data-theme="menta"] {
+  --bg: #DDEDE4;
+  --surface: #FFFFFF;
+  --surface-2: #EDF6F1;
+  --ink: #0F2119;
+  --ink-2: #4A6459;
+  --ink-3: #7B9389;
+  --line: #C6DED2;
+  --line-strong: #A5C6B6;
+  --der: #1F53C9;
+  --die: #BC2B62;
+  --das: #0E7A54;
+  --neutral: #4A6459;
+  --flag: #B07700;
+  --flag-bg: #F7E7C4;
+  --ok: #0E7A54;
+  --ok-bg: #D3EDE0;
+  --err: #BC2B62;
+  --err-bg: #FADCE5;
+  --shadow: 0 1px 2px rgba(15,33,25,.07), 0 8px 24px -16px rgba(15,33,25,.45);
+}
+
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { margin: 0; padding: 0; height: 100%; }
 body {
@@ -435,6 +504,22 @@ button { cursor: pointer; }
   font-size: 13px; font-weight: 600; color: var(--ink-2);
 }
 .pick.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.themegrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.themeopt {
+  border: 1px solid var(--line); background: var(--surface);
+  border-radius: var(--r); padding: 10px 6px 8px;
+  display: flex; flex-direction: column; align-items: center; gap: 7px;
+  font-size: 12px; font-weight: 600; color: var(--ink-2);
+}
+.themeopt.on { border-color: var(--ink); color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.themeopt .sw {
+  width: 34px; height: 34px; border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  display: flex; align-items: flex-end; justify-content: flex-end;
+  overflow: hidden;
+}
+.themeopt .sw i { width: 15px; height: 15px; border-radius: 999px 0 0 0; display: block; }
+
 .sheet-actions { display: flex; gap: 10px; margin-top: 18px; }
 .sheet-actions .btn { flex: 1; }
 .dangerzone { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--line); }
@@ -713,10 +798,30 @@ function speak(text) {
 var darkQuery = null;
 try { darkQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null; } catch (e) { darkQuery = null; }
 
+var THEMES = [
+  { id: "auto", label: "Come il telefono", swatch: ["#EBEDEF", "#0F1318"] },
+  { id: "light", label: "Chiaro", swatch: ["#EBEDEF", "#2A5BD7"] },
+  { id: "dark", label: "Scuro", swatch: ["#0F1318", "#7CA4FF"] },
+  { id: "pergamena", label: "Pergamena", swatch: ["#EFE7D5", "#A8761A"] },
+  { id: "notte", label: "Notte blu", swatch: ["#0A1526", "#79B4FF"] },
+  { id: "menta", label: "Menta", swatch: ["#DDEDE4", "#0E7A54"] }
+];
+
 function applyTheme() {
   var p = store.prefs.theme;
-  var dark = p === "dark" || (p === "auto" && !!(darkQuery && darkQuery.matches));
-  document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+  var resolved = p;
+  if (!THEMES.some(function (t) { return t.id === p; })) resolved = "auto";
+  if (resolved === "auto") resolved = darkQuery && darkQuery.matches ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", resolved);
+  // la barra di sistema del telefono deve seguire lo sfondo scelto
+  var bg = getComputedStyle(document.documentElement).getPropertyValue("--bg").trim();
+  Array.prototype.forEach.call(document.querySelectorAll('meta[name="theme-color"]'), function (m) { m.remove(); });
+  if (bg) {
+    var m = document.createElement("meta");
+    m.name = "theme-color";
+    m.content = bg;
+    document.head.appendChild(m);
+  }
 }
 if (darkQuery) {
   // addEventListener sui MediaQueryList manca su iOS < 14
@@ -1044,40 +1149,86 @@ var QUIZ_MODES = [
 ];
 
 function viewQuiz() {
-  var h = topbar("Esercizi sul lessico che stai studiando");
+  if (!qz) { qz = newQuiz(QUIZ_MODES[0].id, null); newQuestion(); }
+  var h = topbar("Esercizi sul lessico");
   h += '<div class="chiprow" style="margin-top:12px" role="group" aria-label="Tipo di esercizio">' +
     QUIZ_MODES.map(function (m) {
-      return '<button class="chip ' + (qz && qz.mode === m.id ? "on" : "") + '" data-act="quizmode" data-v="' + m.id + '">' + m.label + "</button>";
+      return '<button class="chip ' + (qz.mode === m.id ? "on" : "") + '" data-act="quizmode" data-v="' + m.id + '">' + m.label + "</button>";
     }).join("") + "</div>";
 
-  if (!qz) {
-    h += '<div class="empty"><strong>Scegli un esercizio</strong>' +
-      "<p>Le domande usano le parole filtrate nel Lessico" +
-      (state.topic !== "*" ? " (argomento: " + esc(state.topic) + ")" : "") +
-      ". Le parole sbagliate finiscono nel ripasso di oggi.</p></div>";
-    return h;
+  var counts = {};
+  allItems().forEach(function (i) { (i.topics || []).forEach(function (t) { counts[t] = (counts[t] || 0) + 1; }); });
+  var flagN = Object.keys(store.flags).filter(function (k) { return store.flags[k]; }).length;
+
+  h += '<div class="chiprow" role="group" aria-label="Argomento su cui esercitarsi">';
+  h += '<button class="chip ' + (qz.topic === "*" && !qz.onlyFlag ? "on" : "") + '" data-act="quiztopic" data-v="*">Tutto il lessico <span class="n">' + allItems().length + "</span></button>";
+  if (flagN) {
+    h += '<button class="chip flagchip ' + (qz.onlyFlag ? "on" : "") + '" data-act="quizflag">' + icons.flag +
+      ' Da studiare <span class="n">' + flagN + "</span></button>";
   }
+  h += allTopics().map(function (t) {
+    if (!counts[t]) return "";
+    return '<button class="chip ' + (qz.topic === t ? "on" : "") + '" data-act="quiztopic" data-v="' + esc(t) + '">' +
+      esc(t) + ' <span class="n">' + counts[t] + "</span></button>";
+  }).join("");
+  h += "</div>";
+
+  var poolN = poolFor(qz.mode).length;
+  h += '<div class="resultline"><span>' + plural(poolN, "parola in gioco", "parole in gioco") +
+    (qz.topic !== "*" ? " · " + esc(qz.topic) : "") + "</span>" +
+    '<button class="linkbtn" data-act="resetquiz">Ricomincia</button></div>';
+
   if (!qz.q) {
-    return h + '<div class="empty"><strong>Servono più parole</strong><p>' + esc(qz.reason || "Allarga i filtri nel Lessico e riprova.") + "</p></div>";
+    return h + '<div class="empty"><strong>Servono più parole</strong><p>' + esc(qz.reason || "Scegli un argomento con più parole.") + "</p></div>";
   }
   h += quizCardHtml();
   return h;
 }
 
+function newQuiz(mode, prev) {
+  return {
+    mode: mode,
+    topic: prev ? prev.topic : "*",
+    onlyFlag: prev ? prev.onlyFlag : false,
+    right: 0, total: 0, streak: 0,
+    picked: null, typed: "", q: null, recent: []
+  };
+}
+
 function poolFor(mode) {
-  var base = filtered();
-  if (base.length < 4) base = allItems();
+  // Gli esercizi hanno filtri propri: la ricerca scritta nel Lessico non c'entra.
+  var base = allItems();
+  if (qz.topic !== "*") base = base.filter(function (i) { return (i.topics || []).indexOf(qz.topic) !== -1; });
+  if (qz.onlyFlag) base = base.filter(function (i) { return store.flags[i.id]; });
   if (mode === "articolo") base = base.filter(function (i) { return i.type === "sostantivo" && i.articolo; });
   return base;
+}
+
+// Pesco senza ripetere: tengo memoria delle ultime uscite e do la precedenza
+// alle parole che so meno.
+function drawFrom(pool) {
+  var recentMax = Math.min(pool.length - 1, 15);
+  var fresh = pool.filter(function (i) { return qz.recent.indexOf(i.id) === -1; });
+  if (fresh.length < 1) { qz.recent = qz.recent.slice(-Math.max(0, recentMax - 5)); fresh = pool; }
+  var bag = [];
+  fresh.forEach(function (i) {
+    var s = srsOf(i.id);
+    var weight = 1 + Math.max(0, 3 - (s.box || 0)) + Math.min(3, s.wrong || 0);
+    for (var n = 0; n < weight; n++) bag.push(i);
+  });
+  var pick = bag[Math.floor(Math.random() * bag.length)];
+  qz.recent.push(pick.id);
+  if (qz.recent.length > recentMax) qz.recent.shift();
+  return pick;
 }
 
 function newQuestion() {
   var mode = qz.mode;
   var pool = poolFor(mode);
-  if (mode === "articolo" && pool.length < 1) { qz.q = null; qz.reason = "Con questi filtri non ci sono sostantivi."; return; }
-  if (mode !== "articolo" && pool.length < 4) { qz.q = null; qz.reason = "Servono almeno 4 parole."; return; }
+  if (mode === "articolo" && pool.length < 1) { qz.q = null; qz.reason = "In questo argomento non ci sono sostantivi con articolo."; return; }
+  if (mode !== "articolo" && pool.length < 4) { qz.q = null; qz.reason = "Servono almeno 4 parole: scegli un argomento più ampio."; return; }
 
-  var correct = pool[Math.floor(Math.random() * pool.length)];
+  var correct = drawFrom(pool);
   qz.picked = null;
   qz.typed = "";
   qz.reason = null;
@@ -1164,7 +1315,7 @@ function quizCardHtml() {
 
   h += '<div class="scorerow"><span>' + qz.right + " esatte su " + qz.total + "</span>" +
     (qz.streak > 1 ? '<span class="streak">' + qz.streak + " di fila</span>" : "<span></span>") +
-    '<button class="linkbtn" data-act="resetquiz">Ricomincia</button></div>';
+    "</div>";
   return h;
 }
 
@@ -1333,9 +1484,11 @@ function readForm() {
 function openSettings() {
   var p = store.prefs;
   var h = '<div class="sheet-h"><h2>Impostazioni</h2><button class="iconbtn" data-act="closesheet" aria-label="Chiudi">✕</button></div>';
-  h += '<div class="field"><label>Tema</label><div class="pickrow">' +
-    [["auto", "Come il telefono"], ["light", "Chiaro"], ["dark", "Scuro"]].map(function (t) {
-      return '<button class="pick ' + (p.theme === t[0] ? "on" : "") + '" data-act="settheme" data-v="' + t[0] + '">' + t[1] + "</button>";
+  h += '<div class="field"><label>Tema</label><div class="themegrid">' +
+    THEMES.map(function (t) {
+      return '<button class="themeopt ' + (p.theme === t.id ? "on" : "") + '" data-act="settheme" data-v="' + t.id + '">' +
+        '<span class="sw" style="background:' + t.swatch[0] + '"><i style="background:' + t.swatch[1] + '"></i></span>' +
+        "<span>" + t.label + "</span></button>";
     }).join("") + "</div></div>";
   h += '<div class="field"><label>Pronuncia tedesca</label><div class="pickrow">' +
     '<button class="pick ' + (p.audio ? "on" : "") + '" data-act="setaudio" data-v="1">Attiva</button>' +
@@ -1470,7 +1623,17 @@ var ACTIONS = {
   endsession: function () { rv = null; render(); },
 
   quizmode: function (v) {
-    qz = { mode: v, right: 0, total: 0, streak: 0, picked: null, typed: "", q: null };
+    qz = newQuiz(v, qz);
+    newQuestion();
+    render();
+  },
+  quiztopic: function (v) {
+    qz.topic = v; qz.onlyFlag = false; qz.recent = [];
+    newQuestion();
+    render();
+  },
+  quizflag: function () {
+    qz.onlyFlag = !qz.onlyFlag; qz.topic = "*"; qz.recent = [];
     newQuestion();
     render();
   },
@@ -1490,7 +1653,7 @@ var ACTIONS = {
     i.setSelectionRange(p + 1, p + 1);
   },
   nextq: function () { newQuestion(); render(); },
-  resetquiz: function () { qz.right = 0; qz.total = 0; qz.streak = 0; newQuestion(); render(); },
+  resetquiz: function () { qz.right = 0; qz.total = 0; qz.streak = 0; qz.recent = []; newQuestion(); render(); },
 
   checkupdate: function () { loadVocab(true); },
   export: function () {
