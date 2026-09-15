@@ -1,895 +1,1686 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-theme="light">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5" />
 <title>Der Wortschatzkasten</title>
-<meta name="theme-color" content="#2F5D62" />
-<meta name="description" content="Lessico di tedesco per la certificazione scolastica" />
+<meta name="theme-color" content="#12161B" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EBEDEF" media="(prefers-color-scheme: light)" />
+<meta name="description" content="Il lessico di tedesco, sempre in tasca: schede, ripasso a intervalli ed esercizi." />
 <link rel="manifest" href="manifest.json" />
 <link rel="icon" href="icon-192.png" />
 <link rel="apple-touch-icon" href="icon-192.png" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Wortschatz" />
-
-<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone@7/babel.min.js" crossorigin></script>
-
 <style>
-  html, body { margin: 0; padding: 0; height: 100%; background: #EDE6D6; }
-  #root { min-height: 100%; }
-  * { box-sizing: border-box; }
-  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+/* ---------------------------------------------------------------
+   Der Wortschatzkasten — foglio di stile unico, nessuna dipendenza.
+   Il colore porta un'informazione sola: il genere del sostantivo.
+   der = blu · die = magenta · das = verde
+----------------------------------------------------------------*/
+:root {
+  --bg: #EBEDEF;
+  --surface: #FFFFFF;
+  --surface-2: #F2F4F6;
+  --ink: #12161B;
+  --ink-2: #5C6771;
+  --ink-3: #8A959F;
+  --line: #D8DDE2;
+  --line-strong: #BCC5CC;
+  --der: #2A5BD7;
+  --die: #C02F60;
+  --das: #14795A;
+  --neutral: #4A5560;
+  --flag: #C98A00;
+  --flag-bg: #FBEFC9;
+  --ok: #14795A;
+  --ok-bg: #DDF0E8;
+  --err: #C02F60;
+  --err-bg: #FBE3EA;
+  --shadow: 0 1px 2px rgba(18,22,27,.06), 0 8px 24px -16px rgba(18,22,27,.4);
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --r: 10px;
+  --tap: 44px;
+}
+html[data-theme="dark"] {
+  --bg: #0F1318;
+  --surface: #181D24;
+  --surface-2: #212932;
+  --ink: #E9EDF1;
+  --ink-2: #9AA6B2;
+  --ink-3: #74808C;
+  --line: #2B343E;
+  --line-strong: #3B4653;
+  --der: #7CA4FF;
+  --die: #FF87AC;
+  --das: #4FC79C;
+  --neutral: #A9B4BF;
+  --flag: #EFC14E;
+  --flag-bg: #3A3013;
+  --ok: #4FC79C;
+  --ok-bg: #13332A;
+  --err: #FF87AC;
+  --err-bg: #3A1B26;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 26px -18px rgba(0,0,0,.9);
+}
 
-  .wk-root {
-    --paper: #EDE6D6;
-    --card: #F7F3E8;
-    --ink: #22303C;
-    --ink-soft: #5B5347;
-    --teal: #2F5D62;
-    --gold: #C99A2E;
-    --line: #D9CFB8;
-    font-family: 'IBM Plex Sans', system-ui, sans-serif;
-    background: var(--paper);
-    color: var(--ink);
-    min-height: 100%;
-    padding: 18px 14px 60px;
-  }
-  .wk-head { margin-bottom: 16px; }
-  .wk-head h1 {
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 26px;
-    font-weight: 700;
-    margin: 0 0 2px;
-    color: var(--ink);
-  }
-  .wk-head p { margin: 0; font-size: 13px; color: var(--ink-soft); }
-  .wk-modes {
-    display: flex;
-    gap: 6px;
-    margin-top: 14px;
-    background: #E3DAC3;
-    padding: 4px;
-    border-radius: 10px;
-    width: fit-content;
-  }
-  .wk-mode-btn {
-    border: none;
-    background: transparent;
-    padding: 7px 14px;
-    border-radius: 7px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--ink-soft);
-    cursor: pointer;
-    font-family: inherit;
-  }
-  .wk-mode-btn.active { background: var(--card); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.12); }
-  .wk-addbtn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 12px;
-    background: var(--teal);
-    color: #F7F3E8;
-    border: none;
-    padding: 9px 14px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 13px;
-    cursor: pointer;
-    font-family: inherit;
-  }
-  .wk-search-wrap {
-    margin-top: 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 9px 12px;
-  }
-  .wk-search-icon { color: var(--ink-soft); flex: none; font-size: 14px; }
-  .wk-search-input {
-    flex: 1;
-    border: none;
-    background: transparent;
-    font-family: inherit;
-    font-size: 14px;
-    color: var(--ink);
-    outline: none;
-  }
-  .wk-search-input::placeholder { color: var(--ink-soft); }
-  .wk-search-clear { border: none; background: none; color: var(--ink-soft); cursor: pointer; padding: 2px; flex: none; font-size: 14px; }
-  .wk-filters { margin-top: 18px; }
-  .wk-filter-row {
-    display: flex;
-    gap: 6px;
-    overflow-x: auto;
-    padding-bottom: 6px;
-    -webkit-overflow-scrolling: touch;
-  }
-  .wk-chip {
-    flex: none;
-    border: 1px solid var(--line);
-    background: var(--card);
-    padding: 6px 12px;
-    border-radius: 999px;
-    font-size: 12.5px;
-    font-weight: 600;
-    color: var(--ink-soft);
-    cursor: pointer;
-    white-space: nowrap;
-    font-family: inherit;
-  }
-  .wk-chip.active-topic { background: var(--gold); border-color: var(--gold); color: #2A2110; }
-  .wk-chip.active-type { background: var(--ink); border-color: var(--ink); color: #F7F3E8; }
-  .wk-filter-label { font-size: 11px; color: var(--ink-soft); margin: 10px 0 4px; font-weight: 600; }
-  .wk-grid {
-    margin-top: 14px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 10px;
-  }
-  .wk-groups { display: flex; flex-direction: column; gap: 22px; margin-top: 14px; }
-  .wk-group-title {
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 15px;
-    font-weight: 600;
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 4px;
-    margin-bottom: 10px;
-  }
-  .wk-card {
-    background: var(--card);
-    border-radius: 6px;
-    border: 1px solid var(--line);
-    border-left: 5px solid var(--type-color, var(--teal));
-    padding: 12px 14px;
-    cursor: pointer;
-    position: relative;
-  }
-  .wk-flag-btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    border: none;
-    background: none;
-    padding: 2px;
-    cursor: pointer;
-    color: var(--line);
-    font-size: 15px;
-    line-height: 1;
-  }
-  .wk-flag-btn.flagged { color: var(--gold); }
-  .wk-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
-  .wk-german {
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 17px;
-    font-weight: 600;
-    line-height: 1.3;
-    padding-right: 18px;
-  }
-  .wk-italian { font-size: 13.5px; color: var(--ink-soft); margin-top: 3px; }
-  .wk-typetag {
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--type-color, var(--teal));
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    margin-bottom: 3px;
-  }
-  .wk-details { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); font-size: 13px; display: flex; flex-direction: column; gap: 5px; }
-  .wk-details .lbl { color: var(--ink-soft); font-weight: 600; margin-right: 4px; }
-  .wk-example { font-style: italic; color: var(--ink-soft); font-size: 12.5px; margin-top: 4px; }
-  .wk-topictags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
-  .wk-topictag { font-size: 10.5px; background: #E3DAC3; color: var(--ink-soft); padding: 2px 7px; border-radius: 999px; }
-  .wk-trash { background: none; border: none; color: #A8452F; cursor: pointer; padding: 2px; font-size: 14px; }
-  .wk-confirm { margin-top: 8px; font-size: 12.5px; display: flex; align-items: center; gap: 8px; }
-  .wk-confirm button { border: none; border-radius: 5px; padding: 4px 9px; font-size: 12px; cursor: pointer; font-weight: 600; font-family: inherit; }
-  .wk-empty { padding: 30px 10px; text-align: center; color: var(--ink-soft); font-size: 14px; }
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.45;
+  overscroll-behavior-y: none;
+  -webkit-font-smoothing: antialiased;
+}
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--der); outline-offset: 2px; border-radius: 4px; }
+::selection { background: var(--flag-bg); color: var(--ink); }
 
-  .wk-flash-wrap { margin-top: 20px; display: flex; flex-direction: column; align-items: center; }
-  .wk-flash-topbar { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; width: 100%; max-width: 420px; }
-  .wk-icon-btn { display: flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 7px 12px; cursor: pointer; color: var(--ink-soft); font-size: 12.5px; font-weight: 600; font-family: inherit; }
-  .wk-icon-btn.flagged { color: var(--gold); border-color: var(--gold); }
-  .wk-flash-card {
-    width: 100%;
-    max-width: 420px;
-    min-height: 220px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 26px 22px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,.08);
-  }
-  .wk-flash-front { font-family: 'Source Serif 4', Georgia, serif; font-size: 24px; font-weight: 700; }
-  .wk-flash-sub { margin-top: 8px; font-size: 12.5px; color: var(--ink-soft); }
-  .wk-flash-back-italian { font-size: 19px; font-weight: 600; color: var(--teal); margin-bottom: 10px; }
-  .wk-flash-back-details { font-size: 13px; color: var(--ink-soft); display: flex; flex-direction: column; gap: 4px; }
-  .wk-flash-controls { display: flex; align-items: center; gap: 14px; margin-top: 16px; }
-  .wk-flash-count { font-size: 12.5px; color: var(--ink-soft); }
-  .wk-flip-hint { font-size: 11.5px; color: var(--ink-soft); margin-top: 10px; }
+/* ---------- impalcatura ---------- */
+.app {
+  min-height: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px calc(84px + env(safe-area-inset-bottom));
+}
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--bg);
+  padding: calc(12px + env(safe-area-inset-top)) 0 10px;
+  display: flex; align-items: flex-start; gap: 12px;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s ease;
+}
+.topbar.scrolled { border-bottom-color: var(--line); }
+.brand h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -.03em;
+}
+.brand p { margin: 1px 0 0; font-size: 12.5px; color: var(--ink-2); }
+.topbar-actions { margin-left: auto; display: flex; gap: 6px; }
+.iconbtn {
+  height: 38px; min-width: 38px; padding: 0 12px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 999px; color: var(--ink-2);
+  font-size: 13px; font-weight: 600;
+}
+.iconbtn:active { background: var(--surface-2); }
+.iconbtn.on { color: var(--ink); border-color: var(--line-strong); }
 
-  .wk-quiz-wrap { margin-top: 20px; display: flex; flex-direction: column; align-items: center; }
-  .wk-quiz-score-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-  .wk-quiz-score { font-size: 13px; color: var(--ink-soft); }
-  .wk-quiz-q { width: 100%; max-width: 420px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 22px; text-align: center; }
-  .wk-quiz-german { font-family: 'Source Serif 4', Georgia, serif; font-size: 22px; font-weight: 700; }
-  .wk-quiz-opts { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
-  .wk-quiz-opt { border: 1px solid var(--line); background: #FCFAF3; border-radius: 8px; padding: 10px 12px; font-size: 13.5px; text-align: left; cursor: pointer; font-family: inherit; }
-  .wk-quiz-opt.correct { background: #DCEAD8; border-color: #6E9B65; }
-  .wk-quiz-opt.wrong { background: #F2D9D3; border-color: #A8452F; }
-  .wk-quiz-next { margin-top: 14px; background: var(--teal); color: #F7F3E8; border: none; padding: 9px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; font-family: inherit; }
+/* ---------- barra inferiore ---------- */
+.tabbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  display: flex;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.tab {
+  flex: 1; background: none; border: 0;
+  padding: 9px 2px 8px;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  color: var(--ink-3); font-size: 11px; font-weight: 600;
+  position: relative;
+}
+.tab svg { width: 21px; height: 21px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.tab[aria-selected="true"] { color: var(--ink); }
+.tab .badge {
+  position: absolute; top: 4px; left: 50%; margin-left: 6px;
+  min-width: 17px; height: 17px; padding: 0 4px;
+  background: var(--die); color: #fff;
+  border-radius: 999px; font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
 
-  .wk-modal-bg { position: fixed; inset: 0; background: rgba(34,48,60,.5); display: flex; align-items: flex-end; justify-content: center; z-index: 50; }
-  .wk-modal { background: var(--paper); width: 100%; max-width: 480px; max-height: 92vh; overflow-y: auto; border-radius: 14px 14px 0 0; padding: 18px 18px 24px; }
-  @media (min-width: 640px) { .wk-modal-bg { align-items: center; } .wk-modal { border-radius: 14px; } }
-  .wk-modal h2 { font-family: 'Source Serif 4', Georgia, serif; font-size: 19px; margin: 0 0 14px; }
-  .wk-field { margin-bottom: 12px; }
-  .wk-field label { display: block; font-size: 12px; font-weight: 600; color: var(--ink-soft); margin-bottom: 4px; }
-  .wk-field input, .wk-field select, .wk-field textarea { width: 100%; border: 1px solid var(--line); background: #FCFAF3; border-radius: 7px; padding: 8px 10px; font-size: 14px; font-family: inherit; color: var(--ink); }
-  .wk-field textarea { resize: vertical; min-height: 44px; }
-  .wk-row2 { display: flex; gap: 10px; }
-  .wk-row2 > div { flex: 1; }
-  .wk-type-select { display: flex; flex-wrap: wrap; gap: 6px; }
-  .wk-type-opt { border: 1px solid var(--line); background: #FCFAF3; padding: 6px 11px; border-radius: 999px; font-size: 12.5px; cursor: pointer; font-family: inherit; }
-  .wk-type-opt.sel { color: #fff; }
-  .wk-topic-check { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-  .wk-topic-check label { display: flex; align-items: center; gap: 5px; background: #FCFAF3; border: 1px solid var(--line); padding: 5px 10px; border-radius: 999px; font-size: 12px; font-weight: 500; cursor: pointer; }
-  .wk-add-topic-inline { display: flex; gap: 6px; margin-top: 8px; }
-  .wk-add-topic-inline input { flex: 1; }
-  .wk-add-topic-inline button, .wk-topic-toggle-btn { border: 1px dashed var(--ink-soft); background: transparent; border-radius: 999px; padding: 5px 10px; font-size: 12px; cursor: pointer; font-family: inherit; color: var(--ink-soft); }
-  .wk-modal-actions { display: flex; gap: 10px; margin-top: 18px; }
-  .wk-btn-primary { flex: 1; background: var(--teal); color: #fff; border: none; padding: 11px; border-radius: 8px; font-weight: 700; cursor: pointer; font-family: inherit; font-size: 14px; }
-  .wk-btn-secondary { background: transparent; border: 1px solid var(--line); padding: 11px 16px; border-radius: 8px; cursor: pointer; font-family: inherit; color: var(--ink-soft); font-weight: 600; }
-  .wk-close { position: absolute; top: 14px; right: 14px; background: none; border: none; cursor: pointer; color: var(--ink-soft); font-size: 18px; }
-  .wk-footer-reset { margin-top: 26px; text-align: center; }
-  .wk-footer-reset button { background: none; border: none; font-size: 11.5px; color: var(--ink-soft); text-decoration: underline; cursor: pointer; font-family: inherit; }
-  .wk-status { font-size: 11.5px; color: var(--ink-soft); margin-top: 6px; }
+/* ---------- ricerca e filtri ---------- */
+.searchrow { display: flex; gap: 8px; margin-top: 4px; }
+.search {
+  flex: 1; display: flex; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 0 10px; height: var(--tap);
+}
+.search svg { width: 17px; height: 17px; stroke: var(--ink-3); fill: none; stroke-width: 2; flex: none; }
+.search input { flex: 1; border: 0; background: none; outline: none; font-size: 16px; min-width: 0; }
+.search input::placeholder { color: var(--ink-3); }
+.search button { border: 0; background: none; color: var(--ink-3); padding: 6px; line-height: 1; }
+.chiprow {
+  display: flex; gap: 6px; margin-top: 10px;
+  overflow-x: auto; scrollbar-width: none;
+  padding-bottom: 2px;
+}
+.chiprow::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none; height: 34px; padding: 0 13px;
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 999px; font-size: 13px; font-weight: 600; color: var(--ink-2);
+  white-space: nowrap;
+}
+.chip.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.chip .n { font-weight: 500; opacity: .6; font-variant-numeric: tabular-nums; }
+.chip.flagchip.on { background: var(--flag); border-color: var(--flag); color: #1B1405; }
+.resultline {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 10px; margin: 16px 0 8px;
+  font-size: 12.5px; color: var(--ink-2);
+}
+.linkbtn { background: none; border: 0; color: var(--ink-2); font-size: 12.5px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; padding: 4px 0; }
+
+/* ---------- lista lessico ---------- */
+.list { display: flex; flex-direction: column; gap: 7px; }
+.group-h {
+  margin: 20px 0 8px; padding-bottom: 5px;
+  font-size: 12.5px; font-weight: 700; letter-spacing: .01em;
+  color: var(--ink-2); border-bottom: 1px solid var(--line);
+  display: flex; justify-content: space-between;
+}
+.entry {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--g, var(--neutral));
+  border-radius: var(--r);
+  padding: 11px 12px 11px 13px;
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 10px;
+  align-items: start;
+  text-align: left; width: 100%;
+  font-family: inherit;
+}
+.entry.open { box-shadow: var(--shadow); }
+.entry .lemma {
+  background: none; border: 0; padding: 0; margin: 0;
+  text-align: left; color: inherit; font-family: inherit; cursor: pointer;
+  font-size: 17px; font-weight: 650; letter-spacing: -.015em;
+  line-height: 1.25; word-break: break-word;
+}
+.entry .art { color: var(--g, var(--neutral)); font-weight: 700; }
+.entry .gloss {
+  font-family: var(--font-serif); font-size: 14.5px;
+  color: var(--ink-2); line-height: 1.35; margin-top: 2px;
+}
+.entry .meta { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+.pill {
+  font-size: 11px; font-weight: 600; color: var(--ink-2);
+  background: var(--surface-2); border-radius: 5px; padding: 2px 6px;
+}
+.pill.type { color: var(--g, var(--neutral)); background: color-mix(in srgb, var(--g, var(--neutral)) 11%, transparent); }
+.entry .side { display: flex; flex-direction: column; align-items: center; gap: 2px; grid-row: span 2; }
+.flagbtn {
+  border: 0; background: none; padding: 7px; line-height: 0; border-radius: 8px;
+  color: var(--ink-3);
+}
+.flagbtn svg { width: 17px; height: 17px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+.flagbtn.on { color: var(--flag); }
+.flagbtn.on svg { fill: var(--flag); }
+.mastery {
+  width: 26px; height: 3px; border-radius: 2px;
+  background: var(--line); overflow: hidden;
+}
+.mastery i { display: block; height: 100%; background: var(--das); }
+.detail {
+  grid-column: 1 / -1; margin-top: 10px; padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 14px; display: flex; flex-direction: column; gap: 5px;
+}
+.detail dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; font-size: 13.5px; }
+.detail dt { color: var(--ink-3); font-weight: 600; }
+.detail dd { margin: 0; }
+.detail .note { font-size: 13px; color: var(--ink-2); }
+.detail .example {
+  font-family: var(--font-serif); font-size: 14px;
+  border-left: 2px solid var(--line-strong); padding-left: 10px; margin-top: 2px;
+}
+.detail .example em { display: block; font-style: normal; color: var(--ink-2); font-size: 13px; }
+.detail-actions { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.tinybtn {
+  height: 34px; padding: 0 11px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--surface-2);
+  font-size: 12.5px; font-weight: 600; color: var(--ink-2);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.tinybtn.danger { color: var(--err); border-color: color-mix(in srgb, var(--err) 35%, var(--line)); }
+.tinybtn svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+
+/* ---------- stati vuoti ---------- */
+.empty {
+  text-align: center; padding: 44px 16px; color: var(--ink-2);
+}
+.empty strong { display: block; font-size: 16px; color: var(--ink); margin-bottom: 5px; }
+.empty p { margin: 0 0 14px; font-size: 14px; }
+
+/* ---------- pulsanti principali ---------- */
+.btn {
+  height: 46px; padding: 0 18px; border-radius: var(--r);
+  border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
+  font-size: 15px; font-weight: 650;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+}
+.btn:active { opacity: .85; }
+.btn.ghost { background: var(--surface); color: var(--ink); border-color: var(--line-strong); }
+.btn.block { display: flex; width: 100%; }
+.btn[disabled] { opacity: .45; }
+.fab {
+  position: fixed; right: max(16px, calc(50% - 344px));
+  bottom: calc(72px + env(safe-area-inset-bottom));
+  z-index: 25; height: 50px; padding: 0 18px;
+  border-radius: 999px; border: 0;
+  background: var(--ink); color: var(--bg);
+  font-size: 14.5px; font-weight: 650;
+  display: inline-flex; align-items: center; gap: 7px;
+  box-shadow: 0 6px 20px -6px rgba(18,22,27,.5);
+}
+
+/* ---------- ripasso ---------- */
+.review-head { margin-top: 12px; }
+.dueline { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.dueline .big { font-size: 34px; font-weight: 700; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.dueline .lbl { font-size: 13.5px; color: var(--ink-2); line-height: 1.25; }
+.progressbar { height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; margin: 14px 0 12px; }
+.progressbar i { display: block; height: 100%; background: var(--ink); transition: width .25s ease; }
+.cardstage { perspective: 1200px; margin-top: 4px; }
+.flip { position: relative; transition: transform .38s cubic-bezier(.2,.75,.3,1); transform-style: preserve-3d; }
+.flip.flipped { transform: rotateY(180deg); }
+.face {
+  min-height: 250px; width: 100%;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 14px; box-shadow: var(--shadow);
+  padding: 26px 20px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+}
+.face.back { position: absolute; inset: 0; transform: rotateY(180deg); overflow-y: auto; }
+.face .lemma-xl { font-size: 29px; font-weight: 700; letter-spacing: -.03em; line-height: 1.2; }
+.face .lemma-xl .art { color: var(--g, var(--neutral)); }
+.face .gloss-xl { font-family: var(--font-serif); font-size: 22px; line-height: 1.3; }
+.face .sub { font-size: 13.5px; color: var(--ink-2); }
+.face .forms { font-size: 13.5px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.face .ex { font-family: var(--font-serif); font-size: 14px; color: var(--ink-2); max-width: 34ch; }
+.hint { text-align: center; font-size: 12px; color: var(--ink-3); margin-top: 10px; }
+.grades { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+.grade {
+  height: 52px; border-radius: var(--r); border: 1px solid var(--line);
+  background: var(--surface); font-size: 13.5px; font-weight: 650;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+}
+.grade small { font-weight: 500; font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.grade.g0 { color: var(--err); }
+.grade.g1 { color: var(--flag); }
+.grade.g2 { color: var(--ok); }
+.speak { border: 0; background: none; color: var(--ink-3); padding: 8px; line-height: 0; border-radius: 999px; }
+.speak svg { width: 19px; height: 19px; stroke: currentColor; fill: none; stroke-width: 1.7; }
+.cardtools { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px; }
+.sessiondone { text-align: center; padding: 30px 10px; }
+.sessiondone .big { font-size: 42px; font-weight: 700; letter-spacing: -.03em; }
+.statgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 18px 0; }
+.statbox { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 10px; text-align: center; }
+.statbox b { display: block; font-size: 22px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.statbox span { font-size: 11.5px; color: var(--ink-2); }
+
+/* ---------- quiz ---------- */
+.qcard {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 14px; padding: 22px 18px; box-shadow: var(--shadow);
+  text-align: center; margin-top: 12px;
+}
+.qprompt { font-size: 13px; color: var(--ink-3); margin-bottom: 8px; }
+.qword { font-size: 26px; font-weight: 700; letter-spacing: -.03em; line-height: 1.2; }
+.qword.serif { font-family: var(--font-serif); font-weight: 600; letter-spacing: 0; }
+.qopts { display: flex; flex-direction: column; gap: 8px; margin-top: 18px; }
+.qopt {
+  min-height: var(--tap); padding: 11px 14px; border-radius: var(--r);
+  border: 1px solid var(--line); background: var(--surface-2);
+  font-family: var(--font-serif); font-size: 15px; text-align: left;
+  display: flex; align-items: center; gap: 9px;
+}
+.qopt .k { font-family: var(--font-sans); font-size: 11px; font-weight: 700; color: var(--ink-3); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; flex: none; }
+.qopt.right { background: var(--ok-bg); border-color: var(--ok); color: var(--ink); }
+.qopt.wrongpick { background: var(--err-bg); border-color: var(--err); }
+.qopt.art { font-family: var(--font-sans); font-weight: 700; font-size: 17px; justify-content: center; }
+.qinput {
+  width: 100%; height: var(--tap); margin-top: 16px; text-align: center;
+  border: 1px solid var(--line-strong); border-radius: var(--r);
+  background: var(--surface-2); font-size: 18px; font-weight: 600; outline: none;
+}
+.qinput.right { border-color: var(--ok); background: var(--ok-bg); }
+.qinput.wrongpick { border-color: var(--err); background: var(--err-bg); }
+.umlauts { display: flex; gap: 6px; justify-content: center; margin-top: 10px; flex-wrap: wrap; }
+.umlauts button { width: 42px; height: 38px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface-2); font-size: 16px; font-weight: 600; }
+.verdict { margin-top: 14px; font-size: 14px; }
+.verdict b { display: block; font-size: 15px; margin-bottom: 2px; }
+.verdict.ok b { color: var(--ok); }
+.verdict.no b { color: var(--err); }
+.scorerow { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; font-size: 13px; color: var(--ink-2); }
+.scorerow .streak { color: var(--flag); font-weight: 650; }
+
+/* ---------- progressi ---------- */
+.section-h { font-size: 13px; font-weight: 700; color: var(--ink-2); margin: 26px 0 10px; }
+.bars { display: flex; flex-direction: column; gap: 9px; }
+.barrow {
+  display: grid; grid-template-columns: 1fr auto; gap: 3px 10px;
+  font-size: 13.5px; width: 100%;
+  background: none; border: 0; padding: 0; margin: 0;
+  color: inherit; font-family: inherit; text-align: left; cursor: pointer;
+}
+.barrow .track { grid-column: 1 / -1; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; display: flex; }
+.barrow .track i { display: block; height: 100%; }
+.barrow .track .known { background: var(--das); }
+.barrow .track .learning { background: var(--flag); }
+.barrow .num { color: var(--ink-3); font-variant-numeric: tabular-nums; font-size: 12.5px; }
+.legend { display: flex; gap: 14px; font-size: 12px; color: var(--ink-2); margin-top: 12px; }
+.legend span { display: inline-flex; align-items: center; gap: 5px; }
+.legend i { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+.rowlink {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  min-height: var(--tap); padding: 10px 13px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+  font-size: 14px; font-weight: 600; text-align: left; margin-bottom: 7px;
+}
+.rowlink small { font-weight: 500; color: var(--ink-3); font-size: 12.5px; }
+.rowlink.danger { color: var(--err); }
+
+/* ---------- modali ---------- */
+.sheet-bg {
+  position: fixed; inset: 0; z-index: 60;
+  background: rgba(10,14,18,.45);
+  display: flex; align-items: flex-end; justify-content: center;
+  animation: fade .16s ease;
+}
+.sheet {
+  background: var(--bg); width: 100%; max-width: 560px;
+  max-height: 92vh; overflow-y: auto;
+  border-radius: 16px 16px 0 0;
+  padding: 16px 16px calc(22px + env(safe-area-inset-bottom));
+  animation: rise .22s cubic-bezier(.2,.8,.3,1);
+}
+@media (min-width: 640px) {
+  .sheet-bg { align-items: center; }
+  .sheet { border-radius: 16px; }
+}
+@keyframes rise { from { transform: translateY(24px); } }
+@keyframes fade { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  .flip.flipped { transform: none; }
+  .flip.flipped .face.front { display: none; }
+  .face.back { position: static; transform: none; }
+}
+.sheet-h { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.sheet-h h2 { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: -.02em; }
+.field { margin-bottom: 12px; }
+.field label { display: block; font-size: 12.5px; font-weight: 600; color: var(--ink-2); margin-bottom: 5px; }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: var(--tap);
+  border: 1px solid var(--line); background: var(--surface);
+  border-radius: 9px; padding: 9px 11px; font-size: 16px; outline: none;
+}
+.field input:focus, .field textarea:focus, .field select:focus { border-color: var(--line-strong); }
+.field textarea { min-height: 62px; resize: vertical; }
+.two { display: flex; gap: 10px; }
+.two > * { flex: 1; min-width: 0; }
+.pickrow { display: flex; flex-wrap: wrap; gap: 6px; }
+.pick {
+  height: 36px; padding: 0 12px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface);
+  font-size: 13px; font-weight: 600; color: var(--ink-2);
+}
+.pick.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.sheet-actions { display: flex; gap: 10px; margin-top: 18px; }
+.sheet-actions .btn { flex: 1; }
+.dangerzone { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--line); }
+
+/* ---------- toast ---------- */
+#toast {
+  position: fixed; left: 50%; transform: translateX(-50%);
+  bottom: calc(86px + env(safe-area-inset-bottom)); z-index: 90;
+  background: var(--ink); color: var(--bg);
+  padding: 11px 16px; border-radius: 999px;
+  font-size: 13.5px; font-weight: 600;
+  box-shadow: 0 8px 26px -10px rgba(0,0,0,.6);
+  max-width: min(92vw, 420px); text-align: center;
+}
+#toast[hidden] { display: none; }
+.sr {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
 </style>
 </head>
 <body>
-<div id="root"></div>
+<div id="app" class="app" aria-live="polite"></div>
+<nav class="tabbar" id="tabbar" role="tablist" aria-label="Sezioni"></nav>
+<div id="toast" role="status" hidden></div>
+<script>
+/* =================================================================
+   Der Wortschatzkasten — applicazione completa, JavaScript puro.
+   Niente librerie esterne: si apre offline e parte subito.
+   ================================================================= */
+(function () {
+"use strict";
 
-<script type="text/babel" data-presets="react">
-const { useState, useEffect, useMemo, useCallback, useRef } = React;
+/* ---------------- costanti ---------------- */
 
-const TYPE_META = {
-  sostantivo: { label: "Sostantivi", color: "#2F5D62" },
-  verbo: { label: "Verbi", color: "#A8452F" },
-  aggettivo: { label: "Aggettivi", color: "#8B6F2E" },
-  avverbio: { label: "Avverbi", color: "#4A6B3D" },
-  congiunzione: { label: "Congiunzioni", color: "#5B4B8A" },
-  preposizione: { label: "Preposizioni", color: "#3C6E71" },
-  espressione: { label: "Espressioni", color: "#6E5849" },
+var TYPES = {
+  sostantivo:   { one: "sostantivo",   many: "Sostantivi" },
+  verbo:        { one: "verbo",        many: "Verbi" },
+  aggettivo:    { one: "aggettivo",    many: "Aggettivi" },
+  avverbio:     { one: "avverbio",     many: "Avverbi" },
+  congiunzione: { one: "congiunzione", many: "Congiunzioni" },
+  preposizione: { one: "preposizione", many: "Preposizioni" },
+  espressione:  { one: "espressione",  many: "Espressioni" }
 };
-const TYPE_KEYS = Object.keys(TYPE_META);
+var TYPE_KEYS = Object.keys(TYPES);
+var GENDER_COLOR = { der: "var(--der)", die: "var(--die)", das: "var(--das)" };
 
-function headword(item) {
-  if (item.type === "sostantivo") return `${item.articolo || ""} ${item.german}`.trim();
-  return item.german;
+// Leitner: quanti giorni prima di rivedere una parola, per scatola.
+var INTERVALS = [0, 1, 2, 4, 8, 16, 32];
+var KNOWN_BOX = 4;
+
+var LS = {
+  custom: "wk_custom_items",
+  topics: "wk_custom_topics",
+  flags: "wk_flags",
+  deleted: "wk_deleted_official",
+  overrides: "wk_overrides",
+  srs: "wk_srs",
+  stats: "wk_stats",
+  prefs: "wk_prefs"
+};
+
+/* ---------------- utilità ---------------- */
+
+function $(sel, root) { return (root || document).querySelector(sel); }
+function el(id) { return document.getElementById(id); }
+function esc(s) {
+  return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+  });
 }
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
+function lsGet(k, fb) {
+  try { var r = localStorage.getItem(k); return r ? JSON.parse(r) : fb; } catch (e) { return fb; }
+}
+function lsSet(k, v) {
+  try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; }
+}
+function today() {
+  var d = new Date();
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+}
+function addDays(dateStr, n) {
+  var p = dateStr.split("-");
+  var d = new Date(+p[0], +p[1] - 1, +p[2]);
+  d.setDate(d.getDate() + n);
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+}
+function daysBetween(a, b) {
+  var pa = a.split("-"), pb = b.split("-");
+  return Math.round((new Date(+pb[0], +pb[1] - 1, +pb[2]) - new Date(+pa[0], +pa[1] - 1, +pa[2])) / 86400000);
+}
+// "groß" e "gross", "Bücher" e "bucher" devono trovarsi a vicenda.
+function fold(s) {
+  return String(s || "").toLowerCase()
+    .replace(/ß/g, "ss")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ").trim();
+}
+function shuffle(a) {
+  a = a.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = a[i]; a[i] = a[j]; a[j] = t;
   }
   return a;
 }
-function uid() {
-  return "custom_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+function sample(arr, n) { return shuffle(arr).slice(0, n); }
+function headword(it) {
+  return it.type === "sostantivo" && it.articolo ? it.articolo + " " + it.german : it.german;
 }
-
-// ---- persistence: plain browser localStorage, no external service ----
-const LS_CUSTOM_ITEMS = "wk_custom_items";
-const LS_CUSTOM_TOPICS = "wk_custom_topics";
-const LS_FLAGS = "wk_flags";
-const LS_DELETED = "wk_deleted_official";
-
-function lsGet(key, fallback) {
-  try {
-    const raw = localStorage.getItem(key);
-    return raw ? JSON.parse(raw) : fallback;
-  } catch (e) {
-    return fallback;
-  }
+function genderVar(it) {
+  if (it.type === "sostantivo" && GENDER_COLOR[it.articolo]) return GENDER_COLOR[it.articolo];
+  return "var(--neutral)";
 }
-function lsSet(key, value) {
-  try {
-    localStorage.setItem(key, JSON.stringify(value));
-  } catch (e) {
-    /* storage full or unavailable: fail silently, nothing else we can do */
-  }
-}
+function plural(n, one, many) { return n + " " + (n === 1 ? one : many); }
 
-const emptyForm = {
-  type: "sostantivo",
-  german: "",
-  italian: "",
-  articolo: "die",
-  plurale: "",
-  femminile: "",
-  femminilePlurale: "",
-  reggenza: "",
-  praesens: "",
-  praeteritum: "",
-  perfekt: "",
-  comparativo: "",
-  superlativo: "",
-  caso: "Akkusativ",
-  note: "",
-  esempio: "",
-  esempioTraduzione: "",
-  topics: [],
+var icons = {
+  search: '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>',
+  flag: '<svg viewBox="0 0 24 24"><path d="M5 21V4.5h13l-2.5 4 2.5 4H5"/></svg>',
+  book: '<svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5"/></svg>',
+  cards: '<svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="14" rx="2"/><path d="M8 3h10a3 3 0 0 1 3 3v11"/></svg>',
+  quiz: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.9 2.9 0 0 1 5.6 1c0 2-2.8 2.4-2.8 4"/><path d="M12 17.4h.01"/></svg>',
+  chart: '<svg viewBox="0 0 24 24"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg>',
+  sound: '<svg viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13L7.5 14.5H4z"/><path d="M16 9a4.5 4.5 0 0 1 0 6"/><path d="M18.8 6.4a8 8 0 0 1 0 11.2"/></svg>',
+  pencil: '<svg viewBox="0 0 24 24"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="m14.5 5.5 4 4"/></svg>',
+  trash: '<svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg>'
 };
 
-function App() {
-  const [officialItems, setOfficialItems] = useState([]);
-  const [officialTopics, setOfficialTopics] = useState([]);
-  const [customItems, setCustomItems] = useState(() => lsGet(LS_CUSTOM_ITEMS, []));
-  const [customTopics, setCustomTopics] = useState(() => lsGet(LS_CUSTOM_TOPICS, []));
-  const [flags, setFlags] = useState(() => lsGet(LS_FLAGS, {}));
-  const [deletedIds, setDeletedIds] = useState(() => lsGet(LS_DELETED, []));
-  const [loadStatus, setLoadStatus] = useState("loading"); // loading | ok | error
-  const [ready, setReady] = useState(false);
+/* ---------------- stato ---------------- */
 
-  const [mode, setMode] = useState("sfoglia");
-  const [selTopic, setSelTopic] = useState("Tutti");
-  const [selType, setSelType] = useState("Tutti");
-  const [search, setSearch] = useState("");
-  const [expandedId, setExpandedId] = useState(null);
-  const [confirmId, setConfirmId] = useState(null);
-  const [showAdd, setShowAdd] = useState(false);
-  const [form, setForm] = useState(emptyForm);
-  const [newTopicText, setNewTopicText] = useState("");
-  const [showNewTopicInput, setShowNewTopicInput] = useState(false);
-  const [importMsg, setImportMsg] = useState("");
-  const fileInputRef = useRef(null);
+var db = { official: [], officialTopics: [] };
+var store = {
+  custom: lsGet(LS.custom, []),
+  topics: lsGet(LS.topics, []),
+  flags: lsGet(LS.flags, {}),
+  deleted: lsGet(LS.deleted, []),
+  overrides: lsGet(LS.overrides, {}),
+  srs: lsGet(LS.srs, {}),
+  stats: lsGet(LS.stats, { streak: 0, lastDay: null, total: 0, byDay: {} }),
+  prefs: lsGet(LS.prefs, { theme: "auto", dir: "de-it", audio: true })
+};
+var state = {
+  tab: "lessico",
+  q: "", topic: "*", type: "*", onlyFlag: false,
+  sort: "alpha", openId: null, confirmId: null,
+  loadStatus: "loading"
+};
+var rv = null;  // sessione di ripasso
+var qz = null;  // sessione di quiz
 
-  const loadVocab = useCallback(async () => {
-    setLoadStatus("loading");
-    try {
-      const res = await fetch("./vocab-data.json?_=" + Date.now(), { cache: "no-store" });
-      const data = await res.json();
-      setOfficialItems(data.items || []);
-      setOfficialTopics(data.topics || []);
-      setLoadStatus("ok");
-    } catch (e) {
-      setLoadStatus("error");
-    } finally {
-      setReady(true);
-    }
-  }, []);
+function save(key) { lsSet(LS[key], store[key]); }
 
-  useEffect(() => {
-    loadVocab();
-  }, [loadVocab]);
+/* ---------------- dati derivati ---------------- */
 
-  useEffect(() => { lsSet(LS_CUSTOM_ITEMS, customItems); }, [customItems]);
-  useEffect(() => { lsSet(LS_CUSTOM_TOPICS, customTopics); }, [customTopics]);
-  useEffect(() => { lsSet(LS_FLAGS, flags); }, [flags]);
-  useEffect(() => { lsSet(LS_DELETED, deletedIds); }, [deletedIds]);
-
-  const items = useMemo(() => {
-    const off = officialItems.filter((i) => !deletedIds.includes(i.id));
-    const all = [...off, ...customItems];
-    return all.map((i) => ({ ...i, daStudiare: !!flags[i.id] }));
-  }, [officialItems, customItems, deletedIds, flags]);
-
-  const topics = useMemo(() => {
-    const set = [...officialTopics];
-    customTopics.forEach((t) => { if (!set.includes(t)) set.push(t); });
-    return set;
-  }, [officialTopics, customTopics]);
-
-  const filtered = useMemo(() => {
-    const q = search.trim().toLowerCase();
-    return items.filter((i) => {
-      const matchesTopic =
-        selTopic === "Tutti" ? true : selTopic === "DaStudiare" ? !!i.daStudiare : (i.topics || []).includes(selTopic);
-      const matchesType = selType === "Tutti" || i.type === selType;
-      if (!matchesTopic || !matchesType) return false;
-      if (!q) return true;
-      const haystack = [i.german, i.italian, i.articolo, i.plurale, i.femminile, i.reggenza, i.note, i.esempio, i.esempioTraduzione]
-        .filter(Boolean).join(" ").toLowerCase();
-      return haystack.includes(q);
+function allItems() {
+  var out = [];
+  for (var i = 0; i < db.official.length; i++) {
+    var it = db.official[i];
+    if (store.deleted.indexOf(it.id) !== -1) continue;
+    out.push(store.overrides[it.id] ? Object.assign({}, it, store.overrides[it.id]) : it);
+  }
+  return out.concat(store.custom);
+}
+function allTopics() {
+  var t = db.officialTopics.slice();
+  store.topics.forEach(function (x) { if (t.indexOf(x) === -1) t.push(x); });
+  return t;
+}
+function srsOf(id) { return store.srs[id] || { box: 0, due: null, right: 0, wrong: 0 }; }
+function isDue(id) {
+  var s = store.srs[id];
+  if (!s || !s.due) return false;
+  return s.due <= today();
+}
+function isNew(id) { return !store.srs[id]; }
+function dueItems() {
+  return allItems().filter(function (i) { return isDue(i.id); });
+}
+function matches(it) {
+  if (state.onlyFlag && !store.flags[it.id]) return false;
+  if (state.topic !== "*" && (it.topics || []).indexOf(state.topic) === -1) return false;
+  if (state.type !== "*" && it.type !== state.type) return false;
+  if (!state.q) return true;
+  var q = fold(state.q);
+  if (!q) return true;
+  var hay = fold([it.german, it.italian, it.articolo, it.plurale, it.femminile, it.reggenza,
+    it.note, it.esempio, it.esempioTraduzione, (it.topics || []).join(" ")].filter(Boolean).join(" "));
+  return hay.indexOf(q) !== -1;
+}
+function filtered() {
+  var list = allItems().filter(matches);
+  if (state.sort === "alpha") {
+    list.sort(function (a, b) { return fold(a.german).localeCompare(fold(b.german), "de"); });
+  } else if (state.sort === "type") {
+    list.sort(function (a, b) {
+      var d = TYPE_KEYS.indexOf(a.type) - TYPE_KEYS.indexOf(b.type);
+      return d !== 0 ? d : fold(a.german).localeCompare(fold(b.german), "de");
     });
-  }, [items, selTopic, selType, search]);
+  } else if (state.sort === "new") {
+    list.sort(function (a, b) {
+      var ab = srsOf(a.id).box, bb = srsOf(b.id).box;
+      return ab !== bb ? ab - bb : fold(a.german).localeCompare(fold(b.german), "de");
+    });
+  }
+  return list;
+}
 
-  function toggleDaStudiare(id) {
-    setFlags((prev) => ({ ...prev, [id]: !prev[id] }));
+/* ---------------- ripetizione a intervalli ---------------- */
+
+function gradeItem(id, grade) {
+  var s = srsOf(id);
+  var box = s.box || 0;
+  if (grade === 0) { box = 0; s.wrong = (s.wrong || 0) + 1; }
+  else if (grade === 1) { box = Math.max(1, box); s.right = (s.right || 0) + 1; }
+  else { box = Math.min(INTERVALS.length - 1, box + 1); s.right = (s.right || 0) + 1; }
+  s.box = box;
+  s.due = addDays(today(), INTERVALS[box]);
+  s.last = today();
+  store.srs[id] = s;
+  save("srs");
+  countReview();
+}
+function countReview() {
+  var t = today(), st = store.stats;
+  st.total = (st.total || 0) + 1;
+  st.byDay = st.byDay || {};
+  st.byDay[t] = (st.byDay[t] || 0) + 1;
+  if (st.lastDay !== t) {
+    st.streak = st.lastDay && daysBetween(st.lastDay, t) === 1 ? (st.streak || 0) + 1 : 1;
+    st.lastDay = t;
+  }
+  // tengo solo gli ultimi 120 giorni, per non gonfiare localStorage
+  var keys = Object.keys(st.byDay).sort();
+  while (keys.length > 120) { delete st.byDay[keys.shift()]; }
+  save("stats");
+}
+
+/* ---------------- avvisi ---------------- */
+
+var toastTimer = null;
+function toast(msg) {
+  var t = el("toast");
+  t.textContent = msg;
+  t.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function () { t.hidden = true; }, 2600);
+}
+
+/* ---------------- pronuncia ---------------- */
+
+var voiceDE = null;
+function pickVoice() {
+  if (!("speechSynthesis" in window)) return;
+  var vs = speechSynthesis.getVoices() || [];
+  voiceDE = vs.filter(function (v) { return /^de/i.test(v.lang); })[0] || null;
+}
+if ("speechSynthesis" in window) {
+  pickVoice();
+  speechSynthesis.onvoiceschanged = pickVoice;
+}
+function speak(text) {
+  if (!store.prefs.audio || !("speechSynthesis" in window)) return;
+  try {
+    speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = "de-DE";
+    u.rate = 0.92;
+    if (voiceDE) u.voice = voiceDE;
+    speechSynthesis.speak(u);
+  } catch (e) { /* niente voce disponibile: pazienza */ }
+}
+
+/* ---------------- tema ---------------- */
+
+var darkQuery = null;
+try { darkQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null; } catch (e) { darkQuery = null; }
+
+function applyTheme() {
+  var p = store.prefs.theme;
+  var dark = p === "dark" || (p === "auto" && !!(darkQuery && darkQuery.matches));
+  document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+}
+if (darkQuery) {
+  // addEventListener sui MediaQueryList manca su iOS < 14
+  if (darkQuery.addEventListener) darkQuery.addEventListener("change", applyTheme);
+  else if (darkQuery.addListener) darkQuery.addListener(applyTheme);
+}
+
+/* =================================================================
+   RENDERING
+   ================================================================= */
+
+var TABS = [
+  { id: "lessico", label: "Lessico", icon: icons.book },
+  { id: "ripasso", label: "Ripasso", icon: icons.cards },
+  { id: "quiz", label: "Esercizi", icon: icons.quiz },
+  { id: "progressi", label: "Progressi", icon: icons.chart }
+];
+
+function renderTabs() {
+  var due = dueItems().length;
+  el("tabbar").innerHTML = TABS.map(function (t) {
+    var badge = t.id === "ripasso" && due ? '<span class="badge">' + (due > 99 ? "99+" : due) + "</span>" : "";
+    return '<button class="tab" role="tab" data-tab="' + t.id + '" aria-selected="' + (state.tab === t.id) + '">' +
+      t.icon + badge + "<span>" + t.label + "</span></button>";
+  }).join("");
+}
+
+function topbar(sub) {
+  return '<header class="topbar" id="topbar">' +
+    '<div class="brand"><h1>Der Wortschatzkasten</h1><p>' + esc(sub) + "</p></div>" +
+    '<div class="topbar-actions">' +
+      '<button class="iconbtn" data-act="settings" aria-label="Impostazioni">⋯</button>' +
+    "</div></header>";
+}
+
+function render() {
+  renderTabs();
+  var app = el("app");
+  if (state.tab === "lessico") app.innerHTML = viewLessico();
+  else if (state.tab === "ripasso") app.innerHTML = viewRipasso();
+  else if (state.tab === "quiz") app.innerHTML = viewQuiz();
+  else app.innerHTML = viewProgressi();
+  afterRender();
+  window.scrollTo(0, 0);
+}
+
+function afterRender() {
+  var s = $("#searchInput");
+  if (s) {
+    s.value = state.q;
+    s.addEventListener("input", function () {
+      state.q = this.value;
+      renderList();
+      var c = $("#clearSearch"); if (c) c.style.visibility = this.value ? "visible" : "hidden";
+    });
+  }
+  var qi = $("#quizInput");
+  if (qi) { qi.focus(); }
+}
+
+/* ---------------- 1. Lessico ---------------- */
+
+function viewLessico() {
+  var total = allItems().length;
+  var h = topbar(plural(total, "parola nel tuo Kasten", "parole nel tuo Kasten"));
+  h += '<div class="searchrow"><label class="search">' + icons.search +
+    '<input id="searchInput" type="search" enterkeyhint="search" placeholder="Cerca in tedesco o in italiano" aria-label="Cerca" />' +
+    '<button id="clearSearch" data-act="clearq" aria-label="Cancella ricerca" style="visibility:' + (state.q ? "visible" : "hidden") + '">✕</button>' +
+    "</label></div>";
+
+  var counts = {};
+  allItems().forEach(function (i) { (i.topics || []).forEach(function (t) { counts[t] = (counts[t] || 0) + 1; }); });
+  var flagN = Object.keys(store.flags).filter(function (k) { return store.flags[k]; }).length;
+
+  h += '<div class="chiprow" role="group" aria-label="Filtra per argomento">';
+  h += '<button class="chip flagchip ' + (state.onlyFlag ? "on" : "") + '" data-act="toggleflag">' + icons.flag +
+    ' Da studiare <span class="n">' + flagN + "</span></button>";
+  h += '<button class="chip ' + (state.topic === "*" ? "on" : "") + '" data-act="topic" data-v="*">Tutti gli argomenti</button>';
+  h += allTopics().map(function (t) {
+    return '<button class="chip ' + (state.topic === t ? "on" : "") + '" data-act="topic" data-v="' + esc(t) + '">' +
+      esc(t) + ' <span class="n">' + (counts[t] || 0) + "</span></button>";
+  }).join("");
+  h += "</div>";
+
+  h += '<div class="chiprow" role="group" aria-label="Filtra per categoria grammaticale">';
+  h += '<button class="chip ' + (state.type === "*" ? "on" : "") + '" data-act="type" data-v="*">Tutte le categorie</button>';
+  h += TYPE_KEYS.map(function (k) {
+    return '<button class="chip ' + (state.type === k ? "on" : "") + '" data-act="type" data-v="' + k + '">' + TYPES[k].many + "</button>";
+  }).join("");
+  h += "</div>";
+
+  h += '<div id="listWrap">' + listHtml() + "</div>";
+  h += '<button class="fab" data-act="add">+ Nuova parola</button>';
+  return h;
+}
+
+function renderList() {
+  var w = el("listWrap");
+  if (w) w.innerHTML = listHtml();
+}
+
+function listHtml() {
+  var list = filtered();
+  var sorts = [["alpha", "A → Z"], ["type", "Categoria"], ["new", "Da imparare prima"]];
+  var h = '<div class="resultline"><span>' + plural(list.length, "risultato", "risultati") + "</span>" +
+    '<button class="linkbtn" data-act="cyclesort">Ordine: ' +
+    sorts.filter(function (s) { return s[0] === state.sort; })[0][1] + "</button></div>";
+
+  if (!list.length) {
+    return h + '<div class="empty"><strong>Nessuna parola con questi filtri</strong>' +
+      "<p>Prova a togliere un filtro o a cercare un'altra parola.</p>" +
+      '<button class="btn ghost" data-act="resetfilters">Azzera i filtri</button></div>';
+  }
+  h += '<div class="list">' + list.map(entryHtml).join("") + "</div>";
+  return h;
+}
+
+function entryHtml(it) {
+  var open = state.openId === it.id;
+  var g = genderVar(it);
+  var box = srsOf(it.id).box;
+  var pct = Math.round((box / (INTERVALS.length - 1)) * 100);
+  var art = it.type === "sostantivo" && it.articolo ? '<span class="art">' + it.articolo + "</span> " : "";
+
+  var h = '<div class="entry ' + (open ? "open" : "") + '" style="--g:' + g + '" data-id="' + esc(it.id) + '">';
+  h += '<button class="lemma" data-act="open" data-id="' + esc(it.id) + '" aria-expanded="' + open + '">' +
+    art + esc(it.german) + "</button>";
+  h += '<div class="side">' +
+    '<button class="flagbtn ' + (store.flags[it.id] ? "on" : "") + '" data-act="flag" data-id="' + esc(it.id) + '" ' +
+    'aria-label="Segna come da studiare" aria-pressed="' + !!store.flags[it.id] + '">' + icons.flag + "</button>" +
+    (box > 0 ? '<span class="mastery" title="Quanto la sai"><i style="width:' + pct + '%"></i></span>' : "") +
+    "</div>";
+  h += '<div class="gloss">' + esc(it.italian) + "</div>";
+  h += '<div class="meta"><span class="pill type">' + TYPES[it.type].one + "</span>" +
+    (it.topics || []).map(function (t) { return '<span class="pill">' + esc(t) + "</span>"; }).join("") + "</div>";
+
+  if (open) h += detailHtml(it);
+  h += "</div>";
+  return h;
+}
+
+function detailHtml(it) {
+  var rows = [];
+  if (it.type === "sostantivo") {
+    rows.push(["Plurale", it.plurale || "—"]);
+    if (it.femminile) rows.push(["Femminile", it.femminile + (it.femminilePlurale ? " (pl. " + it.femminilePlurale + ")" : "")]);
+  }
+  if (it.type === "verbo") {
+    if (it.reggenza) rows.push(["Reggenza", it.reggenza]);
+    rows.push(["Präsens", it.praesens || "—"]);
+    rows.push(["Präteritum", it.praeteritum || "—"]);
+    rows.push(["Perfekt", it.perfekt || "—"]);
+  }
+  if (it.type === "aggettivo") {
+    if (it.reggenza) rows.push(["Uso", it.reggenza]);
+    if (it.comparativo) rows.push(["Comparativo", it.comparativo]);
+    if (it.superlativo) rows.push(["Superlativo", it.superlativo]);
+  }
+  if (it.type === "preposizione" && it.caso) rows.push(["Regge", it.caso]);
+  if (it.reggenza && ["verbo", "aggettivo"].indexOf(it.type) === -1) rows.push(["Costruzione", it.reggenza]);
+
+  var s = srsOf(it.id);
+  var h = '<div class="detail">';
+  if (rows.length) h += "<dl>" + rows.map(function (r) {
+    return "<dt>" + esc(r[0]) + "</dt><dd>" + esc(r[1]) + "</dd>";
+  }).join("") + "</dl>";
+  if (it.note) h += '<div class="note">' + esc(it.note) + "</div>";
+  if (it.esempio) h += '<div class="example">' + esc(it.esempio) +
+    (it.esempioTraduzione ? "<em>" + esc(it.esempioTraduzione) + "</em>" : "") + "</div>";
+  if (s.due) h += '<div class="note">Prossimo ripasso: ' + (s.due <= today() ? "oggi" : esc(s.due)) +
+    " · risposte esatte " + (s.right || 0) + ", sbagliate " + (s.wrong || 0) + "</div>";
+
+  h += '<div class="detail-actions">';
+  h += '<button class="tinybtn" data-act="speak" data-id="' + esc(it.id) + '">' + icons.sound + " Ascolta</button>";
+  h += '<button class="tinybtn" data-act="edit" data-id="' + esc(it.id) + '">' + icons.pencil + " Modifica</button>";
+  if (state.confirmId === it.id) {
+    h += '<button class="tinybtn danger" data-act="reallydelete" data-id="' + esc(it.id) + '">Confermi? Elimina</button>' +
+      '<button class="tinybtn" data-act="cancelconfirm">Annulla</button>';
+  } else {
+    h += '<button class="tinybtn danger" data-act="delete" data-id="' + esc(it.id) + '">' + icons.trash + " Elimina</button>";
+  }
+  h += "</div></div>";
+  return h;
+}
+
+/* ---------------- 2. Ripasso ---------------- */
+
+function viewRipasso() {
+  var due = dueItems();
+  var nuove = allItems().filter(function (i) { return isNew(i.id); });
+  var h = topbar("Ripasso a intervalli crescenti");
+
+  if (rv) return h + reviewSessionHtml();
+
+  h += '<div class="review-head">';
+  h += '<div class="dueline"><span class="big">' + due.length + "</span>" +
+    '<span class="lbl">' + (due.length ? "parole da ripassare oggi.<br>Il momento giusto è adesso." :
+      "parole in scadenza oggi.<br>Sei in pari: puoi allenarti lo stesso.") + "</span></div>";
+
+  if (due.length) {
+    h += '<button class="btn block" data-act="startdue">Ripassa le ' + due.length + " di oggi</button>";
+  }
+  h += '<div class="statgrid">' +
+    '<div class="statbox"><b>' + nuove.length + "</b><span>mai viste</span></div>" +
+    '<div class="statbox"><b>' + allItems().filter(function (i) { return srsOf(i.id).box >= KNOWN_BOX; }).length + "</b><span>sicure</span></div>" +
+    '<div class="statbox"><b>' + (store.stats.streak || 0) + "</b><span>giorni di fila</span></div>" +
+    "</div>";
+
+  h += '<div class="section-h">Allenamento libero</div>';
+  h += '<p style="margin:0 0 12px;font-size:14px;color:var(--ink-2)">Parte dalle parole che stai filtrando nel Lessico' +
+    (state.topic !== "*" ? ' (argomento: <strong>' + esc(state.topic) + "</strong>)" : " (tutte)") + ".</p>";
+  h += '<div class="pickrow" style="margin-bottom:12px">' +
+    dirBtn("de-it", "Tedesco → Italiano") + dirBtn("it-de", "Italiano → Tedesco") + dirBtn("mix", "Alternate") +
+    "</div>";
+  h += '<button class="btn ghost block" data-act="startfree">Inizia con ' + filtered().length + " parole</button>";
+  if (nuove.length) {
+    h += '<button class="btn ghost block" style="margin-top:8px" data-act="startnew">Scopri 10 parole nuove</button>';
+  }
+  h += "</div>";
+  return h;
+}
+function dirBtn(v, label) {
+  return '<button class="pick ' + (store.prefs.dir === v ? "on" : "") + '" data-act="setdir" data-v="' + v + '">' + label + "</button>";
+}
+
+function startSession(list, label) {
+  if (!list.length) { toast("Non ci sono parole con questi filtri."); return; }
+  rv = {
+    queue: shuffle(list).map(function (i) { return i.id; }),
+    total: list.length, done: 0, flipped: false, label: label,
+    right: 0, again: 0, startBox: {}
+  };
+  list.forEach(function (i) { rv.startBox[i.id] = srsOf(i.id).box; });
+  render();
+}
+
+function currentCard() {
+  if (!rv || !rv.queue.length) return null;
+  var id = rv.queue[0];
+  var found = allItems().filter(function (i) { return i.id === id; })[0];
+  return found || null;
+}
+
+function reviewSessionHtml() {
+  var it = currentCard();
+  if (!it) return sessionDoneHtml();
+
+  var germanFirst = store.prefs.dir === "de-it" ||
+    (store.prefs.dir === "mix" && (rv.done % 2 === 0));
+  var g = genderVar(it);
+  var pct = Math.round((rv.done / Math.max(1, rv.total)) * 100);
+
+  var h = '<div class="progressbar" aria-hidden="true"><i style="width:' + pct + '%"></i></div>';
+  h += '<div class="resultline"><span>' + esc(rv.label) + " · " + Math.min(rv.done + 1, rv.total) + " di " + rv.total + "</span>" +
+    '<button class="linkbtn" data-act="endsession">Chiudi sessione</button></div>';
+
+  h += '<div class="cardtools">' +
+    '<button class="iconbtn" data-act="flipdir">⇄ ' + (germanFirst ? "DE → IT" : "IT → DE") + "</button>" +
+    '<button class="iconbtn ' + (store.flags[it.id] ? "on" : "") + '" data-act="flag" data-id="' + esc(it.id) + '">' +
+      icons.flag + (store.flags[it.id] ? " Segnata" : " Segna") + "</button>" +
+    '<button class="iconbtn" data-act="speak" data-id="' + esc(it.id) + '">' + icons.sound + "</button>" +
+    "</div>";
+
+  var front, back;
+  var forms = "";
+  if (it.type === "verbo" && (it.praesens || it.perfekt)) {
+    forms = '<div class="forms">' + esc([it.praesens, it.praeteritum, it.perfekt].filter(Boolean).join(" · ")) + "</div>";
+  } else if (it.type === "sostantivo" && it.plurale) {
+    forms = '<div class="forms">Plurale: ' + esc(it.plurale) + "</div>";
+  }
+  var germanFace = '<div class="lemma-xl">' +
+    (it.type === "sostantivo" && it.articolo ? '<span class="art">' + it.articolo + "</span> " : "") +
+    esc(it.german) + "</div>" +
+    (it.reggenza ? '<div class="sub">' + esc(it.reggenza) + "</div>" : "");
+  var italianFace = '<div class="gloss-xl">' + esc(it.italian) + "</div>";
+  var extra = forms + (it.note ? '<div class="sub">' + esc(it.note) + "</div>" : "") +
+    (it.esempio ? '<div class="ex">' + esc(it.esempio) + (it.esempioTraduzione ? "<br><span style=\"font-size:13px\">" + esc(it.esempioTraduzione) + "</span>" : "") + "</div>" : "");
+
+  if (germanFirst) { front = germanFace; back = italianFace + extra; }
+  else { front = italianFace; back = germanFace + extra; }
+
+  h += '<div class="cardstage" style="--g:' + g + '">' +
+    '<div class="flip ' + (rv.flipped ? "flipped" : "") + '" id="flipCard" data-act="flip" role="button" tabindex="0" aria-label="Gira la scheda">' +
+      '<div class="face front">' + front + '<div class="sub" style="margin-top:6px">' + TYPES[it.type].one + "</div></div>" +
+      '<div class="face back">' + back + "</div>" +
+    "</div></div>";
+
+  if (!rv.flipped) {
+    h += '<div class="hint">Tocca la scheda per scoprire la risposta · spazio o frecce da tastiera</div>';
+  } else {
+    var s = srsOf(it.id);
+    h += '<div class="grades">' +
+      '<button class="grade g0" data-act="grade" data-g="0">Da rivedere<small>torna oggi</small></button>' +
+      '<button class="grade g1" data-act="grade" data-g="1">Incerta<small>fra ' + INTERVALS[Math.max(1, s.box)] + "g</small></button>" +
+      '<button class="grade g2" data-act="grade" data-g="2">La so<small>fra ' + INTERVALS[Math.min(INTERVALS.length - 1, (s.box || 0) + 1)] + "g</small></button>" +
+      "</div>";
+    h += '<div class="hint">Tasti 1 · 2 · 3</div>';
+  }
+  return h;
+}
+
+function sessionDoneHtml() {
+  var promossi = Object.keys(rv.startBox).filter(function (id) { return srsOf(id).box > rv.startBox[id]; }).length;
+  var h = '<div class="sessiondone">' +
+    '<div class="big">' + rv.total + "</div>" +
+    "<p style=\"margin:4px 0 0;font-size:15px\">schede riviste. " +
+    (promossi ? promossi + " sono salite di livello." : "Nessuna promossa: rivedile presto.") + "</p>" +
+    '<div class="statgrid">' +
+      '<div class="statbox"><b>' + rv.right + "</b><span>sapute</span></div>" +
+      '<div class="statbox"><b>' + rv.again + "</b><span>da rivedere</span></div>" +
+      '<div class="statbox"><b>' + (store.stats.streak || 0) + "</b><span>giorni di fila</span></div>" +
+    "</div>" +
+    '<button class="btn block" data-act="endsession">Torna al ripasso</button>' +
+    "</div>";
+  return h;
+}
+
+/* ---------------- 3. Esercizi ---------------- */
+
+var QUIZ_MODES = [
+  { id: "traduzione", label: "Che significa?" },
+  { id: "inverso", label: "Come si dice?" },
+  { id: "articolo", label: "der / die / das" },
+  { id: "scrittura", label: "Scrivila tu" }
+];
+
+function viewQuiz() {
+  var h = topbar("Esercizi sul lessico che stai studiando");
+  h += '<div class="chiprow" style="margin-top:12px" role="group" aria-label="Tipo di esercizio">' +
+    QUIZ_MODES.map(function (m) {
+      return '<button class="chip ' + (qz && qz.mode === m.id ? "on" : "") + '" data-act="quizmode" data-v="' + m.id + '">' + m.label + "</button>";
+    }).join("") + "</div>";
+
+  if (!qz) {
+    h += '<div class="empty"><strong>Scegli un esercizio</strong>' +
+      "<p>Le domande usano le parole filtrate nel Lessico" +
+      (state.topic !== "*" ? " (argomento: " + esc(state.topic) + ")" : "") +
+      ". Le parole sbagliate finiscono nel ripasso di oggi.</p></div>";
+    return h;
+  }
+  if (!qz.q) {
+    return h + '<div class="empty"><strong>Servono più parole</strong><p>' + esc(qz.reason || "Allarga i filtri nel Lessico e riprova.") + "</p></div>";
+  }
+  h += quizCardHtml();
+  return h;
+}
+
+function poolFor(mode) {
+  var base = filtered();
+  if (base.length < 4) base = allItems();
+  if (mode === "articolo") base = base.filter(function (i) { return i.type === "sostantivo" && i.articolo; });
+  return base;
+}
+
+function newQuestion() {
+  var mode = qz.mode;
+  var pool = poolFor(mode);
+  if (mode === "articolo" && pool.length < 1) { qz.q = null; qz.reason = "Con questi filtri non ci sono sostantivi."; return; }
+  if (mode !== "articolo" && pool.length < 4) { qz.q = null; qz.reason = "Servono almeno 4 parole."; return; }
+
+  var correct = pool[Math.floor(Math.random() * pool.length)];
+  qz.picked = null;
+  qz.typed = "";
+  qz.reason = null;
+
+  if (mode === "articolo") {
+    qz.q = { item: correct, options: ["der", "die", "das"].map(function (a) { return { id: a, text: a }; }), answer: correct.articolo };
+    return;
+  }
+  if (mode === "scrittura") {
+    qz.q = { item: correct, answer: correct.german };
+    return;
+  }
+  // distrattori credibili: stessa categoria, meglio se stesso argomento
+  var others = allItems().filter(function (i) { return i.id !== correct.id && i.italian !== correct.italian && i.german !== correct.german; });
+  var sameTopic = others.filter(function (i) {
+    return i.type === correct.type && (i.topics || []).some(function (t) { return (correct.topics || []).indexOf(t) !== -1; });
+  });
+  var sameType = others.filter(function (i) { return i.type === correct.type; });
+  var picks = sample(sameTopic, 3);
+  if (picks.length < 3) picks = picks.concat(sample(sameType.filter(function (i) { return picks.indexOf(i) === -1; }), 3 - picks.length));
+  if (picks.length < 3) picks = picks.concat(sample(others.filter(function (i) { return picks.indexOf(i) === -1; }), 3 - picks.length));
+
+  qz.q = {
+    item: correct,
+    options: shuffle([correct].concat(picks)).map(function (i) {
+      return { id: i.id, text: mode === "traduzione" ? i.italian : headword(i) };
+    }),
+    answer: correct.id
+  };
+}
+
+function quizCardHtml() {
+  var q = qz.q, it = q.item, mode = qz.mode;
+  var g = genderVar(it);
+  var h = '<div class="qcard" style="--g:' + g + '">';
+
+  if (mode === "traduzione") {
+    h += '<div class="qprompt">' + TYPES[it.type].one + " · che cosa significa?</div>";
+    h += '<div class="qword">' + esc(headword(it)) + "</div>";
+  } else if (mode === "inverso") {
+    h += '<div class="qprompt">Come si dice in tedesco?</div>';
+    h += '<div class="qword serif">' + esc(it.italian) + "</div>";
+  } else if (mode === "articolo") {
+    h += '<div class="qprompt">Quale articolo?</div>';
+    h += '<div class="qword">' + esc(it.german) + '<div class="qprompt" style="margin-top:6px">' + esc(it.italian) + "</div></div>";
+  } else {
+    h += '<div class="qprompt">Scrivi la parola tedesca' + (it.type === "sostantivo" ? " con l'articolo" : "") + "</div>";
+    h += '<div class="qword serif">' + esc(it.italian) + "</div>";
   }
 
-  function deleteItem(id) {
-    if (String(id).startsWith("custom_")) {
-      setCustomItems((prev) => prev.filter((i) => i.id !== id));
-    } else {
-      setDeletedIds((prev) => (prev.includes(id) ? prev : [...prev, id]));
+  if (mode === "scrittura") {
+    var cls = qz.picked ? (qz.picked === "ok" || qz.picked === "quasi" ? "right" : "wrongpick") : "";
+    h += '<input id="quizInput" class="qinput ' + cls + '" autocomplete="off" autocapitalize="off" spellcheck="false" ' +
+      'enterkeyhint="go" value="' + esc(qz.typed) + '" ' + (qz.picked ? "readonly" : "") + ' aria-label="La tua risposta" />';
+    if (!qz.picked) {
+      h += '<div class="umlauts">' + ["ä", "ö", "ü", "ß", "Ä", "Ö", "Ü"].map(function (c) {
+        return '<button data-act="uml" data-v="' + c + '">' + c + "</button>";
+      }).join("") + "</div>";
+      h += '<button class="btn block" style="margin-top:12px" data-act="checkwrite">Controlla</button>';
     }
-    setConfirmId(null);
-    setExpandedId(null);
-  }
-
-  function toggleFormTopic(t) {
-    setForm((f) => ({ ...f, topics: f.topics.includes(t) ? f.topics.filter((x) => x !== t) : [...f.topics, t] }));
-  }
-  function addTopic() {
-    const t = newTopicText.trim();
-    if (!t || topics.includes(t)) return;
-    setCustomTopics((prev) => [...prev, t]);
-    setForm((f) => ({ ...f, topics: [...f.topics, t] }));
-    setNewTopicText("");
-    setShowNewTopicInput(false);
-  }
-  function submitForm(e) {
-    e.preventDefault();
-    if (!form.german.trim() || !form.italian.trim()) return;
-    setCustomItems((prev) => [...prev, { id: uid(), ...form }]);
-    setForm(emptyForm);
-    setShowAdd(false);
-  }
-
-  function exportBackup() {
-    const payload = {
-      exportedAt: new Date().toISOString(),
-      customItems,
-      customTopics,
-      flags,
-      deletedIds,
-    };
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "wortschatzkasten-backup.json";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    setImportMsg("Backup scaricato.");
-  }
-
-  function triggerImport() {
-    if (fileInputRef.current) fileInputRef.current.click();
-  }
-
-  function handleImportFile(e) {
-    const file = e.target.files && e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = () => {
-      try {
-        const data = JSON.parse(reader.result);
-        setCustomItems(Array.isArray(data.customItems) ? data.customItems : []);
-        setCustomTopics(Array.isArray(data.customTopics) ? data.customTopics : []);
-        setFlags(data.flags && typeof data.flags === "object" ? data.flags : {});
-        setDeletedIds(Array.isArray(data.deletedIds) ? data.deletedIds : []);
-        setImportMsg("Backup importato: le tue parole e bandierine sono state ripristinate.");
-      } catch (err) {
-        setImportMsg("Questo file non è un backup valido.");
+  } else {
+    h += '<div class="qopts">' + q.options.map(function (o, n) {
+      var c = "qopt" + (mode === "articolo" ? " art" : "");
+      if (qz.picked) {
+        if (o.id === q.answer) c += " right";
+        else if (o.id === qz.picked) c += " wrongpick";
       }
+      return '<button class="' + c + '" data-act="answer" data-v="' + esc(o.id) + '">' +
+        (mode === "articolo" ? "" : '<span class="k">' + (n + 1) + "</span>") + esc(o.text) + "</button>";
+    }).join("") + "</div>";
+  }
+
+  if (qz.picked) {
+    var ok = mode === "scrittura" ? (qz.picked === "ok" || qz.picked === "quasi") : qz.picked === q.answer;
+    h += '<div class="verdict ' + (ok ? "ok" : "no") + '">';
+    if (qz.picked === "quasi") h += "<b>Quasi: attenzione all'Umlaut</b>";
+    else h += "<b>" + (ok ? "Esatta" : "Non ci siamo") + "</b>";
+    h += esc(headword(it)) + " — " + esc(it.italian);
+    if (it.note) h += '<div class="qprompt" style="margin-top:6px">' + esc(it.note) + "</div>";
+    h += "</div>";
+    h += '<button class="btn block" style="margin-top:14px" data-act="nextq">Prossima parola</button>';
+  }
+  h += "</div>";
+
+  h += '<div class="scorerow"><span>' + qz.right + " esatte su " + qz.total + "</span>" +
+    (qz.streak > 1 ? '<span class="streak">' + qz.streak + " di fila</span>" : "<span></span>") +
+    '<button class="linkbtn" data-act="resetquiz">Ricomincia</button></div>';
+  return h;
+}
+
+function answerQuiz(val) {
+  if (qz.picked) return;
+  var q = qz.q, ok;
+  if (qz.mode === "scrittura") {
+    var given = fold(qz.typed).replace(/^(der|die|das)\s+/, "");
+    var want = fold(q.answer).replace(/^(der|die|das)\s+/, "");
+    var exact = qz.typed.trim().toLowerCase().replace(/^(der|die|das)\s+/, "") === String(q.answer).toLowerCase();
+    if (exact) qz.picked = "ok";
+    else if (given && given === want) qz.picked = "quasi";
+    else qz.picked = "no";
+    ok = qz.picked !== "no";
+  } else {
+    qz.picked = val;
+    ok = val === q.answer;
+  }
+  qz.total++;
+  if (ok) { qz.right++; qz.streak++; }
+  else {
+    qz.streak = 0;
+    store.flags[q.item.id] = true; save("flags");
+    var s = srsOf(q.item.id);
+    s.box = 0; s.due = today(); s.wrong = (s.wrong || 0) + 1;
+    store.srs[q.item.id] = s; save("srs");
+  }
+  render();
+}
+
+/* ---------------- 4. Progressi ---------------- */
+
+function viewProgressi() {
+  var items = allItems();
+  var known = items.filter(function (i) { return srsOf(i.id).box >= KNOWN_BOX; }).length;
+  var learning = items.filter(function (i) { var b = srsOf(i.id).box; return b > 0 && b < KNOWN_BOX; }).length;
+  var fresh = items.length - known - learning;
+
+  var h = topbar("A che punto sei");
+  h += '<div class="statgrid" style="margin-top:14px">' +
+    '<div class="statbox"><b>' + known + "</b><span>sicure</span></div>" +
+    '<div class="statbox"><b>' + learning + "</b><span>in corso</span></div>" +
+    '<div class="statbox"><b>' + fresh + "</b><span>da iniziare</span></div>" +
+    "</div>";
+  h += '<div class="statgrid">' +
+    '<div class="statbox"><b>' + (store.stats.streak || 0) + "</b><span>giorni di fila</span></div>" +
+    '<div class="statbox"><b>' + (store.stats.byDay && store.stats.byDay[today()] || 0) + "</b><span>schede oggi</span></div>" +
+    '<div class="statbox"><b>' + (store.stats.total || 0) + "</b><span>ripassi totali</span></div>" +
+    "</div>";
+
+  h += '<div class="section-h">Argomenti</div><div class="bars">';
+  h += allTopics().map(function (t) {
+    var list = items.filter(function (i) { return (i.topics || []).indexOf(t) !== -1; });
+    if (!list.length) return "";
+    var k = list.filter(function (i) { return srsOf(i.id).box >= KNOWN_BOX; }).length;
+    var l = list.filter(function (i) { var b = srsOf(i.id).box; return b > 0 && b < KNOWN_BOX; }).length;
+    return '<button class="barrow" data-act="gototopic" data-v="' + esc(t) + '">' +
+      "<span>" + esc(t) + '</span><span class="num">' + k + "/" + list.length + "</span>" +
+      '<span class="track"><i class="known" style="width:' + (k / list.length * 100) + '%"></i>' +
+      '<i class="learning" style="width:' + (l / list.length * 100) + '%"></i></span></button>';
+  }).join("") + "</div>";
+  h += '<div class="legend"><span><i style="background:var(--das)"></i>sicure</span>' +
+    '<span><i style="background:var(--flag)"></i>in corso</span>' +
+    '<span><i style="background:var(--line)"></i>da iniziare</span></div>';
+
+  h += '<div class="section-h">Il tuo Kasten</div>';
+  h += '<button class="rowlink" data-act="checkupdate"><span>Controlla aggiornamenti del lessico</span><small>' +
+    (state.loadStatus === "ok" ? db.official.length + " parole di classe" : "non scaricato") + "</small></button>";
+  h += '<button class="rowlink" data-act="export"><span>Esporta un backup</span><small>file .json</small></button>';
+  h += '<button class="rowlink" data-act="import"><span>Importa un backup</span><small>unisce ai dati attuali</small></button>';
+  if (store.deleted.length) {
+    h += '<button class="rowlink" data-act="restore"><span>Ripristina le parole eliminate</span><small>' + store.deleted.length + "</small></button>";
+  }
+  h += '<button class="rowlink" data-act="settings"><span>Impostazioni</span><small>tema, audio</small></button>';
+  h += '<div class="dangerzone"><button class="rowlink danger" data-act="wipe"><span>Cancella tutti i miei dati</span>' +
+    "<small>parole aggiunte, segni, progressi</small></button></div>";
+  h += '<input id="importFile" type="file" accept="application/json,.json" class="sr" />';
+  return h;
+}
+
+/* ---------------- schede modali ---------------- */
+
+var sheetEl = null;
+function openSheet(html) {
+  closeSheet();
+  sheetEl = document.createElement("div");
+  sheetEl.className = "sheet-bg";
+  sheetEl.innerHTML = '<div class="sheet" role="dialog" aria-modal="true">' + html + "</div>";
+  sheetEl.addEventListener("click", function (e) { if (e.target === sheetEl) closeSheet(); });
+  document.body.appendChild(sheetEl);
+  document.body.style.overflow = "hidden";
+}
+function closeSheet() {
+  if (sheetEl) { sheetEl.remove(); sheetEl = null; document.body.style.overflow = ""; }
+}
+
+var form = null;
+function openForm(item) {
+  form = Object.assign({
+    id: null, type: "sostantivo", german: "", italian: "", articolo: "die", plurale: "",
+    femminile: "", femminilePlurale: "", reggenza: "", praesens: "", praeteritum: "", perfekt: "",
+    comparativo: "", superlativo: "", caso: "Akkusativ", note: "", esempio: "", esempioTraduzione: "", topics: []
+  }, item || {});
+  form.topics = (form.topics || []).slice();
+  renderForm();
+}
+function renderForm() {
+  var f = form;
+  var h = '<div class="sheet-h"><h2>' + (f.id ? "Modifica scheda" : "Nuova parola") + "</h2>" +
+    '<button class="iconbtn" data-act="closesheet" aria-label="Chiudi">✕</button></div>';
+  h += '<div class="field"><label>Categoria grammaticale</label><div class="pickrow">' +
+    TYPE_KEYS.map(function (k) {
+      return '<button type="button" class="pick ' + (f.type === k ? "on" : "") + '" data-act="ftype" data-v="' + k + '">' + TYPES[k].one + "</button>";
+    }).join("") + "</div></div>";
+
+  h += '<div class="two"><div class="field"><label>Tedesco</label>' +
+    '<input data-f="german" value="' + esc(f.german) + '" placeholder="Freude" /></div>' +
+    '<div class="field"><label>Italiano</label><input data-f="italian" value="' + esc(f.italian) + '" placeholder="la gioia" /></div></div>';
+
+  if (f.type === "sostantivo") {
+    h += '<div class="two"><div class="field"><label>Articolo</label><select data-f="articolo">' +
+      ["der", "die", "das"].map(function (a) { return '<option ' + (f.articolo === a ? "selected" : "") + ">" + a + "</option>"; }).join("") +
+      "</select></div><div class=\"field\"><label>Plurale</label><input data-f=\"plurale\" value='" + esc(f.plurale) + "' placeholder=\"die Freuden\" /></div></div>";
+    h += '<div class="two"><div class="field"><label>Femminile</label><input data-f="femminile" value="' + esc(f.femminile) + '" /></div>' +
+      '<div class="field"><label>Plurale femminile</label><input data-f="femminilePlurale" value="' + esc(f.femminilePlurale) + '" /></div></div>';
+  }
+  if (f.type === "verbo") {
+    h += '<div class="field"><label>Reggenza</label><input data-f="reggenza" value="' + esc(f.reggenza) + '" placeholder="auf / über + Akkusativ" /></div>';
+    h += '<div class="two"><div class="field"><label>Präsens (3ª sing.)</label><input data-f="praesens" value="' + esc(f.praesens) + '" /></div>' +
+      '<div class="field"><label>Präteritum</label><input data-f="praeteritum" value="' + esc(f.praeteritum) + '" /></div></div>';
+    h += '<div class="field"><label>Perfekt</label><input data-f="perfekt" value="' + esc(f.perfekt) + '" /></div>';
+  }
+  if (f.type === "aggettivo") {
+    h += '<div class="field"><label>Uso / reggenza</label><input data-f="reggenza" value="' + esc(f.reggenza) + '" placeholder="+ sein" /></div>';
+    h += '<div class="two"><div class="field"><label>Comparativo</label><input data-f="comparativo" value="' + esc(f.comparativo) + '" /></div>' +
+      '<div class="field"><label>Superlativo</label><input data-f="superlativo" value="' + esc(f.superlativo) + '" /></div></div>';
+  }
+  if (f.type === "preposizione") {
+    h += '<div class="field"><label>Caso retto</label><select data-f="caso">' +
+      ["Akkusativ", "Dativ", "Genitiv", "Wechselpräposition"].map(function (c) {
+        return "<option " + (f.caso === c ? "selected" : "") + ">" + c + "</option>";
+      }).join("") + "</select></div>";
+  }
+  h += '<div class="two"><div class="field"><label>Frase di esempio</label><input data-f="esempio" value="' + esc(f.esempio) + '" /></div>' +
+    '<div class="field"><label>Traduzione</label><input data-f="esempioTraduzione" value="' + esc(f.esempioTraduzione) + '" /></div></div>';
+  h += '<div class="field"><label>Nota</label><textarea data-f="note">' + esc(f.note) + "</textarea></div>";
+
+  h += '<div class="field"><label>Argomenti</label><div class="pickrow">' +
+    allTopics().map(function (t) {
+      return '<button type="button" class="pick ' + (f.topics.indexOf(t) !== -1 ? "on" : "") + '" data-act="ftopic" data-v="' + esc(t) + '">' + esc(t) + "</button>";
+    }).join("") + "</div>" +
+    '<div class="two" style="margin-top:8px"><input id="newTopic" placeholder="nuovo argomento" />' +
+    '<button class="btn ghost" style="flex:0 0 auto" data-act="addtopic">Aggiungi</button></div></div>';
+
+  h += '<div class="sheet-actions"><button class="btn ghost" data-act="closesheet">Annulla</button>' +
+    '<button class="btn" data-act="savecard">' + (f.id ? "Salva modifiche" : "Aggiungi al Kasten") + "</button></div>";
+  openSheet(h);
+}
+function readForm() {
+  if (!sheetEl) return;
+  Array.prototype.forEach.call(sheetEl.querySelectorAll("[data-f]"), function (n) {
+    form[n.getAttribute("data-f")] = n.value;
+  });
+}
+
+function openSettings() {
+  var p = store.prefs;
+  var h = '<div class="sheet-h"><h2>Impostazioni</h2><button class="iconbtn" data-act="closesheet" aria-label="Chiudi">✕</button></div>';
+  h += '<div class="field"><label>Tema</label><div class="pickrow">' +
+    [["auto", "Come il telefono"], ["light", "Chiaro"], ["dark", "Scuro"]].map(function (t) {
+      return '<button class="pick ' + (p.theme === t[0] ? "on" : "") + '" data-act="settheme" data-v="' + t[0] + '">' + t[1] + "</button>";
+    }).join("") + "</div></div>";
+  h += '<div class="field"><label>Pronuncia tedesca</label><div class="pickrow">' +
+    '<button class="pick ' + (p.audio ? "on" : "") + '" data-act="setaudio" data-v="1">Attiva</button>' +
+    '<button class="pick ' + (!p.audio ? "on" : "") + '" data-act="setaudio" data-v="0">Disattiva</button></div>' +
+    '<p style="font-size:12.5px;color:var(--ink-3);margin:8px 0 0">Usa la voce di sistema del telefono: se manca il tedesco, il pulsante resta silenzioso.</p></div>';
+  h += '<div class="field"><label>Scorciatoie da tastiera</label>' +
+    '<p style="font-size:13px;color:var(--ink-2);margin:0">Spazio gira la scheda · frecce per scorrere · 1 2 3 per valutare · 1-4 per rispondere al quiz.</p></div>';
+  h += '<div class="sheet-actions"><button class="btn block" data-act="closesheet">Fatto</button></div>';
+  openSheet(h);
+}
+
+/* =================================================================
+   AZIONI
+   ================================================================= */
+
+var ACTIONS = {
+  settings: function () { openSettings(); },
+  closesheet: function () { closeSheet(); },
+  clearq: function () { state.q = ""; render(); },
+  resetfilters: function () { state.q = ""; state.topic = "*"; state.type = "*"; state.onlyFlag = false; render(); },
+  cyclesort: function () {
+    var order = ["alpha", "type", "new"];
+    state.sort = order[(order.indexOf(state.sort) + 1) % order.length];
+    renderList();
+  },
+  topic: function (v) { state.topic = v; state.openId = null; render(); },
+  type: function (v) { state.type = v; state.openId = null; render(); },
+  toggleflag: function () { state.onlyFlag = !state.onlyFlag; render(); },
+  gototopic: function (v) { state.topic = v; state.tab = "lessico"; render(); },
+
+  open: function (v, id) { state.openId = state.openId === id ? null : id; state.confirmId = null; renderList(); },
+  flag: function (v, id) {
+    store.flags[id] = !store.flags[id];
+    save("flags");
+    if (state.tab === "lessico") { renderList(); renderTabs(); } else render();
+  },
+  speak: function (v, id) {
+    var it = allItems().filter(function (i) { return i.id === id; })[0];
+    if (it) speak(headword(it));
+  },
+  add: function () { openForm(null); },
+  edit: function (v, id) {
+    var it = allItems().filter(function (i) { return i.id === id; })[0];
+    if (it) openForm(it);
+  },
+  delete: function (v, id) { state.confirmId = id; renderList(); },
+  cancelconfirm: function () { state.confirmId = null; renderList(); },
+  reallydelete: function (v, id) {
+    if (String(id).indexOf("custom_") === 0) {
+      store.custom = store.custom.filter(function (i) { return i.id !== id; });
+      save("custom");
+    } else if (store.deleted.indexOf(id) === -1) {
+      store.deleted.push(id); save("deleted");
+    }
+    state.confirmId = null; state.openId = null;
+    render();
+    toast("Scheda eliminata. La ritrovi in Progressi.");
+  },
+
+  ftype: function (v) { readForm(); form.type = v; renderForm(); },
+  ftopic: function (v) {
+    readForm();
+    var i = form.topics.indexOf(v);
+    if (i === -1) form.topics.push(v); else form.topics.splice(i, 1);
+    renderForm();
+  },
+  addtopic: function () {
+    readForm();
+    var input = $("#newTopic", sheetEl);
+    var t = input ? input.value.trim() : "";
+    if (!t) return;
+    if (allTopics().indexOf(t) === -1) { store.topics.push(t); save("topics"); }
+    if (form.topics.indexOf(t) === -1) form.topics.push(t);
+    renderForm();
+  },
+  savecard: function () {
+    readForm();
+    if (!form.german.trim() || !form.italian.trim()) { toast("Servono almeno il tedesco e l'italiano."); return; }
+    var data = Object.assign({}, form);
+    data.german = data.german.trim();
+    data.italian = data.italian.trim();
+    if (!data.id) {
+      data.id = "custom_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+      store.custom.push(data); save("custom");
+      toast("Aggiunta al Kasten.");
+    } else if (String(data.id).indexOf("custom_") === 0) {
+      store.custom = store.custom.map(function (i) { return i.id === data.id ? data : i; });
+      save("custom");
+      toast("Modifiche salvate.");
+    } else {
+      store.overrides[data.id] = data; save("overrides");
+      toast("Modifiche salvate solo sul tuo telefono.");
+    }
+    closeSheet();
+    render();
+  },
+
+  setdir: function (v) { store.prefs.dir = v; save("prefs"); render(); },
+  flipdir: function () {
+    store.prefs.dir = store.prefs.dir === "de-it" ? "it-de" : "de-it";
+    save("prefs"); rv.flipped = false; render();
+  },
+  settheme: function (v) { store.prefs.theme = v; save("prefs"); applyTheme(); openSettings(); },
+  setaudio: function (v) { store.prefs.audio = v === "1"; save("prefs"); openSettings(); },
+
+  startdue: function () { startSession(dueItems(), "Ripasso di oggi"); },
+  startfree: function () { startSession(filtered(), "Allenamento libero"); },
+  startnew: function () {
+    startSession(sample(allItems().filter(function (i) { return isNew(i.id); }), 10), "Parole nuove");
+  },
+  flip: function () {
+    if (!rv) return;
+    rv.flipped = !rv.flipped;
+    var card = el("flipCard");
+    if (card && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      card.classList.toggle("flipped", rv.flipped);
+      setTimeout(render, 280);   // lascio finire il giro, poi mostro i pulsanti
+    } else {
+      render();
+    }
+  },
+  grade: function (v) {
+    if (!rv || !rv.flipped) return;
+    var id = rv.queue.shift();
+    var g = +v;
+    gradeItem(id, g);
+    if (g === 0) { rv.again++; rv.queue.push(id); }
+    else { rv.right++; rv.done++; }
+    rv.flipped = false;
+    render();
+  },
+  endsession: function () { rv = null; render(); },
+
+  quizmode: function (v) {
+    qz = { mode: v, right: 0, total: 0, streak: 0, picked: null, typed: "", q: null };
+    newQuestion();
+    render();
+  },
+  answer: function (v) { answerQuiz(v); },
+  checkwrite: function () {
+    var i = $("#quizInput");
+    if (i) qz.typed = i.value;
+    answerQuiz(null);
+  },
+  uml: function (v) {
+    var i = $("#quizInput");
+    if (!i) return;
+    var p = i.selectionStart == null ? i.value.length : i.selectionStart;
+    i.value = i.value.slice(0, p) + v + i.value.slice(i.selectionEnd == null ? p : i.selectionEnd);
+    qz.typed = i.value;
+    i.focus();
+    i.setSelectionRange(p + 1, p + 1);
+  },
+  nextq: function () { newQuestion(); render(); },
+  resetquiz: function () { qz.right = 0; qz.total = 0; qz.streak = 0; newQuestion(); render(); },
+
+  checkupdate: function () { loadVocab(true); },
+  export: function () {
+    var payload = {
+      app: "wortschatzkasten", version: 2, exportedAt: new Date().toISOString(),
+      customItems: store.custom, customTopics: store.topics, flags: store.flags,
+      deletedIds: store.deleted, overrides: store.overrides, srs: store.srs, stats: store.stats
     };
-    reader.readAsText(file);
-    e.target.value = "";
+    var blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "wortschatzkasten-backup-" + today() + ".json";
+    document.body.appendChild(a); a.click(); a.remove();
+    URL.revokeObjectURL(url);
+    toast("Backup scaricato.");
+  },
+  import: function () { var f = el("importFile"); if (f) f.click(); },
+  restore: function () {
+    store.deleted = []; save("deleted");
+    render();
+    toast("Parole ripristinate.");
+  },
+  wipe: function () {
+    openSheet('<div class="sheet-h"><h2>Cancellare tutto?</h2><button class="iconbtn" data-act="closesheet">✕</button></div>' +
+      '<p style="font-size:14px;color:var(--ink-2);margin:0 0 4px">Spariscono le parole che hai aggiunto, le schede segnate e tutti i progressi del ripasso. ' +
+      "Il lessico di classe resta. Non si torna indietro: se ci tieni, esporta prima un backup.</p>" +
+      '<div class="sheet-actions"><button class="btn ghost" data-act="closesheet">Annulla</button>' +
+      '<button class="btn" style="background:var(--err);border-color:var(--err);color:#fff" data-act="reallywipe">Cancella tutto</button></div>');
+  },
+  reallywipe: function () {
+    store.custom = []; store.topics = []; store.flags = {}; store.deleted = [];
+    store.overrides = {}; store.srs = {}; store.stats = { streak: 0, lastDay: null, total: 0, byDay: {} };
+    ["custom", "topics", "flags", "deleted", "overrides", "srs", "stats"].forEach(save);
+    closeSheet(); render();
+    toast("Dati cancellati.");
   }
+};
 
-  useEffect(() => {
-    if (!importMsg) return;
-    const t = setTimeout(() => setImportMsg(""), 4000);
-    return () => clearTimeout(t);
-  }, [importMsg]);
+/* ---------------- eventi globali ---------------- */
 
-  if (!ready) {
-    return <div className="wk-root">Apro il tuo Kasten...</div>;
+document.addEventListener("click", function (e) {
+  var t = e.target.closest("[data-act]");
+  if (t) {
+    var act = t.getAttribute("data-act");
+    if (ACTIONS[act]) {
+      e.preventDefault();
+      ACTIONS[act](t.getAttribute("data-v"), t.getAttribute("data-id"));
+      return;
+    }
   }
-
-  return (
-    <div className="wk-root">
-      <div className="wk-head">
-        <h1>Der Wortschatzkasten</h1>
-        <p>Il tuo lessico di tedesco, pronto per la certificazione</p>
-        <div className="wk-modes">
-          <button className={`wk-mode-btn ${mode === "sfoglia" ? "active" : ""}`} onClick={() => setMode("sfoglia")}>Sfoglia</button>
-          <button className={`wk-mode-btn ${mode === "flashcard" ? "active" : ""}`} onClick={() => setMode("flashcard")}>Flashcard</button>
-          <button className={`wk-mode-btn ${mode === "quiz" ? "active" : ""}`} onClick={() => setMode("quiz")}>Quiz</button>
-        </div>
-        <button className="wk-addbtn" onClick={() => setShowAdd(true)}>+ Nuova parola</button>
-        {loadStatus === "error" && (
-          <div className="wk-status">Non sono riuscito a scaricare l'ultimo lessico dal file: sto mostrando solo le tue parole salvate sul telefono.</div>
-        )}
-        {loadStatus === "ok" && (
-          <button className="wk-status" style={{ background: "none", border: "none", textDecoration: "underline", cursor: "pointer", fontFamily: "inherit" }} onClick={loadVocab}>
-            Controlla aggiornamenti del lessico
-          </button>
-        )}
-      </div>
-
-      <div className="wk-search-wrap">
-        <span className="wk-search-icon">🔍</span>
-        <input className="wk-search-input" type="text" placeholder="Cerca parola..." value={search} onChange={(e) => setSearch(e.target.value)} />
-        {search && <button className="wk-search-clear" onClick={() => setSearch("")}>✕</button>}
-      </div>
-
-      <div className="wk-filters">
-        <div className="wk-filter-label">Argomento</div>
-        <div className="wk-filter-row">
-          <button className={`wk-chip ${selTopic === "Tutti" ? "active-topic" : ""}`} onClick={() => setSelTopic("Tutti")}>Tutti</button>
-          <button className={`wk-chip ${selTopic === "DaStudiare" ? "active-topic" : ""}`} onClick={() => setSelTopic("DaStudiare")}>🚩 Da studiare</button>
-          {topics.map((t) => (
-            <button key={t} className={`wk-chip ${selTopic === t ? "active-topic" : ""}`} onClick={() => setSelTopic(t)}>{t}</button>
-          ))}
-        </div>
-        <div className="wk-filter-label">Categoria grammaticale</div>
-        <div className="wk-filter-row">
-          <button className={`wk-chip ${selType === "Tutti" ? "active-type" : ""}`} onClick={() => setSelType("Tutti")}>Tutti</button>
-          {TYPE_KEYS.map((k) => (
-            <button key={k} className={`wk-chip ${selType === k ? "active-type" : ""}`} onClick={() => setSelType(k)}>{TYPE_META[k].label}</button>
-          ))}
-        </div>
-      </div>
-
-      {mode === "sfoglia" && (
-        <BrowseView
-          items={filtered}
-          groupByTopic={selTopic === "DaStudiare"}
-          topicsOrder={topics}
-          expandedId={expandedId}
-          setExpandedId={setExpandedId}
-          confirmId={confirmId}
-          setConfirmId={setConfirmId}
-          deleteItem={deleteItem}
-          onToggleStudy={toggleDaStudiare}
-        />
-      )}
-      <div style={{ display: mode === "flashcard" ? "block" : "none" }}>
-        <FlashcardView items={filtered} onToggleStudy={toggleDaStudiare} />
-      </div>
-      <div style={{ display: mode === "quiz" ? "block" : "none" }}>
-        <QuizView items={filtered} allItems={items} />
-      </div>
-
-      {showAdd && (
-        <AddModal
-          form={form} setForm={setForm} topics={topics} toggleFormTopic={toggleFormTopic}
-          newTopicText={newTopicText} setNewTopicText={setNewTopicText}
-          showNewTopicInput={showNewTopicInput} setShowNewTopicInput={setShowNewTopicInput}
-          addTopic={addTopic} onSubmit={submitForm}
-          onClose={() => { setShowAdd(false); setForm(emptyForm); }}
-        />
-      )}
-
-      <div className="wk-footer-reset">
-        <button onClick={() => { setCustomItems([]); setCustomTopics([]); setFlags({}); setDeletedIds([]); }}>
-          Cancella le mie modifiche (parole aggiunte, bandierine, eliminazioni)
-        </button>
-        <div style={{ marginTop: 8 }}>
-          <button onClick={exportBackup}>Esporta backup</button>
-          {" · "}
-          <button onClick={triggerImport}>Importa backup</button>
-        </div>
-        <input
-          ref={fileInputRef}
-          type="file"
-          accept="application/json,.json"
-          style={{ display: "none" }}
-          onChange={handleImportFile}
-        />
-        {importMsg && <div className="wk-status" style={{ marginTop: 6 }}>{importMsg}</div>}
-      </div>
-    </div>
-  );
-}
-
-function BrowseView({ items, groupByTopic, topicsOrder, expandedId, setExpandedId, confirmId, setConfirmId, deleteItem, onToggleStudy }) {
-  if (items.length === 0) {
-    return <div className="wk-empty">{groupByTopic ? "Nessuna parola contrassegnata come \u201cda studiare\u201d con questi filtri." : "Nessuna parola con questi filtri. Prova ad ampliarli o aggiungine una nuova."}</div>;
+  var tab = e.target.closest("[data-tab]");
+  if (tab) {
+    state.tab = tab.getAttribute("data-tab");
+    render();
   }
+});
 
-  function renderCard(item) {
-    const isOpen = expandedId === item.id;
-    const color = TYPE_META[item.type]?.color;
-    return (
-      <div key={item.id} className="wk-card" style={{ "--type-color": color }} onClick={() => setExpandedId(isOpen ? null : item.id)}>
-        <button className={`wk-flag-btn ${item.daStudiare ? "flagged" : ""}`} onClick={(e) => { e.stopPropagation(); onToggleStudy(item.id); }}>🚩</button>
-        <div className="wk-card-head">
-          <div>
-            <div className="wk-typetag">{TYPE_META[item.type]?.label.replace(/i$/, "")}</div>
-            <div className="wk-german">{headword(item)}</div>
-            <div className="wk-italian">{item.italian}</div>
-          </div>
-        </div>
-        <div className="wk-topictags">{(item.topics || []).map((t) => (<span key={t} className="wk-topictag">{t}</span>))}</div>
-        {isOpen && (
-          <div className="wk-details" onClick={(e) => e.stopPropagation()}>
-            {item.type === "sostantivo" && (
-              <>
-                <div><span className="lbl">Plurale:</span>{item.plurale || "—"}</div>
-                {item.femminile && <div><span className="lbl">Femminile:</span>{item.femminile}{item.femminilePlurale ? ` (pl. ${item.femminilePlurale})` : ""}</div>}
-              </>
-            )}
-            {item.type === "verbo" && (
-              <>
-                {item.reggenza && <div><span className="lbl">Reggenza:</span>{item.reggenza}</div>}
-                <div><span className="lbl">Präsens (3. Sg.):</span>{item.praesens || "—"}</div>
-                <div><span className="lbl">Präteritum:</span>{item.praeteritum || "—"}</div>
-                <div><span className="lbl">Perfekt:</span>{item.perfekt || "—"}</div>
-              </>
-            )}
-            {item.type === "aggettivo" && (
-              <>
-                {item.reggenza && <div><span className="lbl">Uso:</span>{item.reggenza}</div>}
-                {item.comparativo && <div><span className="lbl">Comparativo:</span>{item.comparativo}</div>}
-                {item.superlativo && <div><span className="lbl">Superlativo:</span>{item.superlativo}</div>}
-              </>
-            )}
-            {item.type === "preposizione" && item.caso && <div><span className="lbl">Regge:</span>{item.caso}</div>}
-            {item.note && <div><span className="lbl">Nota:</span>{item.note}</div>}
-            {item.esempio && <div className="wk-example">"{item.esempio}" — {item.esempioTraduzione}</div>}
-            {confirmId === item.id ? (
-              <div className="wk-confirm">
-                Eliminare questa scheda?
-                <button style={{ background: "#A8452F", color: "#fff" }} onClick={() => deleteItem(item.id)}>Elimina</button>
-                <button style={{ background: "transparent", border: "1px solid var(--line)" }} onClick={() => setConfirmId(null)}>Annulla</button>
-              </div>
-            ) : (
-              <button className="wk-trash" onClick={() => setConfirmId(item.id)}>🗑</button>
-            )}
-          </div>
-        )}
-      </div>
-    );
+document.addEventListener("keydown", function (e) {
+  if (sheetEl) {
+    if (e.key === "Escape") closeSheet();
+    return;
   }
-
-  if (!groupByTopic) return <div className="wk-grid">{items.map(renderCard)}</div>;
-
-  const groups = topicsOrder.map((t) => ({ topic: t, list: items.filter((i) => (i.topics || []).includes(t)) })).filter((g) => g.list.length > 0);
-  const untagged = items.filter((i) => !(i.topics || []).length);
-
-  return (
-    <div className="wk-groups">
-      {groups.map((g) => (
-        <div key={g.topic} className="wk-group">
-          <div className="wk-group-title">{g.topic}</div>
-          <div className="wk-grid">{g.list.map(renderCard)}</div>
-        </div>
-      ))}
-      {untagged.length > 0 && (
-        <div className="wk-group">
-          <div className="wk-group-title">Senza argomento</div>
-          <div className="wk-grid">{untagged.map(renderCard)}</div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-function FlashcardView({ items, onToggleStudy }) {
-  const [order, setOrder] = useState(items.map((i) => i.id));
-  const [idx, setIdx] = useState(0);
-  const [flipped, setFlipped] = useState(false);
-  const [direction, setDirection] = useState("de-it");
-
-  const idsKey = items.map((i) => i.id).join(",");
-  useEffect(() => { setOrder(items.map((i) => i.id)); setIdx(0); setFlipped(false); }, [idsKey]);
-
-  if (items.length === 0) return <div className="wk-empty">Nessuna parola con questi filtri.</div>;
-
-  const byId = Object.fromEntries(items.map((i) => [i.id, i]));
-  const current = byId[order[idx]] || items[0];
-  const showGermanFirst = direction === "de-it";
-
-  function next() { setFlipped(false); setIdx((i) => (i + 1) % order.length); }
-  function prev() { setFlipped(false); setIdx((i) => (i - 1 + order.length) % order.length); }
-  function doShuffle() { setOrder(shuffle(order)); setIdx(0); setFlipped(false); }
-  function toggleDirection() { setDirection((d) => (d === "de-it" ? "it-de" : "de-it")); setFlipped(false); }
-
-  const details = (
-    <div className="wk-flash-back-details">
-      {current.type === "sostantivo" && current.plurale && <div>Plurale: {current.plurale}</div>}
-      {current.type === "verbo" && <div>{current.praesens} · {current.praeteritum} · {current.perfekt}</div>}
-      {current.esempio && <div style={{ fontStyle: "italic" }}>"{current.esempio}" — {current.esempioTraduzione}</div>}
-    </div>
-  );
-
-  return (
-    <div className="wk-flash-wrap">
-      <div className="wk-flash-topbar">
-        <button className="wk-icon-btn" onClick={toggleDirection}>⇄ {showGermanFirst ? "DE → IT" : "IT → DE"}</button>
-        <button className={`wk-icon-btn ${current.daStudiare ? "flagged" : ""}`} onClick={() => onToggleStudy(current.id)}>🚩</button>
-      </div>
-      <div className="wk-flash-card" onClick={() => setFlipped((f) => !f)}>
-        {!flipped ? (
-          showGermanFirst ? (
-            <>
-              <div className="wk-flash-front">{headword(current)}</div>
-              {current.reggenza && <div className="wk-flash-sub">{current.reggenza}</div>}
-            </>
-          ) : (
-            <div className="wk-flash-back-italian">{current.italian}</div>
-          )
-        ) : showGermanFirst ? (
-          <>
-            <div className="wk-flash-back-italian">{current.italian}</div>
-            {details}
-          </>
-        ) : (
-          <>
-            <div className="wk-flash-front">{headword(current)}</div>
-            {current.reggenza && <div className="wk-flash-sub">{current.reggenza}</div>}
-            {details}
-          </>
-        )}
-      </div>
-      <div className="wk-flip-hint">Tocca la carta per girarla</div>
-      <div className="wk-flash-controls">
-        <button className="wk-icon-btn" onClick={prev}>‹</button>
-        <span className="wk-flash-count">{idx + 1} / {order.length}</span>
-        <button className="wk-icon-btn" onClick={next}>›</button>
-        <button className="wk-icon-btn" onClick={doShuffle}>🔀</button>
-      </div>
-    </div>
-  );
-}
-
-function QuizView({ items, allItems }) {
-  const [score, setScore] = useState({ right: 0, total: 0 });
-  const [question, setQuestion] = useState(null);
-  const [picked, setPicked] = useState(null);
-  const pool = items.length >= 4 ? items : allItems;
-  const idsKey = items.map((i) => i.id).join(",");
-
-  const buildQuestion = useCallback(() => {
-    if (pool.length < 2) { setQuestion(null); return; }
-    const correct = pool[Math.floor(Math.random() * pool.length)];
-    const others = shuffle(allItems.filter((i) => i.id !== correct.id && i.italian !== correct.italian)).slice(0, 3);
-    setQuestion({ correct, options: shuffle([correct, ...others]) });
-    setPicked(null);
-  }, [pool, allItems]);
-
-  useEffect(() => { buildQuestion(); setScore({ right: 0, total: 0 }); }, [idsKey]);
-
-  function resetQuiz() { setScore({ right: 0, total: 0 }); buildQuestion(); }
-
-  if (!question) return <div className="wk-empty">Servono almeno 2 parole per fare quiz con questi filtri.</div>;
-
-  function choose(opt) {
-    if (picked) return;
-    setPicked(opt.id);
-    setScore((s) => ({ right: s.right + (opt.id === question.correct.id ? 1 : 0), total: s.total + 1 }));
+  var typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
+  if (typing) {
+    if (e.key === "Enter" && document.activeElement.id === "quizInput" && qz && !qz.picked) {
+      e.preventDefault(); ACTIONS.checkwrite();
+    }
+    return;
   }
+  if (state.tab === "ripasso" && rv) {
+    if (e.key === " " || e.key === "Enter") { e.preventDefault(); ACTIONS.flip(); }
+    else if (rv.flipped && ["1", "2", "3"].indexOf(e.key) !== -1) ACTIONS.grade(String(+e.key - 1));
+    else if (e.key === "ArrowRight" && !rv.flipped) ACTIONS.flip();
+  } else if (state.tab === "quiz" && qz && qz.q) {
+    if (qz.picked && (e.key === " " || e.key === "Enter")) { e.preventDefault(); ACTIONS.nextq(); }
+    else if (!qz.picked && qz.q.options) {
+      var n = +e.key;
+      if (n >= 1 && n <= qz.q.options.length) ACTIONS.answer(qz.q.options[n - 1].id);
+    }
+  }
+});
 
-  return (
-    <div className="wk-quiz-wrap">
-      <div className="wk-quiz-score-row">
-        <div className="wk-quiz-score">Punteggio: {score.right} / {score.total}</div>
-        <button className="wk-icon-btn" onClick={resetQuiz}>↻ Reset</button>
-      </div>
-      <div className="wk-quiz-q">
-        <div className="wk-quiz-german">{headword(question.correct)}</div>
-        <div className="wk-quiz-opts">
-          {question.options.map((opt) => {
-            let cls = "wk-quiz-opt";
-            if (picked) { if (opt.id === question.correct.id) cls += " correct"; else if (opt.id === picked) cls += " wrong"; }
-            return <button key={opt.id} className={cls} onClick={() => choose(opt)}>{opt.italian}</button>;
-          })}
-        </div>
-        {picked && <button className="wk-quiz-next" onClick={buildQuestion}>Prossima parola</button>}
-      </div>
-    </div>
-  );
-}
+// gesti: trascinare la scheda a sinistra o destra durante il ripasso
+var touchX = null, touchY = null;
+document.addEventListener("touchstart", function (e) {
+  if (!rv || !e.target.closest(".cardstage")) return;
+  touchX = e.touches[0].clientX; touchY = e.touches[0].clientY;
+}, { passive: true });
+document.addEventListener("touchend", function (e) {
+  if (touchX === null) return;
+  var dx = e.changedTouches[0].clientX - touchX;
+  var dy = e.changedTouches[0].clientY - touchY;
+  touchX = null;
+  if (Math.abs(dx) < 60 || Math.abs(dy) > 50) return;
+  if (!rv) return;
+  if (!rv.flipped) { ACTIONS.flip(); return; }
+  ACTIONS.grade(dx < 0 ? "0" : "2");
+});
 
-function AddModal({ form, setForm, topics, toggleFormTopic, newTopicText, setNewTopicText, showNewTopicInput, setShowNewTopicInput, addTopic, onSubmit, onClose }) {
-  function set(field, value) { setForm((f) => ({ ...f, [field]: value })); }
-  return (
-    <div className="wk-modal-bg" onClick={onClose}>
-      <div className="wk-modal" onClick={(e) => e.stopPropagation()}>
-        <button className="wk-close" onClick={onClose}>✕</button>
-        <h2>Aggiungi una scheda</h2>
-        <form onSubmit={onSubmit}>
-          <div className="wk-field">
-            <label>Categoria grammaticale</label>
-            <div className="wk-type-select">
-              {TYPE_KEYS.map((k) => (
-                <button type="button" key={k} className={`wk-type-opt ${form.type === k ? "sel" : ""}`}
-                  style={form.type === k ? { background: TYPE_META[k].color, borderColor: TYPE_META[k].color } : {}}
-                  onClick={() => set("type", k)}>{TYPE_META[k].label}</button>
-              ))}
-            </div>
-          </div>
-          <div className="wk-row2">
-            <div className="wk-field"><label>Tedesco</label><input value={form.german} onChange={(e) => set("german", e.target.value)} placeholder="es. die Freude" required /></div>
-            <div className="wk-field"><label>Italiano</label><input value={form.italian} onChange={(e) => set("italian", e.target.value)} placeholder="es. la gioia" required /></div>
-          </div>
-          {form.type === "sostantivo" && (
-            <>
-              <div className="wk-row2">
-                <div className="wk-field"><label>Articolo</label>
-                  <select value={form.articolo} onChange={(e) => set("articolo", e.target.value)}>
-                    <option value="der">der</option><option value="die">die</option><option value="das">das</option>
-                  </select>
-                </div>
-                <div className="wk-field"><label>Plurale</label><input value={form.plurale} onChange={(e) => set("plurale", e.target.value)} placeholder="es. die Freuden" /></div>
-              </div>
-              <div className="wk-row2">
-                <div className="wk-field"><label>Femminile (se esiste)</label><input value={form.femminile} onChange={(e) => set("femminile", e.target.value)} /></div>
-                <div className="wk-field"><label>Plurale femminile</label><input value={form.femminilePlurale} onChange={(e) => set("femminilePlurale", e.target.value)} /></div>
-              </div>
-            </>
-          )}
-          {form.type === "verbo" && (
-            <>
-              <div className="wk-field"><label>Reggenza / costruzione</label><input value={form.reggenza} onChange={(e) => set("reggenza", e.target.value)} placeholder="es. auf / über + Akkusativ" /></div>
-              <div className="wk-row2">
-                <div className="wk-field"><label>Präsens (3. Sg.)</label><input value={form.praesens} onChange={(e) => set("praesens", e.target.value)} /></div>
-                <div className="wk-field"><label>Präteritum</label><input value={form.praeteritum} onChange={(e) => set("praeteritum", e.target.value)} /></div>
-              </div>
-              <div className="wk-field"><label>Perfekt</label><input value={form.perfekt} onChange={(e) => set("perfekt", e.target.value)} /></div>
-            </>
-          )}
-          {form.type === "aggettivo" && (
-            <div className="wk-row2">
-              <div className="wk-field"><label>Comparativo</label><input value={form.comparativo} onChange={(e) => set("comparativo", e.target.value)} /></div>
-              <div className="wk-field"><label>Superlativo</label><input value={form.superlativo} onChange={(e) => set("superlativo", e.target.value)} /></div>
-            </div>
-          )}
-          {form.type === "preposizione" && (
-            <div className="wk-field"><label>Caso retto</label>
-              <select value={form.caso} onChange={(e) => set("caso", e.target.value)}>
-                <option value="Akkusativ">Akkusativ</option><option value="Dativ">Dativ</option><option value="Genitiv">Genitiv</option><option value="Wechselpräposition">Wechselpräposition (Akk./Dat.)</option>
-              </select>
-            </div>
-          )}
-          <div className="wk-field"><label>Frase di esempio (facoltativa)</label><input value={form.esempio} onChange={(e) => set("esempio", e.target.value)} /></div>
-          <div className="wk-field"><label>Traduzione della frase</label><input value={form.esempioTraduzione} onChange={(e) => set("esempioTraduzione", e.target.value)} /></div>
-          <div className="wk-field"><label>Nota (facoltativa)</label><textarea value={form.note} onChange={(e) => set("note", e.target.value)} /></div>
-          <div className="wk-field">
-            <label>Argomenti</label>
-            <div className="wk-topic-check">
-              {topics.map((t) => (
-                <label key={t}><input type="checkbox" checked={form.topics.includes(t)} onChange={() => toggleFormTopic(t)} />{t}</label>
-              ))}
-            </div>
-            {showNewTopicInput ? (
-              <div className="wk-add-topic-inline">
-                <input value={newTopicText} onChange={(e) => setNewTopicText(e.target.value)} placeholder="nuovo argomento" />
-                <button type="button" className="wk-topic-toggle-btn" onClick={addTopic}>Aggiungi</button>
-              </div>
-            ) : (
-              <button type="button" className="wk-topic-toggle-btn" style={{ marginTop: 8 }} onClick={() => setShowNewTopicInput(true)}>+ nuovo argomento</button>
-            )}
-          </div>
-          <div className="wk-modal-actions">
-            <button type="button" className="wk-btn-secondary" onClick={onClose}>Annulla</button>
-            <button type="submit" className="wk-btn-primary">Salva scheda</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-}
+document.addEventListener("change", function (e) {
+  if (e.target.id !== "importFile") return;
+  var file = e.target.files && e.target.files[0];
+  if (!file) return;
+  var reader = new FileReader();
+  reader.onload = function () {
+    try {
+      var d = JSON.parse(reader.result);
+      var added = 0;
+      (d.customItems || []).forEach(function (it) {
+        if (!store.custom.some(function (x) { return x.id === it.id; })) { store.custom.push(it); added++; }
+      });
+      (d.customTopics || []).forEach(function (t) { if (store.topics.indexOf(t) === -1) store.topics.push(t); });
+      Object.keys(d.flags || {}).forEach(function (k) { if (d.flags[k]) store.flags[k] = true; });
+      Object.keys(d.overrides || {}).forEach(function (k) { store.overrides[k] = d.overrides[k]; });
+      Object.keys(d.srs || {}).forEach(function (k) {
+        var mine = store.srs[k], theirs = d.srs[k];
+        if (!mine || (theirs.box || 0) > (mine.box || 0)) store.srs[k] = theirs;
+      });
+      if (d.stats && (d.stats.total || 0) > (store.stats.total || 0)) store.stats = d.stats;
+      ["custom", "topics", "flags", "overrides", "srs", "stats"].forEach(save);
+      render();
+      toast("Backup unito: " + plural(added, "parola nuova", "parole nuove") + ".");
+    } catch (err) {
+      toast("Questo file non è un backup del Kasten.");
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = "";
+});
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
-</script>
+window.addEventListener("scroll", function () {
+  var t = el("topbar");
+  if (t) t.classList.toggle("scrolled", window.scrollY > 4);
+}, { passive: true });
 
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("./service-worker.js").catch(() => {});
+/* ---------------- caricamento del lessico ---------------- */
+
+function loadVocab(manual) {
+  fetch("vocab-data.json", { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("http " + r.status); return r.json(); })
+    .then(function (data) {
+      var before = db.official.length;
+      db.official = data.items || [];
+      db.officialTopics = data.topics || [];
+      state.loadStatus = "ok";
+      lsSet("wk_vocab_cache", data);
+      render();
+      if (manual) {
+        var diff = db.official.length - before;
+        toast(diff > 0 ? plural(diff, "parola nuova", "parole nuove") + " dal lessico di classe." : "Il lessico è già aggiornato.");
+      }
+    })
+    .catch(function () {
+      var cached = lsGet("wk_vocab_cache", null);
+      if (cached && !db.official.length) {
+        db.official = cached.items || [];
+        db.officialTopics = cached.topics || [];
+        state.loadStatus = "cache";
+      } else if (!db.official.length) {
+        state.loadStatus = "error";
+      }
+      render();
+      if (manual) toast("Nessuna connessione: sto usando la copia salvata.");
     });
-  }
+}
+
+/* ---------------- avvio ---------------- */
+
+applyTheme();
+// le scorciatoie dell'icona (index.html#ripasso) aprono direttamente la sezione
+var hash = (location.hash || "").replace("#", "");
+if (["lessico", "ripasso", "quiz", "progressi"].indexOf(hash) !== -1) state.tab = hash;
+
+var cachedStart = lsGet("wk_vocab_cache", null);
+if (cachedStart) {
+  db.official = cachedStart.items || [];
+  db.officialTopics = cachedStart.topics || [];
+  state.loadStatus = "cache";
+}
+render();
+loadVocab(false);
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("service-worker.js").catch(function () {});
+  });
+}
+
+})();
 </script>
 </body>
 </html>

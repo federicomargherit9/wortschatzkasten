@@ -1,17 +1,26 @@
 {
   "name": "Der Wortschatzkasten",
   "short_name": "Wortschatz",
-  "description": "Lessico di tedesco per la certificazione scolastica",
+  "description": "Il lessico di tedesco della classe: schede, ripasso a intervalli ed esercizi, anche offline.",
   "start_url": "./index.html",
   "scope": "./",
+  "id": "/wortschatzkasten/",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
   "orientation": "portrait",
-  "background_color": "#EDE6D6",
-  "theme_color": "#2F5D62",
+  "background_color": "#EBEDEF",
+  "theme_color": "#EBEDEF",
+  "lang": "it",
+  "dir": "ltr",
+  "categories": ["education", "books"],
   "icons": [
     { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
     { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
     { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Ripasso di oggi", "short_name": "Ripasso", "url": "./index.html#ripasso" },
+    { "name": "Esercizi", "short_name": "Esercizi", "url": "./index.html#quiz" }
   ]
 }
