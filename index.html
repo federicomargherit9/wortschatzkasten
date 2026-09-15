@@ -1104,7 +1104,7 @@ function reviewSessionHtml() {
   else { front = italianFace; back = germanFace + extra; }
 
   h += '<div class="cardstage" style="--g:' + g + '">' +
-    '<div class="flip ' + (rv.flipped ? "flipped" : "") + '" id="flipCard" data-act="flip" role="button" tabindex="0" aria-label="Gira la scheda">' +
+    '<div class="flip ' + (rv.flipped ? "flipped" : "") + '" id="flipCard" data-id="' + esc(it.id) + '" data-act="flip" role="button" tabindex="0" aria-label="Gira la scheda">' +
       '<div class="face front">' + front + '<div class="sub" style="margin-top:6px">' + TYPES[it.type].one + "</div></div>" +
       '<div class="face back">' + back + "</div>" +
     "</div></div>";
@@ -1114,9 +1114,9 @@ function reviewSessionHtml() {
   } else {
     var s = srsOf(it.id);
     h += '<div class="grades">' +
-      '<button class="grade g0" data-act="grade" data-g="0">Da rivedere<small>torna oggi</small></button>' +
-      '<button class="grade g1" data-act="grade" data-g="1">Incerta<small>fra ' + INTERVALS[Math.max(1, s.box)] + "g</small></button>" +
-      '<button class="grade g2" data-act="grade" data-g="2">La so<small>fra ' + INTERVALS[Math.min(INTERVALS.length - 1, (s.box || 0) + 1)] + "g</small></button>" +
+      '<button class="grade g0" data-act="grade" data-v="0">Da rivedere<small>torna oggi</small></button>' +
+      '<button class="grade g1" data-act="grade" data-v="1">Incerta<small>fra ' + INTERVALS[Math.max(1, s.box)] + "g</small></button>" +
+      '<button class="grade g2" data-act="grade" data-v="2">La so<small>fra ' + INTERVALS[Math.min(INTERVALS.length - 1, (s.box || 0) + 1)] + "g</small></button>" +
       "</div>";
     h += '<div class="hint">Tasti 1 · 2 · 3</div>';
   }
