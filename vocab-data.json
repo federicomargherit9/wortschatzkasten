@@ -18,7 +18,12 @@
     "Domande indirette e dubbi",
     "Cultura e tradizioni",
     "Unità di misura",
-    "Congiunzioni subordinanti"
+    "Congiunzioni subordinanti",
+    "Cibo e cucina",
+    "Scuola e università",
+    "Uffici e burocrazia",
+    "Lessico domestico",
+    "Lessico medico"
   ],
   "items": [
     {
@@ -2030,8 +2035,10 @@
       "perfekt": "hat abgegeben",
       "italian": "dare, consegnare; esprimere (il voto)",
       "topics": [
-        "Politica"
-      ]
+        "Politica",
+        "Scuola e università"
+      ],
+      "note": "a scuola si usa per 'consegnare i compiti'"
     },
     {
       "id": "d51",
@@ -2976,6 +2983,2083 @@
       "topics": [
         "Congiunzioni subordinanti"
       ]
+    },
+    {
+      "id": "g1",
+      "type": "sostantivo",
+      "german": "Rezept",
+      "articolo": "das",
+      "plurale": "die Rezepte",
+      "italian": "la ricetta",
+      "topics": [
+        "Cibo e cucina"
+      ]
+    },
+    {
+      "id": "g2",
+      "type": "verbo",
+      "german": "kochen",
+      "praesens": "kocht",
+      "praeteritum": "kochte",
+      "perfekt": "hat gekocht",
+      "italian": "cucinare; bollire",
+      "topics": [
+        "Cibo e cucina"
+      ]
+    },
+    {
+      "id": "g3",
+      "type": "verbo",
+      "german": "backen",
+      "reggenza": "verbo forte",
+      "praesens": "bäckt",
+      "praeteritum": "backte",
+      "perfekt": "hat gebacken",
+      "italian": "cuocere al forno; fare dolci",
+      "topics": [
+        "Cibo e cucina"
+      ]
+    },
+    {
+      "id": "g4",
+      "type": "sostantivo",
+      "german": "Zutat",
+      "articolo": "die",
+      "plurale": "die Zutaten",
+      "italian": "l'ingrediente",
+      "topics": [
+        "Cibo e cucina"
+      ],
+      "note": "spesso usato al plurale: die Zutaten"
+    },
+    {
+      "id": "g5",
+      "type": "sostantivo",
+      "german": "Gewürz",
+      "articolo": "das",
+      "plurale": "die Gewürze",
+      "italian": "la spezia",
+      "topics": [
+        "Cibo e cucina"
+      ]
+    },
+    {
+      "id": "g6",
+      "type": "sostantivo",
+      "german": "Garzeit",
+      "articolo": "die",
+      "plurale": "die Garzeiten",
+      "italian": "il tempo di cottura",
+      "topics": [
+        "Cibo e cucina"
+      ]
+    },
+    {
+      "id": "g7",
+      "type": "sostantivo",
+      "german": "Kartoffel",
+      "articolo": "die",
+      "plurale": "die Kartoffeln",
+      "italian": "la patata",
+      "topics": [
+        "Cibo e cucina"
+      ]
+    },
+    {
+      "id": "g8",
+      "type": "sostantivo",
+      "german": "Soße",
+      "articolo": "die",
+      "plurale": "die Soßen",
+      "italian": "la salsa, il sugo",
+      "topics": [
+        "Cibo e cucina"
+      ]
+    },
+    {
+      "id": "g9",
+      "type": "sostantivo",
+      "german": "Tofu",
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "il tofu",
+      "topics": [
+        "Cibo e cucina"
+      ]
+    },
+    {
+      "id": "g10",
+      "type": "sostantivo",
+      "german": "Beilage",
+      "articolo": "die",
+      "plurale": "die Beilagen",
+      "italian": "il contorno",
+      "topics": [
+        "Cibo e cucina"
+      ],
+      "note": "spesso al plurale: die Beilagen"
+    },
+    {
+      "id": "g11",
+      "type": "sostantivo",
+      "german": "Schweinefleisch",
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la carne di maiale",
+      "topics": [
+        "Cibo e cucina"
+      ]
+    },
+    {
+      "id": "g12",
+      "type": "sostantivo",
+      "german": "Hühnerfleisch",
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la carne di pollo",
+      "topics": [
+        "Cibo e cucina"
+      ]
+    },
+    {
+      "id": "g13",
+      "type": "sostantivo",
+      "german": "Rindfleisch",
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la carne di manzo",
+      "topics": [
+        "Cibo e cucina"
+      ]
+    },
+    {
+      "id": "g14",
+      "type": "sostantivo",
+      "german": "Fisch",
+      "articolo": "der",
+      "plurale": "die Fische",
+      "italian": "il pesce",
+      "topics": [
+        "Cibo e cucina"
+      ]
+    },
+    {
+      "id": "g15",
+      "type": "sostantivo",
+      "german": "Lust",
+      "articolo": "die",
+      "plurale": "— per lo più Sg.",
+      "italian": "la voglia",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "'Lust auf/aufs + Akkusativ haben' = avere voglia di"
+    },
+    {
+      "id": "g16",
+      "type": "verbo",
+      "german": "verlieren",
+      "reggenza": "verbo forte, + Akkusativ",
+      "praesens": "verliert",
+      "praeteritum": "verlor",
+      "perfekt": "hat verloren",
+      "italian": "perdere",
+      "topics": [
+        "Scuola e università"
+      ],
+      "esempio": "An meiner Schule verliere ich die Lust am Lernen!",
+      "esempioTraduzione": "Nella mia scuola perdo la voglia di studiare!"
+    },
+    {
+      "id": "g17",
+      "type": "sostantivo",
+      "german": "Stoff",
+      "articolo": "der",
+      "plurale": "die Stoffe",
+      "italian": "il materiale di studio, il programma",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "qui nel senso di 'programma/materiale scolastico da studiare'"
+    },
+    {
+      "id": "g18",
+      "type": "sostantivo",
+      "german": "Fantasie",
+      "articolo": "die",
+      "plurale": "die Fantasien",
+      "italian": "la fantasia, l'immaginazione",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g19",
+      "type": "sostantivo",
+      "german": "Methode",
+      "articolo": "die",
+      "plurale": "die Methoden",
+      "italian": "il metodo",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g20",
+      "type": "sostantivo",
+      "german": "Aufgabe",
+      "articolo": "die",
+      "plurale": "die Aufgaben",
+      "italian": "il compito, l'esercizio",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g21",
+      "type": "sostantivo",
+      "german": "Arbeitsblatt",
+      "articolo": "das",
+      "plurale": "die Arbeitsblätter",
+      "italian": "la scheda di lavoro",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g22",
+      "type": "verbo",
+      "german": "bearbeiten",
+      "praesens": "bearbeitet",
+      "praeteritum": "bearbeitete",
+      "perfekt": "hat bearbeitet",
+      "italian": "elaborare, lavorare su (un compito)",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g24",
+      "type": "aggettivo",
+      "german": "verboten",
+      "italian": "vietato/a",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g25",
+      "type": "sostantivo",
+      "german": "Grund",
+      "articolo": "der",
+      "plurale": "die Gründe",
+      "italian": "il motivo, la ragione",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "'aus diesem Grund' = per questo motivo"
+    },
+    {
+      "id": "g26",
+      "type": "sostantivo",
+      "german": "Thema",
+      "articolo": "das",
+      "plurale": "die Themen",
+      "italian": "il tema, l'argomento",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g27",
+      "type": "verbo",
+      "german": "bestimmen",
+      "praesens": "bestimmt",
+      "praeteritum": "bestimmte",
+      "perfekt": "hat bestimmt",
+      "italian": "decidere, determinare, stabilire",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g28",
+      "type": "sostantivo",
+      "german": "Utopie",
+      "articolo": "die",
+      "plurale": "die Utopien",
+      "italian": "l'utopia",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g29",
+      "type": "sostantivo",
+      "german": "Langeweile",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la noia",
+      "topics": [
+        "Scuola e università",
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g30",
+      "type": "sostantivo",
+      "german": "Leistungsdruck",
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la pressione da prestazione",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "'Leistungsdruck an + Dativ' = pressione riguardo a qualcosa"
+    },
+    {
+      "id": "g31",
+      "type": "sostantivo",
+      "german": "Ärger",
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la rabbia, il fastidio",
+      "topics": [
+        "Scuola e università",
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g32",
+      "type": "verbo",
+      "german": "sich ärgern über",
+      "reggenza": "+ Akkusativ",
+      "praesens": "ärgert sich über",
+      "praeteritum": "ärgerte sich über",
+      "perfekt": "hat sich über ... geärgert",
+      "italian": "arrabbiarsi per",
+      "topics": [
+        "Scuola e università",
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g33",
+      "type": "sostantivo",
+      "german": "Klausur",
+      "articolo": "die",
+      "plurale": "die Klausuren",
+      "italian": "il compito in classe, l'esame scritto",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g34",
+      "type": "sostantivo",
+      "german": "Unterricht",
+      "articolo": "der",
+      "plurale": "— per lo più Sg.",
+      "italian": "la lezione, l'insegnamento",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g35",
+      "type": "sostantivo",
+      "german": "Gymnasium",
+      "articolo": "das",
+      "plurale": "die Gymnasien",
+      "italian": "il liceo",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g36",
+      "type": "sostantivo",
+      "german": "Schüler",
+      "articolo": "der",
+      "plurale": "die Schüler",
+      "femminile": "die Schülerin",
+      "femminilePlurale": "die Schülerinnen",
+      "italian": "l'alunno, l'alunna",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g37",
+      "type": "sostantivo",
+      "german": "Lehrer",
+      "articolo": "der",
+      "plurale": "die Lehrer",
+      "femminile": "die Lehrerin",
+      "femminilePlurale": "die Lehrerinnen",
+      "italian": "l'insegnante",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g38",
+      "type": "verbo",
+      "german": "unterrichten",
+      "praesens": "unterrichtet",
+      "praeteritum": "unterrichtete",
+      "perfekt": "hat unterrichtet",
+      "italian": "insegnare",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "si può fare 'frontal', 'in Gruppen', 'in Partnerarbeit', 'am Computer'"
+    },
+    {
+      "id": "g39",
+      "type": "verbo",
+      "german": "arbeiten",
+      "praesens": "arbeitet",
+      "praeteritum": "arbeitete",
+      "perfekt": "hat gearbeitet",
+      "italian": "lavorare",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g40",
+      "type": "sostantivo",
+      "german": "Universität",
+      "articolo": "die",
+      "plurale": "die Universitäten",
+      "italian": "l'università",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g41",
+      "type": "verbo",
+      "german": "studieren",
+      "praesens": "studiert",
+      "praeteritum": "studierte",
+      "perfekt": "hat studiert",
+      "italian": "studiare (all'università)",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g42",
+      "type": "sostantivo",
+      "german": "Studium",
+      "articolo": "das",
+      "plurale": "die Studien",
+      "italian": "gli studi universitari",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g43",
+      "type": "sostantivo",
+      "german": "Fakultät",
+      "articolo": "die",
+      "plurale": "die Fakultäten",
+      "italian": "la facoltà",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g44",
+      "type": "sostantivo",
+      "german": "Vorlesung",
+      "articolo": "die",
+      "plurale": "die Vorlesungen",
+      "italian": "la lezione universitaria",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g45",
+      "type": "sostantivo",
+      "german": "Jura",
+      "articolo": "—",
+      "plurale": "— (non numerabile, senza articolo)",
+      "italian": "giurisprudenza",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g46",
+      "type": "sostantivo",
+      "german": "Medizin",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "medicina (materia di studio)",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g47",
+      "type": "sostantivo",
+      "german": "Student",
+      "articolo": "der",
+      "plurale": "die Studenten",
+      "femminile": "die Studentin",
+      "femminilePlurale": "die Studentinnen",
+      "italian": "lo studente universitario, la studentessa",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "sostantivo debole: -en in tutti i casi tranne il nominativo singolare"
+    },
+    {
+      "id": "g48",
+      "type": "sostantivo",
+      "german": "Professor",
+      "articolo": "der",
+      "plurale": "die Professoren",
+      "italian": "il professore universitario",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g49",
+      "type": "sostantivo",
+      "german": "Spaß",
+      "articolo": "der",
+      "plurale": "— per lo più Sg.",
+      "italian": "il divertimento",
+      "topics": [
+        "Scuola e università",
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g50",
+      "type": "sostantivo",
+      "german": "Hausaufgabe",
+      "articolo": "die",
+      "plurale": "die Hausaufgaben",
+      "italian": "il compito a casa",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g51",
+      "type": "sostantivo",
+      "german": "Fach",
+      "articolo": "das",
+      "plurale": "die Fächer",
+      "italian": "la materia (scolastica)",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g52",
+      "type": "sostantivo",
+      "german": "Stundenplan",
+      "articolo": "der",
+      "plurale": "die Stundenpläne",
+      "italian": "l'orario scolastico",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g53",
+      "type": "sostantivo",
+      "german": "Lernziel",
+      "articolo": "das",
+      "plurale": "die Lernziele",
+      "italian": "l'obiettivo di apprendimento",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g54",
+      "type": "sostantivo",
+      "german": "Lernmethode",
+      "articolo": "die",
+      "plurale": "die Lernmethoden",
+      "italian": "il metodo di studio",
+      "topics": [
+        "Scuola e università"
+      ],
+      "esempio": "eine abwechslungsreiche Lernmethode",
+      "esempioTraduzione": "un metodo di studio vario"
+    },
+    {
+      "id": "g55",
+      "type": "sostantivo",
+      "german": "Notensystem",
+      "articolo": "das",
+      "plurale": "die Notensysteme",
+      "italian": "il sistema di voti",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g56",
+      "type": "sostantivo",
+      "german": "Bewertungsskala",
+      "articolo": "die",
+      "plurale": "die Bewertungsskalen",
+      "italian": "la scala di valutazione",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g57",
+      "type": "sostantivo",
+      "german": "Klassenraum",
+      "articolo": "der",
+      "plurale": "die Klassenräume",
+      "italian": "l'aula",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "sinonimo: das Klassenzimmer"
+    },
+    {
+      "id": "g58",
+      "type": "sostantivo",
+      "german": "Bank",
+      "articolo": "die",
+      "plurale": "die Bänke",
+      "italian": "il banco (di scuola)",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "attenzione: 'die Bank, die Banken' significa invece 'la banca'"
+    },
+    {
+      "id": "g59",
+      "type": "sostantivo",
+      "german": "Stuhl",
+      "articolo": "der",
+      "plurale": "die Stühle",
+      "italian": "la sedia",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g60",
+      "type": "sostantivo",
+      "german": "Tafel",
+      "articolo": "die",
+      "plurale": "die Tafeln",
+      "italian": "la lavagna",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "die Kreidetafel = lavagna di gesso; die digitale/interaktive Tafel = lavagna digitale/interattiva"
+    },
+    {
+      "id": "g61",
+      "type": "aggettivo",
+      "german": "touchfähig",
+      "italian": "touch, dotato/a di schermo tattile",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g62",
+      "type": "sostantivo",
+      "german": "Prüfung",
+      "articolo": "die",
+      "plurale": "die Prüfungen",
+      "italian": "l'esame, la prova",
+      "topics": [
+        "Scuola e università"
+      ],
+      "esempio": "die mündliche Prüfung",
+      "esempioTraduzione": "l'esame orale"
+    },
+    {
+      "id": "g63",
+      "type": "sostantivo",
+      "german": "Vorbereitung",
+      "articolo": "die",
+      "plurale": "die Vorbereitungen",
+      "italian": "la preparazione",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g64",
+      "type": "espressione",
+      "german": "die Schule abbrechen / die Schule verlassen",
+      "italian": "abbandonare la scuola / lasciare la scuola",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g65",
+      "type": "espressione",
+      "german": "die Schule schwänzen",
+      "italian": "marinare la scuola",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g66",
+      "type": "espressione",
+      "german": "keine Lust aufs Lernen haben / keinen Bock aufs Lernen haben",
+      "italian": "non avere voglia di studiare",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "'keinen Bock haben' è colloquiale"
+    },
+    {
+      "id": "g67",
+      "type": "espressione",
+      "german": "das Gymnasium wählen / sich für das Gymnasium entscheiden",
+      "italian": "scegliere il liceo / decidere per il liceo",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g68",
+      "type": "sostantivo",
+      "german": "Berufsschule",
+      "articolo": "die",
+      "plurale": "die Berufsschulen",
+      "italian": "la scuola professionale",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g69",
+      "type": "sostantivo",
+      "german": "Realschule",
+      "articolo": "die",
+      "plurale": "die Realschulen",
+      "italian": "la scuola secondaria di primo grado (indirizzo intermedio)",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g70",
+      "type": "sostantivo",
+      "german": "Gesamtschule",
+      "articolo": "die",
+      "plurale": "die Gesamtschulen",
+      "italian": "la scuola comprensiva",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g71",
+      "type": "sostantivo",
+      "german": "Hauptschule",
+      "articolo": "die",
+      "plurale": "die Hauptschulen",
+      "italian": "la scuola secondaria di primo grado (indirizzo di base)",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g72",
+      "type": "espressione",
+      "german": "eine Note bekommen",
+      "italian": "prendere un voto",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g73",
+      "type": "sostantivo",
+      "german": "Note",
+      "articolo": "die",
+      "plurale": "die Noten",
+      "italian": "il voto",
+      "topics": [
+        "Scuola e università"
+      ],
+      "esempio": "eine Note bekommen",
+      "esempioTraduzione": "prendere un voto"
+    },
+    {
+      "id": "g74",
+      "type": "sostantivo",
+      "german": "Abitur",
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la maturità, l'esame di stato",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "in Austria/Svizzera si dice 'die Matura'"
+    },
+    {
+      "id": "g75",
+      "type": "espressione",
+      "german": "ein Praktikum absolvieren",
+      "italian": "svolgere un tirocinio",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g76",
+      "type": "sostantivo",
+      "german": "Praktikum",
+      "articolo": "das",
+      "plurale": "die Praktika",
+      "italian": "il tirocinio, lo stage",
+      "topics": [
+        "Scuola e università"
+      ],
+      "esempio": "ein Praktikum absolvieren",
+      "esempioTraduzione": "svolgere un tirocinio"
+    },
+    {
+      "id": "g77",
+      "type": "sostantivo",
+      "german": "Berufsausbildung",
+      "articolo": "die",
+      "plurale": "die Berufsausbildungen",
+      "italian": "la formazione professionale",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g78",
+      "type": "verbo",
+      "german": "motivieren",
+      "praesens": "motiviert",
+      "praeteritum": "motivierte",
+      "perfekt": "hat motiviert",
+      "italian": "motivare",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g79",
+      "type": "espressione",
+      "german": "sitzen bleiben",
+      "italian": "essere bocciato/a, ripetere l'anno",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "letteralmente 'restare seduto'"
+    },
+    {
+      "id": "g80",
+      "type": "sostantivo",
+      "german": "Fähigkeit",
+      "articolo": "die",
+      "plurale": "die Fähigkeiten",
+      "italian": "la capacità, l'abilità",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g81",
+      "type": "sostantivo",
+      "german": "Kindergarten",
+      "articolo": "der",
+      "plurale": "die Kindergärten",
+      "italian": "l'asilo (nido/infanzia)",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g82",
+      "type": "sostantivo",
+      "german": "Grundschule",
+      "articolo": "die",
+      "plurale": "die Grundschulen",
+      "italian": "la scuola primaria",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g83",
+      "type": "espressione",
+      "german": "die weiterführende Schule",
+      "italian": "la scuola secondaria",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "termine generico per le scuole dopo la Grundschule"
+    },
+    {
+      "id": "g84",
+      "type": "verbo",
+      "german": "fragen",
+      "praesens": "fragt",
+      "praeteritum": "fragte",
+      "perfekt": "hat gefragt",
+      "italian": "chiedere, domandare",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g85",
+      "type": "sostantivo",
+      "german": "Frage",
+      "articolo": "die",
+      "plurale": "die Fragen",
+      "italian": "la domanda",
+      "topics": [
+        "Scuola e università"
+      ],
+      "esempio": "Fragen beantworten",
+      "esempioTraduzione": "rispondere alle domande"
+    },
+    {
+      "id": "g86",
+      "type": "verbo",
+      "german": "beantworten",
+      "praesens": "beantwortet",
+      "praeteritum": "beantwortete",
+      "perfekt": "hat beantwortet",
+      "italian": "rispondere a (una domanda)",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g87",
+      "type": "verbo",
+      "german": "interessieren",
+      "praesens": "interessiert",
+      "praeteritum": "interessierte",
+      "perfekt": "hat interessiert",
+      "italian": "interessare (a qualcuno)",
+      "topics": [
+        "Scuola e università"
+      ],
+      "note": "'etwas interessiert mich' = qualcosa mi interessa (uso non riflessivo, diverso da 'sich interessieren für')"
+    },
+    {
+      "id": "g88",
+      "type": "verbo",
+      "german": "lernen",
+      "praesens": "lernt",
+      "praeteritum": "lernte",
+      "perfekt": "hat gelernt",
+      "italian": "imparare, studiare",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g89",
+      "type": "sostantivo",
+      "german": "Lernen",
+      "articolo": "das",
+      "plurale": "— Sg. (sostantivato da 'lernen')",
+      "italian": "l'apprendimento, lo studiare",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g185",
+      "type": "sostantivo",
+      "german": "Arbeit",
+      "articolo": "die",
+      "plurale": "die Arbeiten",
+      "italian": "il lavoro",
+      "topics": [
+        "Scuola e università"
+      ],
+      "esempio": "arbeiten",
+      "esempioTraduzione": "lavorare"
+    },
+    {
+      "id": "g186",
+      "type": "sostantivo",
+      "german": "Motivation",
+      "articolo": "die",
+      "plurale": "— per lo più Sg.",
+      "italian": "la motivazione",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g187",
+      "type": "verbo",
+      "german": "prüfen",
+      "praesens": "prüft",
+      "praeteritum": "prüfte",
+      "perfekt": "hat geprüft",
+      "italian": "esaminare, verificare",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "g188",
+      "type": "verbo",
+      "german": "bewerten",
+      "praesens": "bewertet",
+      "praeteritum": "bewertete",
+      "perfekt": "hat bewertet",
+      "italian": "valutare, dare un voto a",
+      "topics": [
+        "Scuola e università"
+      ],
+      "esempio": "die Bewertungsskala",
+      "esempioTraduzione": "la scala di valutazione"
+    },
+    {
+      "id": "g90",
+      "type": "sostantivo",
+      "german": "Bürgeramt",
+      "articolo": "das",
+      "plurale": "die Bürgerämter",
+      "italian": "l'ufficio anagrafe",
+      "topics": [
+        "Uffici e burocrazia"
+      ]
+    },
+    {
+      "id": "g91",
+      "type": "sostantivo",
+      "german": "Arbeitsamt",
+      "articolo": "das",
+      "plurale": "die Arbeitsämter",
+      "italian": "l'ufficio di collocamento, il centro per l'impiego",
+      "topics": [
+        "Uffici e burocrazia"
+      ]
+    },
+    {
+      "id": "g92",
+      "type": "sostantivo",
+      "german": "Ausländerbehörde",
+      "articolo": "die",
+      "plurale": "die Ausländerbehörden",
+      "italian": "l'ufficio immigrazione (stranieri)",
+      "topics": [
+        "Uffici e burocrazia"
+      ]
+    },
+    {
+      "id": "g93",
+      "type": "sostantivo",
+      "german": "Antrag",
+      "articolo": "der",
+      "plurale": "die Anträge",
+      "italian": "la domanda, la richiesta (formale)",
+      "topics": [
+        "Uffici e burocrazia"
+      ],
+      "note": "'einen Antrag stellen' = presentare una domanda"
+    },
+    {
+      "id": "g94",
+      "type": "verbo",
+      "german": "beantragen",
+      "praesens": "beantragt",
+      "praeteritum": "beantragte",
+      "perfekt": "hat beantragt",
+      "italian": "richiedere (formalmente), fare domanda per",
+      "topics": [
+        "Uffici e burocrazia"
+      ]
+    },
+    {
+      "id": "g95",
+      "type": "sostantivo",
+      "german": "Formular",
+      "articolo": "das",
+      "plurale": "die Formulare",
+      "italian": "il modulo (da compilare)",
+      "topics": [
+        "Uffici e burocrazia"
+      ]
+    },
+    {
+      "id": "g96",
+      "type": "verbo",
+      "german": "sich anmelden",
+      "reggenza": "verbo separabile riflessivo",
+      "praesens": "meldet sich an",
+      "praeteritum": "meldete sich an",
+      "perfekt": "hat sich angemeldet",
+      "italian": "iscriversi, registrarsi",
+      "topics": [
+        "Uffici e burocrazia"
+      ]
+    },
+    {
+      "id": "g97",
+      "type": "sostantivo",
+      "german": "Anmeldung",
+      "articolo": "die",
+      "plurale": "die Anmeldungen",
+      "italian": "l'iscrizione, la registrazione",
+      "topics": [
+        "Uffici e burocrazia"
+      ]
+    },
+    {
+      "id": "g98",
+      "type": "sostantivo",
+      "german": "Wut",
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la rabbia",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g99",
+      "type": "aggettivo",
+      "german": "wütend",
+      "italian": "arrabbiato/a, furioso/a",
+      "topics": [
+        "Sentimenti"
+      ],
+      "note": "in tedesco l'aggettivo si usa invariato anche come avverbio: 'wütend schreien' = urlare con rabbia"
+    },
+    {
+      "id": "g100",
+      "type": "verbo",
+      "german": "sich amüsieren",
+      "praesens": "amüsiert sich",
+      "praeteritum": "amüsierte sich",
+      "perfekt": "hat sich amüsiert",
+      "italian": "divertirsi",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g101",
+      "type": "verbo",
+      "german": "lachen",
+      "praesens": "lacht",
+      "praeteritum": "lachte",
+      "perfekt": "hat gelacht",
+      "italian": "ridere",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g102",
+      "type": "verbo",
+      "german": "weinen",
+      "praesens": "weint",
+      "praeteritum": "weinte",
+      "perfekt": "hat geweint",
+      "italian": "piangere",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g103",
+      "type": "aggettivo",
+      "german": "glücklich",
+      "italian": "felice",
+      "topics": [
+        "Sentimenti"
+      ],
+      "note": "usato anche come avverbio: 'glücklich lächeln' = sorridere felicemente"
+    },
+    {
+      "id": "g104",
+      "type": "aggettivo",
+      "german": "traurig",
+      "italian": "triste",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g105",
+      "type": "sostantivo",
+      "german": "Traurigkeit",
+      "articolo": "die",
+      "plurale": "— Sg.",
+      "italian": "la tristezza",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g106",
+      "type": "aggettivo",
+      "german": "überrascht",
+      "italian": "sorpreso/a",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g107",
+      "type": "sostantivo",
+      "german": "Überraschung",
+      "articolo": "die",
+      "plurale": "die Überraschungen",
+      "italian": "la sorpresa",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g108",
+      "type": "aggettivo",
+      "german": "eifersüchtig",
+      "italian": "geloso/a",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g109",
+      "type": "sostantivo",
+      "german": "Eifersucht",
+      "articolo": "die",
+      "plurale": "— Sg.",
+      "italian": "la gelosia",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g110",
+      "type": "aggettivo",
+      "german": "stolz",
+      "italian": "orgoglioso/a",
+      "topics": [
+        "Sentimenti"
+      ],
+      "note": "'stolz auf + Akkusativ' = orgoglioso di"
+    },
+    {
+      "id": "g111",
+      "type": "sostantivo",
+      "german": "Stolz",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "l'orgoglio",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g112",
+      "type": "aggettivo",
+      "german": "verlegen",
+      "italian": "imbarazzato/a",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g113",
+      "type": "sostantivo",
+      "german": "Verlegenheit",
+      "articolo": "die",
+      "plurale": "— Sg.",
+      "italian": "l'imbarazzo",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g114",
+      "type": "aggettivo",
+      "german": "enttäuscht",
+      "italian": "deluso/a",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g115",
+      "type": "sostantivo",
+      "german": "Enttäuschung",
+      "articolo": "die",
+      "plurale": "die Enttäuschungen",
+      "italian": "la delusione",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g116",
+      "type": "aggettivo",
+      "german": "müde",
+      "italian": "stanco/a",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g117",
+      "type": "verbo",
+      "german": "sich langweilen",
+      "praesens": "langweilt sich",
+      "praeteritum": "langweilte sich",
+      "perfekt": "hat sich gelangweilt",
+      "italian": "annoiarsi",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g118",
+      "type": "aggettivo",
+      "german": "lustig",
+      "italian": "divertente, buffo/a",
+      "topics": [
+        "Sentimenti"
+      ]
+    },
+    {
+      "id": "g119",
+      "type": "aggettivo",
+      "german": "nervös",
+      "italian": "nervoso/a",
+      "topics": [
+        "Sentimenti"
+      ],
+      "note": "usato anche come avverbio: 'nervös lachen' = ridere nervosamente"
+    },
+    {
+      "id": "g120",
+      "type": "sostantivo",
+      "german": "Wohnzimmer",
+      "articolo": "das",
+      "plurale": "die Wohnzimmer",
+      "italian": "il soggiorno",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g121",
+      "type": "sostantivo",
+      "german": "Schlafzimmer",
+      "articolo": "das",
+      "plurale": "die Schlafzimmer",
+      "italian": "la camera da letto",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g122",
+      "type": "sostantivo",
+      "german": "Badezimmer",
+      "articolo": "das",
+      "plurale": "die Badezimmer",
+      "italian": "il bagno",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g123",
+      "type": "sostantivo",
+      "german": "Flur",
+      "articolo": "der",
+      "plurale": "die Flure",
+      "italian": "il corridoio, l'ingresso",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g124",
+      "type": "sostantivo",
+      "german": "Keller",
+      "articolo": "der",
+      "plurale": "die Keller",
+      "italian": "la cantina",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g125",
+      "type": "sostantivo",
+      "german": "Dachboden",
+      "articolo": "der",
+      "plurale": "die Dachböden",
+      "italian": "la soffitta",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g126",
+      "type": "sostantivo",
+      "german": "Balkon",
+      "articolo": "der",
+      "plurale": "die Balkone",
+      "italian": "il balcone",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g127",
+      "type": "sostantivo",
+      "german": "Garten",
+      "articolo": "der",
+      "plurale": "die Gärten",
+      "italian": "il giardino",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g128",
+      "type": "verbo",
+      "german": "putzen",
+      "praesens": "putzt",
+      "praeteritum": "putzte",
+      "perfekt": "hat geputzt",
+      "italian": "pulire",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g129",
+      "type": "verbo",
+      "german": "aufräumen",
+      "reggenza": "verbo separabile",
+      "praesens": "räumt auf",
+      "praeteritum": "räumte auf",
+      "perfekt": "hat aufgeräumt",
+      "italian": "riordinare, mettere in ordine",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g130",
+      "type": "verbo",
+      "german": "staubsaugen",
+      "praesens": "staubsaugt",
+      "praeteritum": "staubsaugte",
+      "perfekt": "hat gestaubsaugt",
+      "italian": "passare l'aspirapolvere",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g131",
+      "type": "verbo",
+      "german": "abwaschen",
+      "reggenza": "verbo separabile, forte",
+      "praesens": "wäscht ab",
+      "praeteritum": "wusch ab",
+      "perfekt": "hat abgewaschen",
+      "italian": "lavare i piatti",
+      "topics": [
+        "Lessico domestico"
+      ],
+      "note": "sinonimo: spülen"
+    },
+    {
+      "id": "g132",
+      "type": "espressione",
+      "german": "die Wäsche waschen",
+      "italian": "fare il bucato",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g133",
+      "type": "verbo",
+      "german": "bügeln",
+      "praesens": "bügelt",
+      "praeteritum": "bügelte",
+      "perfekt": "hat gebügelt",
+      "italian": "stirare",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g134",
+      "type": "espressione",
+      "german": "den Müll rausbringen",
+      "italian": "portare fuori la spazzatura",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g135",
+      "type": "espressione",
+      "german": "das Bett machen",
+      "italian": "rifare il letto",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g136",
+      "type": "verbo",
+      "german": "aufstehen",
+      "reggenza": "verbo separabile, con sein",
+      "praesens": "steht auf",
+      "praeteritum": "stand auf",
+      "perfekt": "ist aufgestanden",
+      "italian": "alzarsi (dal letto)",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g137",
+      "type": "verbo",
+      "german": "sich duschen",
+      "praesens": "duscht sich",
+      "praeteritum": "duschte sich",
+      "perfekt": "hat sich geduscht",
+      "italian": "farsi la doccia",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g138",
+      "type": "verbo",
+      "german": "sich anziehen",
+      "reggenza": "verbo separabile riflessivo",
+      "praesens": "zieht sich an",
+      "praeteritum": "zog sich an",
+      "perfekt": "hat sich angezogen",
+      "italian": "vestirsi",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g139",
+      "type": "verbo",
+      "german": "frühstücken",
+      "praesens": "frühstückt",
+      "praeteritum": "frühstückte",
+      "perfekt": "hat gefrühstückt",
+      "italian": "fare colazione",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g140",
+      "type": "espressione",
+      "german": "zu Abend essen",
+      "italian": "cenare",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g141",
+      "type": "espressione",
+      "german": "schlafen gehen",
+      "italian": "andare a dormire",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g142",
+      "type": "aggettivo",
+      "german": "sauber",
+      "italian": "pulito/a",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g143",
+      "type": "aggettivo",
+      "german": "schmutzig",
+      "italian": "sporco/a",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g144",
+      "type": "aggettivo",
+      "german": "ordentlich",
+      "italian": "ordinato/a",
+      "topics": [
+        "Lessico domestico"
+      ],
+      "note": "usato anche come avverbio: 'ordentlich aufräumen' = riordinare accuratamente"
+    },
+    {
+      "id": "g145",
+      "type": "aggettivo",
+      "german": "unordentlich",
+      "italian": "disordinato/a",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g146",
+      "type": "avverbio",
+      "german": "regelmäßig",
+      "italian": "regolarmente",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g147",
+      "type": "avverbio",
+      "german": "täglich",
+      "italian": "quotidianamente, ogni giorno",
+      "topics": [
+        "Lessico domestico"
+      ]
+    },
+    {
+      "id": "g148",
+      "type": "sostantivo",
+      "german": "Kopfschmerzen",
+      "articolo": "die",
+      "plurale": "die Kopfschmerzen",
+      "italian": "il mal di testa",
+      "topics": [
+        "Lessico medico"
+      ],
+      "note": "plurale tantum, si usa sempre al plurale"
+    },
+    {
+      "id": "g149",
+      "type": "sostantivo",
+      "german": "Bauchschmerzen",
+      "articolo": "die",
+      "plurale": "die Bauchschmerzen",
+      "italian": "il mal di pancia",
+      "topics": [
+        "Lessico medico"
+      ],
+      "note": "plurale tantum"
+    },
+    {
+      "id": "g150",
+      "type": "sostantivo",
+      "german": "Halsschmerzen",
+      "articolo": "die",
+      "plurale": "die Halsschmerzen",
+      "italian": "il mal di gola",
+      "topics": [
+        "Lessico medico"
+      ],
+      "note": "plurale tantum"
+    },
+    {
+      "id": "g151",
+      "type": "sostantivo",
+      "german": "Fieber",
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la febbre",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g152",
+      "type": "sostantivo",
+      "german": "Husten",
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "la tosse",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g153",
+      "type": "sostantivo",
+      "german": "Schnupfen",
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)",
+      "italian": "il raffreddore (naso che cola)",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g154",
+      "type": "sostantivo",
+      "german": "Erkältung",
+      "articolo": "die",
+      "plurale": "die Erkältungen",
+      "italian": "il raffreddore",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g155",
+      "type": "sostantivo",
+      "german": "Grippe",
+      "articolo": "die",
+      "plurale": "die Grippen",
+      "italian": "l'influenza",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g156",
+      "type": "verbo",
+      "german": "sich fühlen",
+      "praesens": "fühlt sich",
+      "praeteritum": "fühlte sich",
+      "perfekt": "hat sich gefühlt",
+      "italian": "sentirsi",
+      "topics": [
+        "Lessico medico"
+      ],
+      "esempio": "Ich fühle mich nicht gut.",
+      "esempioTraduzione": "Non mi sento bene."
+    },
+    {
+      "id": "g157",
+      "type": "espressione",
+      "german": "krank sein",
+      "italian": "essere malato/a",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g158",
+      "type": "espressione",
+      "german": "gesund sein",
+      "italian": "essere sano/a, stare bene",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g159",
+      "type": "verbo",
+      "german": "sich erkälten",
+      "praesens": "erkältet sich",
+      "praeteritum": "erkältete sich",
+      "perfekt": "hat sich erkältet",
+      "italian": "prendere il raffreddore",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g160",
+      "type": "verbo",
+      "german": "sich verletzen",
+      "praesens": "verletzt sich",
+      "praeteritum": "verletzte sich",
+      "perfekt": "hat sich verletzt",
+      "italian": "farsi male, ferirsi",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g161",
+      "type": "espressione",
+      "german": "Das tut weh.",
+      "italian": "Fa male.",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g162",
+      "type": "verbo",
+      "german": "genesen",
+      "reggenza": "verbo forte, con sein",
+      "praesens": "genest",
+      "praeteritum": "genas",
+      "perfekt": "ist genesen",
+      "italian": "guarire (formale)",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g163",
+      "type": "verbo",
+      "german": "sich erholen",
+      "praesens": "erholt sich",
+      "praeteritum": "erholte sich",
+      "perfekt": "hat sich erholt",
+      "italian": "riprendersi, recuperare le forze",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g164",
+      "type": "espressione",
+      "german": "gesund werden",
+      "italian": "guarire",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g165",
+      "type": "espressione",
+      "german": "Gute Besserung!",
+      "italian": "Guarisci presto!",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g166",
+      "type": "sostantivo",
+      "german": "Kopf",
+      "articolo": "der",
+      "plurale": "die Köpfe",
+      "italian": "la testa",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g167",
+      "type": "sostantivo",
+      "german": "Bauch",
+      "articolo": "der",
+      "plurale": "die Bäuche",
+      "italian": "la pancia",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g168",
+      "type": "sostantivo",
+      "german": "Rücken",
+      "articolo": "der",
+      "plurale": "die Rücken",
+      "italian": "la schiena",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g169",
+      "type": "sostantivo",
+      "german": "Arm",
+      "articolo": "der",
+      "plurale": "die Arme",
+      "italian": "il braccio",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g170",
+      "type": "sostantivo",
+      "german": "Bein",
+      "articolo": "das",
+      "plurale": "die Beine",
+      "italian": "la gamba",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g171",
+      "type": "sostantivo",
+      "german": "Hand",
+      "articolo": "die",
+      "plurale": "die Hände",
+      "italian": "la mano",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g172",
+      "type": "sostantivo",
+      "german": "Fuß",
+      "articolo": "der",
+      "plurale": "die Füße",
+      "italian": "il piede",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g173",
+      "type": "sostantivo",
+      "german": "Auge",
+      "articolo": "das",
+      "plurale": "die Augen",
+      "italian": "l'occhio",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g174",
+      "type": "sostantivo",
+      "german": "Ohr",
+      "articolo": "das",
+      "plurale": "die Ohren",
+      "italian": "l'orecchio",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g175",
+      "type": "sostantivo",
+      "german": "Nase",
+      "articolo": "die",
+      "plurale": "die Nasen",
+      "italian": "il naso",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g176",
+      "type": "sostantivo",
+      "german": "Mund",
+      "articolo": "der",
+      "plurale": "die Münder",
+      "italian": "la bocca",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g177",
+      "type": "sostantivo",
+      "german": "Hals",
+      "articolo": "der",
+      "plurale": "die Hälse",
+      "italian": "il collo; la gola",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g178",
+      "type": "sostantivo",
+      "german": "Herz",
+      "articolo": "das",
+      "plurale": "die Herzen",
+      "italian": "il cuore",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g179",
+      "type": "sostantivo",
+      "german": "Zahn",
+      "articolo": "der",
+      "plurale": "die Zähne",
+      "italian": "il dente",
+      "topics": [
+        "Lessico medico"
+      ]
+    },
+    {
+      "id": "g180",
+      "type": "espressione",
+      "german": "Fischers Fritz fischt frische Fische, frische Fische fischt Fischers Fritz.",
+      "italian": "Scioglilingua intraducibile: 'Fritz il pescatore pesca pesci freschi.'",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "Zungenbrecher (scioglilingua) molto famoso, ottimo per esercitarsi con i suoni 'sch' e 'f'"
+    },
+    {
+      "id": "g181",
+      "type": "espressione",
+      "german": "Da liegt der Hund begraben.",
+      "italian": "È qui che sta il problema.",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "modo di dire, lett. 'lì è sepolto il cane'"
+    },
+    {
+      "id": "g182",
+      "type": "espressione",
+      "german": "Ich glaub, mein Schwein pfeift!",
+      "italian": "Non ci posso credere!",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "modo di dire colloquiale e scherzoso, lett. 'credo che il mio maiale fischi'"
+    },
+    {
+      "id": "g183",
+      "type": "espressione",
+      "german": "Toi, toi, toi!",
+      "italian": "In bocca al lupo!",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "espressione scaramantica, spesso accompagnata dal gesto di toccare legno"
+    },
+    {
+      "id": "g184",
+      "type": "espressione",
+      "german": "Mach's gut!",
+      "italian": "Stammi bene!, Ci vediamo!",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "saluto informale di commiato"
     }
   ]
 }
