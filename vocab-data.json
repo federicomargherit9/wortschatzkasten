@@ -23,7 +23,14 @@
     "Scuola e università",
     "Uffici e burocrazia",
     "Lessico domestico",
-    "Lessico medico"
+    "Lessico medico",
+    "Teatro",
+    "Cinema",
+    "Festa e celebrazioni",
+    "Fare proposte",
+    "Reagire a proposte",
+    "Espressioni utili",
+    "Avverbi utili"
   ],
   "items": [
     {
@@ -975,7 +982,8 @@
       "plurale": "die Rollen",
       "italian": "il ruolo",
       "topics": [
-        "Politica"
+        "Politica",
+        "Teatro"
       ]
     },
     {
@@ -3487,12 +3495,13 @@
       "id": "g45",
       "type": "sostantivo",
       "german": "Jura",
-      "articolo": "—",
-      "plurale": "— (non numerabile, senza articolo)",
+      "articolo": "",
+      "plurale": "— (non numerabile, si usa senza articolo)",
       "italian": "giurisprudenza",
       "topics": [
         "Scuola e università"
-      ]
+      ],
+      "note": "parola che si usa sempre senza articolo davanti, es. 'Ich studiere Jura'"
     },
     {
       "id": "g46",
@@ -5060,6 +5069,1495 @@
         "Avverbi e modi di dire (bonus)"
       ],
       "note": "saluto informale di commiato"
+    },
+    {
+      "id": "h1",
+      "type": "espressione",
+      "german": "Theater spielen",
+      "italian": "recitare, fare teatro",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h2",
+      "type": "sostantivo",
+      "german": "Bühne",
+      "articolo": "die",
+      "plurale": "die Bühnen",
+      "italian": "il palco, il palcoscenico",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h3",
+      "type": "verbo",
+      "german": "aufführen",
+      "reggenza": "verbo separabile, + Akkusativ",
+      "praesens": "führt auf",
+      "praeteritum": "führte auf",
+      "perfekt": "hat aufgeführt",
+      "italian": "mettere in scena, rappresentare",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h4",
+      "type": "verbo",
+      "german": "proben",
+      "praesens": "probt",
+      "praeteritum": "probte",
+      "perfekt": "hat geprobt",
+      "italian": "provare (uno spettacolo)",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h5",
+      "type": "sostantivo",
+      "german": "Stück",
+      "articolo": "das",
+      "plurale": "die Stücke",
+      "italian": "il pezzo teatrale, l'opera teatrale",
+      "topics": [
+        "Teatro"
+      ],
+      "note": "anche 'ein Stück' = un pezzo in generale"
+    },
+    {
+      "id": "h6",
+      "type": "sostantivo",
+      "german": "Vorhang",
+      "articolo": "der",
+      "plurale": "die Vorhänge",
+      "italian": "il sipario; la tenda",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h7",
+      "type": "sostantivo",
+      "german": "Publikum",
+      "articolo": "das",
+      "plurale": "— per lo più Sg.",
+      "italian": "il pubblico",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h8",
+      "type": "sostantivo",
+      "german": "Schauspieler",
+      "articolo": "der",
+      "plurale": "die Schauspieler",
+      "femminile": "die Schauspielerin",
+      "femminilePlurale": "die Schauspielerinnen",
+      "italian": "l'attore, l'attrice",
+      "topics": [
+        "Teatro",
+        "Cinema"
+      ]
+    },
+    {
+      "id": "h9",
+      "type": "sostantivo",
+      "german": "Regisseur",
+      "articolo": "der",
+      "plurale": "die Regisseure",
+      "femminile": "die Regisseurin",
+      "femminilePlurale": "die Regisseurinnen",
+      "italian": "il regista, la regista",
+      "topics": [
+        "Teatro",
+        "Cinema"
+      ]
+    },
+    {
+      "id": "h10",
+      "type": "sostantivo",
+      "german": "Handlung",
+      "articolo": "die",
+      "plurale": "die Handlungen",
+      "italian": "la trama, l'azione",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h11",
+      "type": "verbo",
+      "german": "erfinden",
+      "reggenza": "verbo forte, + Akkusativ",
+      "praesens": "erfindet",
+      "praeteritum": "erfand",
+      "perfekt": "hat erfunden",
+      "italian": "inventare",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h12",
+      "type": "aggettivo",
+      "german": "spontan",
+      "italian": "spontaneo/a",
+      "topics": [
+        "Teatro"
+      ],
+      "note": "usato anche come avverbio: 'spontan reagieren' = reagire spontaneamente"
+    },
+    {
+      "id": "h13",
+      "type": "sostantivo",
+      "german": "Künstler",
+      "articolo": "der",
+      "plurale": "die Künstler",
+      "femminile": "die Künstlerin",
+      "femminilePlurale": "die Künstlerinnen",
+      "italian": "l'artista",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h14",
+      "type": "verbo",
+      "german": "sich bewegen",
+      "praesens": "bewegt sich",
+      "praeteritum": "bewegte sich",
+      "perfekt": "hat sich bewegt",
+      "italian": "muoversi",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h15",
+      "type": "aggettivo",
+      "german": "rhythmisch",
+      "italian": "ritmico/a",
+      "topics": [
+        "Teatro"
+      ],
+      "note": "usato anche come avverbio: 'sich rhythmisch bewegen' = muoversi ritmicamente"
+    },
+    {
+      "id": "h16",
+      "type": "sostantivo",
+      "german": "Orchester",
+      "articolo": "das",
+      "plurale": "die Orchester",
+      "italian": "l'orchestra",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h17",
+      "type": "verbo",
+      "german": "begleiten",
+      "praesens": "begleitet",
+      "praeteritum": "begleitete",
+      "perfekt": "hat begleitet",
+      "italian": "accompagnare",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h18",
+      "type": "sostantivo",
+      "german": "Gesang",
+      "articolo": "der",
+      "plurale": "die Gesänge",
+      "italian": "il canto",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h19",
+      "type": "sostantivo",
+      "german": "Kunstform",
+      "articolo": "die",
+      "plurale": "die Kunstformen",
+      "italian": "la forma d'arte",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h20",
+      "type": "sostantivo",
+      "german": "Tanz",
+      "articolo": "der",
+      "plurale": "die Tänze",
+      "italian": "il ballo, la danza",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h21",
+      "type": "sostantivo",
+      "german": "Oper",
+      "articolo": "die",
+      "plurale": "die Opern",
+      "italian": "l'opera (lirica)",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h22",
+      "type": "sostantivo",
+      "german": "Comedyshow",
+      "articolo": "die",
+      "plurale": "die Comedyshows",
+      "italian": "lo spettacolo comico",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h23",
+      "type": "sostantivo",
+      "german": "Improvisationstheater",
+      "articolo": "das",
+      "plurale": "— per lo più Sg.",
+      "italian": "il teatro di improvvisazione",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h24",
+      "type": "sostantivo",
+      "german": "Varietétheater",
+      "articolo": "das",
+      "plurale": "— per lo più Sg.",
+      "italian": "il teatro di varietà",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h25",
+      "type": "sostantivo",
+      "german": "Erzählkunst",
+      "articolo": "die",
+      "plurale": "— Sg.",
+      "italian": "l'arte del narrare, lo storytelling",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h26",
+      "type": "aggettivo",
+      "german": "dramatisch",
+      "italian": "drammatico/a",
+      "topics": [
+        "Teatro",
+        "Cinema"
+      ]
+    },
+    {
+      "id": "h27",
+      "type": "sostantivo",
+      "german": "Szene",
+      "articolo": "die",
+      "plurale": "die Szenen",
+      "italian": "la scena",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h28",
+      "type": "sostantivo",
+      "german": "Programm",
+      "articolo": "das",
+      "plurale": "die Programme",
+      "italian": "il programma",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h29",
+      "type": "sostantivo",
+      "german": "Akrobatik",
+      "articolo": "die",
+      "plurale": "— Sg.",
+      "italian": "l'acrobazia",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h30",
+      "type": "sostantivo",
+      "german": "Märchen",
+      "articolo": "das",
+      "plurale": "die Märchen",
+      "italian": "la fiaba",
+      "topics": [
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h31",
+      "type": "sostantivo",
+      "german": "Film",
+      "articolo": "der",
+      "plurale": "die Filme",
+      "italian": "il film",
+      "topics": [
+        "Cinema"
+      ]
+    },
+    {
+      "id": "h32",
+      "type": "sostantivo",
+      "german": "Science-Fiction",
+      "articolo": "",
+      "plurale": "— (non numerabile, spesso senza articolo)",
+      "italian": "la fantascienza",
+      "topics": [
+        "Cinema"
+      ],
+      "note": "genere cinematografico, si usa spesso senza articolo, es. 'ein Science-Fiction-Film'"
+    },
+    {
+      "id": "h33",
+      "type": "sostantivo",
+      "german": "Komödie",
+      "articolo": "die",
+      "plurale": "die Komödien",
+      "italian": "la commedia",
+      "topics": [
+        "Cinema",
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h34",
+      "type": "sostantivo",
+      "german": "Thriller",
+      "articolo": "der",
+      "plurale": "die Thriller",
+      "italian": "il thriller",
+      "topics": [
+        "Cinema"
+      ]
+    },
+    {
+      "id": "h35",
+      "type": "sostantivo",
+      "german": "Kritik",
+      "articolo": "die",
+      "plurale": "die Kritiken",
+      "italian": "la recensione; la critica",
+      "topics": [
+        "Cinema"
+      ]
+    },
+    {
+      "id": "h36",
+      "type": "sostantivo",
+      "german": "Ticket",
+      "articolo": "das",
+      "plurale": "die Tickets",
+      "italian": "il biglietto",
+      "topics": [
+        "Cinema"
+      ]
+    },
+    {
+      "id": "h37",
+      "type": "sostantivo",
+      "german": "Kasse",
+      "articolo": "die",
+      "plurale": "die Kassen",
+      "italian": "la biglietteria; la cassa",
+      "topics": [
+        "Cinema"
+      ]
+    },
+    {
+      "id": "h38",
+      "type": "sostantivo",
+      "german": "Vorstellung",
+      "articolo": "die",
+      "plurale": "die Vorstellungen",
+      "italian": "la proiezione, lo spettacolo",
+      "topics": [
+        "Cinema"
+      ]
+    },
+    {
+      "id": "h39",
+      "type": "sostantivo",
+      "german": "Kinosaal",
+      "articolo": "der",
+      "plurale": "die Kinosäle",
+      "italian": "la sala cinematografica",
+      "topics": [
+        "Cinema"
+      ]
+    },
+    {
+      "id": "h40",
+      "type": "sostantivo",
+      "german": "Leinwand",
+      "articolo": "die",
+      "plurale": "die Leinwände",
+      "italian": "lo schermo (del cinema)",
+      "topics": [
+        "Cinema"
+      ]
+    },
+    {
+      "id": "h41",
+      "type": "sostantivo",
+      "german": "Zuschauer",
+      "articolo": "der",
+      "plurale": "die Zuschauer",
+      "femminile": "die Zuschauerin",
+      "femminilePlurale": "die Zuschauerinnen",
+      "italian": "lo spettatore, la spettatrice",
+      "topics": [
+        "Cinema"
+      ]
+    },
+    {
+      "id": "h42",
+      "type": "verbo",
+      "german": "planen",
+      "praesens": "plant",
+      "praeteritum": "plante",
+      "perfekt": "hat geplant",
+      "italian": "pianificare, programmare",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h43",
+      "type": "verbo",
+      "german": "organisieren",
+      "praesens": "organisiert",
+      "praeteritum": "organisierte",
+      "perfekt": "hat organisiert",
+      "italian": "organizzare",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h44",
+      "type": "sostantivo",
+      "german": "Abschiedsfest",
+      "articolo": "das",
+      "plurale": "die Abschiedsfeste",
+      "italian": "la festa d'addio",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h45",
+      "type": "sostantivo",
+      "german": "Fest",
+      "articolo": "das",
+      "plurale": "die Feste",
+      "italian": "la festa",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "note": "'auf einem Fest sein' (stato in luogo, + Dativ) / 'auf ein Fest gehen' (moto a luogo, + Akkusativ)"
+    },
+    {
+      "id": "h46",
+      "type": "sostantivo",
+      "german": "Party",
+      "articolo": "die",
+      "plurale": "die Partys",
+      "italian": "la festa (informale)",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "note": "stessa regola di 'das Fest': 'auf einer Party sein' (Dativ) / 'auf eine Party gehen' (Akkusativ)"
+    },
+    {
+      "id": "h47",
+      "type": "sostantivo",
+      "german": "Zweck",
+      "articolo": "der",
+      "plurale": "die Zwecke",
+      "italian": "lo scopo",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h48",
+      "type": "aggettivo",
+      "german": "wohltätig",
+      "italian": "benefico/a, di beneficenza",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "note": "es. 'für wohltätige Zwecke' = per scopi di beneficenza; sinonimo: gemeinnützig"
+    },
+    {
+      "id": "h49",
+      "type": "verbo",
+      "german": "spenden",
+      "reggenza": "+ Dativ della persona/ente, + Akkusativ della cosa donata",
+      "praesens": "spendet",
+      "praeteritum": "spendete",
+      "perfekt": "hat gespendet",
+      "italian": "donare",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h50",
+      "type": "sostantivo",
+      "german": "Spende",
+      "articolo": "die",
+      "plurale": "die Spenden",
+      "italian": "la donazione",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h51",
+      "type": "verbo",
+      "german": "sammeln",
+      "praesens": "sammelt",
+      "praeteritum": "sammelte",
+      "perfekt": "hat gesammelt",
+      "italian": "raccogliere; collezionare",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "esempio": "Geld sammeln",
+      "esempioTraduzione": "raccogliere fondi"
+    },
+    {
+      "id": "h52",
+      "type": "sostantivo",
+      "german": "Geld",
+      "articolo": "das",
+      "plurale": "— per lo più Sg.",
+      "italian": "i soldi, il denaro",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h53",
+      "type": "verbo",
+      "german": "tun",
+      "reggenza": "verbo irregolare",
+      "praesens": "tut",
+      "praeteritum": "tat",
+      "perfekt": "hat getan",
+      "italian": "fare",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h54",
+      "type": "verbo",
+      "german": "machen",
+      "praesens": "macht",
+      "praeteritum": "machte",
+      "perfekt": "hat gemacht",
+      "italian": "fare",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h55",
+      "type": "sostantivo",
+      "german": "Punkt",
+      "articolo": "der",
+      "plurale": "die Punkte",
+      "italian": "il punto",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h56",
+      "type": "verbo",
+      "german": "reagieren",
+      "reggenza": "+ auf Akkusativ",
+      "praesens": "reagiert",
+      "praeteritum": "reagierte",
+      "perfekt": "hat reagiert",
+      "italian": "reagire",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h57",
+      "type": "verbo",
+      "german": "entscheiden",
+      "reggenza": "verbo forte",
+      "praesens": "entscheidet",
+      "praeteritum": "entschied",
+      "perfekt": "hat entschieden",
+      "italian": "decidere",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h58",
+      "type": "verbo",
+      "german": "einladen",
+      "reggenza": "verbo separabile, forte, + Akkusativ",
+      "praesens": "lädt ein",
+      "praeteritum": "lud ein",
+      "perfekt": "hat eingeladen",
+      "italian": "invitare",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h59",
+      "type": "sostantivo",
+      "german": "Klassenkamerad",
+      "articolo": "der",
+      "plurale": "die Klassenkameraden",
+      "femminile": "die Klassenkameradin",
+      "femminilePlurale": "die Klassenkameradinnen",
+      "italian": "il compagno di classe, la compagna di classe",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "note": "sostantivo debole al maschile"
+    },
+    {
+      "id": "h60",
+      "type": "sostantivo",
+      "german": "Schulfreund",
+      "articolo": "der",
+      "plurale": "die Schulfreunde",
+      "femminile": "die Schulfreundin",
+      "femminilePlurale": "die Schulfreundinnen",
+      "italian": "l'amico/a di scuola",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h61",
+      "type": "sostantivo",
+      "german": "Schuldirektor",
+      "articolo": "der",
+      "plurale": "die Schuldirektoren",
+      "femminile": "die Schuldirektorin",
+      "femminilePlurale": "die Schuldirektorinnen",
+      "italian": "il preside, la preside",
+      "topics": [
+        "Festa e celebrazioni",
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "h62",
+      "type": "sostantivo",
+      "german": "Einladung",
+      "articolo": "die",
+      "plurale": "die Einladungen",
+      "italian": "l'invito",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "note": "si può ricevere 'per/über/auf WhatsApp' oppure 'per E-Mail'"
+    },
+    {
+      "id": "h63",
+      "type": "verbo",
+      "german": "schreiben",
+      "reggenza": "verbo forte, + Akkusativ",
+      "praesens": "schreibt",
+      "praeteritum": "schrieb",
+      "perfekt": "hat geschrieben",
+      "italian": "scrivere",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h64",
+      "type": "espressione",
+      "german": "Es gibt etwas zu essen und zu trinken.",
+      "italian": "C'è qualcosa da mangiare e da bere.",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h65",
+      "type": "sostantivo",
+      "german": "Musik",
+      "articolo": "die",
+      "plurale": "— per lo più Sg.",
+      "italian": "la musica",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "esempio": "laute Musik",
+      "esempioTraduzione": "musica ad alto volume"
+    },
+    {
+      "id": "h66",
+      "type": "aggettivo",
+      "german": "laut",
+      "italian": "rumoroso/a, ad alto volume",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "note": "usato anche come avverbio: 'laut singen' = cantare ad alta voce"
+    },
+    {
+      "id": "h67",
+      "type": "verbo",
+      "german": "tanzen",
+      "praesens": "tanzt",
+      "praeteritum": "tanzte",
+      "perfekt": "hat getanzt",
+      "italian": "ballare",
+      "topics": [
+        "Festa e celebrazioni",
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h68",
+      "type": "verbo",
+      "german": "spielen",
+      "praesens": "spielt",
+      "praeteritum": "spielte",
+      "perfekt": "hat gespielt",
+      "italian": "giocare; suonare; recitare",
+      "topics": [
+        "Festa e celebrazioni",
+        "Teatro"
+      ]
+    },
+    {
+      "id": "h69",
+      "type": "aggettivo",
+      "german": "arm",
+      "italian": "povero/a",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "esempio": "arme Leute",
+      "esempioTraduzione": "i poveri, la gente povera"
+    },
+    {
+      "id": "h70",
+      "type": "sostantivo",
+      "german": "Arbeitslose",
+      "articolo": "der/die",
+      "plurale": "die Arbeitslosen",
+      "italian": "il disoccupato, la disoccupata",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "note": "aggettivo sostantivato: si declina come un aggettivo"
+    },
+    {
+      "id": "h71",
+      "type": "sostantivo",
+      "german": "Tierheim",
+      "articolo": "das",
+      "plurale": "die Tierheime",
+      "italian": "il canile, il rifugio per animali",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h72",
+      "type": "aggettivo",
+      "german": "behindert",
+      "italian": "disabile",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "esempio": "behinderte Menschen",
+      "esempioTraduzione": "persone disabili"
+    },
+    {
+      "id": "h73",
+      "type": "sostantivo",
+      "german": "Mensch",
+      "articolo": "der",
+      "plurale": "die Menschen",
+      "italian": "la persona, l'essere umano",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "note": "sostantivo debole: -en in tutti i casi tranne il nominativo singolare"
+    },
+    {
+      "id": "h74",
+      "type": "sostantivo",
+      "german": "Geschenk",
+      "articolo": "das",
+      "plurale": "die Geschenke",
+      "italian": "il regalo",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h75",
+      "type": "verbo",
+      "german": "schenken",
+      "praesens": "schenkt",
+      "praeteritum": "schenkte",
+      "perfekt": "hat geschenkt",
+      "italian": "regalare",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h76",
+      "type": "verbo",
+      "german": "feiern",
+      "praesens": "feiert",
+      "praeteritum": "feierte",
+      "perfekt": "hat gefeiert",
+      "italian": "festeggiare, fare festa",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h77",
+      "type": "sostantivo",
+      "german": "Feier",
+      "articolo": "die",
+      "plurale": "die Feiern",
+      "italian": "la celebrazione, la festa",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h78",
+      "type": "sostantivo",
+      "german": "Geburtstag",
+      "articolo": "der",
+      "plurale": "die Geburtstage",
+      "italian": "il compleanno",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h79",
+      "type": "espressione",
+      "german": "Herzlichen Glückwunsch! / Alles Gute!",
+      "italian": "Tanti auguri!",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h80",
+      "type": "espressione",
+      "german": "Herzlichen Glückwunsch zum Geburtstag!",
+      "italian": "Buon compleanno!",
+      "topics": [
+        "Festa e celebrazioni"
+      ]
+    },
+    {
+      "id": "h81",
+      "type": "espressione",
+      "german": "Ich schaffe es leider nicht zu kommen.",
+      "italian": "Purtroppo non riesco a venire.",
+      "topics": [
+        "Festa e celebrazioni"
+      ],
+      "note": "per dire che non si può partecipare a un invito"
+    },
+    {
+      "id": "h82",
+      "type": "espressione",
+      "german": "Ich habe einen Vorschlag: Wir ...",
+      "italian": "Ho una proposta: ...",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h83",
+      "type": "sostantivo",
+      "german": "Vorschlag",
+      "articolo": "der",
+      "plurale": "die Vorschläge",
+      "italian": "la proposta",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h84",
+      "type": "espressione",
+      "german": "Ich schlage vor, wir ... / Ich würde vorschlagen, wir ...",
+      "italian": "Propongo che ... / Proporrei che ...",
+      "topics": [
+        "Fare proposte"
+      ],
+      "note": "frase principale (Hauptsatz): il verbo resta al secondo posto"
+    },
+    {
+      "id": "h85",
+      "type": "espressione",
+      "german": "Ich schlage vor, dass wir ...",
+      "italian": "Propongo che noi ...",
+      "topics": [
+        "Fare proposte"
+      ],
+      "note": "frase secondaria con 'dass': il verbo va in fondo alla frase"
+    },
+    {
+      "id": "h86",
+      "type": "espressione",
+      "german": "Ich denke/meine/finde, wir sollten ... / Wir sollten ...",
+      "italian": "Penso/credo/trovo che dovremmo... / Dovremmo...",
+      "topics": [
+        "Fare proposte"
+      ],
+      "note": "la seconda forma (senza 'ich denke') è più semplice e diretta"
+    },
+    {
+      "id": "h87",
+      "type": "espressione",
+      "german": "Ich denke/meine/finde, dass ...",
+      "italian": "Penso/credo/trovo che ...",
+      "topics": [
+        "Fare proposte"
+      ],
+      "note": "con 'dass' il verbo va in fondo alla frase"
+    },
+    {
+      "id": "h88",
+      "type": "espressione",
+      "german": "Ich bin der Meinung, wir sollten ...",
+      "italian": "Sono dell'opinione che dovremmo ...",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h89",
+      "type": "espressione",
+      "german": "Wir können/könnten zum Beispiel ...",
+      "italian": "Potremmo per esempio ...",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h90",
+      "type": "espressione",
+      "german": "Versuchen wir es doch mit ...",
+      "italian": "Proviamo con ...",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h91",
+      "type": "espressione",
+      "german": "Ich kann/könnte mir vorstellen, dass ...",
+      "italian": "Potrei immaginare che ...",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h92",
+      "type": "espressione",
+      "german": "Was hältst du davon, wenn wir ...?",
+      "italian": "Che ne dici se ...?",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h93",
+      "type": "espressione",
+      "german": "Warum machen wir nicht ...?",
+      "italian": "Perché non facciamo ...?",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h94",
+      "type": "espressione",
+      "german": "Was meinst du zu dem Vorschlag / dazu? / Was meinst du?",
+      "italian": "Cosa ne pensi della proposta / di questo? / Cosa ne pensi?",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h95",
+      "type": "espressione",
+      "german": "Was hältst du von dem Vorschlag / davon?",
+      "italian": "Cosa ne pensi della proposta / di questo?",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h96",
+      "type": "espressione",
+      "german": "Wie findest du den Vorschlag / das?",
+      "italian": "Come ti sembra la proposta / questo?",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h97",
+      "type": "espressione",
+      "german": "Findest du das gut/okay/in Ordnung?",
+      "italian": "Ti sembra buono/ok/in ordine?",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h98",
+      "type": "espressione",
+      "german": "Ist der Vorschlag für dich okay? / Ist das okay / in Ordnung?",
+      "italian": "Per te la proposta va bene? / Va bene / in ordine?",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h99",
+      "type": "espressione",
+      "german": "Bist du (damit) einverstanden? / Einverstanden?",
+      "italian": "Sei d'accordo (con questo)? / D'accordo?",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h100",
+      "type": "espressione",
+      "german": "Meinst du, das geht/klappt/funktioniert? / Geht das?",
+      "italian": "Pensi che vada bene/funzioni? / Va bene questo?",
+      "topics": [
+        "Fare proposte"
+      ]
+    },
+    {
+      "id": "h101",
+      "type": "espressione",
+      "german": "Einverstanden. / Okay. / Ja, gut.",
+      "italian": "D'accordo. / Ok. / Sì, va bene.",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h102",
+      "type": "espressione",
+      "german": "Der Vorschlag ist sehr gut. / Ja, das ist ein guter Vorschlag. / Den Vorschlag finde ich gut/prima/okay.",
+      "italian": "La proposta è molto buona. / Sì, è una buona proposta. / Trovo la proposta buona/ottima/ok.",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h103",
+      "type": "espressione",
+      "german": "Die Idee ist super/toll! / Das ist eine gute/tolle Idee! / Gute/Tolle Idee! / Super! / Toll!",
+      "italian": "L'idea è fantastica/bellissima! / È una buona/bella idea! / Bella idea! / Fantastico!",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h104",
+      "type": "espressione",
+      "german": "Ja, das können wir so machen.",
+      "italian": "Sì, possiamo fare così.",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h105",
+      "type": "espressione",
+      "german": "Da hast du recht.",
+      "italian": "Qui hai ragione.",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h106",
+      "type": "espressione",
+      "german": "Ich bin da skeptisch.",
+      "italian": "Sono scettico/a al riguardo.",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h107",
+      "type": "espressione",
+      "german": "Das ist nicht schlecht, aber ...",
+      "italian": "Non è male, ma ...",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h108",
+      "type": "espressione",
+      "german": "Ich weiß nicht, ich finde ...",
+      "italian": "Non so, io trovo che ...",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h109",
+      "type": "espressione",
+      "german": "Ich weiß nicht, ob das so eine gute Idee ist.",
+      "italian": "Non so se sia una buona idea.",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h110",
+      "type": "espressione",
+      "german": "Wir können es ja versuchen, aber ich glaube, dass ...",
+      "italian": "Possiamo anche provarci, ma credo che ...",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h111",
+      "type": "espressione",
+      "german": "Ich würde lieber ...",
+      "italian": "Preferirei ...",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h112",
+      "type": "espressione",
+      "german": "Ja vielleicht, aber ...",
+      "italian": "Sì forse, ma ...",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h113",
+      "type": "espressione",
+      "german": "Ich finde die Idee nicht so gut. / Das finde ich keine so gute Idee. / Die Idee ist nicht besonders gut. / Das finde ich nicht so gut.",
+      "italian": "Non trovo l'idea così buona. / Non la trovo una buona idea. / L'idea non è particolarmente buona. / Non lo trovo così buono.",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h114",
+      "type": "espressione",
+      "german": "Ich bin eher dagegen.",
+      "italian": "Sono piuttosto contrario/a.",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h115",
+      "type": "espressione",
+      "german": "Ich glaube, das hat keinen Sinn.",
+      "italian": "Credo che non abbia senso.",
+      "topics": [
+        "Reagire a proposte"
+      ]
+    },
+    {
+      "id": "h116",
+      "type": "espressione",
+      "german": "Ich habe den Eindruck, dass ...",
+      "italian": "Ho l'impressione che ...",
+      "topics": [
+        "Espressioni utili"
+      ]
+    },
+    {
+      "id": "h117",
+      "type": "espressione",
+      "german": "Ich bin überzeugt, dass ...",
+      "italian": "Sono convinto/a che ...",
+      "topics": [
+        "Espressioni utili"
+      ]
+    },
+    {
+      "id": "h118",
+      "type": "espressione",
+      "german": "Ich würde sagen ...",
+      "italian": "Direi che ...",
+      "topics": [
+        "Espressioni utili"
+      ]
+    },
+    {
+      "id": "h119",
+      "type": "espressione",
+      "german": "Meines Wissens ...",
+      "italian": "Per quanto ne so ...",
+      "topics": [
+        "Espressioni utili"
+      ]
+    },
+    {
+      "id": "h120",
+      "type": "espressione",
+      "german": "Meiner Erfahrung nach ...",
+      "italian": "Secondo la mia esperienza ...",
+      "topics": [
+        "Espressioni utili"
+      ]
+    },
+    {
+      "id": "h121",
+      "type": "verbo",
+      "german": "überzeugen",
+      "praesens": "überzeugt",
+      "praeteritum": "überzeugte",
+      "perfekt": "hat überzeugt",
+      "italian": "convincere",
+      "topics": [
+        "Espressioni utili"
+      ],
+      "esempio": "Ich bin überzeugt, dass ...",
+      "esempioTraduzione": "Sono convinto/a che ..."
+    },
+    {
+      "id": "h122",
+      "type": "sostantivo",
+      "german": "Eindruck",
+      "articolo": "der",
+      "plurale": "die Eindrücke",
+      "italian": "l'impressione",
+      "topics": [
+        "Espressioni utili"
+      ],
+      "esempio": "Ich habe den Eindruck, dass ...",
+      "esempioTraduzione": "Ho l'impressione che ..."
+    },
+    {
+      "id": "h123",
+      "type": "espressione",
+      "german": "Meiner Meinung nach ...",
+      "italian": "A mio avviso ...",
+      "topics": [
+        "Espressioni utili"
+      ],
+      "note": "sinonimo più semplice: 'Ich glaube ...' o 'Ich denke ...'"
+    },
+    {
+      "id": "h124",
+      "type": "avverbio",
+      "german": "eigentlich",
+      "italian": "in realtà, a dire il vero",
+      "topics": [
+        "Avverbi utili"
+      ],
+      "note": "spesso indica un contrasto tra ciò che sembra e la realtà: 'Eigentlich wollte ich kommen, aber...' = In realtà volevo venire, ma..."
+    },
+    {
+      "id": "h125",
+      "type": "avverbio",
+      "german": "wirklich",
+      "italian": "veramente, davvero",
+      "topics": [
+        "Avverbi utili"
+      ],
+      "note": "rafforza un'affermazione: 'Das ist wirklich gut.' = È davvero buono."
+    },
+    {
+      "id": "h126",
+      "type": "avverbio",
+      "german": "sogar",
+      "italian": "perfino, addirittura",
+      "topics": [
+        "Avverbi utili"
+      ],
+      "note": "introduce un elemento sorprendente o estremo in una lista/affermazione"
+    },
+    {
+      "id": "h127",
+      "type": "avverbio",
+      "german": "unheimlich",
+      "italian": "incredibilmente, tremendamente",
+      "topics": [
+        "Avverbi utili"
+      ],
+      "note": "uso colloquiale come rafforzativo (qui non significa 'inquietante'): 'unheimlich gut' = incredibilmente buono"
+    },
+    {
+      "id": "h128",
+      "type": "avverbio",
+      "german": "gleich",
+      "italian": "subito; ugualmente",
+      "topics": [
+        "Avverbi utili"
+      ],
+      "note": "attenzione ai due significati: 'Ich komme gleich' (tempo, 'arrivo subito') vs 'gleich groß' (uguaglianza, 'della stessa grandezza')"
+    },
+    {
+      "id": "h129",
+      "type": "avverbio",
+      "german": "echt",
+      "italian": "davvero, veramente",
+      "topics": [
+        "Avverbi utili"
+      ],
+      "note": "molto colloquiale, sinonimo informale di 'wirklich': 'echt cool' = davvero fico"
+    },
+    {
+      "id": "h130",
+      "type": "avverbio",
+      "german": "allgemein",
+      "italian": "in generale, generalmente",
+      "topics": [
+        "Avverbi utili"
+      ]
+    },
+    {
+      "id": "h131",
+      "type": "avverbio",
+      "german": "zusammen",
+      "italian": "insieme",
+      "topics": [
+        "Avverbi utili"
+      ],
+      "note": "indica il fare qualcosa in compagnia di altri: 'zusammen arbeiten' = lavorare insieme"
+    },
+    {
+      "id": "h132",
+      "type": "avverbio",
+      "german": "gemeinsam",
+      "italian": "insieme, in comune",
+      "topics": [
+        "Avverbi utili"
+      ],
+      "note": "simile a 'zusammen', ma sottolinea la condivisione/collaborazione: 'ein gemeinsames Ziel' = un obiettivo comune"
+    },
+    {
+      "id": "h133",
+      "type": "espressione",
+      "german": "fix und fertig sein",
+      "italian": "essere stanchi morti",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "modo di dire, lett. 'essere riparati e pronti'"
+    },
+    {
+      "id": "h134",
+      "type": "espressione",
+      "german": "Bock haben",
+      "italian": "avere voglia",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "modo di dire colloquiale, lett. 'avere un ariete'; collegato a 'keinen Bock haben' (non avere voglia)"
+    },
+    {
+      "id": "h135",
+      "type": "espressione",
+      "german": "die Nase voll haben",
+      "italian": "essere stufi",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "modo di dire, lett. 'avere il naso pieno'"
+    },
+    {
+      "id": "h136",
+      "type": "espressione",
+      "german": "nicht mehr alle Tassen im Schrank haben",
+      "italian": "non avere tutte le rotelle a posto",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "modo di dire, lett. 'non avere più tutte le tazze nella credenza'"
+    },
+    {
+      "id": "h137",
+      "type": "espressione",
+      "german": "einen Vogel haben / eine Meise haben",
+      "italian": "essere fuori di testa, essere un po' matto/a",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "modo di dire, lett. 'avere un uccello' / 'avere una cinciallegra'; le due forme sono equivalenti"
+    },
+    {
+      "id": "h138",
+      "type": "espressione",
+      "german": "das A und O",
+      "italian": "la cosa principale, l'essenziale",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "modo di dire, lett. 'la A e la O' (prima e ultima lettera dell'alfabeto greco)"
+    },
+    {
+      "id": "h139",
+      "type": "espressione",
+      "german": "Was ist dir über die Leber gelaufen?",
+      "italian": "Cosa c'è che non va?",
+      "topics": [
+        "Avverbi e modi di dire (bonus)"
+      ],
+      "note": "modo di dire, lett. 'cosa ti ha camminato sul fegato?'"
     }
   ]
 }
