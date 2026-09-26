@@ -555,11 +555,11 @@ button { cursor: pointer; }
 /* la fiamma della streak: cambia colore ogni tot giorni, poi ricomincia dal rosso */
 .flame { display: inline-flex; width: 22px; height: 22px; animation: flameflicker 1.6s ease-in-out infinite; }
 .flame svg { width: 100%; height: 100%; fill: currentColor; }
-.flame-red { color: #E5482B; }
-.flame-blue { color: #2547B8; }
-.flame-green { color: #1F9D55; }
-.flame-violet { color: #8B3FE0; }
-.flame-crystal { color: #CFEFFF; filter: drop-shadow(0 0 3px #FFFFFF); }
+.flame-red, .flame.flame-red { color: #E5482B; }
+.flame-blue, .flame.flame-blue { color: #2547B8; }
+.flame-green, .flame.flame-green { color: #1F9D55; }
+.flame-violet, .flame.flame-violet { color: #8B3FE0; }
+.flame-crystal, .flame.flame-crystal { color: #CFEFFF; filter: drop-shadow(0 0 3px #FFFFFF); }
 @keyframes flameflicker {
   0%, 100% { transform: scale(1) rotate(-2deg); opacity: .9; }
   50% { transform: scale(1.1) rotate(2deg); opacity: 1; }
