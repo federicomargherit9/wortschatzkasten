@@ -136,6 +136,121 @@ html[data-theme="menta"] {
   --shadow: 0 1px 2px rgba(15,33,25,.07), 0 8px 24px -16px rgba(15,33,25,.45);
 }
 
+/* --- Oceano: blu profondo, per chi ripassa con la testa fredda. --- */
+html[data-theme="oceano"] {
+  --bg: #0B1E3B;
+  --surface: #142B52;
+  --surface-2: #1B3763;
+  --ink: #E9F1FF;
+  --ink-2: #9DB6DE;
+  --ink-3: #6E89B4;
+  --line: #24406E;
+  --line-strong: #345683;
+  --der: #6FB3FF;
+  --die: #FF9BC2;
+  --das: #52D6B0;
+  --neutral: #9DB6DE;
+  --flag: #F4C363;
+  --flag-bg: #3A2E12;
+  --ok: #52D6B0;
+  --ok-bg: #103A30;
+  --err: #FF9BC2;
+  --err-bg: #3E1D2B;
+  --shadow: 0 1px 2px rgba(0,0,0,.45), 0 12px 28px -18px rgba(0,0,0,1);
+}
+
+/* --- Vulcano: rosso caldo e materico, per un ripasso energico. --- */
+html[data-theme="vulcano"] {
+  --bg: #FCEEE9;
+  --surface: #FFFFFF;
+  --surface-2: #FBE0D6;
+  --ink: #3A140A;
+  --ink-2: #8A4531;
+  --ink-3: #B57459;
+  --line: #F0CBBB;
+  --line-strong: #E0AA92;
+  --der: #B33E1E;
+  --die: #C8285A;
+  --das: #3E7A3C;
+  --neutral: #8A4531;
+  --flag: #B4790E;
+  --flag-bg: #FBE7C4;
+  --ok: #3E7A3C;
+  --ok-bg: #E1EFDA;
+  --err: #C8285A;
+  --err-bg: #FAD9E2;
+  --shadow: 0 1px 2px rgba(58,20,10,.10), 0 8px 24px -16px rgba(58,20,10,.5);
+}
+
+/* --- Ametista: viola profondo, morbido per le sessioni serali. --- */
+html[data-theme="ametista"] {
+  --bg: #1C1330;
+  --surface: #281B44;
+  --surface-2: #33234F;
+  --ink: #F0E9FF;
+  --ink-2: #B7A6DE;
+  --ink-3: #8B76B0;
+  --line: #3D2C5C;
+  --line-strong: #513D75;
+  --der: #8FA6FF;
+  --die: #FF8FD1;
+  --das: #55D9A6;
+  --neutral: #B7A6DE;
+  --flag: #F0C868;
+  --flag-bg: #3A3016;
+  --ok: #55D9A6;
+  --ok-bg: #12362C;
+  --err: #FF8FD1;
+  --err-bg: #3C1D33;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 28px -18px rgba(0,0,0,1);
+}
+
+/* --- Sakura: rosa chiaro e luminoso, delicato per lo studio diurno. --- */
+html[data-theme="sakura"] {
+  --bg: #FDECF1;
+  --surface: #FFFFFF;
+  --surface-2: #FCE0E9;
+  --ink: #3A1220;
+  --ink-2: #8A4E62;
+  --ink-3: #B57F92;
+  --line: #F3CBDA;
+  --line-strong: #E4A9C0;
+  --der: #3E63C9;
+  --die: #C6296B;
+  --das: #2E8F6E;
+  --neutral: #8A4E62;
+  --flag: #B8790F;
+  --flag-bg: #FBE7C4;
+  --ok: #2E8F6E;
+  --ok-bg: #DCF0E7;
+  --err: #C6296B;
+  --err-bg: #FAD9E5;
+  --shadow: 0 1px 2px rgba(58,18,32,.08), 0 8px 24px -16px rgba(58,18,32,.45);
+}
+
+/* --- Ambra: arancio caldo al tramonto, per un ripasso avvolgente. --- */
+html[data-theme="ambra"] {
+  --bg: #FBEEDD;
+  --surface: #FFFDF8;
+  --surface-2: #F7E2C4;
+  --ink: #3A2408;
+  --ink-2: #8A6535;
+  --ink-3: #B5936A;
+  --line: #EFD4A8;
+  --line-strong: #DEB877;
+  --der: #2E63B0;
+  --die: #C23E63;
+  --das: #4A7A2E;
+  --neutral: #8A6535;
+  --flag: #C77400;
+  --flag-bg: #FBE3B8;
+  --ok: #4A7A2E;
+  --ok-bg: #E4EFD5;
+  --err: #C23E63;
+  --err-bg: #FAD9E2;
+  --shadow: 0 1px 2px rgba(58,36,8,.10), 0 8px 24px -16px rgba(58,36,8,.5);
+}
+
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { margin: 0; padding: 0; height: 100%; }
 body {
@@ -240,6 +355,11 @@ button { cursor: pointer; }
 .chip.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 .chip .n { font-weight: 500; opacity: .6; font-variant-numeric: tabular-nums; }
 .chip.flagchip.on { background: var(--flag); border-color: var(--flag); color: #1B1405; }
+.chip.clearchip { padding: 0 11px; color: var(--ink-3); font-weight: 500; opacity: .7; }
+.chip.clearchip:active { opacity: 1; }
+.chip.browsechip { padding: 0 10px; color: var(--ink-3); }
+.chip.browsechip svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.8; display: block; }
+.pick .n { font-weight: 500; opacity: .6; font-variant-numeric: tabular-nums; }
 .resultline {
   display: flex; align-items: baseline; justify-content: space-between;
   gap: 10px; margin: 16px 0 8px;
@@ -393,7 +513,8 @@ button { cursor: pointer; }
 .sessiondone .big { font-size: 42px; font-weight: 700; letter-spacing: -.03em; }
 .statgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 18px 0; }
 .statbox { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 10px; text-align: center; }
-.statbox b { display: block; font-size: 22px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.statbox b { display: block; font-size: 22px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.statbox b .flame { margin-left: 3px; vertical-align: -3px; }
 .statbox span { font-size: 11.5px; color: var(--ink-2); }
 
 /* ---------- quiz ---------- */
@@ -431,6 +552,18 @@ button { cursor: pointer; }
 .verdict.no b { color: var(--err); }
 .scorerow { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; font-size: 13px; color: var(--ink-2); }
 .scorerow .streak { color: var(--flag); font-weight: 650; }
+/* la fiamma della streak: cambia colore ogni tot giorni, poi ricomincia dal rosso */
+.flame { display: inline-flex; width: 17px; height: 17px; animation: flameflicker 1.6s ease-in-out infinite; }
+.flame svg { width: 100%; height: 100%; fill: currentColor; }
+.flame-red { color: #E5482B; }
+.flame-blue { color: #2547B8; }
+.flame-green { color: #1F9D55; }
+.flame-violet { color: #8B3FE0; }
+.flame-crystal { color: #CFEFFF; filter: drop-shadow(0 0 3px #FFFFFF); }
+@keyframes flameflicker {
+  0%, 100% { transform: scale(1) rotate(-2deg); opacity: .9; }
+  50% { transform: scale(1.1) rotate(2deg); opacity: 1; }
+}
 
 /* ---------- progressi ---------- */
 .section-h { font-size: 13px; font-weight: 700; color: var(--ink-2); margin: 26px 0 10px; }
@@ -635,7 +768,39 @@ function genderVar(it) {
   if (it.type === "sostantivo" && GENDER_COLOR[it.articolo]) return GENDER_COLOR[it.articolo];
   return "var(--neutral)";
 }
+// la fiamma cambia colore ogni tot giorni di fila, poi il ciclo ricomincia da capo
+function flameStage(streak) {
+  if (!streak) return null;
+  var s = ((streak - 1) % 220) + 1;
+  if (s <= 30) return "flame-red";
+  if (s <= 60) return "flame-blue";
+  if (s <= 105) return "flame-green";
+  if (s <= 160) return "flame-violet";
+  return "flame-crystal";
+}
+function flameHtml(streak) {
+  var stage = flameStage(streak);
+  if (!stage) return "";
+  return '<span class="flame ' + stage + '" aria-hidden="true">' + icons.flame + "</span>";
+}
 function plural(n, one, many) { return n + " " + (n === 1 ? one : many); }
+function topicsSummary(arr) { return arr.length === 1 ? "argomento: " + arr[0] : arr.length + " argomenti"; }
+// aggiunge/rimuove v da un array, senza mutare l'originale (per le selezioni multiple)
+function arrToggle(arr, v) {
+  var i = arr.indexOf(v);
+  if (i === -1) return arr.concat([v]);
+  var c = arr.slice(); c.splice(i, 1); return c;
+}
+// numeri grandi compattati, così non escono mai dal loro box (1010 -> "1.01K")
+function fmtCompact(n) {
+  n = n || 0;
+  if (n < 1000) return String(n);
+  var unit = n < 1e6 ? 1e3 : 1e6, suffix = n < 1e6 ? "K" : "M";
+  var v = n / unit;
+  var d = v < 10 ? 2 : (v < 100 ? 1 : 0);
+  var s = v.toFixed(d).replace(/\.?0+$/, "");
+  return s + suffix;
+}
 
 var icons = {
   search: '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>',
@@ -646,7 +811,9 @@ var icons = {
   chart: '<svg viewBox="0 0 24 24"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg>',
   sound: '<svg viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13L7.5 14.5H4z"/><path d="M16 9a4.5 4.5 0 0 1 0 6"/><path d="M18.8 6.4a8 8 0 0 1 0 11.2"/></svg>',
   pencil: '<svg viewBox="0 0 24 24"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="m14.5 5.5 4 4"/></svg>',
-  trash: '<svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg>'
+  trash: '<svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg>',
+  list: '<svg viewBox="0 0 24 24"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M4 6h.01"/><path d="M4 12h.01"/><path d="M4 18h.01"/></svg>',
+  flame: '<svg viewBox="0 0 24 24" stroke="none"><path d="M12 2c1.2 3-2.4 4.2-2.4 7.6a4.4 4.4 0 0 0 8.8 0c0-1.1-.5-2.1-1.1-3 1.1.1 3.1 2.3 3.1 6.4a6.4 6.4 0 0 1-12.8 0C7.6 8 10 6 12 2z"/></svg>'
 };
 
 /* ---------------- stato ---------------- */
@@ -664,7 +831,7 @@ var store = {
 };
 var state = {
   tab: "lessico",
-  q: "", topic: "*", type: "*", onlyFlag: false,
+  q: "", topics: [], types: [], onlyFlag: false,
   sort: "alpha", openId: null, confirmId: null,
   loadStatus: "loading"
 };
@@ -701,8 +868,8 @@ function dueItems() {
 }
 function matches(it) {
   if (state.onlyFlag && !store.flags[it.id]) return false;
-  if (state.topic !== "*" && (it.topics || []).indexOf(state.topic) === -1) return false;
-  if (state.type !== "*" && it.type !== state.type) return false;
+  if (state.topics.length && !(it.topics || []).some(function (t) { return state.topics.indexOf(t) !== -1; })) return false;
+  if (state.types.length && state.types.indexOf(it.type) === -1) return false;
   if (!state.q) return true;
   var q = fold(state.q);
   if (!q) return true;
@@ -744,8 +911,14 @@ function gradeItem(id, grade) {
   countReview();
 }
 function countReview() {
+  markStreakActivity();
+  store.stats.total = (store.stats.total || 0) + 1;
+  save("stats");
+}
+// registra la giornata come "attiva" solo quando si fa qualcosa di vero:
+// un ripasso, un esercizio o l'aggiunta di una parola. Aprire l'app non basta.
+function markStreakActivity() {
   var t = today(), st = store.stats;
-  st.total = (st.total || 0) + 1;
   st.byDay = st.byDay || {};
   st.byDay[t] = (st.byDay[t] || 0) + 1;
   if (st.lastDay !== t) {
@@ -804,7 +977,12 @@ var THEMES = [
   { id: "dark", label: "Scuro", swatch: ["#0F1318", "#7CA4FF"] },
   { id: "pergamena", label: "Pergamena", swatch: ["#EFE7D5", "#A8761A"] },
   { id: "notte", label: "Notte blu", swatch: ["#0A1526", "#79B4FF"] },
-  { id: "menta", label: "Menta", swatch: ["#DDEDE4", "#0E7A54"] }
+  { id: "menta", label: "Menta", swatch: ["#DDEDE4", "#0E7A54"] },
+  { id: "oceano", label: "Oceano", swatch: ["#0B1E3B", "#6FB3FF"] },
+  { id: "vulcano", label: "Vulcano", swatch: ["#FCEEE9", "#B33E1E"] },
+  { id: "ametista", label: "Ametista", swatch: ["#1C1330", "#8FA6FF"] },
+  { id: "sakura", label: "Sakura", swatch: ["#FDECF1", "#C6296B"] },
+  { id: "ambra", label: "Ambra", swatch: ["#FBEEDD", "#C77400"] }
 ];
 
 function applyTheme() {
@@ -892,35 +1070,56 @@ function viewLessico() {
     '<button id="clearSearch" data-act="clearq" aria-label="Cancella ricerca" style="visibility:' + (state.q ? "visible" : "hidden") + '">✕</button>' +
     "</label></div>";
 
+  h += '<div id="filtersWrap">' + filtersHtml() + "</div>";
+  h += '<button class="fab" data-act="add">+ Nuova parola</button>';
+  return h;
+}
+
+function filtersHtml() {
   var counts = {};
   allItems().forEach(function (i) { (i.topics || []).forEach(function (t) { counts[t] = (counts[t] || 0) + 1; }); });
   var flagN = Object.keys(store.flags).filter(function (k) { return store.flags[k]; }).length;
 
-  h += '<div class="chiprow" role="group" aria-label="Filtra per argomento">';
+  var h = '<div class="chiprow" id="topicChips" role="group" aria-label="Filtra per argomento">';
   h += '<button class="chip flagchip ' + (state.onlyFlag ? "on" : "") + '" data-act="toggleflag">' + icons.flag +
     ' Da studiare <span class="n">' + flagN + "</span></button>";
-  h += '<button class="chip ' + (state.topic === "*" ? "on" : "") + '" data-act="topic" data-v="*">Tutti gli argomenti</button>';
+  h += '<button class="chip ' + (state.topics.length === 0 ? "on" : "") + '" data-act="topic" data-v="*">Tutti gli argomenti</button>';
+  if (state.topics.length) h += '<button class="chip clearchip" data-act="cleartopics" aria-label="Deseleziona tutti gli argomenti">✕</button>';
   h += allTopics().map(function (t) {
-    return '<button class="chip ' + (state.topic === t ? "on" : "") + '" data-act="topic" data-v="' + esc(t) + '">' +
+    return '<button class="chip ' + (state.topics.indexOf(t) !== -1 ? "on" : "") + '" data-act="topic" data-v="' + esc(t) + '">' +
       esc(t) + ' <span class="n">' + (counts[t] || 0) + "</span></button>";
   }).join("");
+  h += '<button class="chip browsechip" data-act="browsetopics" aria-label="Sfoglia tutti gli argomenti">' + icons.list + "</button>";
   h += "</div>";
 
-  h += '<div class="chiprow" role="group" aria-label="Filtra per categoria grammaticale">';
-  h += '<button class="chip ' + (state.type === "*" ? "on" : "") + '" data-act="type" data-v="*">Tutte le categorie</button>';
+  h += '<div class="chiprow" id="typeChips" role="group" aria-label="Filtra per categoria grammaticale">';
+  h += '<button class="chip ' + (state.types.length === 0 ? "on" : "") + '" data-act="type" data-v="*">Tutte le categorie</button>';
+  if (state.types.length) h += '<button class="chip clearchip" data-act="cleartypes" aria-label="Deseleziona tutte le categorie">✕</button>';
   h += TYPE_KEYS.map(function (k) {
-    return '<button class="chip ' + (state.type === k ? "on" : "") + '" data-act="type" data-v="' + k + '">' + TYPES[k].many + "</button>";
+    return '<button class="chip ' + (state.types.indexOf(k) !== -1 ? "on" : "") + '" data-act="type" data-v="' + k + '">' + TYPES[k].many + "</button>";
   }).join("");
+  h += '<button class="chip browsechip" data-act="browsetypes" aria-label="Sfoglia tutte le categorie">' + icons.list + "</button>";
   h += "</div>";
 
   h += '<div id="listWrap">' + listHtml() + "</div>";
-  h += '<button class="fab" data-act="add">+ Nuova parola</button>';
   return h;
 }
 
 function renderList() {
   var w = el("listWrap");
   if (w) w.innerHTML = listHtml();
+}
+
+// aggiorna chip e lista senza ricreare la barra superiore: la posizione di scorrimento
+// orizzontale dei chiprow resta quella che l'utente aveva scelto.
+function renderFilters() {
+  var wrap = el("filtersWrap");
+  if (!wrap) { render(); return; }
+  var tc = $("#topicChips"), yc = $("#typeChips");
+  var ts = tc ? tc.scrollLeft : 0, ys = yc ? yc.scrollLeft : 0;
+  wrap.innerHTML = filtersHtml();
+  var ntc = $("#topicChips"); if (ntc) ntc.scrollLeft = ts;
+  var nyc = $("#typeChips"); if (nyc) nyc.scrollLeft = ys;
 }
 
 function listHtml() {
@@ -935,7 +1134,20 @@ function listHtml() {
       "<p>Prova a togliere un filtro o a cercare un'altra parola.</p>" +
       '<button class="btn ghost" data-act="resetfilters">Azzera i filtri</button></div>';
   }
-  h += '<div class="list">' + list.map(entryHtml).join("") + "</div>";
+  if (state.sort === "type") {
+    // ordino per categoria: rendo visibile il riordinamento con intestazioni di gruppo
+    var lastType = null, body = "";
+    list.forEach(function (it) {
+      if (it.type !== lastType) {
+        lastType = it.type;
+        body += '<div class="group-h">' + esc(TYPES[it.type] ? TYPES[it.type].many : it.type) + "</div>";
+      }
+      body += entryHtml(it);
+    });
+    h += '<div class="list">' + body + "</div>";
+  } else {
+    h += '<div class="list">' + list.map(entryHtml).join("") + "</div>";
+  }
   return h;
 }
 
@@ -1027,12 +1239,12 @@ function viewRipasso() {
   h += '<div class="statgrid">' +
     '<div class="statbox"><b>' + nuove.length + "</b><span>mai viste</span></div>" +
     '<div class="statbox"><b>' + allItems().filter(function (i) { return srsOf(i.id).box >= KNOWN_BOX; }).length + "</b><span>sicure</span></div>" +
-    '<div class="statbox"><b>' + (store.stats.streak || 0) + "</b><span>giorni di fila</span></div>" +
+    '<div class="statbox"><b>' + (store.stats.streak || 0) + flameHtml(store.stats.streak) + "</b><span>giorni di fila</span></div>" +
     "</div>";
 
   h += '<div class="section-h">Allenamento libero</div>';
   h += '<p style="margin:0 0 12px;font-size:14px;color:var(--ink-2)">Parte dalle parole che stai filtrando nel Lessico' +
-    (state.topic !== "*" ? ' (argomento: <strong>' + esc(state.topic) + "</strong>)" : " (tutte)") + ".</p>";
+    (state.topics.length ? " (" + esc(topicsSummary(state.topics)) + ")" : " (tutte)") + ".</p>";
   h += '<div class="pickrow" style="margin-bottom:12px">' +
     dirBtn("de-it", "Tedesco → Italiano") + dirBtn("it-de", "Italiano → Tedesco") + dirBtn("mix", "Alternate") +
     "</div>";
@@ -1132,7 +1344,7 @@ function sessionDoneHtml() {
     '<div class="statgrid">' +
       '<div class="statbox"><b>' + rv.right + "</b><span>sapute</span></div>" +
       '<div class="statbox"><b>' + rv.again + "</b><span>da rivedere</span></div>" +
-      '<div class="statbox"><b>' + (store.stats.streak || 0) + "</b><span>giorni di fila</span></div>" +
+      '<div class="statbox"><b>' + (store.stats.streak || 0) + flameHtml(store.stats.streak) + "</b><span>giorni di fila</span></div>" +
     "</div>" +
     '<button class="btn block" data-act="endsession">Torna al ripasso</button>' +
     "</div>";
@@ -1151,7 +1363,12 @@ var QUIZ_MODES = [
 function viewQuiz() {
   if (!qz) { qz = newQuiz(QUIZ_MODES[0].id, null); newQuestion(); }
   var h = topbar("Esercizi sul lessico");
-  h += '<div class="chiprow" style="margin-top:12px" role="group" aria-label="Tipo di esercizio">' +
+  h += '<div id="quizWrap">' + quizInnerHtml() + "</div>";
+  return h;
+}
+
+function quizInnerHtml() {
+  var h = '<div class="chiprow" style="margin-top:12px" role="group" aria-label="Tipo di esercizio">' +
     QUIZ_MODES.map(function (m) {
       return '<button class="chip ' + (qz.mode === m.id ? "on" : "") + '" data-act="quizmode" data-v="' + m.id + '">' + m.label + "</button>";
     }).join("") + "</div>";
@@ -1160,22 +1377,24 @@ function viewQuiz() {
   allItems().forEach(function (i) { (i.topics || []).forEach(function (t) { counts[t] = (counts[t] || 0) + 1; }); });
   var flagN = Object.keys(store.flags).filter(function (k) { return store.flags[k]; }).length;
 
-  h += '<div class="chiprow" role="group" aria-label="Argomento su cui esercitarsi">';
-  h += '<button class="chip ' + (qz.topic === "*" && !qz.onlyFlag ? "on" : "") + '" data-act="quiztopic" data-v="*">Tutto il lessico <span class="n">' + allItems().length + "</span></button>";
+  h += '<div class="chiprow" id="quizTopicChips" role="group" aria-label="Argomento su cui esercitarsi">';
+  h += '<button class="chip ' + (qz.topics.length === 0 && !qz.onlyFlag ? "on" : "") + '" data-act="quiztopic" data-v="*">Tutto il lessico <span class="n">' + allItems().length + "</span></button>";
+  if (qz.topics.length) h += '<button class="chip clearchip" data-act="clearqtopics" aria-label="Deseleziona tutti gli argomenti">✕</button>';
   if (flagN) {
     h += '<button class="chip flagchip ' + (qz.onlyFlag ? "on" : "") + '" data-act="quizflag">' + icons.flag +
       ' Da studiare <span class="n">' + flagN + "</span></button>";
   }
   h += allTopics().map(function (t) {
     if (!counts[t]) return "";
-    return '<button class="chip ' + (qz.topic === t ? "on" : "") + '" data-act="quiztopic" data-v="' + esc(t) + '">' +
+    return '<button class="chip ' + (qz.topics.indexOf(t) !== -1 ? "on" : "") + '" data-act="quiztopic" data-v="' + esc(t) + '">' +
       esc(t) + ' <span class="n">' + counts[t] + "</span></button>";
   }).join("");
+  h += '<button class="chip browsechip" data-act="browseqtopics" aria-label="Sfoglia tutti gli argomenti">' + icons.list + "</button>";
   h += "</div>";
 
   var poolN = poolFor(qz.mode).length;
   h += '<div class="resultline"><span>' + plural(poolN, "parola in gioco", "parole in gioco") +
-    (qz.topic !== "*" ? " · " + esc(qz.topic) : "") + "</span>" +
+    (qz.topics.length ? " · " + esc(topicsSummary(qz.topics)) : "") + "</span>" +
     '<button class="linkbtn" data-act="resetquiz">Ricomincia</button></div>';
 
   if (!qz.q) {
@@ -1185,10 +1404,22 @@ function viewQuiz() {
   return h;
 }
 
+// aggiorna i chip e la scheda dell'esercizio senza ricreare la barra:
+// così lo scorrimento orizzontale scelto dall'utente resta dov'era.
+function renderQuizFilters() {
+  var wrap = el("quizWrap");
+  if (!wrap) { render(); return; }
+  var tc = $("#quizTopicChips");
+  var ts = tc ? tc.scrollLeft : 0;
+  wrap.innerHTML = quizInnerHtml();
+  var ntc = $("#quizTopicChips"); if (ntc) ntc.scrollLeft = ts;
+  var qi = $("#quizInput"); if (qi) qi.focus();
+}
+
 function newQuiz(mode, prev) {
   return {
     mode: mode,
-    topic: prev ? prev.topic : "*",
+    topics: prev ? prev.topics.slice() : [],
     onlyFlag: prev ? prev.onlyFlag : false,
     right: 0, total: 0, streak: 0,
     picked: null, typed: "", q: null, recent: []
@@ -1198,7 +1429,7 @@ function newQuiz(mode, prev) {
 function poolFor(mode) {
   // Gli esercizi hanno filtri propri: la ricerca scritta nel Lessico non c'entra.
   var base = allItems();
-  if (qz.topic !== "*") base = base.filter(function (i) { return (i.topics || []).indexOf(qz.topic) !== -1; });
+  if (qz.topics.length) base = base.filter(function (i) { return (i.topics || []).some(function (t) { return qz.topics.indexOf(t) !== -1; }); });
   if (qz.onlyFlag) base = base.filter(function (i) { return store.flags[i.id]; });
   if (mode === "articolo") base = base.filter(function (i) { return i.type === "sostantivo" && i.articolo; });
   return base;
@@ -1343,7 +1574,8 @@ function answerQuiz(val) {
     s.box = 0; s.due = today(); s.wrong = (s.wrong || 0) + 1;
     store.srs[q.item.id] = s; save("srs");
   }
-  render();
+  markStreakActivity();
+  renderQuizFilters();
 }
 
 /* ---------------- 4. Progressi ---------------- */
@@ -1361,9 +1593,9 @@ function viewProgressi() {
     '<div class="statbox"><b>' + fresh + "</b><span>da iniziare</span></div>" +
     "</div>";
   h += '<div class="statgrid">' +
-    '<div class="statbox"><b>' + (store.stats.streak || 0) + "</b><span>giorni di fila</span></div>" +
+    '<div class="statbox"><b>' + (store.stats.streak || 0) + flameHtml(store.stats.streak) + "</b><span>giorni di fila</span></div>" +
     '<div class="statbox"><b>' + (store.stats.byDay && store.stats.byDay[today()] || 0) + "</b><span>schede oggi</span></div>" +
-    '<div class="statbox"><b>' + (store.stats.total || 0) + "</b><span>ripassi totali</span></div>" +
+    '<div class="statbox"><b>' + fmtCompact(store.stats.total || 0) + "</b><span>ripassi totali</span></div>" +
     "</div>";
 
   h += '<div class="section-h">Argomenti</div><div class="bars">';
@@ -1384,7 +1616,11 @@ function viewProgressi() {
   h += '<div class="section-h">Il tuo Kasten</div>';
   h += '<button class="rowlink" data-act="checkupdate"><span>Controlla aggiornamenti del lessico</span><small>' +
     (state.loadStatus === "ok" ? db.official.length + " parole di classe" : "non scaricato") + "</small></button>";
-  h += '<button class="rowlink" data-act="export"><span>Esporta un backup</span><small>file .json</small></button>';
+  h += '<button class="rowlink" data-act="export"><span>Esporta un backup completo</span><small>parole, progressi, impostazioni</small></button>';
+  if (store.custom.length) {
+    h += '<button class="rowlink" data-act="exportwords"><span>Esporta solo le parole aggiunte</span><small>' +
+      plural(store.custom.length, "parola tua", "parole tue") + ", senza progressi</small></button>";
+  }
   h += '<button class="rowlink" data-act="import"><span>Importa un backup</span><small>unisce ai dati attuali</small></button>';
   if (store.deleted.length) {
     h += '<button class="rowlink" data-act="restore"><span>Ripristina le parole eliminate</span><small>' + store.deleted.length + "</small></button>";
@@ -1410,6 +1646,27 @@ function openSheet(html) {
 }
 function closeSheet() {
   if (sheetEl) { sheetEl.remove(); sheetEl = null; document.body.style.overflow = ""; }
+}
+
+// sheet con tutti gli argomenti/categorie in un'unica vista, per selezionarne
+// più di uno senza dover scorrere le barre orizzontali.
+function openPickSheet(kind) {
+  var isType = kind === "type", isQ = kind === "qtopic";
+  var counts = {};
+  if (!isType) allItems().forEach(function (i) { (i.topics || []).forEach(function (t) { counts[t] = (counts[t] || 0) + 1; }); });
+  var items = isType ? TYPE_KEYS.map(function (k) { return { v: k, label: TYPES[k].many, n: null }; })
+    : allTopics().filter(function (t) { return !isQ || counts[t]; }).map(function (t) { return { v: t, label: t, n: counts[t] || 0 }; });
+  var sel = isType ? state.types : (isQ ? qz.topics : state.topics);
+  var act = isType ? "type" : (isQ ? "quiztopic" : "topic");
+  var title = isType ? "Categorie grammaticali" : (isQ ? "Argomenti per l'esercizio" : "Argomenti");
+  var h = '<div class="sheet-h"><h2>' + title + '</h2><button class="iconbtn" data-act="closesheet" aria-label="Chiudi">✕</button></div>';
+  h += '<div class="pickrow">' + items.map(function (it) {
+    return '<button class="pick ' + (sel.indexOf(it.v) !== -1 ? "on" : "") + '" data-act="' + act + '" data-v="' + esc(it.v) + '">' +
+      esc(it.label) + (it.n != null ? ' <span class="n">' + it.n + "</span>" : "") + "</button>";
+  }).join("") + "</div>";
+  h += '<div class="sheet-actions"><button class="btn ghost" data-act="' + act + '" data-v="*">Deseleziona tutto</button>' +
+    '<button class="btn" data-act="closesheet">Fatto</button></div>';
+  openSheet(h);
 }
 
 var form = null;
@@ -1508,16 +1765,30 @@ var ACTIONS = {
   settings: function () { openSettings(); },
   closesheet: function () { closeSheet(); },
   clearq: function () { state.q = ""; render(); },
-  resetfilters: function () { state.q = ""; state.topic = "*"; state.type = "*"; state.onlyFlag = false; render(); },
+  resetfilters: function () { state.q = ""; state.topics = []; state.types = []; state.onlyFlag = false; render(); },
   cyclesort: function () {
     var order = ["alpha", "type", "new"];
     state.sort = order[(order.indexOf(state.sort) + 1) % order.length];
     renderList();
   },
-  topic: function (v) { state.topic = v; state.openId = null; render(); },
-  type: function (v) { state.type = v; state.openId = null; render(); },
-  toggleflag: function () { state.onlyFlag = !state.onlyFlag; render(); },
-  gototopic: function (v) { state.topic = v; state.tab = "lessico"; render(); },
+  topic: function (v) {
+    state.openId = null;
+    if (v === "*") state.topics = []; else state.topics = arrToggle(state.topics, v);
+    renderFilters();
+    if (sheetEl) openPickSheet("topic");
+  },
+  type: function (v) {
+    state.openId = null;
+    if (v === "*") state.types = []; else state.types = arrToggle(state.types, v);
+    renderFilters();
+    if (sheetEl) openPickSheet("type");
+  },
+  cleartopics: function () { state.topics = []; renderFilters(); if (sheetEl) openPickSheet("topic"); },
+  cleartypes: function () { state.types = []; renderFilters(); if (sheetEl) openPickSheet("type"); },
+  browsetopics: function () { openPickSheet("topic"); },
+  browsetypes: function () { openPickSheet("type"); },
+  toggleflag: function () { state.onlyFlag = !state.onlyFlag; renderFilters(); },
+  gototopic: function (v) { state.topics = [v]; state.tab = "lessico"; render(); },
 
   open: function (v, id) { state.openId = state.openId === id ? null : id; state.confirmId = null; renderList(); },
   flag: function (v, id) {
@@ -1573,6 +1844,7 @@ var ACTIONS = {
     if (!data.id) {
       data.id = "custom_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
       store.custom.push(data); save("custom");
+      markStreakActivity();
       toast("Aggiunta al Kasten.");
     } else if (String(data.id).indexOf("custom_") === 0) {
       store.custom = store.custom.map(function (i) { return i.id === data.id ? data : i; });
@@ -1625,17 +1897,22 @@ var ACTIONS = {
   quizmode: function (v) {
     qz = newQuiz(v, qz);
     newQuestion();
-    render();
+    renderQuizFilters();
   },
   quiztopic: function (v) {
-    qz.topic = v; qz.onlyFlag = false; qz.recent = [];
+    qz.recent = [];
+    if (v === "*") { qz.topics = []; qz.onlyFlag = false; }
+    else { qz.onlyFlag = false; qz.topics = arrToggle(qz.topics, v); }
     newQuestion();
-    render();
+    renderQuizFilters();
+    if (sheetEl) openPickSheet("qtopic");
   },
+  clearqtopics: function () { qz.topics = []; qz.recent = []; newQuestion(); renderQuizFilters(); if (sheetEl) openPickSheet("qtopic"); },
+  browseqtopics: function () { openPickSheet("qtopic"); },
   quizflag: function () {
-    qz.onlyFlag = !qz.onlyFlag; qz.topic = "*"; qz.recent = [];
+    qz.onlyFlag = !qz.onlyFlag; qz.topics = []; qz.recent = [];
     newQuestion();
-    render();
+    renderQuizFilters();
   },
   answer: function (v) { answerQuiz(v); },
   checkwrite: function () {
@@ -1652,8 +1929,8 @@ var ACTIONS = {
     i.focus();
     i.setSelectionRange(p + 1, p + 1);
   },
-  nextq: function () { newQuestion(); render(); },
-  resetquiz: function () { qz.right = 0; qz.total = 0; qz.streak = 0; qz.recent = []; newQuestion(); render(); },
+  nextq: function () { newQuestion(); renderQuizFilters(); },
+  resetquiz: function () { qz.right = 0; qz.total = 0; qz.streak = 0; qz.recent = []; newQuestion(); renderQuizFilters(); },
 
   checkupdate: function () { loadVocab(true); },
   export: function () {
@@ -1670,6 +1947,24 @@ var ACTIONS = {
     document.body.appendChild(a); a.click(); a.remove();
     URL.revokeObjectURL(url);
     toast("Backup scaricato.");
+  },
+  exportwords: function () {
+    if (!store.custom.length) { toast("Non hai ancora aggiunto parole a mano."); return; }
+    var usedTopics = {};
+    store.custom.forEach(function (it) { (it.topics || []).forEach(function (t) { usedTopics[t] = true; }); });
+    var customTopics = store.topics.filter(function (t) { return usedTopics[t]; });
+    var payload = {
+      app: "wortschatzkasten", version: 2, exportedAt: new Date().toISOString(), type: "words-only",
+      customItems: store.custom, customTopics: customTopics
+    };
+    var blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "wortschatzkasten-parole-" + today() + ".json";
+    document.body.appendChild(a); a.click(); a.remove();
+    URL.revokeObjectURL(url);
+    toast(plural(store.custom.length, "parola esportata", "parole esportate") + ".");
   },
   import: function () { var f = el("importFile"); if (f) f.click(); },
   restore: function () {
