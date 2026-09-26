@@ -514,7 +514,7 @@ button { cursor: pointer; }
 .statgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 18px 0; }
 .statbox { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 10px; text-align: center; }
 .statbox b { display: block; font-size: 22px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.statbox b .flame { margin-left: 3px; vertical-align: -3px; }
+.statbox b .flame { margin-left: 3px; vertical-align: -4px; }
 .statbox span { font-size: 11.5px; color: var(--ink-2); }
 
 /* ---------- quiz ---------- */
@@ -553,7 +553,7 @@ button { cursor: pointer; }
 .scorerow { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; font-size: 13px; color: var(--ink-2); }
 .scorerow .streak { color: var(--flag); font-weight: 650; }
 /* la fiamma della streak: cambia colore ogni tot giorni, poi ricomincia dal rosso */
-.flame { display: inline-flex; width: 17px; height: 17px; animation: flameflicker 1.6s ease-in-out infinite; }
+.flame { display: inline-flex; width: 22px; height: 22px; animation: flameflicker 1.6s ease-in-out infinite; }
 .flame svg { width: 100%; height: 100%; fill: currentColor; }
 .flame-red { color: #E5482B; }
 .flame-blue { color: #2547B8; }
@@ -813,7 +813,7 @@ var icons = {
   pencil: '<svg viewBox="0 0 24 24"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="m14.5 5.5 4 4"/></svg>',
   trash: '<svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg>',
   list: '<svg viewBox="0 0 24 24"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M4 6h.01"/><path d="M4 12h.01"/><path d="M4 18h.01"/></svg>',
-  flame: '<svg viewBox="0 0 24 24" stroke="none"><path d="M12 2c1.2 3-2.4 4.2-2.4 7.6a4.4 4.4 0 0 0 8.8 0c0-1.1-.5-2.1-1.1-3 1.1.1 3.1 2.3 3.1 6.4a6.4 6.4 0 0 1-12.8 0C7.6 8 10 6 12 2z"/></svg>'
+  flame: '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/><path fill="#fff" opacity=".5" transform="translate(12 13.2) scale(.48) translate(-12 -13.2)" d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>'
 };
 
 /* ---------------- stato ---------------- */
@@ -1081,6 +1081,7 @@ function filtersHtml() {
   var flagN = Object.keys(store.flags).filter(function (k) { return store.flags[k]; }).length;
 
   var h = '<div class="chiprow" id="topicChips" role="group" aria-label="Filtra per argomento">';
+  h += '<button class="chip browsechip" data-act="browsetopics" aria-label="Sfoglia tutti gli argomenti">' + icons.list + "</button>";
   h += '<button class="chip flagchip ' + (state.onlyFlag ? "on" : "") + '" data-act="toggleflag">' + icons.flag +
     ' Da studiare <span class="n">' + flagN + "</span></button>";
   h += '<button class="chip ' + (state.topics.length === 0 ? "on" : "") + '" data-act="topic" data-v="*">Tutti gli argomenti</button>';
@@ -1089,16 +1090,15 @@ function filtersHtml() {
     return '<button class="chip ' + (state.topics.indexOf(t) !== -1 ? "on" : "") + '" data-act="topic" data-v="' + esc(t) + '">' +
       esc(t) + ' <span class="n">' + (counts[t] || 0) + "</span></button>";
   }).join("");
-  h += '<button class="chip browsechip" data-act="browsetopics" aria-label="Sfoglia tutti gli argomenti">' + icons.list + "</button>";
   h += "</div>";
 
   h += '<div class="chiprow" id="typeChips" role="group" aria-label="Filtra per categoria grammaticale">';
+  h += '<button class="chip browsechip" data-act="browsetypes" aria-label="Sfoglia tutte le categorie">' + icons.list + "</button>";
   h += '<button class="chip ' + (state.types.length === 0 ? "on" : "") + '" data-act="type" data-v="*">Tutte le categorie</button>';
   if (state.types.length) h += '<button class="chip clearchip" data-act="cleartypes" aria-label="Deseleziona tutte le categorie">✕</button>';
   h += TYPE_KEYS.map(function (k) {
     return '<button class="chip ' + (state.types.indexOf(k) !== -1 ? "on" : "") + '" data-act="type" data-v="' + k + '">' + TYPES[k].many + "</button>";
   }).join("");
-  h += '<button class="chip browsechip" data-act="browsetypes" aria-label="Sfoglia tutte le categorie">' + icons.list + "</button>";
   h += "</div>";
 
   h += '<div id="listWrap">' + listHtml() + "</div>";
@@ -1378,6 +1378,7 @@ function quizInnerHtml() {
   var flagN = Object.keys(store.flags).filter(function (k) { return store.flags[k]; }).length;
 
   h += '<div class="chiprow" id="quizTopicChips" role="group" aria-label="Argomento su cui esercitarsi">';
+  h += '<button class="chip browsechip" data-act="browseqtopics" aria-label="Sfoglia tutti gli argomenti">' + icons.list + "</button>";
   h += '<button class="chip ' + (qz.topics.length === 0 && !qz.onlyFlag ? "on" : "") + '" data-act="quiztopic" data-v="*">Tutto il lessico <span class="n">' + allItems().length + "</span></button>";
   if (qz.topics.length) h += '<button class="chip clearchip" data-act="clearqtopics" aria-label="Deseleziona tutti gli argomenti">✕</button>';
   if (flagN) {
@@ -1389,7 +1390,6 @@ function quizInnerHtml() {
     return '<button class="chip ' + (qz.topics.indexOf(t) !== -1 ? "on" : "") + '" data-act="quiztopic" data-v="' + esc(t) + '">' +
       esc(t) + ' <span class="n">' + counts[t] + "</span></button>";
   }).join("");
-  h += '<button class="chip browsechip" data-act="browseqtopics" aria-label="Sfoglia tutti gli argomenti">' + icons.list + "</button>";
   h += "</div>";
 
   var poolN = poolFor(qz.mode).length;
@@ -1617,10 +1617,8 @@ function viewProgressi() {
   h += '<button class="rowlink" data-act="checkupdate"><span>Controlla aggiornamenti del lessico</span><small>' +
     (state.loadStatus === "ok" ? db.official.length + " parole di classe" : "non scaricato") + "</small></button>";
   h += '<button class="rowlink" data-act="export"><span>Esporta un backup completo</span><small>parole, progressi, impostazioni</small></button>';
-  if (store.custom.length) {
-    h += '<button class="rowlink" data-act="exportwords"><span>Esporta solo le parole aggiunte</span><small>' +
-      plural(store.custom.length, "parola tua", "parole tue") + ", senza progressi</small></button>";
-  }
+  h += '<button class="rowlink" data-act="exportwords"><span>Esporta solo le parole aggiunte</span><small>' +
+    (store.custom.length ? plural(store.custom.length, "parola tua", "parole tue") + ", senza progressi" : "nessuna parola aggiunta finora") + "</small></button>";
   h += '<button class="rowlink" data-act="import"><span>Importa un backup</span><small>unisce ai dati attuali</small></button>';
   if (store.deleted.length) {
     h += '<button class="rowlink" data-act="restore"><span>Ripristina le parole eliminate</span><small>' + store.deleted.length + "</small></button>";
