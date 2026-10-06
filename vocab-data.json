@@ -30,7 +30,10 @@
     "Fare proposte",
     "Reagire a proposte",
     "Espressioni utili",
-    "Avverbi utili"
+    "Avverbi utili",
+    "Sport e calcio",
+    "Mesi e stagioni",
+    "Volontariato e impegno civico"
   ],
   "items": [
     {
@@ -408,7 +411,8 @@
       "italian": "aperto/a",
       "comparativo": "offener",
       "topics": [
-        "Vantaggi lingua straniera"
+        "Vantaggi lingua straniera",
+        "Scuola e università"
       ],
       "esempio": "offener und toleranter sein",
       "esempioTraduzione": "essere più aperti e tolleranti"
@@ -1995,7 +1999,8 @@
       "perfekt": "hat teilgenommen an",
       "italian": "partecipare a",
       "topics": [
-        "Politica"
+        "Politica",
+        "Scuola e università"
       ]
     },
     {
@@ -5941,7 +5946,8 @@
       "perfekt": "hat geschenkt",
       "italian": "regalare",
       "topics": [
-        "Festa e celebrazioni"
+        "Festa e celebrazioni",
+        "Volontariato e impegno civico"
       ]
     },
     {
@@ -6558,6 +6564,1145 @@
         "Avverbi e modi di dire (bonus)"
       ],
       "note": "modo di dire, lett. 'cosa ti ha camminato sul fegato?'"
+    },
+    {
+      "id": "i1",
+      "type": "sostantivo",
+      "german": "Tor",
+      "articolo": "das",
+      "plurale": "die Tore",
+      "italian": "la porta (del campo); il gol",
+      "topics": [
+        "Sport e calcio"
+      ],
+      "note": "attenzione: 'das Tor' può significare sia la porta del campo che il gol segnato"
+    },
+    {
+      "id": "i2",
+      "type": "sostantivo",
+      "german": "Fußball",
+      "articolo": "der",
+      "plurale": "die Fußbälle",
+      "italian": "il pallone; il calcio (lo sport)",
+      "topics": [
+        "Sport e calcio"
+      ],
+      "note": "senza articolo nell'uso generico: 'Fußball spielen' = giocare a calcio"
+    },
+    {
+      "id": "i3",
+      "type": "sostantivo",
+      "german": "Torwart",
+      "articolo": "der",
+      "plurale": "die Torwarte",
+      "femminile": "die Torwartin",
+      "femminilePlurale": "die Torwartinnen",
+      "italian": "il portiere",
+      "topics": [
+        "Sport e calcio"
+      ]
+    },
+    {
+      "id": "i4",
+      "type": "sostantivo",
+      "german": "Ersatzbank",
+      "articolo": "die",
+      "plurale": "die Ersatzbänke",
+      "italian": "la panchina",
+      "topics": [
+        "Sport e calcio"
+      ]
+    },
+    {
+      "id": "i5",
+      "type": "sostantivo",
+      "german": "Schiedsrichter",
+      "articolo": "der",
+      "plurale": "die Schiedsrichter",
+      "femminile": "die Schiedsrichterin",
+      "femminilePlurale": "die Schiedsrichterinnen",
+      "italian": "l'arbitro, l'arbitra",
+      "topics": [
+        "Sport e calcio"
+      ]
+    },
+    {
+      "id": "i6",
+      "type": "sostantivo",
+      "german": "Mannschaft",
+      "articolo": "die",
+      "plurale": "die Mannschaften",
+      "italian": "la squadra",
+      "topics": [
+        "Sport e calcio"
+      ]
+    },
+    {
+      "id": "i7",
+      "type": "sostantivo",
+      "german": "Trainer",
+      "articolo": "der",
+      "plurale": "die Trainer",
+      "femminile": "die Trainerin",
+      "femminilePlurale": "die Trainerinnen",
+      "italian": "l'allenatore, l'allenatrice",
+      "topics": [
+        "Sport e calcio"
+      ]
+    },
+    {
+      "id": "i8",
+      "type": "sostantivo",
+      "german": "Foul",
+      "articolo": "das",
+      "plurale": "die Fouls",
+      "italian": "il fallo",
+      "topics": [
+        "Sport e calcio"
+      ]
+    },
+    {
+      "id": "i9",
+      "type": "sostantivo",
+      "german": "Liga",
+      "articolo": "die",
+      "plurale": "die Ligen",
+      "italian": "il campionato, la lega",
+      "topics": [
+        "Sport e calcio"
+      ]
+    },
+    {
+      "id": "i10",
+      "type": "sostantivo",
+      "german": "Fußballfeld",
+      "articolo": "das",
+      "plurale": "die Fußballfelder",
+      "italian": "il campo da gioco",
+      "topics": [
+        "Sport e calcio"
+      ]
+    },
+    {
+      "id": "i11",
+      "type": "sostantivo",
+      "german": "Fußballspieler",
+      "articolo": "der",
+      "plurale": "die Fußballspieler",
+      "femminile": "die Fußballspielerin",
+      "femminilePlurale": "die Fußballspielerinnen",
+      "italian": "il calciatore, la calciatrice",
+      "topics": [
+        "Sport e calcio"
+      ]
+    },
+    {
+      "id": "i12",
+      "type": "verbo",
+      "german": "verweisen",
+      "reggenza": "verbo forte, + Akkusativ, 'vom Platz verweisen'",
+      "praesens": "verweist",
+      "praeteritum": "verwies",
+      "perfekt": "hat verwiesen",
+      "italian": "espellere (dal campo)",
+      "topics": [
+        "Sport e calcio"
+      ]
+    },
+    {
+      "id": "i13",
+      "type": "sostantivo",
+      "german": "Spiel",
+      "articolo": "das",
+      "plurale": "die Spiele",
+      "italian": "la partita; il gioco",
+      "topics": [
+        "Sport e calcio"
+      ]
+    },
+    {
+      "id": "i14",
+      "type": "sostantivo",
+      "german": "Strafstoß",
+      "articolo": "der",
+      "plurale": "die Strafstöße",
+      "italian": "il calcio di rigore",
+      "topics": [
+        "Sport e calcio"
+      ],
+      "note": "sinonimo più colloquiale: der Elfmeter"
+    },
+    {
+      "id": "i15",
+      "type": "sostantivo",
+      "german": "Januar",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "gennaio",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i16",
+      "type": "sostantivo",
+      "german": "Februar",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "febbraio",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i17",
+      "type": "sostantivo",
+      "german": "März",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "marzo",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i18",
+      "type": "sostantivo",
+      "german": "April",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "aprile",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i19",
+      "type": "sostantivo",
+      "german": "Mai",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "maggio",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i20",
+      "type": "sostantivo",
+      "german": "Juni",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "giugno",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i21",
+      "type": "sostantivo",
+      "german": "Juli",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "luglio",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i22",
+      "type": "sostantivo",
+      "german": "August",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "agosto",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i23",
+      "type": "sostantivo",
+      "german": "September",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "settembre",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i24",
+      "type": "sostantivo",
+      "german": "Oktober",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "ottobre",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i25",
+      "type": "sostantivo",
+      "german": "November",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "novembre",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i26",
+      "type": "sostantivo",
+      "german": "Dezember",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "dicembre",
+      "topics": [
+        "Mesi e stagioni"
+      ],
+      "note": "tutti i mesi sono maschili e si usano senza articolo nelle date, es. 'im Januar' = a gennaio"
+    },
+    {
+      "id": "i27",
+      "type": "sostantivo",
+      "german": "Herbst",
+      "articolo": "der",
+      "plurale": "— per lo più Sg.",
+      "italian": "l'autunno",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i28",
+      "type": "sostantivo",
+      "german": "Sommer",
+      "articolo": "der",
+      "plurale": "— per lo più Sg.",
+      "italian": "l'estate",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i29",
+      "type": "sostantivo",
+      "german": "Frühling",
+      "articolo": "der",
+      "plurale": "— per lo più Sg.",
+      "italian": "la primavera",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i30",
+      "type": "sostantivo",
+      "german": "Winter",
+      "articolo": "der",
+      "plurale": "— per lo più Sg.",
+      "italian": "l'inverno",
+      "topics": [
+        "Mesi e stagioni"
+      ]
+    },
+    {
+      "id": "i31",
+      "type": "sostantivo",
+      "german": "Journalismus",
+      "articolo": "der",
+      "plurale": "— Sg.",
+      "italian": "il giornalismo",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "i32",
+      "type": "sostantivo",
+      "german": "Boulevardzeitung",
+      "articolo": "die",
+      "plurale": "die Boulevardzeitungen",
+      "italian": "il tabloid",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "i33",
+      "type": "sostantivo",
+      "german": "Schlagzeile",
+      "articolo": "die",
+      "plurale": "die Schlagzeilen",
+      "italian": "il titolo di testa",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "i34",
+      "type": "sostantivo",
+      "german": "Artikel",
+      "articolo": "der",
+      "plurale": "die Artikel",
+      "italian": "l'articolo (di giornale)",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "i35",
+      "type": "sostantivo",
+      "german": "Journalist",
+      "articolo": "der",
+      "plurale": "die Journalisten",
+      "femminile": "die Journalistin",
+      "femminilePlurale": "die Journalistinnen",
+      "italian": "il giornalista, la giornalista",
+      "topics": [
+        "Media e informazione"
+      ],
+      "note": "sostantivo debole al maschile"
+    },
+    {
+      "id": "i36",
+      "type": "sostantivo",
+      "german": "Zeitung",
+      "articolo": "die",
+      "plurale": "die Zeitungen",
+      "italian": "il giornale, il quotidiano",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "i37",
+      "type": "sostantivo",
+      "german": "Redakteur",
+      "articolo": "der",
+      "plurale": "die Redakteure",
+      "femminile": "die Redakteurin",
+      "femminilePlurale": "die Redakteurinnen",
+      "italian": "il direttore/la direttrice del giornale, il redattore/la redattrice",
+      "topics": [
+        "Media e informazione"
+      ]
+    },
+    {
+      "id": "i38",
+      "type": "sostantivo",
+      "german": "Gast",
+      "articolo": "der",
+      "plurale": "die Gäste",
+      "italian": "l'ospite",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i40",
+      "type": "sostantivo",
+      "german": "Größe",
+      "articolo": "die",
+      "plurale": "die Größen",
+      "italian": "la taglia, la misura, la grandezza",
+      "topics": [
+        "Volontariato e impegno civico"
+      ],
+      "esempio": "Welche Größe?",
+      "esempioTraduzione": "Che taglia?"
+    },
+    {
+      "id": "i41",
+      "type": "verbo",
+      "german": "anbieten",
+      "reggenza": "verbo separabile, forte, + Dativ della persona + Akkusativ della cosa",
+      "praesens": "bietet an",
+      "praeteritum": "bot an",
+      "perfekt": "hat angeboten",
+      "italian": "offrire",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i42",
+      "type": "verbo",
+      "german": "anrufen",
+      "reggenza": "verbo separabile, forte, + Akkusativ",
+      "praesens": "ruft an",
+      "praeteritum": "rief an",
+      "perfekt": "hat angerufen",
+      "italian": "telefonare, chiamare",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i43",
+      "type": "aggettivo",
+      "german": "minderjährig",
+      "italian": "minorenne",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i44",
+      "type": "verbo",
+      "german": "mitbringen",
+      "reggenza": "verbo separabile, irregolare, + Akkusativ",
+      "praesens": "bringt mit",
+      "praeteritum": "brachte mit",
+      "perfekt": "hat mitgebracht",
+      "italian": "portare con sé (verso un luogo)",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i45",
+      "type": "verbo",
+      "german": "mitnehmen",
+      "reggenza": "verbo separabile, forte, + Akkusativ",
+      "praesens": "nimmt mit",
+      "praeteritum": "nahm mit",
+      "perfekt": "hat mitgenommen",
+      "italian": "portare via con sé",
+      "topics": [
+        "Volontariato e impegno civico"
+      ],
+      "note": "differenza con 'mitbringen': 'mitnehmen' = portare via da un luogo, 'mitbringen' = portare verso un luogo/persona"
+    },
+    {
+      "id": "i46",
+      "type": "espressione",
+      "german": "eine Erfahrung machen/erleben",
+      "italian": "fare/vivere un'esperienza",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i47",
+      "type": "sostantivo",
+      "german": "Erfahrung",
+      "articolo": "die",
+      "plurale": "die Erfahrungen",
+      "italian": "l'esperienza",
+      "topics": [
+        "Volontariato e impegno civico"
+      ],
+      "esempio": "eine Erfahrung machen",
+      "esempioTraduzione": "fare un'esperienza"
+    },
+    {
+      "id": "i48",
+      "type": "sostantivo",
+      "german": "Gemüse",
+      "articolo": "das",
+      "plurale": "— per lo più Sg.",
+      "italian": "la verdura",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i49",
+      "type": "sostantivo",
+      "german": "Brot",
+      "articolo": "das",
+      "plurale": "die Brote",
+      "italian": "il pane",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i50",
+      "type": "verbo",
+      "german": "schneiden",
+      "reggenza": "verbo forte, + Akkusativ",
+      "praesens": "schneidet",
+      "praeteritum": "schnitt",
+      "perfekt": "hat geschnitten",
+      "italian": "tagliare",
+      "topics": [
+        "Volontariato e impegno civico"
+      ],
+      "esempio": "Gemüse und Brot schneiden",
+      "esempioTraduzione": "tagliare verdura e pane"
+    },
+    {
+      "id": "i51",
+      "type": "aggettivo",
+      "german": "befriedigend",
+      "italian": "soddisfacente",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i52",
+      "type": "sostantivo",
+      "german": "freiwillige Arbeit",
+      "articolo": "die",
+      "plurale": "— per lo più Sg.",
+      "italian": "il lavoro volontario, il volontariato",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i53",
+      "type": "sostantivo",
+      "german": "Freiwillige",
+      "articolo": "der/die",
+      "plurale": "die Freiwilligen",
+      "italian": "il volontario, la volontaria",
+      "topics": [
+        "Volontariato e impegno civico"
+      ],
+      "note": "aggettivo sostantivato: si declina come un aggettivo, come 'der/die Arbeitslose'"
+    },
+    {
+      "id": "i54",
+      "type": "espressione",
+      "german": "ein wenig von allem",
+      "italian": "un po' di tutto",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i55",
+      "type": "espressione",
+      "german": "Einmal ist genug.",
+      "italian": "Una volta è sufficiente, basta così.",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i56",
+      "type": "sostantivo",
+      "german": "Dienst",
+      "articolo": "der",
+      "plurale": "die Dienste",
+      "italian": "il servizio",
+      "topics": [
+        "Volontariato e impegno civico"
+      ],
+      "esempio": "einen Dienst für die Gesellschaft leisten",
+      "esempioTraduzione": "prestare un servizio per la società"
+    },
+    {
+      "id": "i57",
+      "type": "sostantivo",
+      "german": "Gesellschaft",
+      "articolo": "die",
+      "plurale": "die Gesellschaften",
+      "italian": "la società",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i58",
+      "type": "verbo",
+      "german": "verbinden",
+      "reggenza": "verbo forte, + Akkusativ, 'mit + Dativ'",
+      "praesens": "verbindet",
+      "praeteritum": "verband",
+      "perfekt": "hat verbunden",
+      "italian": "collegare, unire",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i59",
+      "type": "verbo",
+      "german": "realisieren",
+      "praesens": "realisiert",
+      "praeteritum": "realisierte",
+      "perfekt": "hat realisiert",
+      "italian": "realizzare, mettere in pratica",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i60",
+      "type": "verbo",
+      "german": "befragen",
+      "praesens": "befragt",
+      "praeteritum": "befragte",
+      "perfekt": "hat befragt",
+      "italian": "intervistare, interrogare",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i61",
+      "type": "sostantivo",
+      "german": "Bewohner",
+      "articolo": "der",
+      "plurale": "die Bewohner",
+      "femminile": "die Bewohnerin",
+      "femminilePlurale": "die Bewohnerinnen",
+      "italian": "l'abitante, il/la residente",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i62",
+      "type": "verbo",
+      "german": "verbessern",
+      "praesens": "verbessert",
+      "praeteritum": "verbesserte",
+      "perfekt": "hat verbessert",
+      "italian": "migliorare",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i63",
+      "type": "sostantivo",
+      "german": "Wunsch",
+      "articolo": "der",
+      "plurale": "die Wünsche",
+      "italian": "il desiderio",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i64",
+      "type": "sostantivo",
+      "german": "Dorfplatz",
+      "articolo": "der",
+      "plurale": "die Dorfplätze",
+      "italian": "la piazza del paese",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i65",
+      "type": "verbo",
+      "german": "sich treffen",
+      "reggenza": "verbo forte riflessivo",
+      "praesens": "trifft sich",
+      "praeteritum": "traf sich",
+      "perfekt": "hat sich getroffen",
+      "italian": "incontrarsi",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i66",
+      "type": "verbo",
+      "german": "elektrisieren",
+      "praesens": "elektrisiert",
+      "praeteritum": "elektrisierte",
+      "perfekt": "hat elektrisiert",
+      "italian": "elettrizzare, entusiasmare",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i67",
+      "type": "aggettivo",
+      "german": "geeignet",
+      "italian": "adatto/a, idoneo/a",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i68",
+      "type": "verbo",
+      "german": "anfertigen",
+      "reggenza": "verbo separabile, + Akkusativ",
+      "praesens": "fertigt an",
+      "praeteritum": "fertigte an",
+      "perfekt": "hat angefertigt",
+      "italian": "realizzare, preparare (un lavoro)",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i69",
+      "type": "verbo",
+      "german": "präsentieren",
+      "praesens": "präsentiert",
+      "praeteritum": "präsentierte",
+      "perfekt": "hat präsentiert",
+      "italian": "presentare",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i70",
+      "type": "sostantivo",
+      "german": "Dorfbevölkerung",
+      "articolo": "die",
+      "plurale": "— per lo più Sg.",
+      "italian": "la popolazione del paese",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i71",
+      "type": "verbo",
+      "german": "bedauern",
+      "praesens": "bedauert",
+      "praeteritum": "bedauerte",
+      "perfekt": "hat bedauert",
+      "italian": "rimpiangere, dispiacersi di",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i72",
+      "type": "verbo",
+      "german": "beauftragen",
+      "praesens": "beauftragt",
+      "praeteritum": "beauftragte",
+      "perfekt": "hat beauftragt",
+      "italian": "incaricare",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i73",
+      "type": "sostantivo",
+      "german": "Gemeinderat",
+      "articolo": "der",
+      "plurale": "die Gemeinderäte",
+      "italian": "il consiglio comunale",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i74",
+      "type": "verbo",
+      "german": "einbringen",
+      "reggenza": "verbo separabile, irregolare, + Akkusativ",
+      "praesens": "bringt ein",
+      "praeteritum": "brachte ein",
+      "perfekt": "hat eingebracht",
+      "italian": "apportare, contribuire con",
+      "topics": [
+        "Volontariato e impegno civico"
+      ],
+      "esempio": "Ideen einbringen",
+      "esempioTraduzione": "contribuire con delle idee"
+    },
+    {
+      "id": "i75",
+      "type": "sostantivo",
+      "german": "Wiese",
+      "articolo": "die",
+      "plurale": "die Wiesen",
+      "italian": "il prato",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i76",
+      "type": "sostantivo",
+      "german": "Kommission",
+      "articolo": "die",
+      "plurale": "die Kommissionen",
+      "italian": "la commissione",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i77",
+      "type": "sostantivo",
+      "german": "Bau",
+      "articolo": "der",
+      "plurale": "die Bauten",
+      "italian": "la costruzione, l'edificazione",
+      "topics": [
+        "Volontariato e impegno civico"
+      ]
+    },
+    {
+      "id": "i78",
+      "type": "sostantivo",
+      "german": "Erfolg",
+      "articolo": "der",
+      "plurale": "die Erfolge",
+      "italian": "il successo",
+      "topics": [
+        "Volontariato e impegno civico"
+      ],
+      "note": "'Erfolg haben' = avere successo"
+    },
+    {
+      "id": "i79",
+      "type": "verbo",
+      "german": "erschaffen",
+      "reggenza": "verbo forte, + Akkusativ",
+      "praesens": "erschafft",
+      "praeteritum": "erschuf",
+      "perfekt": "hat erschaffen",
+      "italian": "creare",
+      "topics": [
+        "Volontariato e impegno civico"
+      ],
+      "note": "più solenne/letterario di 'schaffen'"
+    },
+    {
+      "id": "i80",
+      "type": "sostantivo",
+      "german": "Begegnung",
+      "articolo": "die",
+      "plurale": "die Begegnungen",
+      "italian": "l'incontro",
+      "topics": [
+        "Volontariato e impegno civico"
+      ],
+      "esempio": "ein Ort der Begegnung",
+      "esempioTraduzione": "un luogo d'incontro"
+    },
+    {
+      "id": "i81",
+      "type": "sostantivo",
+      "german": "Landesprojekt",
+      "articolo": "das",
+      "plurale": "die Landesprojekte",
+      "italian": "il progetto nazionale/regionale",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i82",
+      "type": "espressione",
+      "german": "sich Gedanken machen über",
+      "italian": "riflettere su, farsi domande su",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i83",
+      "type": "sostantivo",
+      "german": "Wettbewerb",
+      "articolo": "der",
+      "plurale": "die Wettbewerbe",
+      "italian": "il concorso, la gara",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i84",
+      "type": "sostantivo",
+      "german": "Preisgeld",
+      "articolo": "das",
+      "plurale": "die Preisgelder",
+      "italian": "il premio in denaro",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i85",
+      "type": "verbo",
+      "german": "umsetzen",
+      "reggenza": "verbo separabile, + Akkusativ",
+      "praesens": "setzt um",
+      "praeteritum": "setzte um",
+      "perfekt": "hat umgesetzt",
+      "italian": "realizzare, mettere in pratica",
+      "topics": [
+        "Scuola e università"
+      ],
+      "esempio": "etwas in die Wirklichkeit umsetzen",
+      "esempioTraduzione": "realizzare qualcosa"
+    },
+    {
+      "id": "i86",
+      "type": "sostantivo",
+      "german": "Wirklichkeit",
+      "articolo": "die",
+      "plurale": "— per lo più Sg.",
+      "italian": "la realtà",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i87",
+      "type": "sostantivo",
+      "german": "Bedingung",
+      "articolo": "die",
+      "plurale": "die Bedingungen",
+      "italian": "la condizione",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i88",
+      "type": "verbo",
+      "german": "schaffen",
+      "reggenza": "verbo forte, + Akkusativ",
+      "praesens": "schafft",
+      "praeteritum": "schuf",
+      "perfekt": "hat geschaffen",
+      "italian": "creare",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i89",
+      "type": "verbo",
+      "german": "sich wohlfühlen",
+      "reggenza": "verbo separabile riflessivo",
+      "praesens": "fühlt sich wohl",
+      "praeteritum": "fühlte sich wohl",
+      "perfekt": "hat sich wohlgefühlt",
+      "italian": "sentirsi a proprio agio, stare bene",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i90",
+      "type": "verbo",
+      "german": "hinzufügen",
+      "reggenza": "verbo separabile, + Akkusativ",
+      "praesens": "fügt hinzu",
+      "praeteritum": "fügte hinzu",
+      "perfekt": "hat hinzugefügt",
+      "italian": "aggiungere",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i91",
+      "type": "sostantivo",
+      "german": "Klassenstufe",
+      "articolo": "die",
+      "plurale": "die Klassenstufen",
+      "italian": "il livello/anno scolastico",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i92",
+      "type": "aggettivo",
+      "german": "zusätzlich",
+      "italian": "aggiuntivo/a, supplementare",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i93",
+      "type": "verbo",
+      "german": "gestalten",
+      "praesens": "gestaltet",
+      "praeteritum": "gestaltete",
+      "perfekt": "hat gestaltet",
+      "italian": "progettare, dare forma a, organizzare",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i94",
+      "type": "sostantivo",
+      "german": "Lernraum",
+      "articolo": "der",
+      "plurale": "die Lernräume",
+      "italian": "lo spazio di apprendimento",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i95",
+      "type": "verbo",
+      "german": "sich vorstellen",
+      "reggenza": "verbo separabile riflessivo, + Akkusativ",
+      "praesens": "stellt sich vor",
+      "praeteritum": "stellte sich vor",
+      "perfekt": "hat sich vorgestellt",
+      "italian": "immaginare, immaginarsi",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i96",
+      "type": "sostantivo",
+      "german": "Innenarchitekt",
+      "articolo": "der",
+      "plurale": "die Innenarchitekten",
+      "femminile": "die Innenarchitektin",
+      "femminilePlurale": "die Innenarchitektinnen",
+      "italian": "l'architetto/a d'interni",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i97",
+      "type": "sostantivo",
+      "german": "Unterstützung",
+      "articolo": "die",
+      "plurale": "— per lo più Sg.",
+      "italian": "il sostegno, l'aiuto",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i98",
+      "type": "sostantivo",
+      "german": "Firma",
+      "articolo": "die",
+      "plurale": "die Firmen",
+      "italian": "l'azienda",
+      "topics": [
+        "Scuola e università"
+      ]
+    },
+    {
+      "id": "i99",
+      "type": "espressione",
+      "german": "hoffen auf",
+      "italian": "sperare in",
+      "topics": [
+        "Scuola e università"
+      ]
     }
   ]
 }
