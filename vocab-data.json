@@ -31,9 +31,8 @@
     "Reagire a proposte",
     "Espressioni utili",
     "Avverbi utili",
-    "Sport e calcio",
-    "Mesi e stagioni",
-    "Volontariato e impegno civico"
+    "Distributori automatici e alimentazione",
+    "Grammatica"
   ],
   "items": [
     {
@@ -411,8 +410,7 @@
       "italian": "aperto/a",
       "comparativo": "offener",
       "topics": [
-        "Vantaggi lingua straniera",
-        "Scuola e università"
+        "Vantaggi lingua straniera"
       ],
       "esempio": "offener und toleranter sein",
       "esempioTraduzione": "essere più aperti e tolleranti"
@@ -1999,8 +1997,7 @@
       "perfekt": "hat teilgenommen an",
       "italian": "partecipare a",
       "topics": [
-        "Politica",
-        "Scuola e università"
+        "Politica"
       ]
     },
     {
@@ -2263,7 +2260,8 @@
       "perfekt": "hat gefördert",
       "italian": "promuovere, sostenere",
       "topics": [
-        "Unione Europea"
+        "Unione Europea",
+        "Distributori automatici e alimentazione"
       ]
     },
     {
@@ -2430,7 +2428,8 @@
       "plurale": "die Vorteile",
       "italian": "il vantaggio",
       "topics": [
-        "Unione Europea"
+        "Unione Europea",
+        "Distributori automatici e alimentazione"
       ]
     },
     {
@@ -2441,7 +2440,8 @@
       "plurale": "die Nachteile",
       "italian": "lo svantaggio",
       "topics": [
-        "Unione Europea"
+        "Unione Europea",
+        "Distributori automatici e alimentazione"
       ]
     },
     {
@@ -5022,7 +5022,8 @@
       "plurale": "die Zähne",
       "italian": "il dente",
       "topics": [
-        "Lessico medico"
+        "Lessico medico",
+        "Distributori automatici e alimentazione"
       ]
     },
     {
@@ -5946,8 +5947,7 @@
       "perfekt": "hat geschenkt",
       "italian": "regalare",
       "topics": [
-        "Festa e celebrazioni",
-        "Volontariato e impegno civico"
+        "Festa e celebrazioni"
       ]
     },
     {
@@ -6568,1141 +6568,659 @@
     {
       "id": "i1",
       "type": "sostantivo",
-      "german": "Tor",
-      "articolo": "das",
-      "plurale": "die Tore",
-      "italian": "la porta (del campo); il gol",
+      "german": "Snackautomat",
+      "italian": "il distributore automatico di snack",
       "topics": [
-        "Sport e calcio"
+        "Distributori automatici e alimentazione"
       ],
-      "note": "attenzione: 'das Tor' può significare sia la porta del campo che il gol segnato"
+      "plurale": "die Snackautomaten",
+      "articolo": "der",
+      "note": "sostantivo debole: -en in tutti i casi obliqui e al plurale"
     },
     {
       "id": "i2",
       "type": "sostantivo",
-      "german": "Fußball",
-      "articolo": "der",
-      "plurale": "die Fußbälle",
-      "italian": "il pallone; il calcio (lo sport)",
+      "german": "Süßigkeit",
+      "italian": "il dolce, la caramella",
       "topics": [
-        "Sport e calcio"
+        "Distributori automatici e alimentazione"
       ],
-      "note": "senza articolo nell'uso generico: 'Fußball spielen' = giocare a calcio"
+      "articolo": "die",
+      "plurale": "die Süßigkeiten"
     },
     {
       "id": "i3",
       "type": "sostantivo",
-      "german": "Torwart",
-      "articolo": "der",
-      "plurale": "die Torwarte",
-      "femminile": "die Torwartin",
-      "femminilePlurale": "die Torwartinnen",
-      "italian": "il portiere",
+      "german": "Limonade",
+      "italian": "la bibita gassata, la limonata",
       "topics": [
-        "Sport e calcio"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "articolo": "die",
+      "plurale": "die Limonaden"
     },
     {
       "id": "i4",
       "type": "sostantivo",
-      "german": "Ersatzbank",
-      "articolo": "die",
-      "plurale": "die Ersatzbänke",
-      "italian": "la panchina",
+      "german": "Frühstück",
+      "italian": "la colazione",
       "topics": [
-        "Sport e calcio"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "plurale": "die Frühstücke",
+      "articolo": "das",
+      "note": "di solito al singolare"
     },
     {
       "id": "i5",
       "type": "sostantivo",
-      "german": "Schiedsrichter",
-      "articolo": "der",
-      "plurale": "die Schiedsrichter",
-      "femminile": "die Schiedsrichterin",
-      "femminilePlurale": "die Schiedsrichterinnen",
-      "italian": "l'arbitro, l'arbitra",
+      "german": "Sportunterricht",
+      "italian": "l'educazione fisica",
       "topics": [
-        "Sport e calcio"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)"
     },
     {
       "id": "i6",
-      "type": "sostantivo",
-      "german": "Mannschaft",
-      "articolo": "die",
-      "plurale": "die Mannschaften",
-      "italian": "la squadra",
+      "type": "aggettivo",
+      "german": "hungrig",
+      "italian": "affamato/a",
       "topics": [
-        "Sport e calcio"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "note": "usato anche come avverbio: „nach dem Sport hungrig sein“ = avere fame dopo lo sport"
     },
     {
       "id": "i7",
       "type": "sostantivo",
-      "german": "Trainer",
-      "articolo": "der",
-      "plurale": "die Trainer",
-      "femminile": "die Trainerin",
-      "femminilePlurale": "die Trainerinnen",
-      "italian": "l'allenatore, l'allenatrice",
+      "german": "Energie",
+      "italian": "l'energia",
       "topics": [
-        "Sport e calcio"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "plurale": "die Energien",
+      "articolo": "die",
+      "note": "spesso al singolare nel senso di energia fisica"
     },
     {
       "id": "i8",
       "type": "sostantivo",
-      "german": "Foul",
-      "articolo": "das",
-      "plurale": "die Fouls",
-      "italian": "il fallo",
+      "german": "Unterrichtsstunde",
+      "italian": "l'ora di lezione",
       "topics": [
-        "Sport e calcio"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "articolo": "die",
+      "plurale": "die Unterrichtsstunden"
     },
     {
       "id": "i9",
       "type": "sostantivo",
-      "german": "Liga",
-      "articolo": "die",
-      "plurale": "die Ligen",
-      "italian": "il campionato, la lega",
+      "german": "Schulmensa",
+      "italian": "la mensa scolastica",
       "topics": [
-        "Sport e calcio"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "articolo": "die",
+      "plurale": "die Schulmensen"
     },
     {
       "id": "i10",
       "type": "sostantivo",
-      "german": "Fußballfeld",
-      "articolo": "das",
-      "plurale": "die Fußballfelder",
-      "italian": "il campo da gioco",
+      "german": "Bequemlichkeit",
+      "italian": "la comodità, la praticità",
       "topics": [
-        "Sport e calcio"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)"
     },
     {
       "id": "i11",
       "type": "sostantivo",
-      "german": "Fußballspieler",
-      "articolo": "der",
-      "plurale": "die Fußballspieler",
-      "femminile": "die Fußballspielerin",
-      "femminilePlurale": "die Fußballspielerinnen",
-      "italian": "il calciatore, la calciatrice",
+      "german": "Zucker",
+      "italian": "lo zucchero",
       "topics": [
-        "Sport e calcio"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)"
     },
     {
       "id": "i12",
-      "type": "verbo",
-      "german": "verweisen",
-      "reggenza": "verbo forte, + Akkusativ, 'vom Platz verweisen'",
-      "praesens": "verweist",
-      "praeteritum": "verwies",
-      "perfekt": "hat verwiesen",
-      "italian": "espellere (dal campo)",
+      "type": "sostantivo",
+      "german": "Fett",
+      "italian": "il grasso",
       "topics": [
-        "Sport e calcio"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "articolo": "das",
+      "plurale": "die Fette"
     },
     {
       "id": "i13",
       "type": "sostantivo",
-      "german": "Spiel",
-      "articolo": "das",
-      "plurale": "die Spiele",
-      "italian": "la partita; il gioco",
+      "german": "Taschengeld",
+      "italian": "la paghetta",
       "topics": [
-        "Sport e calcio"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)"
     },
     {
       "id": "i14",
       "type": "sostantivo",
-      "german": "Strafstoß",
-      "articolo": "der",
-      "plurale": "die Strafstöße",
-      "italian": "il calcio di rigore",
+      "german": "Junkfood",
+      "italian": "il cibo spazzatura",
       "topics": [
-        "Sport e calcio"
+        "Distributori automatici e alimentazione"
       ],
-      "note": "sinonimo più colloquiale: der Elfmeter"
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)"
     },
     {
       "id": "i15",
       "type": "sostantivo",
-      "german": "Januar",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "gennaio",
+      "german": "Nuss",
+      "italian": "la noce, la frutta secca",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "articolo": "die",
+      "plurale": "die Nüsse"
     },
     {
       "id": "i16",
       "type": "sostantivo",
-      "german": "Februar",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "febbraio",
+      "german": "Angebot",
+      "italian": "l'offerta, l'assortimento",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "articolo": "das",
+      "plurale": "die Angebote"
     },
     {
       "id": "i17",
       "type": "sostantivo",
-      "german": "März",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "marzo",
+      "german": "Essgewohnheit",
+      "italian": "l'abitudine alimentare",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "articolo": "die",
+      "plurale": "die Essgewohnheiten"
     },
     {
       "id": "i18",
-      "type": "sostantivo",
-      "german": "April",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "aprile",
+      "type": "verbo",
+      "german": "weggehen",
+      "italian": "andare via",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "reggenza": "verbo separabile",
+      "praesens": "geht weg",
+      "praeteritum": "ging weg",
+      "perfekt": "ist weggegangen"
     },
     {
       "id": "i19",
-      "type": "sostantivo",
-      "german": "Mai",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "maggio",
+      "type": "verbo",
+      "german": "darstellen",
+      "italian": "rappresentare, costituire",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "reggenza": "verbo inseparabile, + Akkusativ",
+      "praesens": "stellt dar",
+      "note": "espressione utile: „ein Problem darstellen“ = costituire un problema",
+      "praeteritum": "stellte dar",
+      "perfekt": "hat dargestellt"
     },
     {
       "id": "i20",
-      "type": "sostantivo",
-      "german": "Juni",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "giugno",
+      "type": "verbo",
+      "german": "zustimmen",
+      "italian": "essere d'accordo con qualcuno o qualcosa",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione",
+        "Espressioni utili"
+      ],
+      "reggenza": "+ Dativ, verbo separabile",
+      "praesens": "stimmt zu",
+      "praeteritum": "stimmte zu",
+      "perfekt": "hat zugestimmt"
     },
     {
       "id": "i21",
-      "type": "sostantivo",
-      "german": "Juli",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "luglio",
+      "type": "verbo",
+      "german": "konsumieren",
+      "italian": "consumare",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "reggenza": "+ Akkusativ",
+      "praesens": "konsumiert",
+      "praeteritum": "konsumierte",
+      "perfekt": "hat konsumiert"
     },
     {
       "id": "i22",
-      "type": "sostantivo",
-      "german": "August",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "agosto",
+      "type": "verbo",
+      "german": "verzichten",
+      "italian": "rinunciare a",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "reggenza": "auf + Akkusativ",
+      "praesens": "verzichtet",
+      "praeteritum": "verzichtete",
+      "perfekt": "hat verzichtet"
     },
     {
       "id": "i23",
-      "type": "sostantivo",
-      "german": "September",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "settembre",
+      "type": "verbo",
+      "german": "anbieten",
+      "italian": "offrire, mettere a disposizione",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "reggenza": "verbo separabile, + Akkusativ",
+      "praesens": "bietet an",
+      "praeteritum": "bot an",
+      "perfekt": "hat angeboten"
     },
     {
       "id": "i24",
-      "type": "sostantivo",
-      "german": "Oktober",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "ottobre",
+      "type": "aggettivo",
+      "german": "ungesund",
+      "italian": "poco salutare, malsano",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "note": "usato anche come avverbio: „sich ungesund ernähren“ = alimentarsi in modo poco sano"
     },
     {
       "id": "i25",
-      "type": "sostantivo",
-      "german": "November",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "novembre",
+      "type": "aggettivo",
+      "german": "gesundheitlich",
+      "italian": "relativo alla salute, sanitario",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "note": "esempio: „gesundheitliche Probleme“ = problemi di salute"
     },
     {
       "id": "i26",
-      "type": "sostantivo",
-      "german": "Dezember",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "dicembre",
+      "type": "aggettivo",
+      "german": "verfügbar",
+      "italian": "disponibile, reperibile",
       "topics": [
-        "Mesi e stagioni"
+        "Distributori automatici e alimentazione"
       ],
-      "note": "tutti i mesi sono maschili e si usano senza articolo nelle date, es. 'im Januar' = a gennaio"
+      "note": "esempio: „gesunde Alternativen verfügbar machen“ = rendere disponibili alternative sane"
     },
     {
       "id": "i27",
-      "type": "sostantivo",
-      "german": "Herbst",
-      "articolo": "der",
-      "plurale": "— per lo più Sg.",
-      "italian": "l'autunno",
+      "type": "aggettivo",
+      "german": "übergewichtig",
+      "italian": "in sovrappeso",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "note": "usato anche come avverbio: „übergewichtig sein“ = essere in sovrappeso"
     },
     {
       "id": "i28",
-      "type": "sostantivo",
-      "german": "Sommer",
-      "articolo": "der",
-      "plurale": "— per lo più Sg.",
-      "italian": "l'estate",
+      "type": "aggettivo",
+      "german": "schädlich",
+      "italian": "dannoso, nocivo",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "note": "costruzione utile: „schädlich für + Akkusativ“"
     },
     {
       "id": "i29",
-      "type": "sostantivo",
-      "german": "Frühling",
-      "articolo": "der",
-      "plurale": "— per lo più Sg.",
-      "italian": "la primavera",
+      "type": "avverbio",
+      "german": "wenigstens",
+      "italian": "almeno",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "note": "indica una quantità o un fatto minimo: „Wenigstens haben wir Wasser.“ = Almeno abbiamo acqua."
     },
     {
       "id": "i30",
-      "type": "sostantivo",
-      "german": "Winter",
-      "articolo": "der",
-      "plurale": "— per lo più Sg.",
-      "italian": "l'inverno",
+      "type": "avverbio",
+      "german": "teilweise",
+      "italian": "in parte, parzialmente",
       "topics": [
-        "Mesi e stagioni"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "note": "esempio: „Ich stimme nur teilweise zu.“ = Sono d'accordo solo in parte."
     },
     {
       "id": "i31",
-      "type": "sostantivo",
-      "german": "Journalismus",
-      "articolo": "der",
-      "plurale": "— Sg.",
-      "italian": "il giornalismo",
+      "type": "avverbio",
+      "german": "selten",
+      "italian": "raramente",
       "topics": [
-        "Media e informazione"
-      ]
+        "Distributori automatici e alimentazione"
+      ],
+      "note": "avverbio di frequenza: „Ich kaufe selten Snacks.“ = Compro raramente snack."
     },
     {
       "id": "i32",
-      "type": "sostantivo",
-      "german": "Boulevardzeitung",
-      "articolo": "die",
-      "plurale": "die Boulevardzeitungen",
-      "italian": "il tabloid",
+      "type": "avverbio",
+      "german": "außerdem",
+      "italian": "inoltre",
       "topics": [
-        "Media e informazione"
-      ]
+        "Distributori automatici e alimentazione",
+        "Espressioni utili"
+      ],
+      "note": "avverbio connettivo: in posizione 1 provoca l'inversione, es. „Außerdem bieten die Automaten …“"
     },
     {
       "id": "i33",
-      "type": "sostantivo",
-      "german": "Schlagzeile",
-      "articolo": "die",
-      "plurale": "die Schlagzeilen",
-      "italian": "il titolo di testa",
+      "type": "avverbio",
+      "german": "nämlich",
+      "italian": "infatti, cioè",
       "topics": [
-        "Media e informazione"
-      ]
+        "Distributori automatici e alimentazione",
+        "Espressioni utili"
+      ],
+      "note": "spiega un'affermazione precedente e non occupa normalmente la posizione 1: „Ich bleibe zu Hause, ich bin nämlich krank.“"
     },
     {
       "id": "i34",
-      "type": "sostantivo",
-      "german": "Artikel",
-      "articolo": "der",
-      "plurale": "die Artikel",
-      "italian": "l'articolo (di giornale)",
+      "type": "avverbio",
+      "german": "deshalb / deswegen",
+      "italian": "perciò, per questo motivo",
       "topics": [
-        "Media e informazione"
-      ]
+        "Distributori automatici e alimentazione",
+        "Espressioni utili"
+      ],
+      "note": "avverbi connettivi: in posizione 1 provocano l'inversione, es. „Deshalb kaufe ich Wasser.“"
     },
     {
       "id": "i35",
-      "type": "sostantivo",
-      "german": "Journalist",
-      "articolo": "der",
-      "plurale": "die Journalisten",
-      "femminile": "die Journalistin",
-      "femminilePlurale": "die Journalistinnen",
-      "italian": "il giornalista, la giornalista",
+      "type": "espressione",
+      "german": "aus diesem Grund",
+      "italian": "per questo motivo",
       "topics": [
-        "Media e informazione"
+        "Distributori automatici e alimentazione",
+        "Espressioni utili"
       ],
-      "note": "sostantivo debole al maschile"
+      "note": "in posizione 1 richiede il verbo al secondo posto: „Aus diesem Grund esse ich gesünder.“"
     },
     {
       "id": "i36",
-      "type": "sostantivo",
-      "german": "Zeitung",
-      "articolo": "die",
-      "plurale": "die Zeitungen",
-      "italian": "il giornale, il quotidiano",
+      "type": "espressione",
+      "german": "Zum Glück ...",
+      "italian": "Per fortuna ...",
       "topics": [
-        "Media e informazione"
-      ]
+        "Distributori automatici e alimentazione",
+        "Espressioni utili"
+      ],
+      "note": "con elemento iniziale in posizione 1: segue subito il verbo coniugato."
     },
     {
       "id": "i37",
-      "type": "sostantivo",
-      "german": "Redakteur",
-      "articolo": "der",
-      "plurale": "die Redakteure",
-      "femminile": "die Redakteurin",
-      "femminilePlurale": "die Redakteurinnen",
-      "italian": "il direttore/la direttrice del giornale, il redattore/la redattrice",
+      "type": "espressione",
+      "german": "Auf der einen Seite ..., auf der anderen Seite ...",
+      "italian": "Da un lato ..., dall'altro lato ...",
       "topics": [
-        "Media e informazione"
-      ]
+        "Distributori automatici e alimentazione",
+        "Espressioni utili"
+      ],
+      "note": "utile per presentare vantaggi e svantaggi in un testo argomentativo."
     },
     {
       "id": "i38",
-      "type": "sostantivo",
-      "german": "Gast",
-      "articolo": "der",
-      "plurale": "die Gäste",
-      "italian": "l'ospite",
+      "type": "espressione",
+      "german": "Ein großer Vorteil / Nachteil ist ...",
+      "italian": "Un grande vantaggio / svantaggio è ...",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Distributori automatici e alimentazione",
+        "Espressioni utili"
+      ],
+      "note": "formula utile per un testo argomentativo B2."
+    },
+    {
+      "id": "i39",
+      "type": "espressione",
+      "german": "Es steht außer Zweifel, dass ...",
+      "italian": "È fuori dubbio che ...",
+      "topics": [
+        "Distributori automatici e alimentazione",
+        "Espressioni utili"
+      ],
+      "note": "registro formale; con „dass“ il verbo coniugato va alla fine."
     },
     {
       "id": "i40",
-      "type": "sostantivo",
-      "german": "Größe",
-      "articolo": "die",
-      "plurale": "die Größen",
-      "italian": "la taglia, la misura, la grandezza",
+      "type": "espressione",
+      "german": "Ich finde / denke / glaube / meine auch, dass ...",
+      "italian": "Anch'io penso / credo / ritengo che ...",
       "topics": [
-        "Volontariato e impegno civico"
+        "Espressioni utili"
       ],
-      "esempio": "Welche Größe?",
-      "esempioTraduzione": "Che taglia?"
+      "note": "per riprendere e condividere un'opinione altrui."
     },
     {
       "id": "i41",
-      "type": "verbo",
-      "german": "anbieten",
-      "reggenza": "verbo separabile, forte, + Dativ della persona + Akkusativ della cosa",
-      "praesens": "bietet an",
-      "praeteritum": "bot an",
-      "perfekt": "hat angeboten",
-      "italian": "offrire",
+      "type": "espressione",
+      "german": "Wie Claus finde ich, dass ...",
+      "italian": "Come Claus, penso che ...",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Espressioni utili"
+      ],
+      "note": "sostituisci „Claus“ con il nome della persona citata."
     },
     {
       "id": "i42",
-      "type": "verbo",
-      "german": "anrufen",
-      "reggenza": "verbo separabile, forte, + Akkusativ",
-      "praesens": "ruft an",
-      "praeteritum": "rief an",
-      "perfekt": "hat angerufen",
-      "italian": "telefonare, chiamare",
+      "type": "espressione",
+      "german": "Ich bin wie Claus der Meinung, dass ...",
+      "italian": "Come Claus, sono dell'opinione che ...",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Espressioni utili"
+      ],
+      "note": "con „dass“ il verbo coniugato va alla fine."
     },
     {
       "id": "i43",
-      "type": "aggettivo",
-      "german": "minderjährig",
-      "italian": "minorenne",
+      "type": "espressione",
+      "german": "Es ist richtig, dass ...",
+      "italian": "È vero / corretto che ...",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Espressioni utili"
+      ],
+      "note": "formula neutra per riconoscere un argomento prima di aggiungere una riserva."
     },
     {
       "id": "i44",
-      "type": "verbo",
-      "german": "mitbringen",
-      "reggenza": "verbo separabile, irregolare, + Akkusativ",
-      "praesens": "bringt mit",
-      "praeteritum": "brachte mit",
-      "perfekt": "hat mitgebracht",
-      "italian": "portare con sé (verso un luogo)",
+      "type": "espressione",
+      "german": "Ich finde, Claus hat (nicht) recht.",
+      "italian": "Trovo che Claus abbia (non abbia) ragione.",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Espressioni utili"
+      ],
+      "note": "frase principale: „hat“ resta al secondo posto."
     },
     {
       "id": "i45",
-      "type": "verbo",
-      "german": "mitnehmen",
-      "reggenza": "verbo separabile, forte, + Akkusativ",
-      "praesens": "nimmt mit",
-      "praeteritum": "nahm mit",
-      "perfekt": "hat mitgenommen",
-      "italian": "portare via con sé",
+      "type": "espressione",
+      "german": "Ich stimme Claus (nicht / teilweise) zu.",
+      "italian": "Sono (non / parzialmente) d'accordo con Claus.",
       "topics": [
-        "Volontariato e impegno civico"
+        "Espressioni utili"
       ],
-      "note": "differenza con 'mitbringen': 'mitnehmen' = portare via da un luogo, 'mitbringen' = portare verso un luogo/persona"
+      "note": "zustimmen regge il Dativ; verbo separabile."
     },
     {
       "id": "i46",
       "type": "espressione",
-      "german": "eine Erfahrung machen/erleben",
-      "italian": "fare/vivere un'esperienza",
+      "german": "Ich sehe das auch so / nicht so wie Claus.",
+      "italian": "Anch'io / io non la vedo come Claus.",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Espressioni utili"
+      ],
+      "note": "per esprimere accordo o disaccordo con un'opinione."
     },
     {
       "id": "i47",
-      "type": "sostantivo",
-      "german": "Erfahrung",
-      "articolo": "die",
-      "plurale": "die Erfahrungen",
-      "italian": "l'esperienza",
+      "type": "espressione",
+      "german": "Ich bin mit Claus (vollkommen / nicht ganz / nicht) einverstanden.",
+      "italian": "Sono (pienamente / non del tutto / per nulla) d'accordo con Claus.",
       "topics": [
-        "Volontariato e impegno civico"
+        "Espressioni utili"
       ],
-      "esempio": "eine Erfahrung machen",
-      "esempioTraduzione": "fare un'esperienza"
+      "note": "einverstanden sein mit + Dativ."
     },
     {
       "id": "i48",
-      "type": "sostantivo",
-      "german": "Gemüse",
-      "articolo": "das",
-      "plurale": "— per lo più Sg.",
-      "italian": "la verdura",
+      "type": "espressione",
+      "german": "Ich bin der Ansicht / Auffassung, dass ...",
+      "italian": "Sono dell'opinione / dell'avviso che ...",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Espressioni utili"
+      ],
+      "note": "registro formale; con „dass“ il verbo coniugato va alla fine."
     },
     {
       "id": "i49",
-      "type": "sostantivo",
-      "german": "Brot",
-      "articolo": "das",
-      "plurale": "die Brote",
-      "italian": "il pane",
+      "type": "espressione",
+      "german": "Ich bin (mir) sicher, dass ...",
+      "italian": "Sono sicuro/a che ...",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Espressioni utili"
+      ],
+      "note": "„mir“ è facoltativo; con „dass“ il verbo coniugato va alla fine."
     },
     {
       "id": "i50",
-      "type": "verbo",
-      "german": "schneiden",
-      "reggenza": "verbo forte, + Akkusativ",
-      "praesens": "schneidet",
-      "praeteritum": "schnitt",
-      "perfekt": "hat geschnitten",
-      "italian": "tagliare",
+      "type": "espressione",
+      "german": "Konjunktiv II: irreale Gegenwart",
+      "italian": "Per un'ipotesi irreale nel presente usa il Konjunktiv II: forme proprie come wäre, hätte, gäbe, müsste oppure würde + infinito. Esempio: „Wenn es keine Snackautomaten gäbe, wäre das ein Problem.“",
       "topics": [
-        "Volontariato e impegno civico"
+        "Grammatica"
       ],
-      "esempio": "Gemüse und Brot schneiden",
-      "esempioTraduzione": "tagliare verdura e pane"
+      "note": "Nella subordinata con wenn il verbo va alla fine; nella principale, dopo la subordinata, il verbo coniugato occupa subito la posizione 1."
     },
     {
       "id": "i51",
-      "type": "aggettivo",
-      "german": "befriedigend",
-      "italian": "soddisfacente",
+      "type": "espressione",
+      "german": "Konjunktiv II: irreale Vergangenheit",
+      "italian": "Per un'ipotesi irreale nel passato usa hätte/wäre + Partizip II. Esempio: „Wenn die Inhaberin nicht weggegangen wäre, hätten wir kein Café verloren.“",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Grammatica"
+      ],
+      "note": "Nella subordinata: Partizip II prima dell'ausiliare; nella principale: ausiliare coniugato in posizione 2 e Partizip II alla fine."
     },
     {
       "id": "i52",
-      "type": "sostantivo",
-      "german": "freiwillige Arbeit",
-      "articolo": "die",
-      "plurale": "— per lo più Sg.",
-      "italian": "il lavoro volontario, il volontariato",
+      "type": "espressione",
+      "german": "Konditionalsatz ohne wenn",
+      "italian": "Si può omettere wenn e mettere il verbo coniugato al primo posto: „Hätte ich Zeit, würde ich dir helfen.“ / „Gäbe es keine Snackautomaten, wäre das ein Problem.“",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Grammatica"
+      ],
+      "note": "Struttura formale, utile nello scritto B2; la principale mantiene il verbo in seconda posizione."
     },
     {
       "id": "i53",
-      "type": "sostantivo",
-      "german": "Freiwillige",
-      "articolo": "der/die",
-      "plurale": "die Freiwilligen",
-      "italian": "il volontario, la volontaria",
+      "type": "espressione",
+      "german": "wenn oder ob?",
+      "italian": "wenn esprime una condizione o una ripetizione temporale: „Wenn man Süßigkeiten isst, ...“. ob introduce una domanda indiretta sì/no: „Ich weiß nicht, ob die Produkte gesund sind.“",
       "topics": [
-        "Volontariato e impegno civico"
+        "Grammatica"
       ],
-      "note": "aggettivo sostantivato: si declina come un aggettivo, come 'der/die Arbeitslose'"
+      "note": "In entrambi i casi il verbo coniugato va alla fine della subordinata."
     },
     {
       "id": "i54",
       "type": "espressione",
-      "german": "ein wenig von allem",
-      "italian": "un po' di tutto",
+      "german": "Domanda diretta e indiretta con W-Wort",
+      "italian": "Domanda diretta: „Warum kaufen Schüler diese Produkte?“ Domanda indiretta: „Ich frage mich, warum Schüler diese Produkte kaufen.“",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Grammatica"
+      ],
+      "note": "Nella domanda diretta il verbo è in seconda posizione; nell'indiretta il W-Wort introduce una subordinata e il verbo va alla fine."
     },
     {
       "id": "i55",
       "type": "espressione",
-      "german": "Einmal ist genug.",
-      "italian": "Una volta è sufficiente, basta così.",
+      "german": "Verbstellung con dass, weil e wenn",
+      "italian": "Ciascuna congiunzione apre una subordinata con il verbo coniugato alla fine: „Ich denke, dass es ein Problem wäre, weil man den Snack mitbringen müsste.“",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Grammatica"
+      ],
+      "note": "Con un verbo modale + infinito, l'infinito precede il modale: „mitbringen müsste“."
     },
     {
       "id": "i56",
-      "type": "sostantivo",
-      "german": "Dienst",
-      "articolo": "der",
-      "plurale": "die Dienste",
-      "italian": "il servizio",
+      "type": "espressione",
+      "german": "Inversione nella frase principale",
+      "italian": "Se la posizione 1 è occupata da un avverbio o complemento, il verbo resta in posizione 2 e il soggetto segue: „Letztes Jahr gab es ein Café.“ / „Zum Glück haben wir Wasser.“",
       "topics": [
-        "Volontariato e impegno civico"
+        "Grammatica"
       ],
-      "esempio": "einen Dienst für die Gesellschaft leisten",
-      "esempioTraduzione": "prestare un servizio per la società"
+      "note": "Non inserire il soggetto o un altro avverbio prima del verbo coniugato."
     },
     {
       "id": "i57",
-      "type": "sostantivo",
-      "german": "Gesellschaft",
-      "articolo": "die",
-      "plurale": "die Gesellschaften",
-      "italian": "la società",
+      "type": "espressione",
+      "german": "überzeugen + dazu + zu-Infinitiv",
+      "italian": "Per convincere qualcuno a fare qualcosa: jemanden (Akk.) dazu überzeugen, etwas zu tun. Esempio: „Gründe überzeugen Schüler dazu, gesündere Lebensmittel zu kaufen.“",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Grammatica"
+      ],
+      "note": "Con un sostantivo si usa invece „jemanden von etwas (Dativ) überzeugen“."
     },
     {
       "id": "i58",
-      "type": "verbo",
-      "german": "verbinden",
-      "reggenza": "verbo forte, + Akkusativ, 'mit + Dativ'",
-      "praesens": "verbindet",
-      "praeteritum": "verband",
-      "perfekt": "hat verbunden",
-      "italian": "collegare, unire",
+      "type": "espressione",
+      "german": "um ... zu + Infinitiv",
+      "italian": "La costruzione um ... zu esprime lo scopo e ha lo stesso soggetto nella principale e nell'infinitiva: „Ich esse Obst, um neue Energie zu bekommen.“",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Grammatica"
+      ],
+      "note": "„zu“ sta subito prima dell'infinito; per i verbi separabili va tra prefisso e verbo: „um einzukaufen“."
     },
     {
       "id": "i59",
-      "type": "verbo",
-      "german": "realisieren",
-      "praesens": "realisiert",
-      "praeteritum": "realisierte",
-      "perfekt": "hat realisiert",
-      "italian": "realizzare, mettere in pratica",
+      "type": "espressione",
+      "german": "Passiv mit Modalverb",
+      "italian": "Il passivo con un modale si forma con Partizip II + werden all'infinito: „Gesunde Alternativen müssen angeboten werden.“",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Grammatica"
+      ],
+      "note": "Nella subordinata entrambi gli infiniti vanno alla fine: „..., weil gesunde Alternativen angeboten werden müssen.“"
     },
     {
       "id": "i60",
-      "type": "verbo",
-      "german": "befragen",
-      "praesens": "befragt",
-      "praeteritum": "befragte",
-      "perfekt": "hat befragt",
-      "italian": "intervistare, interrogare",
+      "type": "espressione",
+      "german": "Konzessivsatz mit obwohl",
+      "italian": "obwohl introduce un contrasto inatteso: „Obwohl die Snacks teuer sind, kaufen viele Schüler sie.“",
       "topics": [
-        "Volontariato e impegno civico"
-      ]
+        "Grammatica"
+      ],
+      "note": "Nella subordinata con obwohl il verbo va alla fine; nella principale che segue, il verbo coniugato viene subito dopo la virgola."
     },
     {
       "id": "i61",
-      "type": "sostantivo",
-      "german": "Bewohner",
-      "articolo": "der",
-      "plurale": "die Bewohner",
-      "femminile": "die Bewohnerin",
-      "femminilePlurale": "die Bewohnerinnen",
-      "italian": "l'abitante, il/la residente",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i62",
-      "type": "verbo",
-      "german": "verbessern",
-      "praesens": "verbessert",
-      "praeteritum": "verbesserte",
-      "perfekt": "hat verbessert",
-      "italian": "migliorare",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i63",
-      "type": "sostantivo",
-      "german": "Wunsch",
-      "articolo": "der",
-      "plurale": "die Wünsche",
-      "italian": "il desiderio",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i64",
-      "type": "sostantivo",
-      "german": "Dorfplatz",
-      "articolo": "der",
-      "plurale": "die Dorfplätze",
-      "italian": "la piazza del paese",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i65",
-      "type": "verbo",
-      "german": "sich treffen",
-      "reggenza": "verbo forte riflessivo",
-      "praesens": "trifft sich",
-      "praeteritum": "traf sich",
-      "perfekt": "hat sich getroffen",
-      "italian": "incontrarsi",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i66",
-      "type": "verbo",
-      "german": "elektrisieren",
-      "praesens": "elektrisiert",
-      "praeteritum": "elektrisierte",
-      "perfekt": "hat elektrisiert",
-      "italian": "elettrizzare, entusiasmare",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i67",
-      "type": "aggettivo",
-      "german": "geeignet",
-      "italian": "adatto/a, idoneo/a",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i68",
-      "type": "verbo",
-      "german": "anfertigen",
-      "reggenza": "verbo separabile, + Akkusativ",
-      "praesens": "fertigt an",
-      "praeteritum": "fertigte an",
-      "perfekt": "hat angefertigt",
-      "italian": "realizzare, preparare (un lavoro)",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i69",
-      "type": "verbo",
-      "german": "präsentieren",
-      "praesens": "präsentiert",
-      "praeteritum": "präsentierte",
-      "perfekt": "hat präsentiert",
-      "italian": "presentare",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i70",
-      "type": "sostantivo",
-      "german": "Dorfbevölkerung",
-      "articolo": "die",
-      "plurale": "— per lo più Sg.",
-      "italian": "la popolazione del paese",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i71",
-      "type": "verbo",
-      "german": "bedauern",
-      "praesens": "bedauert",
-      "praeteritum": "bedauerte",
-      "perfekt": "hat bedauert",
-      "italian": "rimpiangere, dispiacersi di",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i72",
-      "type": "verbo",
-      "german": "beauftragen",
-      "praesens": "beauftragt",
-      "praeteritum": "beauftragte",
-      "perfekt": "hat beauftragt",
-      "italian": "incaricare",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i73",
-      "type": "sostantivo",
-      "german": "Gemeinderat",
-      "articolo": "der",
-      "plurale": "die Gemeinderäte",
-      "italian": "il consiglio comunale",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i74",
-      "type": "verbo",
-      "german": "einbringen",
-      "reggenza": "verbo separabile, irregolare, + Akkusativ",
-      "praesens": "bringt ein",
-      "praeteritum": "brachte ein",
-      "perfekt": "hat eingebracht",
-      "italian": "apportare, contribuire con",
-      "topics": [
-        "Volontariato e impegno civico"
-      ],
-      "esempio": "Ideen einbringen",
-      "esempioTraduzione": "contribuire con delle idee"
-    },
-    {
-      "id": "i75",
-      "type": "sostantivo",
-      "german": "Wiese",
-      "articolo": "die",
-      "plurale": "die Wiesen",
-      "italian": "il prato",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i76",
-      "type": "sostantivo",
-      "german": "Kommission",
-      "articolo": "die",
-      "plurale": "die Kommissionen",
-      "italian": "la commissione",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i77",
-      "type": "sostantivo",
-      "german": "Bau",
-      "articolo": "der",
-      "plurale": "die Bauten",
-      "italian": "la costruzione, l'edificazione",
-      "topics": [
-        "Volontariato e impegno civico"
-      ]
-    },
-    {
-      "id": "i78",
-      "type": "sostantivo",
-      "german": "Erfolg",
-      "articolo": "der",
-      "plurale": "die Erfolge",
-      "italian": "il successo",
-      "topics": [
-        "Volontariato e impegno civico"
-      ],
-      "note": "'Erfolg haben' = avere successo"
-    },
-    {
-      "id": "i79",
-      "type": "verbo",
-      "german": "erschaffen",
-      "reggenza": "verbo forte, + Akkusativ",
-      "praesens": "erschafft",
-      "praeteritum": "erschuf",
-      "perfekt": "hat erschaffen",
-      "italian": "creare",
-      "topics": [
-        "Volontariato e impegno civico"
-      ],
-      "note": "più solenne/letterario di 'schaffen'"
-    },
-    {
-      "id": "i80",
-      "type": "sostantivo",
-      "german": "Begegnung",
-      "articolo": "die",
-      "plurale": "die Begegnungen",
-      "italian": "l'incontro",
-      "topics": [
-        "Volontariato e impegno civico"
-      ],
-      "esempio": "ein Ort der Begegnung",
-      "esempioTraduzione": "un luogo d'incontro"
-    },
-    {
-      "id": "i81",
-      "type": "sostantivo",
-      "german": "Landesprojekt",
-      "articolo": "das",
-      "plurale": "die Landesprojekte",
-      "italian": "il progetto nazionale/regionale",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i82",
       "type": "espressione",
-      "german": "sich Gedanken machen über",
-      "italian": "riflettere su, farsi domande su",
+      "german": "Relativsatz mit Präposition",
+      "italian": "La preposizione precede il pronome relativo: „Das ist die Schule, in der ich lerne.“ / „Der Snack, auf den ich verzichte, ist ungesund.“",
       "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i83",
-      "type": "sostantivo",
-      "german": "Wettbewerb",
-      "articolo": "der",
-      "plurale": "die Wettbewerbe",
-      "italian": "il concorso, la gara",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i84",
-      "type": "sostantivo",
-      "german": "Preisgeld",
-      "articolo": "das",
-      "plurale": "die Preisgelder",
-      "italian": "il premio in denaro",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i85",
-      "type": "verbo",
-      "german": "umsetzen",
-      "reggenza": "verbo separabile, + Akkusativ",
-      "praesens": "setzt um",
-      "praeteritum": "setzte um",
-      "perfekt": "hat umgesetzt",
-      "italian": "realizzare, mettere in pratica",
-      "topics": [
-        "Scuola e università"
+        "Grammatica"
       ],
-      "esempio": "etwas in die Wirklichkeit umsetzen",
-      "esempioTraduzione": "realizzare qualcosa"
-    },
-    {
-      "id": "i86",
-      "type": "sostantivo",
-      "german": "Wirklichkeit",
-      "articolo": "die",
-      "plurale": "— per lo più Sg.",
-      "italian": "la realtà",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i87",
-      "type": "sostantivo",
-      "german": "Bedingung",
-      "articolo": "die",
-      "plurale": "die Bedingungen",
-      "italian": "la condizione",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i88",
-      "type": "verbo",
-      "german": "schaffen",
-      "reggenza": "verbo forte, + Akkusativ",
-      "praesens": "schafft",
-      "praeteritum": "schuf",
-      "perfekt": "hat geschaffen",
-      "italian": "creare",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i89",
-      "type": "verbo",
-      "german": "sich wohlfühlen",
-      "reggenza": "verbo separabile riflessivo",
-      "praesens": "fühlt sich wohl",
-      "praeteritum": "fühlte sich wohl",
-      "perfekt": "hat sich wohlgefühlt",
-      "italian": "sentirsi a proprio agio, stare bene",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i90",
-      "type": "verbo",
-      "german": "hinzufügen",
-      "reggenza": "verbo separabile, + Akkusativ",
-      "praesens": "fügt hinzu",
-      "praeteritum": "fügte hinzu",
-      "perfekt": "hat hinzugefügt",
-      "italian": "aggiungere",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i91",
-      "type": "sostantivo",
-      "german": "Klassenstufe",
-      "articolo": "die",
-      "plurale": "die Klassenstufen",
-      "italian": "il livello/anno scolastico",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i92",
-      "type": "aggettivo",
-      "german": "zusätzlich",
-      "italian": "aggiuntivo/a, supplementare",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i93",
-      "type": "verbo",
-      "german": "gestalten",
-      "praesens": "gestaltet",
-      "praeteritum": "gestaltete",
-      "perfekt": "hat gestaltet",
-      "italian": "progettare, dare forma a, organizzare",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i94",
-      "type": "sostantivo",
-      "german": "Lernraum",
-      "articolo": "der",
-      "plurale": "die Lernräume",
-      "italian": "lo spazio di apprendimento",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i95",
-      "type": "verbo",
-      "german": "sich vorstellen",
-      "reggenza": "verbo separabile riflessivo, + Akkusativ",
-      "praesens": "stellt sich vor",
-      "praeteritum": "stellte sich vor",
-      "perfekt": "hat sich vorgestellt",
-      "italian": "immaginare, immaginarsi",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i96",
-      "type": "sostantivo",
-      "german": "Innenarchitekt",
-      "articolo": "der",
-      "plurale": "die Innenarchitekten",
-      "femminile": "die Innenarchitektin",
-      "femminilePlurale": "die Innenarchitektinnen",
-      "italian": "l'architetto/a d'interni",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i97",
-      "type": "sostantivo",
-      "german": "Unterstützung",
-      "articolo": "die",
-      "plurale": "— per lo più Sg.",
-      "italian": "il sostegno, l'aiuto",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i98",
-      "type": "sostantivo",
-      "german": "Firma",
-      "articolo": "die",
-      "plurale": "die Firmen",
-      "italian": "l'azienda",
-      "topics": [
-        "Scuola e università"
-      ]
-    },
-    {
-      "id": "i99",
-      "type": "espressione",
-      "german": "hoffen auf",
-      "italian": "sperare in",
-      "topics": [
-        "Scuola e università"
-      ]
+      "note": "Il caso del pronome dipende dalla preposizione o dalla funzione nella relativa; il verbo va alla fine."
     }
   ]
 }
