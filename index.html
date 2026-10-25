@@ -593,6 +593,71 @@ button { cursor: pointer; }
 .rowlink small { font-weight: 500; color: var(--ink-3); font-size: 12.5px; }
 .rowlink.danger { color: var(--err); }
 
+
+/* ---------- area impostazioni (delimitata ma discreta) ---------- */
+.settingsbox {
+  margin-top: 26px;
+  border: 1px solid var(--line); border-radius: 14px;
+  background: var(--surface-2);
+}
+.settingsbox > summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  min-height: var(--tap); padding: 10px 14px;
+  font-size: 13px; font-weight: 700; color: var(--ink-2);
+  -webkit-tap-highlight-color: transparent;
+}
+.settingsbox > summary::-webkit-details-marker { display: none; }
+.settingsbox > summary small { font-weight: 500; color: var(--ink-3); font-size: 12px; margin-left: auto; }
+.settingsbox > summary::after {
+  content: ""; width: 7px; height: 7px; flex: none; margin-left: 4px;
+  border-right: 2px solid var(--ink-3); border-bottom: 2px solid var(--ink-3);
+  transform: rotate(45deg) translateY(-2px); transition: transform .15s;
+}
+.settingsbox[open] > summary::after { transform: rotate(225deg) translate(-2px, -1px); }
+.settingsbox-body { padding: 2px 10px 10px; }
+.settingsbox-body .rowlink:last-child { margin-bottom: 0; }
+.settingsbox .dangerzone { margin-top: 12px; padding-top: 10px; }
+.settingsbox .dangerzone .rowlink { margin-bottom: 0; }
+.subh { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-3); margin: 12px 4px 6px; }
+
+/* ---------- notifiche ---------- */
+.notif-note {
+  font-size: 13px; color: var(--ink-2); line-height: 1.45;
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 10px 12px; margin: 0 0 12px;
+}
+.notif-intro { font-size: 13.5px; color: var(--ink-2); margin: 0 0 12px; line-height: 1.45; }
+.notif-on {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 10px 12px; margin-bottom: 12px;
+  border: 1px solid var(--line); border-radius: var(--r); background: var(--surface);
+  font-size: 13.5px; font-weight: 600;
+}
+.notif-on small { display: block; font-weight: 500; color: var(--ink-3); font-size: 12px; }
+.nrow {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 10px 9px 12px; margin-bottom: 7px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+}
+.nrow.off .ntime, .nrow.off .ninfo { opacity: .45; }
+.ntime { font-size: 22px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.ninfo { flex: 1; min-width: 0; }
+.ninfo b { display: block; font-size: 13px; }
+.ninfo small { display: block; color: var(--ink-3); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.switch {
+  flex: none; width: 44px; height: 26px; border-radius: 999px; padding: 0;
+  border: 1px solid var(--line-strong); background: var(--surface-2); position: relative;
+  transition: background .15s;
+}
+.switch::after {
+  content: ""; position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; border-radius: 999px;
+  background: var(--ink-3); transition: transform .15s, background .15s;
+}
+.switch.on { background: var(--das); border-color: var(--das); }
+.switch.on::after { transform: translateX(18px); background: #fff; }
+.nhint { font-size: 12.5px; color: var(--ink-3); margin: 12px 2px 0; line-height: 1.45; }
+
 /* ---------- modali ---------- */
 .sheet-bg {
   position: fixed; inset: 0; z-index: 60;
@@ -714,8 +779,16 @@ var LS = {
   overrides: "wk_overrides",
   srs: "wk_srs",
   stats: "wk_stats",
-  prefs: "wk_prefs"
+  prefs: "wk_prefs",
+  notif: "wk_notif"
 };
+
+// --- notifiche programmate (vedi GUIDA-NOTIFICHE.md) ---
+// Indirizzo del server notifiche (Cloudflare Worker). Finché è vuoto la sezione Notifiche spiega cosa manca.
+var PUSH_SERVER_URL = "";
+// Chiave pubblica VAPID (la coppia privata sta solo sul server).
+var VAPID_PUBLIC_KEY = "BLn1Fdl04Z_i2hPtOAp2toc3icB2vt1e0MmOf3M7gg-j5XnrRMZXxMXxpEfxR_-B5eu5rKWw2ombG0AdwSr8evE";
+var MAX_REMINDERS = 8;
 
 /* ---------------- utilità ---------------- */
 
@@ -832,18 +905,24 @@ var store = {
   overrides: lsGet(LS.overrides, {}),
   srs: lsGet(LS.srs, {}),
   stats: lsGet(LS.stats, { streak: 0, lastDay: null, total: 0, byDay: {} }),
-  prefs: lsGet(LS.prefs, { theme: "auto", dir: "de-it", audio: true })
+  prefs: lsGet(LS.prefs, { theme: "auto", dir: "de-it", audio: true }),
+  // le notifiche sono per dispositivo (ogni telefono ha la sua iscrizione): non finiscono nei backup
+  notif: lsGet(LS.notif, { enabled: false, reminders: [] })
 };
 var state = {
   tab: "lessico",
   q: "", topics: [], types: [], onlyFlag: false,
   sort: "alpha", openId: null, confirmId: null,
+  settingsOpen: false,
   loadStatus: "loading"
 };
 var rv = null;  // sessione di ripasso
 var qz = null;  // sessione di quiz
 
-function save(key) { lsSet(LS[key], store[key]); }
+function save(key) {
+  lsSet(LS[key], store[key]);
+  if (key === "stats") syncSwState();
+}
 
 /* ---------------- dati derivati ---------------- */
 
@@ -1618,7 +1697,12 @@ function viewProgressi() {
     '<span><i style="background:var(--flag)"></i>in corso</span>' +
     '<span><i style="background:var(--line)"></i>da iniziare</span></div>';
 
-  h += '<div class="section-h">Il tuo Kasten</div>';
+  h += '<details class="settingsbox" id="settingsBox"' + (state.settingsOpen ? " open" : "") + '>' +
+    '<summary><span>Impostazioni e dati</span><small>notifiche, tema, backup</small></summary><div class="settingsbox-body">';
+  h += '<div class="subh">Per te</div>';
+  h += '<button class="rowlink" data-act="notifs"><span>Notifiche programmate</span><small>' + notifSummary() + "</small></button>";
+  h += '<button class="rowlink" data-act="settings"><span>Tema e audio</span><small>aspetto, pronuncia</small></button>';
+  h += '<div class="subh">Lessico e dati</div>';
   h += '<button class="rowlink" data-act="checkupdate"><span>Controlla aggiornamenti del lessico</span><small>' +
     (state.loadStatus === "ok" ? db.official.length + " parole di classe" : "non scaricato") + "</small></button>";
   h += '<button class="rowlink" data-act="export"><span>Esporta un backup completo</span><small>parole, progressi, impostazioni</small></button>';
@@ -1628,9 +1712,9 @@ function viewProgressi() {
   if (store.deleted.length) {
     h += '<button class="rowlink" data-act="restore"><span>Ripristina le parole eliminate</span><small>' + store.deleted.length + "</small></button>";
   }
-  h += '<button class="rowlink" data-act="settings"><span>Impostazioni</span><small>tema, audio</small></button>';
   h += '<div class="dangerzone"><button class="rowlink danger" data-act="wipe"><span>Cancella tutti i miei dati</span>' +
     "<small>parole aggiunte, segni, progressi</small></button></div>";
+  h += "</div></details>";
   h += '<input id="importFile" type="file" accept="application/json,.json" class="sr" />';
   return h;
 }
@@ -2004,6 +2088,225 @@ var ACTIONS = {
   }
 };
 
+
+/* ---------------- notifiche programmate ---------------- */
+/* Il telefono si iscrive al server (Cloudflare Worker) e gli manda l'elenco delle sue notifiche.
+   Il server le spedisce all'ora giusta; il testo delle "predefinite" lo sceglie il service worker
+   in base a cosa hai già fatto oggi. */
+
+function idbOpen() {
+  return new Promise(function (resolve, reject) {
+    var r = indexedDB.open("wk-sw", 1);
+    r.onupgradeneeded = function () { r.result.createObjectStore("kv"); };
+    r.onsuccess = function () { resolve(r.result); };
+    r.onerror = function () { reject(r.error); };
+  });
+}
+// il service worker non può leggere localStorage: gli lascio qui ultimo giorno attivo e streak
+function syncSwState() {
+  try {
+    if (!("indexedDB" in window)) return;
+    idbOpen().then(function (db) {
+      var tx = db.transaction("kv", "readwrite");
+      tx.objectStore("kv").put({ lastDay: store.stats.lastDay || null, streak: store.stats.streak || 0, updated: Date.now() }, "state");
+    }).catch(function () {});
+  } catch (e) {}
+}
+
+function pushSupported() { return "serviceWorker" in navigator && "PushManager" in window && "Notification" in window; }
+function isIOS() { return /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1); }
+function isStandalone() {
+  return (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone === true;
+}
+function b64uToUint8(s) {
+  s = s.replace(/-/g, "+").replace(/_/g, "/");
+  while (s.length % 4) s += "=";
+  var b = atob(s), o = new Uint8Array(b.length);
+  for (var i = 0; i < b.length; i++) o[i] = b.charCodeAt(i);
+  return o;
+}
+function pushPost(path, body) {
+  return fetch(PUSH_SERVER_URL.replace(/\/+$/, "") + path, {
+    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body)
+  }).then(function (r) {
+    return r.json().catch(function () { return {}; }).then(function (j) {
+      if (!r.ok) throw new Error(j.error || ("errore " + r.status));
+      return j;
+    });
+  });
+}
+function getPushSub(create) {
+  return navigator.serviceWorker.ready.then(function (reg) {
+    return reg.pushManager.getSubscription().then(function (sub) {
+      if (sub || !create) return sub;
+      return reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64uToUint8(VAPID_PUBLIC_KEY) });
+    });
+  });
+}
+function syncNotifs() {
+  return getPushSub(true).then(function (sub) {
+    var tz = "Europe/Rome";
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || tz; } catch (e) {}
+    return pushPost("/sync", {
+      subscription: sub.toJSON(), tz: tz,
+      reminders: store.notif.reminders.map(function (r) {
+        return { id: r.id, time: r.time, kind: r.kind, text: r.text || "", on: r.on !== false };
+      })
+    });
+  });
+}
+function notifReady() {
+  return !!store.notif.enabled && pushSupported() && !!PUSH_SERVER_URL && Notification.permission === "granted";
+}
+function notifSummary() {
+  var n = store.notif;
+  if (!n.reminders.length) return n.enabled ? "nessuna ancora" : "disattivate";
+  var on = n.reminders.filter(function (r) { return r.on !== false; }).length;
+  return n.enabled ? plural(on, "attiva", "attive") : "disattivate";
+}
+function notifProblem() {
+  if (!pushSupported()) {
+    return isIOS() && !isStandalone()
+      ? "Su iPhone le notifiche funzionano solo dall'app installata: tocca Condividi → «Aggiungi alla schermata Home», poi apri il Kasten dalla sua icona (serve iOS 16.4 o più recente)."
+      : "Questo browser non supporta le notifiche programmate. Prova con Chrome su Android, oppure con l'app installata su iPhone.";
+  }
+  if (!PUSH_SERVER_URL) return "Il server delle notifiche non è ancora collegato: segui GUIDA-NOTIFICHE.md e poi scrivi il suo indirizzo in PUSH_SERVER_URL dentro index.html.";
+  if (Notification.permission === "denied") return "Le notifiche sono bloccate per quest'app. Riattivale dalle impostazioni del telefono (Notifiche → Wortschatzkasten) e riapri questa schermata.";
+  return "";
+}
+
+var nf = null; // notifica in modifica
+
+function openNotifs() {
+  var n = store.notif, prob = notifProblem();
+  var h = '<div class="sheet-h"><h2>Notifiche</h2><button class="iconbtn" data-act="closesheet" aria-label="Chiudi">✕</button></div>';
+  h += '<p class="notif-intro">Un promemoria ogni giorno all\'ora che scegli. Valgono solo per questo telefono: ognuno imposta le sue.</p>';
+  if (prob) {
+    h += '<div class="notif-note">' + esc(prob) + "</div>";
+  } else if (!n.enabled) {
+    h += '<button class="btn block" data-act="notifenable" style="margin-bottom:12px">Attiva le notifiche su questo telefono</button>';
+  } else {
+    h += '<div class="notif-on"><span>Notifiche attive<small>su questo telefono</small></span><span style="display:flex;gap:6px">' +
+      '<button class="tinybtn" data-act="notiftest">Prova</button><button class="tinybtn" data-act="notifdisable">Disattiva</button></span></div>';
+  }
+  var list = n.reminders.slice().sort(function (a, b) { return a.time < b.time ? -1 : a.time > b.time ? 1 : 0; });
+  list.forEach(function (r) {
+    var on = r.on !== false;
+    h += '<div class="nrow ' + (on ? "" : "off") + '"><div class="ntime">' + esc(r.time) + "</div>" +
+      '<div class="ninfo"><b>' + (r.kind === "custom" ? "Personalizzata" : "Predefinita") + "</b><small>" +
+      (r.kind === "custom" ? esc(r.text) : "testo diverso ogni giorno") + "</small></div>" +
+      '<button class="switch ' + (on ? "on" : "") + '" role="switch" aria-checked="' + on + '" aria-label="Attiva o disattiva questa notifica" data-act="notiftoggle" data-id="' + esc(r.id) + '"></button>' +
+      '<button class="tinybtn" data-act="notifedit" data-id="' + esc(r.id) + '">Modifica</button></div>';
+  });
+  if (!list.length) h += '<p class="nhint" style="margin-top:0">Nessuna notifica ancora. Aggiungine una, per esempio alle 7:02 per la corriera.</p>';
+  h += '<button class="btn ghost block" data-act="notifadd" style="margin-top:6px"' + (list.length >= MAX_REMINDERS ? " disabled" : "") + '>+ Aggiungi notifica</button>';
+  h += '<p class="nhint"><b>Predefinita:</b> ogni giorno un testo diverso, a caso. Se oggi non hai ancora ripassato, aggiunto o fatto un quiz ti ricorda di farlo; se l\'hai già fatto ti invita a fare di più.<br><b>Personalizzata:</b> scrivi tu il testo.</p>';
+  h += '<div class="sheet-actions"><button class="btn block" data-act="closesheet">Fatto</button></div>';
+  openSheet(h, !!sheetEl);
+}
+
+function readNotifEditor() {
+  var t = el("nfTime"); if (t && nf) nf.time = t.value;
+  var x = el("nfText"); if (x && nf) nf.text = x.value;
+}
+function openNotifEditor() {
+  var d = nf;
+  var h = '<div class="sheet-h"><h2>' + (d.id ? "Modifica notifica" : "Nuova notifica") + '</h2><button class="iconbtn" data-act="notifback" aria-label="Indietro">✕</button></div>';
+  h += '<div class="field"><label for="nfTime">Ora (ogni giorno)</label><input id="nfTime" type="time" value="' + esc(d.time) + '" /></div>';
+  h += '<div class="field"><label>Testo</label><div class="pickrow">' +
+    '<button class="pick ' + (d.kind === "default" ? "on" : "") + '" data-act="notifkind" data-v="default">Predefinito</button>' +
+    '<button class="pick ' + (d.kind === "custom" ? "on" : "") + '" data-act="notifkind" data-v="custom">Personalizzato</button></div>';
+  if (d.kind === "custom") {
+    h += '<textarea id="nfText" maxlength="140" placeholder="Es. Corriera: 10 schede e arrivi a scuola già in forma!" style="margin-top:8px">' + esc(d.text) + "</textarea>";
+  } else {
+    h += '<p class="nhint">Il testo cambia ogni giorno e dipende da cosa hai già fatto oggi (ripasso, quiz o parola nuova).</p>';
+  }
+  h += "</div>";
+  h += '<div class="sheet-actions">' +
+    (d.id ? '<button class="btn ghost" style="flex:0 0 auto;color:var(--err)" data-act="notifdel" data-id="' + esc(d.id) + '">Elimina</button>' : "") +
+    '<button class="btn ghost" data-act="notifback">Annulla</button><button class="btn" data-act="notifsave">Salva</button></div>';
+  openSheet(h, !!sheetEl);
+}
+function afterNotifChange() {
+  save("notif");
+  if (notifReady()) syncNotifs().catch(function () { toast("Non sono riuscito a sincronizzare le notifiche: controlla la connessione."); });
+}
+
+Object.assign(ACTIONS, {
+  notifs: function () { openNotifs(); },
+  notifenable: function () {
+    if (notifProblem()) { openNotifs(); return; }
+    // il permesso va chiesto subito dopo il tocco (iPhone lo richiede)
+    Notification.requestPermission().then(function (perm) {
+      if (perm !== "granted") { toast("Permesso non concesso."); openNotifs(); return; }
+      store.notif.enabled = true; save("notif");
+      return syncNotifs().then(function () { toast("Notifiche attivate."); openNotifs(); });
+    }).catch(function (err) {
+      store.notif.enabled = false; save("notif");
+      toast("Non sono riuscito ad attivarle: " + (err && err.message ? err.message : "riprova"));
+      openNotifs();
+    });
+  },
+  notifdisable: function () {
+    getPushSub(false).then(function (sub) {
+      if (!sub) return;
+      var ep = sub.endpoint;
+      return pushPost("/unsubscribe", { endpoint: ep }).catch(function () {}).then(function () { return sub.unsubscribe(); });
+    }).catch(function () {}).then(function () {
+      store.notif.enabled = false; save("notif");
+      toast("Notifiche disattivate."); openNotifs();
+    });
+  },
+  notiftest: function () {
+    syncNotifs().then(function () { return getPushSub(false); }).then(function (sub) {
+      return pushPost("/test", { endpoint: sub.endpoint });
+    }).then(function () { toast("Prova inviata: arriva tra pochi secondi."); })
+      .catch(function (err) { toast("Prova non riuscita: " + (err && err.message ? err.message : "errore")); });
+  },
+  notifadd: function () {
+    if (store.notif.reminders.length >= MAX_REMINDERS) { toast("Hai raggiunto il massimo di " + MAX_REMINDERS + " notifiche."); return; }
+    nf = { id: null, time: "20:00", kind: "default", text: "", on: true };
+    openNotifEditor();
+  },
+  notifedit: function (v, id) {
+    var r = store.notif.reminders.filter(function (x) { return x.id === id; })[0];
+    if (!r) return;
+    nf = { id: r.id, time: r.time, kind: r.kind, text: r.text || "", on: r.on !== false };
+    openNotifEditor();
+  },
+  notifkind: function (v) { readNotifEditor(); nf.kind = v; openNotifEditor(); },
+  notifback: function () { nf = null; openNotifs(); },
+  notifsave: function () {
+    readNotifEditor();
+    if (!/^\d{2}:\d{2}$/.test(nf.time || "")) { toast("Scegli l'ora."); return; }
+    if (nf.kind === "custom" && !nf.text.trim()) { toast("Scrivi il testo della notifica."); return; }
+    var rec = { id: nf.id || ("n_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6)), time: nf.time, kind: nf.kind, text: nf.kind === "custom" ? nf.text.trim() : "", on: nf.on !== false };
+    var found = false;
+    store.notif.reminders = store.notif.reminders.map(function (x) { if (x.id === rec.id) { found = true; return rec; } return x; });
+    if (!found) store.notif.reminders.push(rec);
+    nf = null;
+    afterNotifChange();
+    openNotifs();
+    toast(store.notif.enabled ? "Notifica salvata." : "Salvata. Attiva le notifiche per riceverla.");
+  },
+  notifdel: function (v, id) {
+    store.notif.reminders = store.notif.reminders.filter(function (x) { return x.id !== id; });
+    nf = null;
+    afterNotifChange();
+    openNotifs();
+    toast("Notifica eliminata.");
+  },
+  notiftoggle: function (v, id) {
+    store.notif.reminders.forEach(function (x) { if (x.id === id) x.on = x.on === false; });
+    afterNotifChange();
+    openNotifs();
+  }
+});
+
+document.addEventListener("toggle", function (e) {
+  if (e.target && e.target.id === "settingsBox") state.settingsOpen = e.target.open;
+}, true);
+
 /* ---------------- eventi globali ---------------- */
 
 document.addEventListener("click", function (e) {
@@ -2147,6 +2450,8 @@ if (cachedStart) {
 }
 render();
 loadVocab(false);
+syncSwState();
+if (notifReady()) syncNotifs().catch(function () {}); // tiene aggiornati server e fuso orario
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
