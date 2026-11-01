@@ -32,7 +32,10 @@
     "Espressioni utili",
     "Avverbi utili",
     "Distributori automatici e alimentazione",
-    "Grammatica"
+    "Grammatica",
+    "Animali e mondo animale",
+    "Sport e attivita fisica",
+    "Ristorante e ordinazioni"
   ],
   "items": [
     {
@@ -1187,7 +1190,8 @@
       "german": "Kann ich mit Karte bezahlen?",
       "italian": "Posso pagare con la carta?",
       "topics": [
-        "Shopping e acquisti"
+        "Shopping e acquisti",
+        "Ristorante e ordinazioni"
       ]
     },
     {
@@ -3041,7 +3045,8 @@
       "plurale": "die Zutaten",
       "italian": "l'ingrediente",
       "topics": [
-        "Cibo e cucina"
+        "Cibo e cucina",
+        "Ristorante e ordinazioni"
       ],
       "note": "spesso usato al plurale: die Zutaten"
     },
@@ -3108,7 +3113,8 @@
       "plurale": "die Beilagen",
       "italian": "il contorno",
       "topics": [
-        "Cibo e cucina"
+        "Cibo e cucina",
+        "Ristorante e ordinazioni"
       ],
       "note": "spesso al plurale: die Beilagen"
     },
@@ -7221,6 +7227,2057 @@
         "Grammatica"
       ],
       "note": "Il caso del pronome dipende dalla preposizione o dalla funzione nella relativa; il verbo va alla fine."
+    },
+    {
+      "id": "j1",
+      "type": "sostantivo",
+      "german": "Haustier",
+      "italian": "l'animale domestico",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Haustiere"
+    },
+    {
+      "id": "j2",
+      "type": "sostantivo",
+      "german": "Hund",
+      "italian": "il cane",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Hunde",
+      "note": "Il cane ha un olfatto estremamente sviluppato."
+    },
+    {
+      "id": "j3",
+      "type": "sostantivo",
+      "german": "Katze",
+      "italian": "il gatto",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Katzen",
+      "note": "I gatti comunicano anche con la posizione della coda."
+    },
+    {
+      "id": "j4",
+      "type": "sostantivo",
+      "german": "Kaninchen",
+      "italian": "il coniglio",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Kaninchen"
+    },
+    {
+      "id": "j5",
+      "type": "sostantivo",
+      "german": "Meerschweinchen",
+      "italian": "il porcellino d'India",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Meerschweinchen"
+    },
+    {
+      "id": "j6",
+      "type": "sostantivo",
+      "german": "Hamster",
+      "italian": "il criceto",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Hamster"
+    },
+    {
+      "id": "j7",
+      "type": "sostantivo",
+      "german": "Papagei",
+      "italian": "il pappagallo",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Papageien",
+      "note": "Molte specie possono imitare suoni e parole."
+    },
+    {
+      "id": "j8",
+      "type": "sostantivo",
+      "german": "Pferd",
+      "italian": "il cavallo",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Pferde"
+    },
+    {
+      "id": "j9",
+      "type": "sostantivo",
+      "german": "Huhn",
+      "italian": "la gallina",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Hühner"
+    },
+    {
+      "id": "j10",
+      "type": "sostantivo",
+      "german": "Kuh",
+      "italian": "la mucca",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Kühe"
+    },
+    {
+      "id": "j11",
+      "type": "sostantivo",
+      "german": "Schaf",
+      "italian": "la pecora",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Schafe"
+    },
+    {
+      "id": "j12",
+      "type": "sostantivo",
+      "german": "Ziege",
+      "italian": "la capra",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Ziegen"
+    },
+    {
+      "id": "j13",
+      "type": "sostantivo",
+      "german": "Schwein",
+      "italian": "il maiale",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Schweine"
+    },
+    {
+      "id": "j14",
+      "type": "sostantivo",
+      "german": "Biene",
+      "italian": "l'ape",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Bienen",
+      "note": "Importante impollinatore per molte piante."
+    },
+    {
+      "id": "j15",
+      "type": "sostantivo",
+      "german": "Schmetterling",
+      "italian": "la farfalla",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Schmetterlinge"
+    },
+    {
+      "id": "j16",
+      "type": "sostantivo",
+      "german": "Igel",
+      "italian": "il riccio",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Igel",
+      "note": "Quando si sente minacciato si arrotola in una palla."
+    },
+    {
+      "id": "j17",
+      "type": "sostantivo",
+      "german": "Fuchs",
+      "italian": "la volpe",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Füchse"
+    },
+    {
+      "id": "j18",
+      "type": "sostantivo",
+      "german": "Reh",
+      "italian": "il capriolo",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Rehe"
+    },
+    {
+      "id": "j19",
+      "type": "sostantivo",
+      "german": "Wildschwein",
+      "italian": "il cinghiale",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Wildschweine"
+    },
+    {
+      "id": "j20",
+      "type": "sostantivo",
+      "german": "Eichhörnchen",
+      "italian": "lo scoiattolo",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Eichhörnchen"
+    },
+    {
+      "id": "j21",
+      "type": "sostantivo",
+      "german": "Fledermaus",
+      "italian": "il pipistrello",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Fledermäuse",
+      "note": "E un mammifero; molte specie usano l'ecolocalizzazione."
+    },
+    {
+      "id": "j22",
+      "type": "sostantivo",
+      "german": "Wolf",
+      "italian": "il lupo",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Wölfe"
+    },
+    {
+      "id": "j23",
+      "type": "sostantivo",
+      "german": "Bär",
+      "italian": "l'orso",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Bären"
+    },
+    {
+      "id": "j24",
+      "type": "sostantivo",
+      "german": "Luchs",
+      "italian": "la lince",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Luchse"
+    },
+    {
+      "id": "j25",
+      "type": "sostantivo",
+      "german": "Otter",
+      "italian": "la lontra",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Otter"
+    },
+    {
+      "id": "j26",
+      "type": "sostantivo",
+      "german": "Seehund",
+      "italian": "la foca comune",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Seehunde"
+    },
+    {
+      "id": "j27",
+      "type": "sostantivo",
+      "german": "Delfin",
+      "italian": "il delfino",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Delfine"
+    },
+    {
+      "id": "j28",
+      "type": "sostantivo",
+      "german": "Wal",
+      "italian": "la balena",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Wale"
+    },
+    {
+      "id": "j29",
+      "type": "sostantivo",
+      "german": "Hai",
+      "italian": "lo squalo",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Haie"
+    },
+    {
+      "id": "j30",
+      "type": "sostantivo",
+      "german": "Schildkrote",
+      "italian": "la tartaruga",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Schildkroten"
+    },
+    {
+      "id": "j31",
+      "type": "sostantivo",
+      "german": "Krokodil",
+      "italian": "il coccodrillo",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Krokodile"
+    },
+    {
+      "id": "j32",
+      "type": "sostantivo",
+      "german": "Schlange",
+      "italian": "il serpente",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Schlangen"
+    },
+    {
+      "id": "j33",
+      "type": "sostantivo",
+      "german": "Eidechse",
+      "italian": "la lucertola",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Eidechsen"
+    },
+    {
+      "id": "j34",
+      "type": "sostantivo",
+      "german": "Frosch",
+      "italian": "la rana",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Frosche"
+    },
+    {
+      "id": "j35",
+      "type": "sostantivo",
+      "german": "Pinguin",
+      "italian": "il pinguino",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Pinguine"
+    },
+    {
+      "id": "j36",
+      "type": "sostantivo",
+      "german": "Flamingo",
+      "italian": "il fenicottero",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Flamingos"
+    },
+    {
+      "id": "j37",
+      "type": "sostantivo",
+      "german": "Giraffe",
+      "italian": "la giraffa",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Giraffen"
+    },
+    {
+      "id": "j38",
+      "type": "sostantivo",
+      "german": "Elefant",
+      "italian": "l'elefante",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Elefanten"
+    },
+    {
+      "id": "j39",
+      "type": "sostantivo",
+      "german": "Löwe",
+      "italian": "il leone",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Löwen"
+    },
+    {
+      "id": "j40",
+      "type": "sostantivo",
+      "german": "Tiger",
+      "italian": "la tigre",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Tiger"
+    },
+    {
+      "id": "j41",
+      "type": "sostantivo",
+      "german": "Zebra",
+      "italian": "la zebra",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Zebras"
+    },
+    {
+      "id": "j42",
+      "type": "sostantivo",
+      "german": "Nashorn",
+      "italian": "il rinoceronte",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Nashörner"
+    },
+    {
+      "id": "j43",
+      "type": "sostantivo",
+      "german": "Nilpferd",
+      "italian": "l'ippopotamo",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Nilpferde"
+    },
+    {
+      "id": "j44",
+      "type": "sostantivo",
+      "german": "Känguru",
+      "italian": "il canguro",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Kängurus"
+    },
+    {
+      "id": "j45",
+      "type": "sostantivo",
+      "german": "Koala",
+      "italian": "il koala",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Koalas"
+    },
+    {
+      "id": "j46",
+      "type": "sostantivo",
+      "german": "Gorilla",
+      "italian": "il gorilla",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Gorillas"
+    },
+    {
+      "id": "j47",
+      "type": "sostantivo",
+      "german": "Orang-Utan",
+      "italian": "l'orango",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Orang-Utans"
+    },
+    {
+      "id": "j48",
+      "type": "sostantivo",
+      "german": "Gepard",
+      "italian": "il ghepardo",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Geparde",
+      "note": "E l'animale terrestre piu veloce."
+    },
+    {
+      "id": "j49",
+      "type": "sostantivo",
+      "german": "Lebensraum",
+      "italian": "l'habitat",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Lebensräume"
+    },
+    {
+      "id": "j50",
+      "type": "sostantivo",
+      "german": "Regenwald",
+      "italian": "la foresta pluviale",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Regenwälder"
+    },
+    {
+      "id": "j51",
+      "type": "sostantivo",
+      "german": "Wüste",
+      "italian": "il deserto",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Wüsten"
+    },
+    {
+      "id": "j52",
+      "type": "sostantivo",
+      "german": "Savanne",
+      "italian": "la savana",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Savannen"
+    },
+    {
+      "id": "j53",
+      "type": "sostantivo",
+      "german": "Korallenriff",
+      "italian": "la barriera corallina",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Korallenriffe"
+    },
+    {
+      "id": "j54",
+      "type": "sostantivo",
+      "german": "Höhle",
+      "italian": "la grotta",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Höhlen"
+    },
+    {
+      "id": "j55",
+      "type": "sostantivo",
+      "german": "Nest",
+      "italian": "il nido",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Nester"
+    },
+    {
+      "id": "j56",
+      "type": "sostantivo",
+      "german": "Bau",
+      "italian": "la tana",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Baue",
+      "note": "Per esempio: il Bau del tasso o della volpe."
+    },
+    {
+      "id": "j57",
+      "type": "sostantivo",
+      "german": "Stall",
+      "italian": "la stalla",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Ställe"
+    },
+    {
+      "id": "j58",
+      "type": "sostantivo",
+      "german": "Weide",
+      "italian": "il pascolo",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Weiden"
+    },
+    {
+      "id": "j59",
+      "type": "sostantivo",
+      "german": "Tierarzt",
+      "italian": "il veterinario",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "die Tierärzte",
+      "note": "Femminile: die Tierärztin, die Tierärztinnen."
+    },
+    {
+      "id": "j60",
+      "type": "sostantivo",
+      "german": "Tierfutter",
+      "italian": "il cibo per animali",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)"
+    },
+    {
+      "id": "j61",
+      "type": "sostantivo",
+      "german": "Leine",
+      "italian": "il guinzaglio",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "die",
+      "plurale": "die Leinen"
+    },
+    {
+      "id": "j62",
+      "type": "sostantivo",
+      "german": "Katzenklo",
+      "italian": "la lettiera",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "das",
+      "plurale": "die Katzenklos"
+    },
+    {
+      "id": "j63",
+      "type": "sostantivo",
+      "german": "Artenschutz",
+      "italian": "la tutela delle specie",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)"
+    },
+    {
+      "id": "j64",
+      "type": "aggettivo",
+      "german": "gefährdet",
+      "italian": "minacciato, in pericolo",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "note": "Si usa per specie a rischio: „eine gefährdete Art“."
+    },
+    {
+      "id": "j65",
+      "type": "verbo",
+      "german": "futtern",
+      "italian": "dare da mangiare a un animale",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "praesens": "futtert",
+      "praeteritum": "futterte",
+      "perfekt": "hat gefuttert",
+      "reggenza": "+ Akkusativ"
+    },
+    {
+      "id": "j66",
+      "type": "verbo",
+      "german": "pflegen",
+      "italian": "prendersi cura di, curare",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "praesens": "pflegt",
+      "praeteritum": "pflegte",
+      "perfekt": "hat gepflegt",
+      "reggenza": "+ Akkusativ"
+    },
+    {
+      "id": "j67",
+      "type": "verbo",
+      "german": "Gassi gehen",
+      "italian": "portare il cane a passeggio",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "praesens": "geht Gassi",
+      "praeteritum": "ging Gassi",
+      "perfekt": "ist Gassi gegangen",
+      "reggenza": "con un cane"
+    },
+    {
+      "id": "j68",
+      "type": "verbo",
+      "german": "adoptieren",
+      "italian": "adottare",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "praesens": "adoptiert",
+      "praeteritum": "adoptierte",
+      "perfekt": "hat adoptiert",
+      "reggenza": "+ Akkusativ"
+    },
+    {
+      "id": "j69",
+      "type": "verbo",
+      "german": "aussterben",
+      "italian": "estinguersi",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "praesens": "stirbt aus",
+      "praeteritum": "starb aus",
+      "perfekt": "ist ausgestorben",
+      "reggenza": "verbo separabile"
+    },
+    {
+      "id": "j70",
+      "type": "espressione",
+      "german": "ein Haustier haben",
+      "italian": "avere un animale domestico",
+      "topics": [
+        "Animali e mondo animale"
+      ]
+    },
+    {
+      "id": "j71",
+      "type": "espressione",
+      "german": "sich um ein Tier kümmern",
+      "italian": "prendersi cura di un animale",
+      "topics": [
+        "Animali e mondo animale"
+      ],
+      "note": "sich kümmern um + Akkusativ."
+    },
+    {
+      "id": "j72",
+      "type": "sostantivo",
+      "german": "Sportart",
+      "italian": "lo sport, la disciplina sportiva",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Sportarten"
+    },
+    {
+      "id": "j73",
+      "type": "sostantivo",
+      "german": "Mannschaft",
+      "italian": "la squadra",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Mannschaften"
+    },
+    {
+      "id": "j74",
+      "type": "sostantivo",
+      "german": "Gegner",
+      "italian": "l'avversario",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Gegner",
+      "note": "Femminile: die Gegnerin, die Gegnerinnen."
+    },
+    {
+      "id": "j75",
+      "type": "sostantivo",
+      "german": "Spielstand",
+      "italian": "il punteggio",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Spielstände"
+    },
+    {
+      "id": "j76",
+      "type": "sostantivo",
+      "german": "Schiedsrichter",
+      "italian": "l'arbitro",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Schiedsrichter",
+      "note": "Femminile: die Schiedsrichterin, die Schiedsrichterinnen."
+    },
+    {
+      "id": "j77",
+      "type": "sostantivo",
+      "german": "Halbzeit",
+      "italian": "il primo o secondo tempo",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Halbzeiten"
+    },
+    {
+      "id": "j78",
+      "type": "sostantivo",
+      "german": "Verlangerung",
+      "italian": "i tempi supplementari",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Verlangerungen"
+    },
+    {
+      "id": "j79",
+      "type": "sostantivo",
+      "german": "Unentschieden",
+      "italian": "il pareggio",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "das",
+      "plurale": "die Unentschieden"
+    },
+    {
+      "id": "j80",
+      "type": "sostantivo",
+      "german": "Schwimmbad",
+      "italian": "la piscina",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "das",
+      "plurale": "die Schwimmbäder"
+    },
+    {
+      "id": "j81",
+      "type": "sostantivo",
+      "german": "Schwimmbecken",
+      "italian": "la vasca",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "das",
+      "plurale": "die Schwimmbecken"
+    },
+    {
+      "id": "j82",
+      "type": "sostantivo",
+      "german": "Schwimmbahn",
+      "italian": "la corsia in piscina",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Schwimmbahnen"
+    },
+    {
+      "id": "j83",
+      "type": "sostantivo",
+      "german": "Schwimmbrille",
+      "italian": "gli occhialini da nuoto",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Schwimmbrillen"
+    },
+    {
+      "id": "j84",
+      "type": "sostantivo",
+      "german": "Badekappe",
+      "italian": "la cuffia da nuoto",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Badekappen"
+    },
+    {
+      "id": "j85",
+      "type": "sostantivo",
+      "german": "Sprungbrett",
+      "italian": "il trampolino",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "das",
+      "plurale": "die Sprungbretter"
+    },
+    {
+      "id": "j86",
+      "type": "sostantivo",
+      "german": "Ball",
+      "italian": "la palla",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Bälle"
+    },
+    {
+      "id": "j87",
+      "type": "sostantivo",
+      "german": "Tor",
+      "italian": "la porta; il gol",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "das",
+      "plurale": "die Tore"
+    },
+    {
+      "id": "j88",
+      "type": "sostantivo",
+      "german": "Fitnessstudio",
+      "italian": "la palestra",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "das",
+      "plurale": "die Fitnessstudios"
+    },
+    {
+      "id": "j89",
+      "type": "sostantivo",
+      "german": "Hantel",
+      "italian": "il manubrio",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Hanteln"
+    },
+    {
+      "id": "j90",
+      "type": "sostantivo",
+      "german": "Langhantel",
+      "italian": "il bilanciere",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Langhanteln"
+    },
+    {
+      "id": "j91",
+      "type": "sostantivo",
+      "german": "Hantelscheibe",
+      "italian": "il disco per pesi",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Hantelscheiben"
+    },
+    {
+      "id": "j92",
+      "type": "sostantivo",
+      "german": "Hantelbank",
+      "italian": "la panca per pesi",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Hantelbänke"
+    },
+    {
+      "id": "j93",
+      "type": "sostantivo",
+      "german": "Klimmzugstange",
+      "italian": "la sbarra per trazioni",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Klimmzugstangen"
+    },
+    {
+      "id": "j94",
+      "type": "sostantivo",
+      "german": "Barren",
+      "italian": "le parallele",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Barren",
+      "note": "Di solito al plurale per l'attrezzo del calisthenics."
+    },
+    {
+      "id": "j95",
+      "type": "sostantivo",
+      "german": "Liegestütz",
+      "italian": "il piegamento sulle braccia",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Liegestütze"
+    },
+    {
+      "id": "j96",
+      "type": "sostantivo",
+      "german": "Klimmzug",
+      "italian": "la trazione alla sbarra",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Klimmzüge"
+    },
+    {
+      "id": "j97",
+      "type": "sostantivo",
+      "german": "Kniebeuge",
+      "italian": "lo squat",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Kniebeugen"
+    },
+    {
+      "id": "j98",
+      "type": "sostantivo",
+      "german": "Ausfallschritt",
+      "italian": "l'affondo",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Ausfallschritte"
+    },
+    {
+      "id": "j99",
+      "type": "sostantivo",
+      "german": "Wiederholung",
+      "italian": "la ripetizione",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Wiederholungen"
+    },
+    {
+      "id": "j100",
+      "type": "sostantivo",
+      "german": "Satz",
+      "italian": "la serie (di esercizi)",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Sätze"
+    },
+    {
+      "id": "j101",
+      "type": "sostantivo",
+      "german": "Muskelkater",
+      "italian": "il dolore muscolare post-allenamento",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)"
+    },
+    {
+      "id": "j102",
+      "type": "sostantivo",
+      "german": "Ausdauer",
+      "italian": "la resistenza",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "— Sg. (non numerabile)"
+    },
+    {
+      "id": "j103",
+      "type": "sostantivo",
+      "german": "Krafttraining",
+      "italian": "l'allenamento di forza",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)"
+    },
+    {
+      "id": "j104",
+      "type": "sostantivo",
+      "german": "Schlittschuh",
+      "italian": "il pattino da ghiaccio",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Schlittschuhe"
+    },
+    {
+      "id": "j105",
+      "type": "sostantivo",
+      "german": "Eisbahn",
+      "italian": "la pista di pattinaggio",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Eisbahnen"
+    },
+    {
+      "id": "j106",
+      "type": "sostantivo",
+      "german": "Ski",
+      "italian": "lo sci",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Ski"
+    },
+    {
+      "id": "j107",
+      "type": "sostantivo",
+      "german": "Skistock",
+      "italian": "il bastoncino da sci",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Skistöcke"
+    },
+    {
+      "id": "j108",
+      "type": "sostantivo",
+      "german": "Skischuh",
+      "italian": "lo scarpone da sci",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Skischuhe"
+    },
+    {
+      "id": "j109",
+      "type": "sostantivo",
+      "german": "Skilift",
+      "italian": "l'impianto di risalita",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Skilifte"
+    },
+    {
+      "id": "j110",
+      "type": "sostantivo",
+      "german": "Skipass",
+      "italian": "lo skipass",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Skipässe"
+    },
+    {
+      "id": "j111",
+      "type": "sostantivo",
+      "german": "Skipiste",
+      "italian": "la pista da sci",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Skipisten"
+    },
+    {
+      "id": "j112",
+      "type": "sostantivo",
+      "german": "Abfahrt",
+      "italian": "la discesa",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Abfahrten"
+    },
+    {
+      "id": "j113",
+      "type": "sostantivo",
+      "german": "Langlauf",
+      "italian": "lo sci di fondo",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "— Sg. (non numerabile)"
+    },
+    {
+      "id": "j114",
+      "type": "sostantivo",
+      "german": "Snowboard",
+      "italian": "lo snowboard",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "das",
+      "plurale": "die Snowboards"
+    },
+    {
+      "id": "j115",
+      "type": "sostantivo",
+      "german": "Helm",
+      "italian": "il casco",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Helme"
+    },
+    {
+      "id": "j116",
+      "type": "sostantivo",
+      "german": "Kletterwand",
+      "italian": "la parete da arrampicata",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Kletterwände"
+    },
+    {
+      "id": "j117",
+      "type": "sostantivo",
+      "german": "Klettergurt",
+      "italian": "l'imbragatura",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Klettergurte"
+    },
+    {
+      "id": "j118",
+      "type": "sostantivo",
+      "german": "Karabiner",
+      "italian": "il moschettone",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "der",
+      "plurale": "die Karabiner"
+    },
+    {
+      "id": "j119",
+      "type": "sostantivo",
+      "german": "Sicherungsseil",
+      "italian": "la corda di sicurezza",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "das",
+      "plurale": "die Sicherungsseile"
+    },
+    {
+      "id": "j120",
+      "type": "sostantivo",
+      "german": "Segelboot",
+      "italian": "la barca a vela",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "das",
+      "plurale": "die Segelboote"
+    },
+    {
+      "id": "j121",
+      "type": "sostantivo",
+      "german": "Paddel",
+      "italian": "la pagaia",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "das",
+      "plurale": "die Paddel"
+    },
+    {
+      "id": "j122",
+      "type": "sostantivo",
+      "german": "Kajak",
+      "italian": "il kayak",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "das",
+      "plurale": "die Kajaks"
+    },
+    {
+      "id": "j123",
+      "type": "sostantivo",
+      "german": "Stromschnelle",
+      "italian": "la rapida (di un fiume)",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Stromschnellen"
+    },
+    {
+      "id": "j124",
+      "type": "sostantivo",
+      "german": "Schwimmweste",
+      "italian": "il giubbotto di salvataggio",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "articolo": "die",
+      "plurale": "die Schwimmwesten"
+    },
+    {
+      "id": "j125",
+      "type": "verbo",
+      "german": "schwimmen",
+      "italian": "nuotare",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "schwimmt",
+      "praeteritum": "schwamm",
+      "perfekt": "ist geschwommen",
+      "reggenza": "verbo forte"
+    },
+    {
+      "id": "j126",
+      "type": "verbo",
+      "german": "kraulen",
+      "italian": "nuotare a crawl",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "krault",
+      "praeteritum": "kraulte",
+      "perfekt": "hat gekrault"
+    },
+    {
+      "id": "j127",
+      "type": "verbo",
+      "german": "tauchen",
+      "italian": "immergersi, fare immersioni",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "taucht",
+      "praeteritum": "tauchte",
+      "perfekt": "ist getaucht"
+    },
+    {
+      "id": "j128",
+      "type": "verbo",
+      "german": "passen",
+      "italian": "passare la palla",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "passt",
+      "praeteritum": "passte",
+      "perfekt": "hat gepasst",
+      "reggenza": "+ Dativ"
+    },
+    {
+      "id": "j129",
+      "type": "verbo",
+      "german": "werfen",
+      "italian": "lanciare",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "wirft",
+      "praeteritum": "warf",
+      "perfekt": "hat geworfen",
+      "reggenza": "+ Akkusativ, verbo forte"
+    },
+    {
+      "id": "j130",
+      "type": "verbo",
+      "german": "fangen",
+      "italian": "prendere, afferrare",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "fangt",
+      "praeteritum": "fing",
+      "perfekt": "hat gefangen",
+      "reggenza": "+ Akkusativ, verbo forte"
+    },
+    {
+      "id": "j131",
+      "type": "verbo",
+      "german": "schiessen",
+      "italian": "tirare, segnare",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "schießt",
+      "praeteritum": "schoss",
+      "perfekt": "hat geschossen",
+      "reggenza": "+ Akkusativ, verbo forte"
+    },
+    {
+      "id": "j132",
+      "type": "verbo",
+      "german": "dribbeln",
+      "italian": "palleggiare, dribblare",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "dribbelt",
+      "praeteritum": "dribbelte",
+      "perfekt": "hat gedribbelt"
+    },
+    {
+      "id": "j133",
+      "type": "verbo",
+      "german": "verteidigen",
+      "italian": "difendere",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "verteidigt",
+      "praeteritum": "verteidigte",
+      "perfekt": "hat verteidigt",
+      "reggenza": "+ Akkusativ"
+    },
+    {
+      "id": "j134",
+      "type": "verbo",
+      "german": "aufwärmen",
+      "italian": "riscaldarsi",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "wärmt auf",
+      "praeteritum": "wärmte auf",
+      "perfekt": "hat sich aufgewärmt",
+      "reggenza": "verbo separabile, sich aufwärmen"
+    },
+    {
+      "id": "j135",
+      "type": "verbo",
+      "german": "dehnen",
+      "italian": "fare stretching, allungare",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "dehnt",
+      "praeteritum": "dehnte",
+      "perfekt": "hat gedehnt",
+      "reggenza": "spesso: sich dehnen"
+    },
+    {
+      "id": "j136",
+      "type": "verbo",
+      "german": "trainieren",
+      "italian": "allenarsi, allenare",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "trainiert",
+      "praeteritum": "trainierte",
+      "perfekt": "hat trainiert"
+    },
+    {
+      "id": "j137",
+      "type": "verbo",
+      "german": "heben",
+      "italian": "sollevare",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "hebt",
+      "praeteritum": "hob",
+      "perfekt": "hat gehoben",
+      "reggenza": "+ Akkusativ, verbo forte"
+    },
+    {
+      "id": "j138",
+      "type": "verbo",
+      "german": "Schlittschuh laufen",
+      "italian": "pattinare sul ghiaccio",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "läuft Schlittschuh",
+      "praeteritum": "lief Schlittschuh",
+      "perfekt": "ist Schlittschuh gelaufen",
+      "reggenza": "verbo forte"
+    },
+    {
+      "id": "j139",
+      "type": "verbo",
+      "german": "skifahren",
+      "italian": "sciare",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "fahrt Ski",
+      "praeteritum": "fuhr Ski",
+      "perfekt": "ist Ski gefahren",
+      "reggenza": "verbo separabile, verbo forte"
+    },
+    {
+      "id": "j140",
+      "type": "verbo",
+      "german": "snowboarden",
+      "italian": "fare snowboard",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "snowboardet",
+      "praeteritum": "snowboardete",
+      "perfekt": "ist gesnowboardet"
+    },
+    {
+      "id": "j141",
+      "type": "verbo",
+      "german": "klettern",
+      "italian": "arrampicarsi",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "klettert",
+      "praeteritum": "kletterte",
+      "perfekt": "ist geklettert"
+    },
+    {
+      "id": "j142",
+      "type": "verbo",
+      "german": "segeln",
+      "italian": "andare a vela",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "segelt",
+      "praeteritum": "segelte",
+      "perfekt": "ist gesegelt"
+    },
+    {
+      "id": "j143",
+      "type": "verbo",
+      "german": "paddeln",
+      "italian": "remare con la pagaia",
+      "topics": [
+        "Sport e attivita fisica"
+      ],
+      "praesens": "paddelt",
+      "praeteritum": "paddelte",
+      "perfekt": "ist gepaddelt"
+    },
+    {
+      "id": "j144",
+      "type": "espressione",
+      "german": "Wie viele Liegestütze schaffst du?",
+      "italian": "Quanti piegamenti sulle braccia riesci a fare?",
+      "topics": [
+        "Sport e attivita fisica"
+      ]
+    },
+    {
+      "id": "j145",
+      "type": "espressione",
+      "german": "Wie viele Klimmzüge kannst du machen?",
+      "italian": "Quante trazioni riesci a fare?",
+      "topics": [
+        "Sport e attivita fisica"
+      ]
+    },
+    {
+      "id": "j146",
+      "type": "espressione",
+      "german": "Ich mache drei Sätze mit zehn Wiederholungen.",
+      "italian": "Faccio tre serie da dieci ripetizioni.",
+      "topics": [
+        "Sport e attivita fisica"
+      ]
+    },
+    {
+      "id": "j147",
+      "type": "espressione",
+      "german": "Ich gehe zweimal pro Woche ins Fitnessstudio.",
+      "italian": "Vado in palestra due volte alla settimana.",
+      "topics": [
+        "Sport e attivita fisica"
+      ]
+    },
+    {
+      "id": "j148",
+      "type": "espressione",
+      "german": "Wir müssen uns zuerst aufwärmen.",
+      "italian": "Dobbiamo prima riscaldarci.",
+      "topics": [
+        "Sport e attivita fisica"
+      ]
+    },
+    {
+      "id": "j149",
+      "type": "espressione",
+      "german": "Auf der Piste gilt Helmpflicht.",
+      "italian": "Sulla pista da sci il casco e obbligatorio.",
+      "topics": [
+        "Sport e attivita fisica"
+      ]
+    },
+    {
+      "id": "j150",
+      "type": "sostantivo",
+      "german": "Speisekarte",
+      "italian": "il menu",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "die",
+      "plurale": "die Speisekarten"
+    },
+    {
+      "id": "j151",
+      "type": "sostantivo",
+      "german": "Tageskarte",
+      "italian": "il menu del giorno",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "die",
+      "plurale": "die Tageskarten"
+    },
+    {
+      "id": "j152",
+      "type": "sostantivo",
+      "german": "Vorspeise",
+      "italian": "l'antipasto",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "die",
+      "plurale": "die Vorspeisen"
+    },
+    {
+      "id": "j153",
+      "type": "sostantivo",
+      "german": "Hauptgericht",
+      "italian": "il piatto principale",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "das",
+      "plurale": "die Hauptgerichte"
+    },
+    {
+      "id": "j154",
+      "type": "sostantivo",
+      "german": "Nachspeise",
+      "italian": "il dessert",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "die",
+      "plurale": "die Nachspeisen"
+    },
+    {
+      "id": "j155",
+      "type": "sostantivo",
+      "german": "Besteck",
+      "italian": "le posate",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "das",
+      "plurale": "— Sg. (non numerabile)",
+      "note": "Include coltello, forchetta e cucchiaio."
+    },
+    {
+      "id": "j156",
+      "type": "sostantivo",
+      "german": "Gabel",
+      "italian": "la forchetta",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "die",
+      "plurale": "die Gabeln"
+    },
+    {
+      "id": "j157",
+      "type": "sostantivo",
+      "german": "Messer",
+      "italian": "il coltello",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "das",
+      "plurale": "die Messer"
+    },
+    {
+      "id": "j158",
+      "type": "sostantivo",
+      "german": "Löffel",
+      "italian": "il cucchiaio",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "der",
+      "plurale": "die Löffel"
+    },
+    {
+      "id": "j159",
+      "type": "sostantivo",
+      "german": "Serviette",
+      "italian": "il tovagliolo",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "die",
+      "plurale": "die Servietten"
+    },
+    {
+      "id": "j160",
+      "type": "sostantivo",
+      "german": "Rechnung",
+      "italian": "il conto",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "die",
+      "plurale": "die Rechnungen"
+    },
+    {
+      "id": "j161",
+      "type": "sostantivo",
+      "german": "Quittung",
+      "italian": "la ricevuta",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "die",
+      "plurale": "die Quittungen"
+    },
+    {
+      "id": "j162",
+      "type": "sostantivo",
+      "german": "Trinkgeld",
+      "italian": "la mancia",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "das",
+      "plurale": "die Trinkgelder"
+    },
+    {
+      "id": "j163",
+      "type": "sostantivo",
+      "german": "Allergie",
+      "italian": "l'allergia",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "die",
+      "plurale": "die Allergien"
+    },
+    {
+      "id": "j164",
+      "type": "sostantivo",
+      "german": "Lebensmittelallergie",
+      "italian": "l'allergia alimentare",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "die",
+      "plurale": "die Lebensmittelallergien"
+    },
+    {
+      "id": "j165",
+      "type": "sostantivo",
+      "german": "Unverträglichkeit",
+      "italian": "l'intolleranza",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "articolo": "die",
+      "plurale": "die Unverträglichkeiten",
+      "note": "Spesso: Lebensmittelunvertraglichkeit."
+    },
+    {
+      "id": "j166",
+      "type": "aggettivo",
+      "german": "vegetarisch",
+      "italian": "vegetariano/a",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "note": "Per piatti senza carne o pesce."
+    },
+    {
+      "id": "j167",
+      "type": "aggettivo",
+      "german": "vegan",
+      "italian": "vegano/a",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "note": "Per piatti senza prodotti di origine animale."
+    },
+    {
+      "id": "j168",
+      "type": "aggettivo",
+      "german": "glutenfrei",
+      "italian": "senza glutine",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ]
+    },
+    {
+      "id": "j169",
+      "type": "aggettivo",
+      "german": "laktosefrei",
+      "italian": "senza lattosio",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ]
+    },
+    {
+      "id": "j170",
+      "type": "aggettivo",
+      "german": "scharf",
+      "italian": "piccante",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "note": "Usato anche come avverbio: „nicht zu scharf“ = non troppo piccante."
+    },
+    {
+      "id": "j171",
+      "type": "verbo",
+      "german": "bestellen",
+      "italian": "ordinare",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "praesens": "bestellt",
+      "praeteritum": "bestellte",
+      "perfekt": "hat bestellt",
+      "reggenza": "+ Akkusativ"
+    },
+    {
+      "id": "j172",
+      "type": "verbo",
+      "german": "servieren",
+      "italian": "servire",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "praesens": "serviert",
+      "praeteritum": "servierte",
+      "perfekt": "hat serviert",
+      "reggenza": "+ Akkusativ"
+    },
+    {
+      "id": "j173",
+      "type": "verbo",
+      "german": "empfehlen",
+      "italian": "consigliare",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "praesens": "empfiehlt",
+      "praeteritum": "empfahl",
+      "perfekt": "hat empfohlen",
+      "reggenza": "+ Dativ + Akkusativ, verbo forte"
+    },
+    {
+      "id": "j174",
+      "type": "verbo",
+      "german": "bezahlen",
+      "italian": "pagare",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "praesens": "bezahlt",
+      "praeteritum": "bezahlte",
+      "perfekt": "hat bezahlt",
+      "reggenza": "+ Akkusativ"
+    },
+    {
+      "id": "j175",
+      "type": "verbo",
+      "german": "reservieren",
+      "italian": "prenotare",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "praesens": "reserviert",
+      "praeteritum": "reservierte",
+      "perfekt": "hat reserviert",
+      "reggenza": "+ Akkusativ"
+    },
+    {
+      "id": "j176",
+      "type": "espressione",
+      "german": "Ich möchte gern bestellen.",
+      "italian": "Vorrei ordinare.",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ]
+    },
+    {
+      "id": "j177",
+      "type": "espressione",
+      "german": "Was können Sie uns empfehlen?",
+      "italian": "Che cosa ci puo consigliare?",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ]
+    },
+    {
+      "id": "j178",
+      "type": "espressione",
+      "german": "Ich hätte gern ...",
+      "italian": "Vorrei ...",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "note": "Formula cortese per ordinare."
+    },
+    {
+      "id": "j179",
+      "type": "espressione",
+      "german": "Ohne Zwiebeln, bitte.",
+      "italian": "Senza cipolle, per favore.",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "note": "Modello per una richiesta speciale: ohne + Akkusativ."
+    },
+    {
+      "id": "j180",
+      "type": "espressione",
+      "german": "Ist dieses Gericht vegetarisch / vegan?",
+      "italian": "Questo piatto e vegetariano / vegano?",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ]
+    },
+    {
+      "id": "j181",
+      "type": "espressione",
+      "german": "Ich bin gegen Nüsse allergisch.",
+      "italian": "Sono allergico/a alla frutta secca.",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "note": "allergisch gegen + Akkusativ."
+    },
+    {
+      "id": "j182",
+      "type": "espressione",
+      "german": "Enthalt dieses Gericht Gluten?",
+      "italian": "Questo piatto contiene glutine?",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ]
+    },
+    {
+      "id": "j183",
+      "type": "espressione",
+      "german": "Die Rechnung, bitte.",
+      "italian": "Il conto, per favore.",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ]
+    },
+    {
+      "id": "j184",
+      "type": "espressione",
+      "german": "Zusammen oder getrennt?",
+      "italian": "Insieme o separati?",
+      "topics": [
+        "Ristorante e ordinazioni"
+      ],
+      "note": "Domanda tipica al momento del conto."
     }
   ]
 }
