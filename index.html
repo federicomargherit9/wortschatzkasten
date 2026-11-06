@@ -567,6 +567,275 @@ button { cursor: pointer; }
   50% { transform: scale(1.1) rotate(2deg); opacity: 1; }
 }
 
+/* --- Salvia: verde-grigio polveroso, per concentrarsi. --- */
+html[data-theme="salvia"] {
+  --bg: #E4E9DF;
+  --surface: #F6F8F2;
+  --surface-2: #EBEFE5;
+  --ink: #232A22;
+  --ink-2: #566053;
+  --ink-3: #7D8979;
+  --line: #CFD8C6;
+  --line-strong: #B4C0A8;
+  --der: #3F6A8C;
+  --die: #984562;
+  --das: #4C7A4A;
+  --neutral: #566053;
+  --flag: #A67C1E;
+  --flag-bg: #F1E7C6;
+  --ok: #3F6C3E;
+  --ok-bg: #DCE9D5;
+  --err: #984562;
+  --err-bg: #F2DDE3;
+  --shadow: 0 1px 2px rgba(40,34,30,.07), 0 8px 22px -16px rgba(40,34,30,.55);
+}
+
+/* --- Lavanda: viola cipria, calma serale. --- */
+html[data-theme="lavanda"] {
+  --bg: #E9E6F1;
+  --surface: #F8F6FC;
+  --surface-2: #EFECF6;
+  --ink: #25222F;
+  --ink-2: #5B566B;
+  --ink-3: #807B91;
+  --line: #D6D1E3;
+  --line-strong: #BDB6D2;
+  --der: #4A64A8;
+  --die: #94416C;
+  --das: #3F705C;
+  --neutral: #5B566B;
+  --flag: #A57A24;
+  --flag-bg: #F1E6C9;
+  --ok: #376553;
+  --ok-bg: #DAEAE2;
+  --err: #94416C;
+  --err-bg: #F3DCE7;
+  --shadow: 0 1px 2px rgba(40,34,30,.07), 0 8px 22px -16px rgba(40,34,30,.55);
+}
+
+/* --- Argilla: terracotta e rosa antico, calda. --- */
+html[data-theme="argilla"] {
+  --bg: #EFE3DC;
+  --surface: #FAF3EE;
+  --surface-2: #F3E8E1;
+  --ink: #2E211C;
+  --ink-2: #6A564D;
+  --ink-3: #8F7B71;
+  --line: #E0CFC4;
+  --line-strong: #CBB4A5;
+  --der: #46679A;
+  --die: #964060;
+  --das: #4F6E44;
+  --neutral: #6A564D;
+  --flag: #A8701F;
+  --flag-bg: #F2E2C3;
+  --ok: #4A6840;
+  --ok-bg: #E0E9D6;
+  --err: #964060;
+  --err-bg: #F3DAE1;
+  --shadow: 0 1px 2px rgba(40,34,30,.07), 0 8px 22px -16px rgba(40,34,30,.55);
+}
+
+/* --- Cacao: marrone scuro e crema, avvolgente. --- */
+html[data-theme="cacao"] {
+  --bg: #1F1A17;
+  --surface: #2A2420;
+  --surface-2: #352D28;
+  --ink: #EDE3D8;
+  --ink-2: #B2A396;
+  --ink-3: #8A7C70;
+  --line: #3C332D;
+  --line-strong: #51463E;
+  --der: #8FB0DB;
+  --die: #E59AB4;
+  --das: #8DC29A;
+  --neutral: #B2A396;
+  --flag: #E2B863;
+  --flag-bg: #3B3016;
+  --ok: #8DC29A;
+  --ok-bg: #22362A;
+  --err: #E59AB4;
+  --err-bg: #3D222C;
+  --shadow: 0 1px 2px rgba(0,0,0,.45), 0 12px 28px -18px rgba(0,0,0,.95);
+}
+
+/* --- Prugna: prugna spenta e rosa, notturna. --- */
+html[data-theme="prugna"] {
+  --bg: #241A26;
+  --surface: #2F2331;
+  --surface-2: #3A2C3D;
+  --ink: #EFE5EF;
+  --ink-2: #B8A6BA;
+  --ink-3: #8F7D92;
+  --line: #44344A;
+  --line-strong: #5A4761;
+  --der: #98B1E6;
+  --die: #F0A0BE;
+  --das: #8FCBAA;
+  --neutral: #B8A6BA;
+  --flag: #E5BC68;
+  --flag-bg: #3C3116;
+  --ok: #8FCBAA;
+  --ok-bg: #223A2D;
+  --err: #F0A0BE;
+  --err-bg: #40222F;
+  --shadow: 0 1px 2px rgba(0,0,0,.45), 0 12px 28px -18px rgba(0,0,0,.95);
+}
+
+/* --- Crepuscolo: ardesia verde-azzurra e pesca, notturna. --- */
+html[data-theme="crepuscolo"] {
+  --bg: #1B2326;
+  --surface: #243034;
+  --surface-2: #2D3C41;
+  --ink: #E6EEEC;
+  --ink-2: #A5B7B5;
+  --ink-3: #7C908F;
+  --line: #34454A;
+  --line-strong: #48606A;
+  --der: #8DB6D8;
+  --die: #EDA3AF;
+  --das: #8FCBA8;
+  --neutral: #A5B7B5;
+  --flag: #EBB57A;
+  --flag-bg: #3C2E1A;
+  --ok: #8FCBA8;
+  --ok-bg: #213A2E;
+  --err: #EDA3AF;
+  --err-bg: #3E232A;
+  --shadow: 0 1px 2px rgba(0,0,0,.45), 0 12px 28px -18px rgba(0,0,0,.95);
+}
+
+
+/* ---------- impostazioni: righe con interruttore, sezioni a tendina, rotella ---------- */
+.setgroup { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); margin-bottom: 10px; }
+.setgroup > summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; gap: 8px;
+  min-height: var(--tap); padding: 10px 13px; font-size: 14px; font-weight: 700;
+}
+.setgroup > summary::-webkit-details-marker { display: none; }
+.setgroup > summary small { margin-left: auto; font-weight: 500; font-size: 12px; color: var(--ink-3); }
+.setgroup > summary::after {
+  content: ""; width: 8px; height: 8px; border-right: 2px solid var(--ink-3); border-bottom: 2px solid var(--ink-3);
+  transform: rotate(45deg) translate(-2px,-2px); transition: transform .2s; flex: none;
+}
+.setgroup[open] > summary::after { transform: rotate(225deg) translate(-2px,-1px); }
+.setgroup-body { padding: 2px 13px 12px; border-top: 1px solid var(--line); }
+.setrow { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.setrow:last-child { border-bottom: 0; }
+.setrow .txt { flex: 1; min-width: 0; }
+.setrow .txt b { display: block; font-size: 13.5px; font-weight: 600; }
+.setrow .txt small { display: block; font-size: 12px; color: var(--ink-3); line-height: 1.4; margin-top: 2px; }
+.setrow.dim .txt, .setrow.dim .wheelbox { opacity: .45; }
+.setrow select, .setrow input[type=time] {
+  font: inherit; font-size: 14px; padding: 8px 10px; border: 1px solid var(--line-strong); border-radius: 8px;
+  background: var(--surface-2); color: var(--ink); min-height: 38px;
+}
+.setnote { font-size: 12.5px; color: var(--ink-3); line-height: 1.45; margin: 8px 0 0; }
+.setbtns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.setbtns .btn { flex: 1 1 auto; min-width: 140px; }
+.bkstatus { font-size: 12.5px; color: var(--ink-2); line-height: 1.5; margin-top: 10px; padding: 10px 12px; background: var(--surface-2); border-radius: 8px; }
+.bkstatus.warn { background: var(--flag-bg); color: var(--ink); }
+.wheelbox { display: flex; align-items: center; gap: 6px; flex: none; }
+.wheel {
+  position: relative; width: 64px; height: 84px; overflow-y: scroll; scroll-snap-type: y mandatory;
+  scrollbar-width: none; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line-strong);
+  -webkit-mask-image: linear-gradient(transparent, #000 32%, #000 68%, transparent);
+  mask-image: linear-gradient(transparent, #000 32%, #000 68%, transparent);
+  overscroll-behavior: contain; touch-action: pan-y;
+}
+.wheel::-webkit-scrollbar { display: none; }
+.wheel-pad { height: 28px; }
+.wheel-i {
+  height: 28px; line-height: 28px; text-align: center; scroll-snap-align: center;
+  font-variant-numeric: tabular-nums; font-weight: 600; font-size: 15px; color: var(--ink-3);
+  transition: transform .18s ease, color .18s ease, font-size .18s ease;
+}
+.wheel-i.sel { color: var(--ink); font-size: 20px; font-weight: 800; transform: scale(1.05); }
+.wheelmark { position: relative; }
+.wheelbox .wl { font-size: 11.5px; color: var(--ink-3); max-width: 64px; line-height: 1.2; }
+
+/* ---------- progressi: tempo e bilancio ---------- */
+.timecard { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; margin-top: 4px; }
+.timecard .big { font-size: 30px; font-weight: 800; letter-spacing: -.03em; font-variant-numeric: tabular-nums; margin: 10px 0 2px; }
+.timecard .sub { font-size: 12px; color: var(--ink-3); }
+.seg { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; background: var(--surface-2); padding: 3px; border-radius: 10px; }
+.seg button { background: transparent; border: 0; font-family: inherit; padding: 8px 2px; border-radius: 8px; font-size: 12.5px; font-weight: 600; color: var(--ink-2); min-height: 36px; transition: background .2s, color .2s; }
+.seg button.on { background: var(--ink); color: var(--bg); }
+.bal { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.bal-head { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.bal-net { font-size: 26px; font-weight: 800; letter-spacing: -.03em; font-variant-numeric: tabular-nums; display: flex; align-items: center; gap: 6px; }
+.bal-head small { color: var(--ink-3); font-size: 12px; line-height: 1.35; }
+.bal-scroll { max-height: 214px; overflow-y: auto; overscroll-behavior: contain; padding: 4px 0; }
+.bal-row { display: flex; align-items: center; gap: 10px; padding: 9px 14px; font-size: 13.5px; }
+.bal-row + .bal-row { border-top: 1px solid var(--line); }
+.bal-row .lbl { flex: 1; min-width: 0; }
+.bal-row .lbl small { display: block; color: var(--ink-3); font-size: 11.5px; }
+.bal-row b { font-variant-numeric: tabular-nums; font-size: 15px; }
+.bal-sub { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-3); padding: 10px 14px 4px; background: var(--surface-2); }
+.tick { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 7px; flex: none; }
+.tick svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.up { color: var(--ok); } .down { color: var(--err); } .flat { color: var(--ink-3); }
+.tick.up { background: var(--ok-bg); } .tick.down { background: var(--err-bg); } .tick.flat { background: var(--surface-2); }
+.bal-day { display: flex; align-items: center; gap: 10px; padding: 7px 14px; font-size: 13px; }
+.bal-day .d { width: 64px; color: var(--ink-2); }
+.bal-day .bar { flex: 1; height: 6px; border-radius: 3px; background: var(--surface-2); position: relative; overflow: hidden; }
+.bal-day .bar i { position: absolute; top: 0; bottom: 0; border-radius: 3px; }
+.bal-day .bar i.up { background: var(--ok); left: 50%; } .bal-day .bar i.down { background: var(--err); right: 50%; }
+.bal-day b { width: 40px; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---------- streak a schermo intero ---------- */
+.statbox[data-act="streak"] { cursor: pointer; transition: transform .12s; }
+.statbox[data-act="streak"]:active { transform: scale(.96); }
+#streakView {
+  position: fixed; inset: 0; z-index: 80; background: var(--bg); overflow-y: auto;
+  display: flex; flex-direction: column; align-items: center;
+  padding: calc(14px + env(safe-area-inset-top)) 20px calc(28px + env(safe-area-inset-bottom));
+  transition: clip-path .46s cubic-bezier(.3,.8,.2,1);
+}
+#streakView .sv-back {
+  background: transparent; border: 0;
+  position: absolute; top: calc(10px + env(safe-area-inset-top)); left: 10px; width: 44px; height: 44px;
+  display: grid; place-items: center; border-radius: 999px; color: var(--ink); z-index: 2;
+}
+#streakView .sv-back svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+#streakView .sv-in { opacity: 0; transform: translateY(14px) scale(.96); transition: opacity .35s ease .12s, transform .45s cubic-bezier(.2,.8,.3,1) .12s; width: 100%; max-width: 440px; margin: auto 0; text-align: center; }
+#streakView.open .sv-in { opacity: 1; transform: none; }
+.sv-glow { position: relative; width: min(62vw, 250px); aspect-ratio: 1; margin: 0 auto 6px; display: grid; place-items: center; }
+.sv-glow::before {
+  content: ""; position: absolute; inset: -16%; border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, currentColor 30%, transparent), transparent 68%);
+  animation: svglow 3.2s ease-in-out infinite;
+}
+.sv-glow .flame { position: relative; width: 100%; height: 100%; animation: svflame 1.9s ease-in-out infinite; transform-origin: 50% 90%; }
+@keyframes svflame { 0%,100% { transform: scale(1) rotate(-2deg); } 50% { transform: scale(1.06,1.09) rotate(2deg); } }
+@keyframes svglow { 0%,100% { opacity: .55; transform: scale(.94); } 50% { opacity: 1; transform: scale(1.06); } }
+.sv-glow .flame.flame-idle { animation: none; }
+.sv-num { font-size: 52px; font-weight: 800; letter-spacing: -.04em; line-height: 1.05; font-variant-numeric: tabular-nums; }
+.sv-lbl { font-size: 17px; font-weight: 700; color: var(--ink-2); margin-top: 2px; }
+.sv-days { display: flex; justify-content: center; gap: 10px; margin: 22px 0 6px; }
+.sv-day { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: var(--ink-2); }
+.sv-day.today { color: var(--ink); }
+.sv-box { width: 44px; height: 44px; border-radius: 10px; border: 2px solid var(--line-strong); display: grid; place-items: center; background: var(--surface); }
+.sv-box svg { width: 26px; height: 26px; fill: none; stroke: #fff; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 26; stroke-dashoffset: 26; }
+.sv-day.done .sv-box { background: var(--das); border-color: var(--das); }
+#streakView.open .sv-day.done .sv-box { animation: svpop .42s cubic-bezier(.3,1.6,.5,1) both; animation-delay: calc(.35s + var(--i) * .09s); }
+#streakView.open .sv-day.done .sv-box svg { animation: svcheck .3s ease-out forwards; animation-delay: calc(.5s + var(--i) * .09s); }
+@keyframes svpop { 0% { transform: scale(.6); } 100% { transform: scale(1); } }
+@keyframes svcheck { to { stroke-dashoffset: 0; } }
+.sv-quote { margin: 30px auto 0; padding: 0 6px; max-width: 380px; }
+.sv-quote p { margin: 0; font-family: var(--font-serif); font-size: 19px; line-height: 1.45; font-style: italic; }
+.sv-quote cite { display: block; margin-top: 12px; font-style: normal; font-size: 12.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--ink-3); }
+.sv-quote::before { content: ""; display: block; width: 36px; height: 3px; border-radius: 2px; background: var(--line-strong); margin: 0 auto 16px; }
+.sv-quote cite:empty { display: none; }
+.sv-msg { font-size: 13.5px; color: var(--ink-3); margin-top: 8px; }
+@media (prefers-reduced-motion: reduce) {
+  #streakView, #streakView .sv-in { transition: none; }
+  .sv-glow::before, .sv-glow .flame { animation: none; }
+}
+
+.sv-glow.flame-idle { color: #A39B8E; }
+.sv-glow.flame-idle::before { display: none; }
+
 /* ---------- progressi ---------- */
 .section-h { font-size: 13px; font-weight: 700; color: var(--ink-2); margin: 26px 0 10px; }
 .bars { display: flex; flex-direction: column; gap: 9px; }
@@ -780,12 +1049,14 @@ var LS = {
   srs: "wk_srs",
   stats: "wk_stats",
   prefs: "wk_prefs",
-  notif: "wk_notif"
+  notif: "wk_notif",
+  hist: "wk_hist",
+  time: "wk_time"
 };
 
 // --- notifiche programmate (vedi GUIDA-NOTIFICHE.md) ---
 // Indirizzo del server notifiche (Cloudflare Worker). Finché è vuoto la sezione Notifiche spiega cosa manca.
-var PUSH_SERVER_URL = "https://wortschatz-push.federico-margherit9.workers.dev";
+var PUSH_SERVER_URL = "";
 // Chiave pubblica VAPID (la coppia privata sta solo sul server).
 var VAPID_PUBLIC_KEY = "BLn1Fdl04Z_i2hPtOAp2toc3icB2vt1e0MmOf3M7gg-j5XnrRMZXxMXxpEfxR_-B5eu5rKWw2ombG0AdwSr8evE";
 var MAX_REMINDERS = 8;
@@ -907,7 +1178,10 @@ var store = {
   stats: lsGet(LS.stats, { streak: 0, lastDay: null, total: 0, byDay: {} }),
   prefs: lsGet(LS.prefs, { theme: "auto", dir: "de-it", audio: true }),
   // le notifiche sono per dispositivo (ogni telefono ha la sua iscrizione): non finiscono nei backup
-  notif: lsGet(LS.notif, { enabled: false, reminders: [] })
+  notif: lsGet(LS.notif, { enabled: false, reminders: [] }),
+  // registro dei cambi di stato (bilancio) e tempo trascorso nell'app: partono dal primo avvio di questa versione
+  hist: lsGet(LS.hist, { since: today(), days: {} }),
+  time: lsGet(LS.time, { total: 0, byDay: {} })
 };
 var state = {
   tab: "lessico",
@@ -918,6 +1192,705 @@ var state = {
 };
 var rv = null;  // sessione di ripasso
 var qz = null;  // sessione di quiz
+
+/* =================================================================
+   NOVITÀ: impostazioni, backup, statistiche, streak, nuove parole
+   ================================================================= */
+
+var PREF_DEFAULTS = {
+  theme: "auto", dir: "de-it", audio: true,
+  // categorie incluse nei backup (esportazione manuale e backup automatico)
+  backupCats: { progress: true, custom: true, allwords: true, topics: true, stats: true, settings: true, flags: true, edits: true },
+  // dow: 0 = domenica … 6 = sabato
+  autoBackup: { on: false, dow: 0, time: "20:00" },
+  prioUnseen: false,        // ripasso per argomento: prima le parole mai viste
+  newFromStarted: false,    // "Scopri parole nuove": prima gli argomenti già iniziati
+  autoNew: { on: false, count: 5, lim1On: true, lim1: 80, lim2On: true, lim2: 30, preferStarted: false, lastDay: null },
+  timeRange: "today"
+};
+function fillDefaults(target, defs) {
+  Object.keys(defs).forEach(function (k) {
+    var dv = defs[k];
+    if (dv && typeof dv === "object" && !Array.isArray(dv)) {
+      if (!target[k] || typeof target[k] !== "object") target[k] = {};
+      fillDefaults(target[k], dv);
+    } else if (target[k] === undefined) target[k] = dv;
+  });
+  return target;
+}
+function normalizePrefs() { fillDefaults(store.prefs, PREF_DEFAULTS); }
+function getPath(o, path) { return path.split(".").reduce(function (a, k) { return a == null ? a : a[k]; }, o); }
+function setPath(o, path, v) {
+  var p = path.split("."), last = p.pop();
+  var t = p.reduce(function (a, k) { return a[k]; }, o);
+  t[last] = v;
+}
+
+/* ---------------- registro dei cambi di stato (bilancio parole) ---------------- */
+// n = nuove (mai viste → in corso) · u = avanzate di scatola · k = diventate sicure
+// d = retrocesse · l = uscite dallo stato "sicura"
+function recordChange(prevBox, newBox) {
+  if (prevBox === newBox) return;
+  var t = today(), h = store.hist;
+  h.days = h.days || {};
+  var r = h.days[t] || (h.days[t] = { n: 0, u: 0, k: 0, d: 0, l: 0 });
+  if (prevBox === undefined) r.n++;
+  else if (newBox > prevBox) { if (prevBox < KNOWN_BOX && newBox >= KNOWN_BOX) r.k++; else r.u++; }
+  else { if (prevBox >= KNOWN_BOX && newBox < KNOWN_BOX) r.l++; else r.d++; }
+  var keys = Object.keys(h.days).sort();
+  while (keys.length > 90) delete h.days[keys.shift()];
+  save("hist");
+}
+function histSum(days) {
+  var out = { n: 0, u: 0, k: 0, d: 0, l: 0 }, t = today();
+  for (var i = 0; i < days; i++) {
+    var r = (store.hist.days || {})[addDays(t, -i)];
+    if (r) Object.keys(out).forEach(function (k) { out[k] += r[k] || 0; });
+  }
+  return out;
+}
+
+/* ---------------- tempo trascorso nell'app ---------------- */
+// conto solo i secondi in cui l'app è in primo piano E l'utente ha toccato/scritto/scorso da meno di un minuto
+var tmLast = Date.now(), tmAct = Date.now(), tmDirty = false, tmSaved = Date.now();
+["pointerdown", "keydown", "touchstart", "wheel", "scroll", "click"].forEach(function (ev) {
+  window.addEventListener(ev, function () { tmAct = Date.now(); }, { passive: true, capture: true });
+});
+function timeTick() {
+  var now = Date.now();
+  var dt = Math.min((now - tmLast) / 1000, 10);   // dopo una sospensione non recupero i secondi persi
+  tmLast = now;
+  if (document.visibilityState === "visible" && now - tmAct <= 60000 && dt > 0) {
+    var t = today(), tm = store.time;
+    tm.byDay = tm.byDay || {};
+    tm.byDay[t] = Math.round(((tm.byDay[t] || 0) + dt) * 10) / 10;
+    tm.total = Math.round(((tm.total || 0) + dt) * 10) / 10;
+    tmDirty = true;
+    var keys = Object.keys(tm.byDay);
+    if (keys.length > 400) { keys.sort(); while (keys.length > 400) delete tm.byDay[keys.shift()]; }
+  }
+  if (tmDirty && now - tmSaved > 15000) flushTime();
+  var big = el("timeBig");
+  if (big && state.tab === "progressi") big.textContent = fmtTime(timeFor(store.prefs.timeRange));
+}
+function flushTime() { if (tmDirty) { save("time"); tmDirty = false; } tmSaved = Date.now(); }
+function timeFor(range) {
+  var tm = store.time, t = today();
+  if (range === "all") return tm.total || 0;
+  var n = range === "today" ? 1 : range === "week" ? 7 : 30, s = 0;
+  for (var i = 0; i < n; i++) s += (tm.byDay || {})[addDays(t, -i)] || 0;
+  return s;
+}
+function fmtTime(sec) {
+  sec = Math.round(sec);
+  if (sec < 60) return sec + " s";
+  var m = Math.floor(sec / 60);
+  if (m < 60) return m + " min";
+  var h = Math.floor(m / 60);
+  return h + " h " + String(m % 60).padStart(2, "0") + " min";
+}
+setInterval(timeTick, 5000);
+document.addEventListener("visibilitychange", function () {
+  tmLast = Date.now();
+  if (document.visibilityState === "hidden") flushTime();
+  else { backupCheck(); autoAddNewWords(); }
+});
+window.addEventListener("pagehide", flushTime);
+
+/* ---------------- parole nuove: scelta ---------------- */
+// argomenti "iniziati" = quelli con almeno una parola già entrata nel ripasso
+function startedTopics() {
+  var set = {};
+  allItems().forEach(function (i) { if (store.srs[i.id]) (i.topics || []).forEach(function (t) { set[t] = true; }); });
+  return set;
+}
+function pickNewWords(n, preferStarted) {
+  var unseen = allItems().filter(function (i) { return isNew(i.id); });
+  if (!preferStarted) return sample(unseen, n);
+  var st = startedTopics();
+  var pri = [], rest = [];
+  unseen.forEach(function (i) { ((i.topics || []).some(function (t) { return st[t]; }) ? pri : rest).push(i); });
+  var out = sample(pri, n);
+  if (out.length < n) out = out.concat(sample(rest, n - out.length));
+  return out;
+}
+// ripasso di un argomento: prima le parole mai viste (in ordine casuale), poi le altre (in ordine casuale)
+function unseenFirst(list) {
+  var a = [], b = [];
+  list.forEach(function (i) { (isNew(i.id) ? a : b).push(i); });
+  return shuffle(a).concat(shuffle(b));
+}
+// inserimento automatico giornaliero nel ripasso
+function autoAddNewWords() {
+  var a = store.prefs.autoNew;
+  if (!a || !a.on) return 0;
+  var t = today();
+  if (a.lastDay === t) return 0;
+  if (!db.official.length && !store.custom.length) return 0;   // lessico non ancora caricato
+  var learning = allItems().filter(function (i) { var s = store.srs[i.id]; return s && (s.box || 0) < KNOWN_BOX; }).length;
+  var due = dueItems().length;
+  if (a.lim1On && !(learning < a.lim1)) return 0;
+  if (a.lim2On && !(due < a.lim2)) return 0;
+  var pick = pickNewWords(a.count, a.preferStarted);
+  pick.forEach(function (it) {
+    if (store.srs[it.id]) return;                                // mai duplicati né parole già incontrate
+    store.srs[it.id] = { box: 0, due: t, right: 0, wrong: 0, auto: t };
+    recordChange(undefined, 0);
+  });
+  a.lastDay = t;
+  save("srs"); save("prefs");
+  if (pick.length) {
+    toast(plural(pick.length, "parola nuova aggiunta", "parole nuove aggiunte") + " al ripasso di oggi.");
+    if (!rv && !sheetEl && !el("streakView")) render();
+  }
+  return pick.length;
+}
+
+/* ---------------- citazioni ---------------- */
+var QUOTES = [
+  { t: "Avere un’altra lingua è possedere una seconda anima.", a: "Carlo Magno" },
+  { t: "Imparare un’altra lingua non significa solo conoscere parole diverse, ma anche imparare un altro modo di pensare.", a: "Flora Lewis" },
+  { t: "Chi non conosce le lingue straniere non sa nulla della propria.", a: "Johann Wolfgang von Goethe" },
+  { t: "Se parlassimo un’altra lingua, percepiremmo un mondo leggermente diverso.", a: "Ludwig Wittgenstein" },
+  { t: "Imparare un’altra lingua è come diventare un’altra persona.", a: "Haruki Murakami" },
+  { t: "Se parli a una persona in una lingua che capisce, parli alla sua testa. Se le parli nella sua lingua madre, parli al suo cuore.", a: "Nelson Mandela" },
+  { t: "Chi parla solo una lingua è una persona, ma chi ne parla due è due persone.", a: "Proverbio turco" },
+  { t: "Vivi una nuova vita per ogni nuova lingua che parli.", a: "Proverbio ceco" },
+  { t: "Impara come se dovessi vivere per sempre.", a: "Mahatma Gandhi" },
+  { t: "Non scoraggiare mai nessuno che continua a fare progressi, non importa quanto lentamente.", a: "Platone" },
+  { t: "L’educazione fai-da-te è l’unico tipo di educazione che esista.", a: "Isaac Asimov" },
+  { t: "Impara quel che è più semplice! Per quelli il cui tempo è venuto non è mai troppo tardi!", a: "Bertolt Brecht · Lode dell’imparare" },
+  { t: "Impara l’abc; non basta, ma imparalo! […] Affamato, afferra il libro: è un’arma. Tu devi prendere il potere.", a: "Bertolt Brecht · Lode dell’imparare" },
+  { t: "Non avere paura di chiedere, compagno! Non lasciarti influenzare, verifica tu stesso! […] Punta il dito su ogni voce, chiedi: e questo, perché?", a: "Bertolt Brecht · Lode dell’imparare" },
+  { t: "Sto lavorando duro per preparare il mio prossimo errore.", a: "Riflessione sull’imparare attraverso i propri passi falsi" },
+  { t: "Ci sono quelli che lottano tutta la vita: essi sono gli indispensabili.", a: "" },
+  { t: "Il dubbio è la cosa più sicura.", a: "" }
+];
+// mai la stessa frase due volte di fila (l'ultima mostrata resta tra un'apertura e l'altra)
+function pickQuote() {
+  var last = lsGet("wk_quote_last", -1), idx;
+  do { idx = Math.floor(Math.random() * QUOTES.length); } while (QUOTES.length > 1 && idx === last);
+  lsSet("wk_quote_last", idx);
+  return QUOTES[idx];
+}
+
+/* ---------------- streak a schermo intero ---------------- */
+var streakOpen = false;
+var DAY_INITIAL = ["D", "L", "M", "M", "G", "V", "S"];
+function dayDone(d) {
+  var st = store.stats;
+  if (st.byDay && st.byDay[d] > 0) return true;
+  if (!st.lastDay || !st.streak) return false;
+  return d <= st.lastDay && d > addDays(st.lastDay, -st.streak);
+}
+function streakHtml() {
+  var st = store.stats, streak = st.streak || 0, t = today();
+  var stage = flameStage(streak) || "flame-red";
+  var doneToday = st.lastDay === t && streak > 0;
+  var cls = doneToday ? stage : "flame-idle";
+  var days = "";
+  for (var i = 4; i >= 0; i--) {
+    var d = addDays(t, -i), p = d.split("-"), wd = new Date(+p[0], +p[1] - 1, +p[2]).getDay();
+    var done = dayDone(d);
+    days += '<div class="sv-day' + (done ? " done" : "") + (i === 0 ? " today" : "") + '" style="--i:' + (4 - i) + '">' +
+      "<span>" + DAY_INITIAL[wd] + '</span><span class="sv-box">' +
+      (done ? '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>' : "") + "</span></div>";
+  }
+  var q = pickQuote();
+  var msg = !streak ? "Studia oggi per accendere la fiamma." :
+    (doneToday ? "Oggi hai già fatto la tua parte." : "Fai un ripasso oggi per tenere viva la serie.");
+  return '<button class="sv-back" data-act="streakback" aria-label="Indietro"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>' +
+    '<div class="sv-in">' +
+      '<div class="sv-glow ' + cls + '"><span class="flame ' + cls + '" aria-hidden="true">' + icons.flame + "</span></div>" +
+      '<div class="sv-num">' + streak + "</div>" +
+      '<div class="sv-lbl">' + (streak === 1 ? "giorno di fila" : "giorni di fila") + "</div>" +
+      '<div class="sv-msg">' + msg + "</div>" +
+      '<div class="sv-days" aria-label="Ultimi cinque giorni">' + days + "</div>" +
+      '<blockquote class="sv-quote"><p>«' + esc(q.t) + "»</p><cite>" + esc(q.a) + "</cite></blockquote>" +
+    "</div>";
+}
+function streakRect(fromEl) {
+  var W = window.innerWidth, H = window.innerHeight, r = fromEl && fromEl.getBoundingClientRect();
+  if (!r || !r.width) return "inset(50% 50% 50% 50% round 14px)";
+  return "inset(" + Math.max(0, r.top) + "px " + Math.max(0, W - r.right) + "px " + Math.max(0, H - r.bottom) + "px " + Math.max(0, r.left) + "px round 12px)";
+}
+function openStreak(fromEl) {
+  if (streakOpen) return;
+  streakOpen = true;
+  var v = document.createElement("div");
+  v.id = "streakView";
+  v.setAttribute("role", "dialog"); v.setAttribute("aria-label", "La tua costanza");
+  v.innerHTML = streakHtml();
+  v.style.clipPath = streakRect(fromEl);
+  document.body.appendChild(v);
+  document.body.style.overflow = "hidden";
+  void v.offsetWidth;
+  requestAnimationFrame(function () {
+    v.classList.add("open");
+    v.style.clipPath = "inset(0px 0px 0px 0px round 0px)";
+  });
+  try { history.pushState({ sv: 1 }, ""); } catch (e) {}
+  var b = v.querySelector(".sv-back"); if (b) b.focus({ preventScroll: true });
+}
+function closeStreak() {
+  var v = el("streakView");
+  if (!streakOpen || !v) { streakOpen = false; return; }
+  streakOpen = false;
+  v.classList.remove("open");
+  v.style.clipPath = streakRect($('[data-act="streak"]'));
+  setTimeout(function () { v.remove(); if (!sheetEl) document.body.style.overflow = ""; }, 480);
+}
+window.addEventListener("popstate", function () { if (streakOpen) closeStreak(); });
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && streakOpen) { ACTIONS.streakback(); return; }
+  if (e.key === "Enter" && document.activeElement && document.activeElement.getAttribute("data-act") === "streak") {
+    e.preventDefault(); openStreak(document.activeElement);
+  }
+});
+
+/* ---------------- backup: contenuto ---------------- */
+var BK_CATS = [
+  { id: "progress", label: "Progressi", hint: "scatole, livelli e scadenze del ripasso" },
+  { id: "custom",   label: "Parole aggiunte", hint: "le parole che hai inserito tu" },
+  { id: "allwords", label: "Tutte le parole", hint: "anche il lessico di classe (file più pesante)" },
+  { id: "topics",   label: "Argomenti lessicali", hint: "argomenti personalizzati" },
+  { id: "stats",    label: "Statistiche", hint: "streak, attività, tempo di studio, bilancio" },
+  { id: "settings", label: "Impostazioni", hint: "tema, audio, backup, nuove parole" },
+  { id: "flags",    label: "Parole «Da studiare»", hint: "i segni che hai messo alle parole" },
+  { id: "edits",    label: "Modifiche e parole eliminate", hint: "correzioni al lessico di classe e parole nascoste" }
+];
+function enabledCats() {
+  var c = store.prefs.backupCats;
+  return BK_CATS.map(function (x) { return x.id; }).filter(function (id) { return c[id]; });
+}
+function clone(o) { return JSON.parse(JSON.stringify(o)); }
+function buildBackup(cats) {
+  cats = cats || enabledCats();
+  var has = function (c) { return cats.indexOf(c) !== -1; };
+  var p = { app: "wortschatzkasten", version: 3, exportedAt: new Date().toISOString(), categories: cats };
+  if (has("progress")) p.srs = store.srs;
+  if (has("custom")) p.customItems = store.custom;
+  if (has("allwords")) p.allWords = { items: db.official, topics: db.officialTopics };
+  if (has("topics")) p.customTopics = store.topics;
+  if (has("stats")) { p.stats = store.stats; p.time = store.time; p.hist = store.hist; }
+  if (has("settings")) p.prefs = store.prefs;
+  if (has("flags")) p.flags = store.flags;
+  if (has("edits")) { p.overrides = store.overrides; p.deletedIds = store.deleted; }
+  return p;
+}
+function downloadJson(obj, name) {
+  var blob = new Blob([JSON.stringify(obj)], { type: "application/json" });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement("a");
+  a.href = url; a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+}
+
+/* ---------------- backup: copia interna (IndexedDB) e cartella ---------------- */
+function idbKV(mode, fn) {
+  return idbOpen().then(function (d) {
+    return new Promise(function (resolve, reject) {
+      var tx = d.transaction("kv", mode), r = fn(tx.objectStore("kv"));
+      tx.oncomplete = function () { resolve(r && r.result); };
+      tx.onerror = tx.onabort = function () { reject(tx.error); };
+    });
+  });
+}
+function idbPut(k, v) { return idbKV("readwrite", function (s) { return s.put(v, k); }); }
+function idbGet(k) { return idbKV("readonly", function (s) { return s.get(k); }); }
+var BK_FILE = "wortschatzkasten-backup-automatico.json";
+var bkMeta = lsGet("wk_backupmeta", { lastAt: 0, internal: false, filePending: false, fileAt: 0, dirName: "", preImportAt: 0 });
+function saveBkMeta() { lsSet("wk_backupmeta", bkMeta); }
+var bkRunning = false;
+
+function lastScheduled(now) {
+  var ab = store.prefs.autoBackup, hm = (ab.time || "20:00").split(":");
+  var d = new Date(now);
+  d.setHours(+hm[0] || 0, +hm[1] || 0, 0, 0);
+  d.setDate(d.getDate() - ((d.getDay() - ab.dow + 7) % 7));
+  if (d.getTime() > now) d.setDate(d.getDate() - 7);
+  return d.getTime();
+}
+// Il browser non può far partire nulla ad app chiusa: il backup scatta alla prima apertura
+// (o appena l'app torna in primo piano) dopo il giorno e l'ora scelti.
+function backupCheck(force) {
+  var ab = store.prefs.autoBackup;
+  if (!ab || !ab.on || bkRunning) return Promise.resolve(false);
+  var now = Date.now();
+  if (!force && bkMeta.lastAt >= lastScheduled(now)) return Promise.resolve(false);
+  // dati non ancora pronti (lessico in caricamento): riprovo più tardi
+  if (!db.official.length && !store.custom.length && !Object.keys(store.srs).length) return Promise.resolve(false);
+  bkRunning = true;
+  var payload = buildBackup();
+  return idbPut("autobackup", payload).then(function () { bkMeta.internal = true; }, function () { bkMeta.internal = false; })
+    .then(function () { return writeToFolder(payload, false); })
+    .then(function (savedToFolder) {
+      bkMeta.lastAt = Date.now();
+      bkMeta.filePending = !savedToFolder;
+      if (savedToFolder) bkMeta.fileAt = bkMeta.lastAt;
+      saveBkMeta();
+      bkRunning = false;
+      if (sheetEl && sheetEl.querySelector("#setMark")) openSettings();
+      if (!rv && !sheetEl && !streakOpen) render();
+      return true;
+    }, function () { bkRunning = false; return false; });
+}
+// scrive nella cartella scelta, se il browser la ricorda e il permesso è ancora valido
+function writeToFolder(payload, userGesture) {
+  if (!("showDirectoryPicker" in window)) return Promise.resolve(false);
+  return idbGet("bkdir").then(function (h) {
+    if (!h) return false;
+    var perm = userGesture ? (h.requestPermission ? h.requestPermission({ mode: "readwrite" }) : "denied") :
+      (h.queryPermission ? h.queryPermission({ mode: "readwrite" }) : "denied");
+    return Promise.resolve(perm).then(function (p) {
+      if (p !== "granted") return false;
+      return h.getFileHandle(BK_FILE, { create: true }).then(function (fh) { return fh.createWritable(); })
+        .then(function (w) { return w.write(JSON.stringify(payload)).then(function () { return w.close(); }); })
+        .then(function () { return true; });
+    });
+  }).catch(function () { return false; });
+}
+// pulsante "Salva il file": parte da un tocco, quindi può usare permessi e download
+function saveBackupFile() {
+  return idbGet("autobackup").catch(function () { return null; }).then(function (payload) {
+    payload = payload || buildBackup();
+    return writeToFolder(payload, true).then(function (ok) {
+      if (!ok) downloadJson(payload, BK_FILE);
+      bkMeta.filePending = false; bkMeta.fileAt = Date.now(); saveBkMeta();
+      toast(ok ? "Backup salvato nella cartella." : "Backup scaricato.");
+      if (sheetEl && sheetEl.querySelector("#setMark")) openSettings();
+      render();
+    });
+  });
+}
+function pickBackupFolder() {
+  if (!("showDirectoryPicker" in window)) return;
+  window.showDirectoryPicker({ mode: "readwrite" }).then(function (h) {
+    bkMeta.dirName = h.name || "cartella"; saveBkMeta();
+    return idbPut("bkdir", h);
+  }).then(function () { toast("Cartella scelta."); openSettings(); }).catch(function () {});
+}
+function fmtStamp(ms) {
+  var d = new Date(ms), p = function (n) { return String(n).padStart(2, "0"); };
+  return p(d.getDate()) + "/" + p(d.getMonth() + 1) + " " + p(d.getHours()) + ":" + p(d.getMinutes());
+}
+var DOW_NAMES = [["1", "Lunedì"], ["2", "Martedì"], ["3", "Mercoledì"], ["4", "Giovedì"], ["5", "Venerdì"], ["6", "Sabato"], ["0", "Domenica"]];
+
+/* ---------------- backup: ripristino ---------------- */
+var imp = null;   // { data, has, sel, mode }
+function detectCats(d) {
+  return {
+    progress: !!d.srs, custom: !!d.customItems, allwords: !!(d.allWords && d.allWords.items), topics: !!d.customTopics,
+    stats: !!(d.stats || d.time || d.hist), settings: !!d.prefs, flags: !!d.flags, edits: !!(d.overrides || d.deletedIds)
+  };
+}
+function mergeDayMax(a, b) {
+  var out = Object.assign({}, a);
+  Object.keys(b || {}).forEach(function (k) {
+    if (b[k] && typeof b[k] === "object") {
+      var o = out[k] = Object.assign({}, out[k] || {});
+      Object.keys(b[k]).forEach(function (f) { o[f] = Math.max(o[f] || 0, b[k][f] || 0); });
+    } else out[k] = Math.max(out[k] || 0, b[k] || 0);
+  });
+  return out;
+}
+function applyBackup(d, mode, sel) {
+  var rep = mode === "replace";
+  if (sel.progress && d.srs) {
+    if (rep) store.srs = clone(d.srs);
+    else Object.keys(d.srs).forEach(function (k) {
+      var mine = store.srs[k], theirs = d.srs[k];
+      if (!mine || (theirs.box || 0) > (mine.box || 0)) store.srs[k] = theirs;
+    });
+  }
+  if (sel.topics && d.customTopics) {
+    if (rep) store.topics = d.customTopics.slice();
+    else d.customTopics.forEach(function (t) { if (store.topics.indexOf(t) === -1) store.topics.push(t); });
+  }
+  if (sel.custom && d.customItems) {
+    if (rep) store.custom = clone(d.customItems);
+    else d.customItems.forEach(function (it) { if (!store.custom.some(function (x) { return x.id === it.id; })) store.custom.push(it); });
+    // gli argomenti delle parole importate devono esistere, altrimenti non si vedrebbero nei filtri
+    store.custom.forEach(function (it) { (it.topics || []).forEach(function (t) { if (allTopics().indexOf(t) === -1) store.topics.push(t); }); });
+  }
+  if (sel.allwords && d.allWords) {
+    // non tolgo mai parole dal lessico di classe: aggiungo solo quelle che mancano
+    var have = {}; db.official.forEach(function (i) { have[i.id] = true; });
+    (d.allWords.items || []).forEach(function (i) { if (i && i.id && !have[i.id]) db.official.push(i); });
+    (d.allWords.topics || []).forEach(function (t) { if (db.officialTopics.indexOf(t) === -1) db.officialTopics.push(t); });
+    lsSet("wk_vocab_cache", { items: db.official, topics: db.officialTopics });
+  }
+  if (sel.flags && d.flags) {
+    if (rep) store.flags = clone(d.flags);
+    else Object.keys(d.flags).forEach(function (k) { if (d.flags[k]) store.flags[k] = true; });
+  }
+  if (sel.edits) {
+    if (d.overrides) {
+      if (rep) store.overrides = clone(d.overrides);
+      else Object.keys(d.overrides).forEach(function (k) { if (!store.overrides[k]) store.overrides[k] = d.overrides[k]; });
+    }
+    if (d.deletedIds) {
+      if (rep) store.deleted = d.deletedIds.slice();
+      else d.deletedIds.forEach(function (k) { if (store.deleted.indexOf(k) === -1) store.deleted.push(k); });
+    }
+  }
+  if (sel.stats) {
+    if (d.stats) {
+      if (rep) store.stats = clone(d.stats);
+      else {
+        var a = store.stats, b = d.stats;
+        var useB = (b.lastDay || "") > (a.lastDay || "") || ((b.lastDay || "") === (a.lastDay || "") && (b.streak || 0) > (a.streak || 0));
+        store.stats = {
+          streak: useB ? b.streak || 0 : a.streak || 0, lastDay: useB ? b.lastDay || null : a.lastDay || null,
+          total: Math.max(a.total || 0, b.total || 0), byDay: mergeDayMax(a.byDay, b.byDay)
+        };
+      }
+    }
+    if (d.time) {
+      if (rep) store.time = clone(d.time);
+      else store.time = { total: Math.max(store.time.total || 0, d.time.total || 0), byDay: mergeDayMax(store.time.byDay, d.time.byDay) };
+    }
+    if (d.hist) {
+      if (rep) store.hist = clone(d.hist);
+      else store.hist = { since: [store.hist.since, d.hist.since].filter(Boolean).sort()[0] || today(), days: mergeDayMax(store.hist.days, d.hist.days) };
+    }
+  }
+  if (sel.settings && d.prefs) {
+    if (rep) Object.assign(store.prefs, clone(d.prefs));
+    else Object.keys(d.prefs).forEach(function (k) { if (store.prefs[k] === undefined) store.prefs[k] = d.prefs[k]; });
+    normalizePrefs();
+  }
+  ["srs", "topics", "custom", "flags", "deleted", "overrides", "stats", "time", "hist", "prefs"].forEach(save);
+}
+function openImport(d) {
+  var has = detectCats(d), sel = {};
+  Object.keys(has).forEach(function (k) { sel[k] = has[k]; });
+  if (!Object.keys(has).some(function (k) { return has[k]; })) { toast("Questo file non è un backup del Kasten."); return; }
+  imp = { data: d, has: has, sel: sel, mode: "merge" };
+  openImportSheet(false);
+}
+function openImportSheet(keep) {
+  var h = '<div class="sheet-h"><h2>Ripristina un backup</h2><button class="iconbtn" data-act="closesheet" aria-label="Chiudi">✕</button></div>';
+  if (imp.data.exportedAt) h += '<p class="setnote" style="margin:0 0 8px">File del ' + esc(String(imp.data.exportedAt).slice(0, 10)) + ". Scegli cosa ripristinare:</p>";
+  BK_CATS.forEach(function (c) {
+    if (!imp.has[c.id]) return;
+    h += swRow(c.label, c.hint, imp.sel[c.id], "impsel", c.id);
+  });
+  h += '<div class="field" style="margin-top:14px"><label>Come?</label><div class="pickrow">' +
+    '<button class="pick ' + (imp.mode === "merge" ? "on" : "") + '" data-act="impmode" data-v="merge">Unisci</button>' +
+    '<button class="pick ' + (imp.mode === "replace" ? "on" : "") + '" data-act="impmode" data-v="replace">Sostituisci</button></div>' +
+    '<p class="setnote">' + (imp.mode === "merge" ?
+      "Aggiunge ciò che manca e tiene lo stato più avanzato: non cancella nulla." :
+      "Le categorie scelte vengono sostituite con quelle del file. Il lessico di classe non viene mai ridotto.") + "</p>" +
+    '<p class="setnote">Prima di ripristinare salvo una copia dei tuoi dati attuali: potrai annullare.</p></div>';
+  h += '<div class="sheet-actions"><button class="btn ghost" data-act="closesheet">Annulla</button>' +
+    '<button class="btn" data-act="impgo">Ripristina</button></div>';
+  openSheet(h, keep);
+}
+function doImport() {
+  var all = BK_CATS.map(function (c) { return c.id; });
+  var sel = imp.sel, mode = imp.mode, data = imp.data;
+  if (!Object.keys(sel).some(function (k) { return sel[k]; })) { toast("Scegli almeno una categoria."); return; }
+  idbPut("preimport", buildBackup(all)).then(function () { return true; }, function () { return false; })
+    .then(function (safe) {
+      if (safe) { bkMeta.preImportAt = Date.now(); saveBkMeta(); }
+      else if (mode === "replace") { toast("Non riesco a salvare la copia di sicurezza: uso «Unisci»."); mode = "merge"; }
+      applyBackup(data, mode, sel);
+      imp = null;
+      closeSheet(); applyTheme(); render();
+      toast("Backup ripristinato.");
+    });
+}
+function undoImport() {
+  idbGet("preimport").then(function (d) {
+    if (!d) { toast("Nessun ripristino da annullare."); return; }
+    var all = {}; BK_CATS.forEach(function (c) { all[c.id] = true; });
+    applyBackup(d, "replace", all);
+    bkMeta.preImportAt = 0; saveBkMeta(); idbPut("preimport", null).catch(function () {});
+    applyTheme(); openSettings(); render();
+    toast("Ripristino annullato.");
+  }).catch(function () { toast("Non riesco a leggere la copia di sicurezza."); });
+}
+
+/* ---------------- impostazioni: elementi grafici ---------------- */
+function swRow(title, hint, on, act, v, dim) {
+  return '<div class="setrow' + (dim ? " dim" : "") + '"><div class="txt"><b>' + title + "</b>" + (hint ? "<small>" + hint + "</small>" : "") + "</div>" +
+    '<button class="switch ' + (on ? "on" : "") + '" role="switch" aria-checked="' + !!on + '" aria-label="' + esc(title) + '" data-act="' + act + '" data-v="' + esc(v) + '"></button></div>';
+}
+// rotella: scorre a scatti, il numero al centro è quello scelto
+function wheelRow(title, hint, path, min, max, dim) {
+  var val = getPath(store.prefs, path), items = "";
+  for (var n = min; n <= max; n++) items += '<div class="wheel-i' + (n === val ? " sel" : "") + '" data-n="' + n + '">' + n + "</div>";
+  return '<div class="setrow' + (dim ? " dim" : "") + '"><div class="txt"><b>' + title + "</b>" + (hint ? "<small>" + hint + "</small>" : "") + "</div>" +
+    '<div class="wheelbox"><div class="wheel" tabindex="0" role="spinbutton" aria-label="' + esc(title) + '" aria-valuemin="' + min + '" aria-valuemax="' + max +
+    '" aria-valuenow="' + val + '" data-path="' + path + '" data-min="' + min + '" data-max="' + max + '"><div class="wheel-pad"></div>' + items + '<div class="wheel-pad"></div></div></div></div>';
+}
+function initWheels(root) {
+  Array.prototype.forEach.call(root.querySelectorAll(".wheel"), function (w) {
+    var min = +w.dataset.min, max = +w.dataset.max, path = w.dataset.path, cur = getPath(store.prefs, path), timer = null;
+    w.scrollTop = (cur - min) * 28;
+    function idxVal() { return Math.max(min, Math.min(max, Math.round(w.scrollTop / 28) + min)); }
+    function mark(v) {
+      Array.prototype.forEach.call(w.querySelectorAll(".wheel-i"), function (it) { it.classList.toggle("sel", +it.dataset.n === v); });
+      w.setAttribute("aria-valuenow", v);
+    }
+    w.addEventListener("scroll", function () {
+      var v = idxVal();
+      if (v !== cur) { cur = v; mark(v); }
+      clearTimeout(timer);
+      timer = setTimeout(function () { if (getPath(store.prefs, path) !== cur) { setPath(store.prefs, path, cur); save("prefs"); } }, 160);
+    }, { passive: true });
+    w.addEventListener("click", function (e) {
+      var it = e.target.closest(".wheel-i");
+      if (it) w.scrollTo({ top: (+it.dataset.n - min) * 28, behavior: "smooth" });
+    });
+    w.addEventListener("keydown", function (e) {
+      var d = e.key === "ArrowUp" ? -1 : e.key === "ArrowDown" ? 1 : 0;
+      if (!d) return;
+      e.preventDefault(); e.stopPropagation();
+      w.scrollTo({ top: (Math.max(min, Math.min(max, cur + d)) - min) * 28, behavior: "smooth" });
+    });
+  });
+}
+function bkStatusHtml() {
+  var ab = store.prefs.autoBackup, h = "";
+  if (!ab.on) return "";
+  var dn = DOW_NAMES.filter(function (x) { return +x[0] === ab.dow; })[0][1].toLowerCase();
+  h += "Prossimo backup: " + dn + " alle " + esc(ab.time) + " (se l’app è chiusa, alla prima apertura dopo).<br>";
+  h += bkMeta.lastAt ? "Ultimo backup: " + fmtStamp(bkMeta.lastAt) + (bkMeta.internal ? " · copia interna salvata" : " · copia interna non riuscita") : "Nessun backup ancora eseguito.";
+  if (bkMeta.fileAt) h += "<br>Ultimo file salvato: " + fmtStamp(bkMeta.fileAt);
+  return h;
+}
+function openSettings() {
+  var p = store.prefs, o = state.setOpen = state.setOpen || {};
+  var keep = !!(sheetEl && sheetEl.querySelector("#setMark"));
+  var h = '<span id="setMark" class="sr"></span><div class="sheet-h"><h2>Impostazioni</h2><button class="iconbtn" data-act="closesheet" aria-label="Chiudi">✕</button></div>';
+  h += '<div class="field"><label>Tema</label><div class="themegrid">' +
+    THEMES.map(function (t) {
+      return '<button class="themeopt ' + (p.theme === t.id ? "on" : "") + '" data-act="settheme" data-v="' + t.id + '">' +
+        '<span class="sw" style="background:' + t.swatch[0] + '"><i style="background:' + t.swatch[1] + '"></i></span>' +
+        "<span>" + t.label + "</span></button>";
+    }).join("") + "</div></div>";
+  h += '<div class="field"><label>Pronuncia tedesca</label><div class="pickrow">' +
+    '<button class="pick ' + (p.audio ? "on" : "") + '" data-act="setaudio" data-v="1">Attiva</button>' +
+    '<button class="pick ' + (!p.audio ? "on" : "") + '" data-act="setaudio" data-v="0">Disattiva</button></div>' +
+    '<p style="font-size:12.5px;color:var(--ink-3);margin:8px 0 0">Usa la voce di sistema del telefono: se manca il tedesco, il pulsante resta silenzioso.</p></div>';
+
+  // --- ripasso e parole nuove ---
+  var a = p.autoNew;
+  h += '<details class="setgroup" data-g="rev"' + (o.rev ? " open" : "") + "><summary>Ripasso e parole nuove</summary><div class=\"setgroup-body\">";
+  h += swRow("Prima le parole mai viste", "Ripassando un argomento dal Lessico, le parole che non hai mai incontrato vengono proposte per prime; poi tutte le altre.", p.prioUnseen, "setflag", "prioUnseen");
+  h += swRow("«Scopri parole nuove»: argomenti già iniziati", "Le parole nuove si pescano prima dagli argomenti che hai già iniziato e che hanno ancora parole mai viste. Spento: scelta casuale.", p.newFromStarted, "setflag", "newFromStarted");
+  h += "</div></details>";
+
+  h += '<details class="setgroup" data-g="auto"' + (o.auto ? " open" : "") + "><summary>Nuove parole ogni giorno<small>" + (a.on ? a.count + " al giorno" : "spento") + "</small></summary><div class=\"setgroup-body\">";
+  h += swRow("Inserimento automatico", "Ogni giorno aggiunge al ripasso alcune parole mai viste.", a.on, "setflag", "autoNew.on");
+  h += wheelRow("Parole nuove al giorno", "Al massimo questo numero.", "autoNew.count", 1, 20, !a.on);
+  h += swRow("Solo se le parole in corso sono poche", "Aggiunge solo se le parole in corso sono meno della soglia.", a.lim1On, "setflag", "autoNew.lim1On", !a.on);
+  h += wheelRow("Soglia parole in corso", "Meno di…", "autoNew.lim1", 10, 300, !a.on || !a.lim1On);
+  h += swRow("Solo se il ripasso di oggi è leggero", "Aggiunge solo se le parole da ripassare oggi sono meno della soglia.", a.lim2On, "setflag", "autoNew.lim2On", !a.on);
+  h += wheelRow("Soglia ripasso di oggi", "Meno di…", "autoNew.lim2", 5, 100, !a.on || !a.lim2On);
+  h += swRow("Prima gli argomenti già iniziati", "Sceglie a caso, ma dà la precedenza agli argomenti già iniziati. Spento: a caso fra tutte le parole mai viste.", a.preferStarted, "setflag", "autoNew.preferStarted", !a.on);
+  h += '<p class="setnote">Parte una volta al giorno, quando apri l’app, e solo se valgono insieme le soglie attive. Non tocca le parole già incontrate.</p>';
+  h += "</div></details>";
+
+  // --- backup ---
+  var ab = p.autoBackup;
+  h += '<details class="setgroup" data-g="bk"' + (o.bk ? " open" : "") + "><summary>Backup<small>" + (ab.on ? "automatico attivo" : "") + "</small></summary><div class=\"setgroup-body\">";
+  h += '<div class="subh" style="margin-left:0">Backup automatico settimanale</div>';
+  h += swRow("Backup automatico", "Una copia aggiornata ogni settimana, che sostituisce la precedente.", ab.on, "setflag", "autoBackup.on");
+  if (ab.on) {
+    h += '<div class="setrow"><div class="txt"><b>Giorno</b></div><select id="bkDow" aria-label="Giorno del backup">' +
+      DOW_NAMES.map(function (x) { return '<option value="' + x[0] + '"' + (+x[0] === ab.dow ? " selected" : "") + ">" + x[1] + "</option>"; }).join("") + "</select></div>";
+    h += '<div class="setrow"><div class="txt"><b>Orario</b></div><input id="bkTime" type="time" value="' + esc(ab.time) + '" aria-label="Orario del backup" /></div>';
+    h += '<div class="bkstatus' + (bkMeta.filePending ? " warn" : "") + '">' + bkStatusHtml() +
+      (bkMeta.filePending ? "<br><b>Il file non è ancora stato salvato.</b>" : "") + "</div>";
+    h += '<div class="setbtns">' + (bkMeta.filePending ? '<button class="btn" data-act="bksavefile">Salva il file ora</button>' : "") +
+      '<button class="btn ghost" data-act="bknow">Esegui un backup ora</button>' +
+      ("showDirectoryPicker" in window ? '<button class="btn ghost" data-act="bkfolder">' + (bkMeta.dirName ? "Cartella: " + esc(bkMeta.dirName) : "Scegli una cartella") + "</button>" : "") + "</div>";
+  }
+  h += '<p class="setnote"><b>Come funziona davvero.</b> Un’app web non può eseguire nulla quando è chiusa: il backup parte alla prima apertura dopo il giorno e l’ora scelti. ' +
+    "Salva una copia interna al browser (aiuta se sbagli qualcosa nell’app, ma sparisce se cancelli i dati del sito) e poi ti chiede di salvare il file: " +
+    ("showDirectoryPicker" in window ? "con una cartella scelta lo scrive da solo quando il browser lo permette, altrimenti basta un tocco su «Salva il file». " : "su questo dispositivo serve un tocco su «Salva il file». ") +
+    "Il file è la vera sicurezza.</p>";
+  h += '<div class="subh" style="margin-left:0;margin-top:18px">Cosa includere nei backup</div>';
+  BK_CATS.forEach(function (c) { h += swRow(c.label, c.hint, p.backupCats[c.id], "setflag", "backupCats." + c.id); });
+  h += '<p class="setnote">Vale per il backup automatico e per «Esporta un backup completo».</p>';
+  if (bkMeta.preImportAt) h += '<div class="setbtns"><button class="btn ghost" data-act="undoimport">Annulla l’ultimo ripristino (' + fmtStamp(bkMeta.preImportAt) + ")</button></div>";
+  h += "</div></details>";
+
+  h += '<div class="field"><label>Scorciatoie da tastiera</label>' +
+    '<p style="font-size:13px;color:var(--ink-2);margin:0">Spazio gira la scheda · frecce per scorrere · 1 2 3 per valutare · 1-4 per rispondere al quiz.</p></div>';
+  h += '<div class="sheet-actions"><button class="btn block" data-act="closesheet">Fatto</button></div>';
+  openSheet(h, keep);
+  initWheels(sheetEl);
+}
+
+/* ---------------- progressi: tempo e bilancio ---------------- */
+var SVG = {
+  up: '<svg viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>',
+  down: '<svg viewBox="0 0 24 24"><path d="M12 5v14M5.5 12.5 12 19l6.5-6.5"/></svg>',
+  plus: '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>',
+  minus: '<svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>',
+  check: '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
+};
+function timeCardHtml() {
+  var r = store.prefs.timeRange, labels = [["today", "Oggi"], ["week", "Settimana"], ["month", "Mese"], ["all", "Sempre"]];
+  var sub = { today: "oggi", week: "negli ultimi 7 giorni", month: "negli ultimi 30 giorni", all: "dall’inizio" }[r];
+  return '<div class="timecard" id="timeCard"><div class="seg" role="tablist" aria-label="Periodo">' +
+    labels.map(function (x) { return '<button role="tab" class="' + (r === x[0] ? "on" : "") + '" aria-selected="' + (r === x[0]) + '" data-act="timerange" data-v="' + x[0] + '">' + x[1] + "</button>"; }).join("") +
+    '</div><div class="big" id="timeBig">' + fmtTime(timeFor(r)) + '</div><div class="sub">tempo nell’app, ' + sub + "</div></div>";
+}
+function tickHtml(kind, svg) { return '<span class="tick ' + kind + '">' + svg + "</span>"; }
+function balanceHtml() {
+  var s = histSum(7), t = today();
+  var net = s.n + s.u + s.k - s.d - s.l;
+  var kind = net > 0 ? "up" : net < 0 ? "down" : "flat";
+  var rows = [
+    ["Nuove parole", "da «mai viste» a «in corso»", s.n, SVG.plus, 1],
+    ["Avanzate", "salite di scatola", s.u, SVG.up, 1],
+    ["Diventate sicure", "hanno raggiunto la conoscenza acquisita", s.k, SVG.check, 1],
+    ["Retrocesse", "tornate a un livello precedente", s.d, SVG.down, -1],
+    ["Uscite dalle sicure", "non più «sicure»", s.l, SVG.minus, -1]
+  ];
+  var h = '<div class="bal"><div class="bal-head"><div class="bal-net ' + kind + '">' + tickHtml(kind, kind === "up" ? SVG.up : kind === "down" ? SVG.down : SVG.minus) +
+    (net > 0 ? "+" : net < 0 ? "−" : "") + Math.abs(net) + "</div><small>Bilancio degli ultimi 7 giorni.<br>Conta i cambi di stato avvenuti, non le differenze.</small></div>";
+  h += '<div class="bal-scroll" tabindex="0" aria-label="Dettaglio del bilancio, scorrevole">';
+  rows.forEach(function (r) {
+    var k = r[2] === 0 ? "flat" : (r[4] > 0 ? "up" : "down");
+    h += '<div class="bal-row">' + tickHtml(k, r[3]) + '<div class="lbl">' + r[0] + "<small>" + r[1] + '</small></div><b class="' + k + '">' +
+      (r[2] === 0 ? "0" : (r[4] > 0 ? "+" : "−") + r[2]) + "</b></div>";
+  });
+  h += '<div class="bal-sub">Giorno per giorno</div>';
+  var mx = 1, days = [];
+  for (var i = 0; i < 7; i++) {
+    var d = addDays(t, -i), x = (store.hist.days || {})[d] || { n: 0, u: 0, k: 0, d: 0, l: 0 };
+    var v = (x.n || 0) + (x.u || 0) + (x.k || 0) - (x.d || 0) - (x.l || 0);
+    days.push([d, v]); mx = Math.max(mx, Math.abs(v));
+  }
+  days.forEach(function (x, i) {
+    var p = x[0].split("-"), dt = new Date(+p[0], +p[1] - 1, +p[2]);
+    var label = i === 0 ? "Oggi" : i === 1 ? "Ieri" : ["dom", "lun", "mar", "mer", "gio", "ven", "sab"][dt.getDay()] + " " + dt.getDate();
+    var k = x[1] > 0 ? "up" : x[1] < 0 ? "down" : "flat", w = Math.round(Math.abs(x[1]) / mx * 50);
+    h += '<div class="bal-day"><span class="d">' + label + '</span><span class="bar">' + (x[1] ? '<i class="' + k + '" style="width:' + w + '%"></i>' : "") +
+      '</span><b class="' + k + '">' + (x[1] > 0 ? "▲ +" : x[1] < 0 ? "▼ −" : "– ") + Math.abs(x[1]) + "</b></div>";
+  });
+  if (store.hist.since && store.hist.since > addDays(t, -6)) {
+    h += '<div class="bal-row"><div class="lbl"><small>Il registro dei cambi è attivo dal ' + esc(store.hist.since.split("-").reverse().join("/")) + ": i giorni precedenti non sono disponibili.</small></div></div>";
+  }
+  return h + "</div></div>";
+}
+function bkBannerHtml() {
+  if (!store.prefs.autoBackup.on || !bkMeta.filePending) return "";
+  return '<div class="bkstatus warn" style="margin:10px 0 0;display:flex;align-items:center;gap:10px"><span style="flex:1">Backup settimanale pronto: salva il file.</span>' +
+    '<button class="btn" style="min-height:36px;padding:6px 14px" data-act="bksavefile">Salva</button></div>';
+}
+
+normalizePrefs();
+if (!store.hist.days) store.hist.days = {};
+if (!store.time.byDay) store.time.byDay = {};
+save("prefs"); save("hist"); save("time");
 
 function save(key) {
   lsSet(LS[key], store[key]);
@@ -983,6 +1956,7 @@ function filtered() {
 
 function gradeItem(id, grade) {
   var s = srsOf(id);
+  var prevBox = store.srs[id] ? (store.srs[id].box || 0) : undefined;
   var box = s.box || 0;
   if (grade === 0) { box = 0; s.wrong = (s.wrong || 0) + 1; }
   else if (grade === 1) { box = Math.max(1, box); s.right = (s.right || 0) + 1; }
@@ -992,6 +1966,7 @@ function gradeItem(id, grade) {
   s.last = today();
   store.srs[id] = s;
   save("srs");
+  recordChange(prevBox, box);
   countReview();
 }
 function countReview() {
@@ -1066,7 +2041,13 @@ var THEMES = [
   { id: "vulcano", label: "Vulcano", swatch: ["#FCEEE9", "#B33E1E"] },
   { id: "ametista", label: "Ametista", swatch: ["#1C1330", "#8FA6FF"] },
   { id: "sakura", label: "Sakura", swatch: ["#FDECF1", "#C6296B"] },
-  { id: "ambra", label: "Ambra", swatch: ["#FBEEDD", "#C77400"] }
+  { id: "ambra", label: "Ambra", swatch: ["#FBEEDD", "#C77400"] },
+  { id: "salvia", label: "Salvia", swatch: ["#E4E9DF", "#6E9468"] },
+  { id: "lavanda", label: "Lavanda", swatch: ["#E9E6F1", "#7C6BB5"] },
+  { id: "argilla", label: "Argilla", swatch: ["#EFE3DC", "#C0654A"] },
+  { id: "cacao", label: "Cacao", swatch: ["#1F1A17", "#E2B863"] },
+  { id: "prugna", label: "Prugna", swatch: ["#241A26", "#F0A0BE"] },
+  { id: "crepuscolo", label: "Crepuscolo", swatch: ["#1B2326", "#EBB57A"] }
 ];
 
 function applyTheme() {
@@ -1116,7 +2097,7 @@ function topbar(sub) {
     '<div class="brand"><h1>Der Wortschatzkasten</h1><p>' + esc(sub) + "</p></div>" +
     '<div class="topbar-actions">' +
       '<button class="iconbtn" data-act="settings" aria-label="Impostazioni">⋯</button>' +
-    "</div></header>";
+    "</div></header>" + bkBannerHtml();
 }
 
 function render() {
@@ -1323,7 +2304,7 @@ function viewRipasso() {
   h += '<div class="statgrid">' +
     '<div class="statbox"><b>' + nuove.length + "</b><span>mai viste</span></div>" +
     '<div class="statbox"><b>' + allItems().filter(function (i) { return srsOf(i.id).box >= KNOWN_BOX; }).length + "</b><span>sicure</span></div>" +
-    '<div class="statbox"><b>' + (store.stats.streak || 0) + flameHtml(store.stats.streak) + "</b><span>giorni di fila</span></div>" +
+    '<div class="statbox" role="button" tabindex="0" data-act="streak" aria-label="Apri la tua costanza"><b>' + (store.stats.streak || 0) + flameHtml(store.stats.streak) + "</b><span>giorni di fila</span></div>" +
     "</div>";
 
   h += '<div class="section-h">Allenamento libero</div>';
@@ -1333,6 +2314,10 @@ function viewRipasso() {
     dirBtn("de-it", "Tedesco → Italiano") + dirBtn("it-de", "Italiano → Tedesco") + dirBtn("mix", "Alternate") +
     "</div>";
   h += '<button class="btn ghost block" data-act="startfree">Inizia con ' + filtered().length + " parole</button>";
+  if (store.prefs.prioUnseen && state.topics.length) {
+    var unseenN = filtered().filter(function (i) { return isNew(i.id); }).length;
+    h += '<p style="margin:8px 2px 0;font-size:12.5px;color:var(--ink-3)">' + (unseenN ? plural(unseenN, "parola mai vista", "parole mai viste") + " in prima fila." : "Nessuna parola mai vista in questa selezione.") + "</p>";
+  }
   if (nuove.length) {
     h += '<button class="btn ghost block" style="margin-top:8px" data-act="startnew">Scopri 10 parole nuove</button>';
   }
@@ -1343,10 +2328,10 @@ function dirBtn(v, label) {
   return '<button class="pick ' + (store.prefs.dir === v ? "on" : "") + '" data-act="setdir" data-v="' + v + '">' + label + "</button>";
 }
 
-function startSession(list, label) {
+function startSession(list, label, opts) {
   if (!list.length) { toast("Non ci sono parole con questi filtri."); return; }
   rv = {
-    queue: shuffle(list).map(function (i) { return i.id; }),
+    queue: (opts && opts.unseenFirst ? unseenFirst(list) : shuffle(list)).map(function (i) { return i.id; }),
     total: list.length, done: 0, flipped: false, label: label,
     right: 0, again: 0, startBox: {}
   };
@@ -1428,7 +2413,7 @@ function sessionDoneHtml() {
     '<div class="statgrid">' +
       '<div class="statbox"><b>' + rv.right + "</b><span>sapute</span></div>" +
       '<div class="statbox"><b>' + rv.again + "</b><span>da rivedere</span></div>" +
-      '<div class="statbox"><b>' + (store.stats.streak || 0) + flameHtml(store.stats.streak) + "</b><span>giorni di fila</span></div>" +
+      '<div class="statbox" role="button" tabindex="0" data-act="streak" aria-label="Apri la tua costanza"><b>' + (store.stats.streak || 0) + flameHtml(store.stats.streak) + "</b><span>giorni di fila</span></div>" +
     "</div>" +
     '<button class="btn block" data-act="endsession">Torna al ripasso</button>' +
     "</div>";
@@ -1655,8 +2640,10 @@ function answerQuiz(val) {
     qz.streak = 0;
     store.flags[q.item.id] = true; save("flags");
     var s = srsOf(q.item.id);
+    var prevBox = store.srs[q.item.id] ? (store.srs[q.item.id].box || 0) : undefined;
     s.box = 0; s.due = today(); s.wrong = (s.wrong || 0) + 1;
     store.srs[q.item.id] = s; save("srs");
+    recordChange(prevBox, 0);
   }
   markStreakActivity();
   renderQuizFilters();
@@ -1677,10 +2664,13 @@ function viewProgressi() {
     '<div class="statbox"><b>' + fresh + "</b><span>da iniziare</span></div>" +
     "</div>";
   h += '<div class="statgrid">' +
-    '<div class="statbox"><b>' + (store.stats.streak || 0) + flameHtml(store.stats.streak) + "</b><span>giorni di fila</span></div>" +
+    '<div class="statbox" role="button" tabindex="0" data-act="streak" aria-label="Apri la tua costanza"><b>' + (store.stats.streak || 0) + flameHtml(store.stats.streak) + "</b><span>giorni di fila</span></div>" +
     '<div class="statbox"><b>' + (store.stats.byDay && store.stats.byDay[today()] || 0) + "</b><span>schede oggi</span></div>" +
     '<div class="statbox"><b>' + fmtCompact(store.stats.total || 0) + "</b><span>ripassi totali</span></div>" +
     "</div>";
+
+  h += '<div class="section-h">Tempo nell’app</div>' + timeCardHtml();
+  h += '<div class="section-h">Bilancio parole</div>' + balanceHtml();
 
   h += '<div class="section-h">Argomenti</div><div class="bars">';
   h += allTopics().map(function (t) {
@@ -1698,17 +2688,17 @@ function viewProgressi() {
     '<span><i style="background:var(--line)"></i>da iniziare</span></div>';
 
   h += '<details class="settingsbox" id="settingsBox"' + (state.settingsOpen ? " open" : "") + '>' +
-    '<summary><span>Impostazioni e dati</span><small>notifiche, tema, backup</small></summary><div class="settingsbox-body">';
+    '<summary><span>Impostazioni e dati</span><small>notifiche, tema, backup, parole nuove</small></summary><div class="settingsbox-body">';
   h += '<div class="subh">Per te</div>';
   h += '<button class="rowlink" data-act="notifs"><span>Notifiche programmate</span><small>' + notifSummary() + "</small></button>";
-  h += '<button class="rowlink" data-act="settings"><span>Tema e audio</span><small>aspetto, pronuncia</small></button>';
+  h += '<button class="rowlink" data-act="settings"><span>Tema, backup e parole nuove</span><small>aspetto, backup, ripasso</small></button>';
   h += '<div class="subh">Lessico e dati</div>';
   h += '<button class="rowlink" data-act="checkupdate"><span>Controlla aggiornamenti del lessico</span><small>' +
     (state.loadStatus === "ok" ? db.official.length + " parole di classe" : "non scaricato") + "</small></button>";
-  h += '<button class="rowlink" data-act="export"><span>Esporta un backup completo</span><small>parole, progressi, impostazioni</small></button>';
+  h += '<button class="rowlink" data-act="export"><span>Esporta un backup completo</span><small>scegli cosa includere nelle impostazioni</small></button>';
   h += '<button class="rowlink" data-act="exportwords"><span>Esporta solo le parole aggiunte</span><small>' +
     (store.custom.length ? plural(store.custom.length, "parola tua", "parole tue") + ", senza progressi" : "nessuna parola aggiunta finora") + "</small></button>";
-  h += '<button class="rowlink" data-act="import"><span>Importa un backup</span><small>unisce ai dati attuali</small></button>';
+  h += '<button class="rowlink" data-act="import"><span>Importa un backup</span><small>unisci o sostituisci, con copia di sicurezza</small></button>';
   if (store.deleted.length) {
     h += '<button class="rowlink" data-act="restore"><span>Ripristina le parole eliminate</span><small>' + store.deleted.length + "</small></button>";
   }
@@ -1836,25 +2826,6 @@ function readForm() {
   });
 }
 
-function openSettings() {
-  var p = store.prefs;
-  var h = '<div class="sheet-h"><h2>Impostazioni</h2><button class="iconbtn" data-act="closesheet" aria-label="Chiudi">✕</button></div>';
-  h += '<div class="field"><label>Tema</label><div class="themegrid">' +
-    THEMES.map(function (t) {
-      return '<button class="themeopt ' + (p.theme === t.id ? "on" : "") + '" data-act="settheme" data-v="' + t.id + '">' +
-        '<span class="sw" style="background:' + t.swatch[0] + '"><i style="background:' + t.swatch[1] + '"></i></span>' +
-        "<span>" + t.label + "</span></button>";
-    }).join("") + "</div></div>";
-  h += '<div class="field"><label>Pronuncia tedesca</label><div class="pickrow">' +
-    '<button class="pick ' + (p.audio ? "on" : "") + '" data-act="setaudio" data-v="1">Attiva</button>' +
-    '<button class="pick ' + (!p.audio ? "on" : "") + '" data-act="setaudio" data-v="0">Disattiva</button></div>' +
-    '<p style="font-size:12.5px;color:var(--ink-3);margin:8px 0 0">Usa la voce di sistema del telefono: se manca il tedesco, il pulsante resta silenzioso.</p></div>';
-  h += '<div class="field"><label>Scorciatoie da tastiera</label>' +
-    '<p style="font-size:13px;color:var(--ink-2);margin:0">Spazio gira la scheda · frecce per scorrere · 1 2 3 per valutare · 1-4 per rispondere al quiz.</p></div>';
-  h += '<div class="sheet-actions"><button class="btn block" data-act="closesheet">Fatto</button></div>';
-  openSheet(h);
-}
-
 /* =================================================================
    AZIONI
    ================================================================= */
@@ -1967,9 +2938,11 @@ var ACTIONS = {
   setaudio: function (v) { store.prefs.audio = v === "1"; save("prefs"); openSettings(); },
 
   startdue: function () { startSession(dueItems(), "Ripasso di oggi"); },
-  startfree: function () { startSession(filtered(), "Allenamento libero"); },
+  startfree: function () {
+    startSession(filtered(), "Allenamento libero", { unseenFirst: !!store.prefs.prioUnseen && state.topics.length > 0 });
+  },
   startnew: function () {
-    startSession(sample(allItems().filter(function (i) { return isNew(i.id); }), 10), "Parole nuove");
+    startSession(pickNewWords(10, !!store.prefs.newFromStarted), "Parole nuove");
   },
   flip: function () {
     if (!rv) return;
@@ -2034,18 +3007,8 @@ var ACTIONS = {
 
   checkupdate: function () { loadVocab(true); },
   export: function () {
-    var payload = {
-      app: "wortschatzkasten", version: 2, exportedAt: new Date().toISOString(),
-      customItems: store.custom, customTopics: store.topics, flags: store.flags,
-      deletedIds: store.deleted, overrides: store.overrides, srs: store.srs, stats: store.stats
-    };
-    var blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement("a");
-    a.href = url;
-    a.download = "wortschatzkasten-backup-" + today() + ".json";
-    document.body.appendChild(a); a.click(); a.remove();
-    URL.revokeObjectURL(url);
+    if (!enabledCats().length) { toast("Scegli almeno una categoria nelle impostazioni di backup."); return; }
+    downloadJson(buildBackup(), "wortschatzkasten-backup-" + today() + ".json");
     toast("Backup scaricato.");
   },
   exportwords: function () {
@@ -2083,10 +3046,49 @@ var ACTIONS = {
     store.custom = []; store.topics = []; store.flags = {}; store.deleted = [];
     store.overrides = {}; store.srs = {}; store.stats = { streak: 0, lastDay: null, total: 0, byDay: {} };
     ["custom", "topics", "flags", "deleted", "overrides", "srs", "stats"].forEach(save);
+    store.hist = { since: today(), days: {} }; store.time = { total: 0, byDay: {} };
+    ["custom", "topics", "flags", "deleted", "overrides", "srs", "stats", "hist", "time"].forEach(save);
     closeSheet(); render();
     toast("Dati cancellati.");
   }
 };
+
+/* ---------------- azioni delle novità ---------------- */
+Object.assign(ACTIONS, {
+  setflag: function (path) {
+    var cur = !!getPath(store.prefs, path);
+    setPath(store.prefs, path, !cur);
+    save("prefs");
+    if (path === "autoBackup.on" && !cur) {
+      try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}
+      if (!bkMeta.lastAt) backupCheck(true);          // primo backup subito, poi uno a settimana
+    }
+    if (path === "autoNew.on" && !cur) { store.prefs.autoNew.lastDay = null; save("prefs"); autoAddNewWords(); }
+    openSettings();
+  },
+  bknow: function () { backupCheck(true).then(function () { saveBackupFile(); }); },
+  bksavefile: function () { saveBackupFile(); },
+  bkfolder: function () { pickBackupFolder(); },
+  undoimport: function () { undoImport(); },
+  impsel: function (id) { if (imp) { imp.sel[id] = !imp.sel[id]; openImportSheet(true); } },
+  impmode: function (v) { if (imp) { imp.mode = v; openImportSheet(true); } },
+  impgo: function () { if (imp) doImport(); },
+  timerange: function (v) {
+    store.prefs.timeRange = v; save("prefs");
+    var c = el("timeCard");
+    if (c) c.outerHTML = timeCardHtml();
+  },
+  streak: function () { openStreak(lastActEl); },
+  streakback: function () {
+    if (history.state && history.state.sv) history.back();
+    else closeStreak();
+  }
+});
+document.addEventListener("change", function (e) {
+  var t = e.target;
+  if (t.id === "bkDow") { store.prefs.autoBackup.dow = +t.value; save("prefs"); openSettings(); }
+  else if (t.id === "bkTime" && /^\d\d:\d\d$/.test(t.value)) { store.prefs.autoBackup.time = t.value; save("prefs"); openSettings(); }
+});
 
 
 /* ---------------- notifiche programmate ---------------- */
@@ -2305,13 +3307,19 @@ Object.assign(ACTIONS, {
 
 document.addEventListener("toggle", function (e) {
   if (e.target && e.target.id === "settingsBox") state.settingsOpen = e.target.open;
+  if (e.target && e.target.classList && e.target.classList.contains("setgroup")) {
+    state.setOpen = state.setOpen || {};
+    state.setOpen[e.target.getAttribute("data-g")] = e.target.open;
+  }
 }, true);
 
 /* ---------------- eventi globali ---------------- */
 
+var lastActEl = null;
 document.addEventListener("click", function (e) {
   var t = e.target.closest("[data-act]");
   if (t) {
+    lastActEl = t;
     var act = t.getAttribute("data-act");
     if (ACTIONS[act]) {
       e.preventDefault();
@@ -2374,35 +3382,14 @@ document.addEventListener("change", function (e) {
   if (!file) return;
   var reader = new FileReader();
   reader.onload = function () {
-    try {
-      var d = JSON.parse(reader.result);
-      var added = 0;
-      (d.customItems || []).forEach(function (it) {
-        if (!store.custom.some(function (x) { return x.id === it.id; })) { store.custom.push(it); added++; }
-      });
-      (d.customTopics || []).forEach(function (t) { if (store.topics.indexOf(t) === -1) store.topics.push(t); });
-      Object.keys(d.flags || {}).forEach(function (k) { if (d.flags[k]) store.flags[k] = true; });
-      Object.keys(d.overrides || {}).forEach(function (k) { store.overrides[k] = d.overrides[k]; });
-      Object.keys(d.srs || {}).forEach(function (k) {
-        var mine = store.srs[k], theirs = d.srs[k];
-        if (!mine || (theirs.box || 0) > (mine.box || 0)) store.srs[k] = theirs;
-      });
-      if (d.stats && (d.stats.total || 0) > (store.stats.total || 0)) store.stats = d.stats;
-      ["custom", "topics", "flags", "overrides", "srs", "stats"].forEach(save);
-      render();
-      toast("Backup unito: " + plural(added, "parola nuova", "parole nuove") + ".");
-    } catch (err) {
-      toast("Questo file non è un backup del Kasten.");
-    }
+    var d = null;
+    try { d = JSON.parse(reader.result); } catch (err) { d = null; }
+    if (!d || typeof d !== "object" || d.app !== "wortschatzkasten") { toast("Questo file non è un backup del Kasten."); return; }
+    openImport(d);
   };
   reader.readAsText(file);
   e.target.value = "";
 });
-
-window.addEventListener("scroll", function () {
-  var t = el("topbar");
-  if (t) t.classList.toggle("scrolled", window.scrollY > 4);
-}, { passive: true });
 
 /* ---------------- caricamento del lessico ---------------- */
 
@@ -2415,7 +3402,9 @@ function loadVocab(manual) {
       db.officialTopics = data.topics || [];
       state.loadStatus = "ok";
       lsSet("wk_vocab_cache", data);
+      autoAddNewWords();
       render();
+      backupCheck();
       if (manual) {
         var diff = db.official.length - before;
         toast(diff > 0 ? plural(diff, "parola nuova", "parole nuove") + " dal lessico di classe." : "Il lessico è già aggiornato.");
@@ -2448,8 +3437,11 @@ if (cachedStart) {
   db.officialTopics = cachedStart.topics || [];
   state.loadStatus = "cache";
 }
+autoAddNewWords();
 render();
 loadVocab(false);
+backupCheck();
+setInterval(function () { backupCheck(); autoAddNewWords(); }, 60000);
 syncSwState();
 if (notifReady()) syncNotifs().catch(function () {}); // tiene aggiornati server e fuso orario
 
